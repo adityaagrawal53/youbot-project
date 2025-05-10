@@ -1,0 +1,92 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{githubYoubotOverview}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/youbot}}
+      \field{note}{[Accessed 23-04-2025]}
+      \field{title}{youbot - {O}verview --- github.com}
+    \endentry
+    \entry{Tsogias2016}{bachelorsthesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=848151fbf6191c8a8635a0950ce929e7}{%
+           family={Tsogias},
+           familyi={T\bibinitperiod},
+           given={Ioannis},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {National Technical University of Athens}%
+      }
+      \strng{namehash}{848151fbf6191c8a8635a0950ce929e7}
+      \strng{fullhash}{848151fbf6191c8a8635a0950ce929e7}
+      \strng{fullhashraw}{848151fbf6191c8a8635a0950ce929e7}
+      \strng{bibnamehash}{848151fbf6191c8a8635a0950ce929e7}
+      \strng{authorbibnamehash}{848151fbf6191c8a8635a0950ce929e7}
+      \strng{authornamehash}{848151fbf6191c8a8635a0950ce929e7}
+      \strng{authorfullhash}{848151fbf6191c8a8635a0950ce929e7}
+      \strng{authorfullhashraw}{848151fbf6191c8a8635a0950ce929e7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Kinematic Analysis of a KUKA YouBot}}
+      \field{year}{2016}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.26240/heal.ntua.12581
+      \endverb
+      \verb{urlraw}
+      \verb https://dspace.lib.ntua.gr/xmlui/handle/123456789/43358
+      \endverb
+      \verb{url}
+      \verb https://dspace.lib.ntua.gr/xmlui/handle/123456789/43358
+      \endverb
+    \endentry
+    \entry{archiveYouBotStore}{misc}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{note}{[Accessed 23-04-2025]}
+      \field{title}{you{B}ot {S}tore --- web.archive.org}
+      \true{nocite}
+      \verb{urlraw}
+      \verb \url{https://web.archive.org/web/20170318163736/http://www.youbot-store.com/developers/}
+      \endverb
+      \verb{url}
+      \verb %5Curl%7Bhttps://web.archive.org/web/20170318163736/http://www.youbot-store.com/developers/%7D
+      \endverb
+    \endentry
+    \entry{janpaulusYouBotDriver}{misc}{}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://janpaulus.github.io/}}
+      \field{note}{[Accessed 23-04-2025]}
+      \field{title}{you{B}ot {D}river --- janpaulus.github.io}
+      \true{nocite}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
