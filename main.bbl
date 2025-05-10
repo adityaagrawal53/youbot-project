@@ -71,10 +71,10 @@
       \field{title}{you{B}ot {S}tore --- web.archive.org}
       \true{nocite}
       \verb{urlraw}
-      \verb \url{https://web.archive.org/web/20170318163736/http://www.youbot-store.com/developers/}
+      \verb https://web.archive.org/web/20170318163736/http://www.youbot-store.com/developers/
       \endverb
       \verb{url}
-      \verb %5Curl%7Bhttps://web.archive.org/web/20170318163736/http://www.youbot-store.com/developers/%7D
+      \verb https://web.archive.org/web/20170318163736/http://www.youbot-store.com/developers/
       \endverb
     \endentry
     \entry{janpaulusYouBotDriver}{misc}{}{}

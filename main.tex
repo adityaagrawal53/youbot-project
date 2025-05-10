@@ -20,7 +20,10 @@
 
 
 \newcommand{\commentout}[1]{}
-\newcommand{\adi}[1]{\textcolor{red}{#1}}
+\newif\ifshowadi
+\showaditrue% Set to \showaditrue to display notes
+
+\newcommand{\adi}[1]{\ifshowadi\textcolor{red}{#1}\fi}
 
 
 
@@ -91,9 +94,9 @@
 
     The YouBot is a mobile robotic platform developed by German automation company KUKA. First introduced in the early 2010s \adi{[cite]}, it was primarily designed for research and educational purposes in the field of robotics. To further this purpose, a significant portion of software used on the YouBot is open-source and available on GitHub \adi{[cite]}. 
 
-    The YouBot typically consists of two main parts: a mobile base and a robotic arm. The mobile base is equipped with four omnidirectional mecanum wheels and motors for movement, alongside an onboard computer for processing and control. This onboard computer uses Ubuntu and ROS1 with conveninently provided drivers and wrappers, allowing for smooth software integration as well. The robotic arm has 5 degrees of freedom (DOF) and a two-finger gripper, allowing it to potentially perform a variety of tasks through the onboard computer. Since our project involves only the mobile base, we will not be discussing the arm in detail.
+    The YouBot typically consists of two main parts: a mobile base and a robotic arm. The mobile base is equipped with four omnidirectional mecanum wheels and motors for movement, alongside an onboard computer for processing and control. This onboard computer uses Ubuntu and ROS1 with conveninently provided drivers and wrappers, allowing for smooth software integration as well. The robotic arm has 5 degrees of freedom (DOF) and a two-finger gripper \adi{[cite]}, allowing it to potentially perform a variety of tasks through the onboard computer. Since our project involves only the mobile base, we will not be discussing the arm in detail.
 
-    The YouBot was also equipped with a variety of sensors when I received it, including a Kinect v1 camera and a functioning Hokuyo URG-04LX laser rangefinder. The Kinect camera module contains a infrared depth camera and RGB camera. This combined with its high availability and low cost made it a popular choice for navigation and perception tasks in robotics. The Hokuyo URG-04LX is a 2D laser rangefinder that was commonly used in robotics research as well, due to its compact design and high-resolution distance measurements. 
+    The YouBot was also equipped with a variety of sensors when I received it, including a Kinect v1 camera \adi{[cite]} and a functioning Hokuyo URG-04LX laser rangefinder \adi{[cite]}. The Kinect camera module contains a infrared depth camera and RGB camera. This combined with its high availability and low cost made it a popular choice for navigation and perception tasks in robotics. The Hokuyo URG-04LX is a 2D laser rangefinder that was commonly used in robotics research as well, due to its compact design and high-resolution distance measurements. 
 
     This robot and the attached sensor modules are thus particularly well-suited for research within mobile robotics, particularly those pertaining to navigation and perception, as well as human-robot interaction. 
 
@@ -120,31 +123,63 @@
 
     \section{Initial state of YouBot}
 
-    This section aims to document the KUKA YouBot's state as I found it during the start of my project. 
+    This section aims to document the KUKA YouBot's state as initially received. This includes the actual robot base itself, the miscellaneous peripherals and accessories that were included, the onboard computer and its software, etc., as well as the documentation currently available for the YouBot, online and otherwise. 
 
-    The KUKA YouBot in question is a decade-old robot. In context of the specific one in the lab, it was last used in 2019 for a project in the AEE programme and has been unused since then. Even in 2019, the documentation was sparse and out of date and the provided lead-acid batteries for the robot were completely unusable due to sulphation. 
+    The KUKA YouBot was procured by the university in 2014, and has not been in use since 2019. At that time, the robot was considered to be quite antiquated, and the software and hardware were already outdated. Furthermore, the relevant websites hosting documentation and information are no longer available. This situation has only worsened over the years, and the starting point for this project documentation-wise was an user manual uploaded on a third-party website marked as a draft version from 2013.
 
-    \subsection{Hardware Overview}
-    \subsubsection{Robot Base}
-    The robot itself has 24V IN through a 3-pin XLR connector. There's two 24V OUTs on the top as well. There's an ethernet port and two etherCAT ports as well.
-    There's many USB ports. You can use a visual display for the onboard computer as well using an ancient VGA port. \cite{githubYoubotOverview}
+    \subsection{Robot Base Overview}
 
-    There's four omnidirectional wheels, a 24V lead-acid battery (originally!). There's this metal plate on top that was installed when the robot itself was procured. 
-
-    \subsubsection{Computer}
-    The onboard computer is an [] with an []. 
+    \adi{initial inspection\\}
 
 
-    \subsubsection{Battery}
-    lead-acid, completely dead, practically unsuable for the purposes of this project. 
-    \subsubsection{Sensors}
-    in the box there were included some sensors: two Hokuyo nodes (one of them had a completely broken Mini-USB port), as well as a KINECTv1 camera. 
+    The robot base features a 24V power input via a 3-pin XLR connector, accessed through the top of the robot. In addition to this, there are two 24V 3-pin XLR output ports, indeded to power external sensors or other components such as robotic arms. On this top panel, one can also find two EtherCAT ports for consistent real-time communication with motion-oriented robotics (i.e. the robotic arm), as well as a standard Ethernet port for wired interfacing with an external computer or network. 
 
-    \subsection{Software Overview}
+    Mobility is provided by four omnidirectional mecanum wheels and relevant motors. This allows for relatively smooth and precise movement through a combination of linear and rotational motion. The motors are controlled via the onboard computer, which can send and recieve data from the motors and provide relevant feedback.
+
+    The onboard computer includes 6 USB2.0 ports, which can be used to connect various peripherals, such as a keyboard, mouse, USB, wireless adapter, etc. Additionally, there is a VGA port for connecting a monitor. \cite{githubYoubotOverview}  
+
+    The attached top panel is a sensor and mounting plate, designed to allow for the convenient attachment of various sensors and accessories. [cite https://web.archive.org/web/20160613151621/http://www.youbot-store.com/accessories/mounting-and-sensor-plate]
+
+    The robot base is also equipped with a slot for a sealed lead-acid battery (SLA), which can be used to power the robot when not connected to a wall outlet. The battery can connect to the robot via a 4-pin XLR connector.  
+
+    \subsection{Additional Hardware Components}
+
+    
+    \adi{DESCRIBE THE INITIAL INSPECTION IN FULL HERE! TALK ABOUT THE PILLAR STUFF AND NUTS AND WHATNOT AS WELL!!!!}
+
+    \subsection{Onboard Computer Overview}
     The computer runs [this software] and ROS version []. I wasn't able to immediately boot up any tests to ensure if the robot itself was working at any stage in time. 
 
-    \subsubsection{Operating System}
-    \subsubsection{ROS}
+    \adi{what ports are there? what software is on there? ubuntu? initial setup? ROS version? software?}
+    The onboard computer is an [] with an []. 
+
+    It was running Ubuntu 12.04 LTS with ROS Hydro, which is a decade-old version of the operating system and the robot operating system. This version of Ubuntu is no longer supported, and the software is outdated and not compatible with most modern software and libraries. This will be detailed in a future section.
+
+    Alongside the OS and ROS, the computer also had various drivers and wrappers installed to enable communication with the robot's motors and sensors. This could be done directly through C++ programs, or through the use of pre-made ROS packages. We have elected to use the latter for the purposes of developing a system on the YouBot, to allow for a seamless integration with the ROS ecosystem in the future, alongside a level of standardization and ease of use. 
+
+
+    \subsection{Battery}
+    
+    The mobile robot base allows for a 24V power supply through a 4-pin XLR connector. It could also be operated without using a wired cable to the wall, by using a lead-acid battery originally which had a capacity of 5Ah and gave the YouBot an approximate runtime of 90 minutes. This lead-acid battery is \adi{[dimensions here]}. This battery is also connected through a 4-pin XLR connector. While not a standard connector for power supply (4-pin XLR connectors are typically used for audio equipment), it is very robust and secure for the purposes of a mobile robot. 
+
+    However, the SLA batteries that were initially included with the YouBot were completely unusable. The lab engineer (Vesa Korhonen) had also put together a makeshift SLA battery in 2019, which had also degraded severely. 
+
+    As such, either the original batteries had to be replaced, or the robot had to be continuously used with a wired connection to the wall. This would have been a significant limitation to the project had we not been able to create a makeshift replacement battery which will be discussed in section 4.3.
+    
+
+    \subsection{Sensors}
+    
+    Alongside the robot base and various hardware components, the YouBot was also equipped with a variety of sensors. These included a Kinect v1 camera and two Hokuyo URG-04LX laser rangefinders (, one of which had a broken mini-USB port, rendering it unusable). These sensors are commonly used in robotics research and are well-suited for navigation and perception tasks.
+
+    \subsubsection{Kinect}  
+
+    The Kinect v1 camera is a depth and RGB camera that was originally designed and sold in tandem with the XBOX 360 to enable motion tracking and gaming. Due to its low cost, high availability and ease of use, it had indirectly become a popular choice for robotics research as well.
+
+    This Kinect camera module can be used through the use of open-source software such as libfreenect \adi{[cite]} to access the data from the various sensors on the module. Furthermore, this information could be processed using the OpenCV library and then used to enable the autonomous navigation as previously described. 
+
+    \subsubsection{Hokuyo URG-04LX Laser Rangefinder}
+
+    The Hokuyo URG-04LX is a 2D laser rangefinder that is commonly used in robotics research. It is a compact and lightweight sensor that provides high-resolution distance measurements in a 240-degree field of view. The URG-04LX is capable of measuring distances up to 4 meters with an accuracy of +/- 10 mm. It communicates with the onboard computer using a serial interface, making it easy to integrate into existing systems. 
 
     \subsection{Documentation}
 
@@ -169,9 +204,24 @@
     \pagebreak
 
     \section{System Development}
-    \subsection{Peripherals}
+    \subsection{Booting up the YouBot}
+
+    \adi{describe the booting up process here, what ports to use, how to connect to the onboard computer, etc.}
+
+    \adi{furthermore describe issues with software that needed to be fixed, such as the bashrc file, the networking, etc.}
+
+        \pagebreak
+
+
+    \subsection{Running ROS interface}
+
+    \adi{describe the process of inspecting the installed software, the drivers and wrappers, and running the original demos.}
+        \pagebreak
+
 
     \subsection{Battery Replacement}
+
+    \adi{vesa sent me a message about this entire part. use that.}
     The lead-acid batteries, as previously mentioned, were completely unusable. I contacted our lab engineer (Vesa Korhonen) and he was more than willing to assist me with replacing this battery, as well as testing the abilities of the others. 
     replaced batteries, obtained laptop and peripherals
 
@@ -182,26 +232,22 @@
     There were three original batteries in the box meant for the YouBot that were more than a decade old and a makeshift one made by the lab engineer in 2019. While we were able to receive a voltage on the makeshift battery, it was far too less and the voltage quickly dropped to 0 on attempting to charge overnight. As a result, me and Vesa decided to make a quick replacement battery.
 
     This involved combining two lead-acid batteries that we bought from Vantaa using sticky tape and then attaching them to our XLR 4-pin connector. While the battery was quite quick and dirty, it works well for our purposes. We didn't bother to even hermetically seal it since I'm probably the only use going to be using the thing anyway. 
-
-    \subsection{Running ROS interface}
-    
-    \subsection{Software Setup}
-
-    Discuss issues in bashrc
-    Discuss history 
-    Discuss running original demos
+    \pagebreak
 
 
-    \subsection{ROS1 Navigation Stack}
+    \subsection{Inspecting ROS1 Navigation Stack}
 
+    \adi{rqt, rviz, writing own packages, catkin, the various topics and nodes, etc. }
     Finding the packages
     running these packages
+    \pagebreak
 
     \subsection{ROS1-ROS2 Bridge}
 
     One of the first tasks I decided to embark on after getting the robot up and running was to set up the ROS1-ROS2 bridge. This was the most important link within the system, as it would allow the robot to seamless access the ROS2 navigation stack and enable it to access the computational resources of a more recent computer. However, the version of ROS1 on the robot is Hydro, which is more than a decade old and predates ROS2 development, i.e. it is not compatible with a ROS1-ROS2 bridge. 
 
     There are thus a handful of options to consider: One would be to upgrade the ROS1 version of the robot to a version that supports the bridge, such as Melodic or Noetic. However, this would require a significant amount of work and may cause compatibility issues with the outdated software on the robot. Another option would be to use a different computer with a more recent version of ROS1 and use it as a middleware between the robot and the ROS2 navigation stack. This would allow for a more seamless integration of the two systems, but would require additional hardware and software setup and create an unneccesarily complex system. 
+    \pagebreak
 
     \subsection{Sensors}
     \subsubsection{Kinect Camera and libfreenect}
