@@ -21,9 +21,16 @@
 
 \newcommand{\commentout}[1]{}
 \newif\ifshowadi
-\showaditrue% Set to \showaditrue to display notes
+\showaditrue% Set to \showaditrue to display comments on extending thesis
 
 \newcommand{\adi}[1]{\ifshowadi\textcolor{red}{#1}\fi}
+
+\newif\ifshownotes
+\shownotestrue% Set to \shownotestrue to display notes
+
+\newcommand{\notes}[1]{\ifshownotes\textcolor{blue}{#1}\fi}
+
+
 
 
 %%%%%%%%%%%%
@@ -242,9 +249,13 @@
 
     \subsection{Battery Replacement}
 
-    \adi{
-how the new batteries were obtained, tested and recharged,
-}
+    \notes{
+    Here are some good web pages about the Slealed Lead Acid (SLA) batteries:
+https://batterymasters.co.uk/blog/post/How%20Do%20Sealed%20Lead%20Acid%20Batteries%20Work
+and
+https://www.power-sonic.com/blog/how-to-charge-a-lead-acid-battery/
+and
+https://www.powerstream.com/SLA.htm}
 
     As previously mentioned, the YouBot came with three 24V SLA batteries. Two of these were the original batteries included with the YouBot, and one was a makeshift battery put together by Vesa in 2019. All three batteries were unusable. This section thus documents the technology behind the SLA batteries, the testing of the original batteries, replacing and testing a new battery, and future battery options. 
 
@@ -262,16 +273,17 @@ how the new batteries were obtained, tested and recharged,
 
     To confirm the degradation of the original batteries, we decided to test them using a multimeter. The two original batteries were completely dead, and did not show any voltage when connected to the multimeter. The makeshift battery showed some voltage, but it was far too low to be usable out the gate. This battery was put together using two 12V SLA batteries, where each battery was individually connected to the 4-pin XLR connector. The YouBot internally connects them in series to create a 24V battery.   
     
-    Vesa attempted to revive this battery through desulphation, where a higher-than-recommended voltage (in this case, ) is applied to the battery to force current through the hardened sulphate layers and dissolve them. 
+    Vesa attempted to revive this battery through desulphation, where a higher-than-recommended voltage (in this case, 30V) is applied to the battery to force current through the hardened sulphate layers and dissolve them. 
 
     This seemed initially promising: the battery was accepting a charge and its voltage was increasing. However, this was only temporary, as the battery quickly lost voltage again after charging, suggesting that the sulphation was very severe. While some surface conductivity was perhaps restored, the effective area of the electrode plates was still very small, resulting in a very low capacity. As such, the battery was not usable for our purposes.  
 
     \subsubsection{Replacing batteries}
 
-    
+    \adi{maybe here we can link to the specific batteries used? the dimensions would be neat as well...}
 
-    This involved combining two lead-acid batteries that we bought from Vantaa using sticky tape and then attaching them to our XLR 4-pin connector. While the battery was quite quick and dirty, it works well for our purposes. We didn't bother to even hermetically seal it since I'm probably the only use going to be using the thing anyway. 
- 
+    We decided to remake the makeshift battery using two new 12V SLA batteries of the same dimensions. While the previous batteries were Bitelma batteries, we bought some from Leader this time. These batteries were 12V 5.4Ah batteries. We tested them using a multimeter and used a car charger to charge them overnight. 
+    
+    The old batteries were removed from their casing and all relevant connections and pieces to structure the battery were removed. The new batteries were then appropriately connected to the 4-pin XLR connector \adi{maybe mention the pinout here?}, and the structural pieces were reattached with tape. After putting the casing back on, we were able to connect the new battery to the YouBot and power it on. The YouBot detects the two batteries and shows their individual voltages, confirming that the battery works. While it's not hermetically sealed, it works well for the purposes of this project. 
 
     \subsubsection{Future Battery Options}
 
@@ -279,18 +291,7 @@ how the new batteries were obtained, tested and recharged,
 
     An ideal candidate for a replacement battery techonology would be lithium-ion-phosphate (LiFePO4) batteries. These batteries are more expensive, but have multiple advantages over SLA batteries. They have longer lifespans, higher energy density, lighter weight, and are less prone to degradation. However, they would also need an integrated battery management system (BMS) to ensure safe operation, and potentially some custom hardware to fit the dimensions of the YouBot's battery compartment. 
     
-       \pagebreak
-
-    \subsubsection{balls}
-
-    Here are some good web pages about the Slealed Lead Acid (SLA) batteries:
-https://batterymasters.co.uk/blog/post/How%20Do%20Sealed%20Lead%20Acid%20Batteries%20Work
-and
-https://www.power-sonic.com/blog/how-to-charge-a-lead-acid-battery/
-and
-https://www.powerstream.com/SLA.htm
-   
-
+    \pagebreak
     \subsection{ROS1-ROS2 Bridge}
 
     One of the first tasks I decided to embark on after getting the robot up and running was to set up the ROS1-ROS2 bridge. This was the most important link within the system, as it would allow the robot to seamless access the ROS2 navigation stack and enable it to access the computational resources of a more recent computer. However, the version of ROS1 on the robot is Hydro, which is more than a decade old and predates ROS2 development, i.e. it is not compatible with a ROS1-ROS2 bridge. 
