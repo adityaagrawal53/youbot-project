@@ -31,8 +31,9 @@
 \contentsline {subsubsection}{\numberline {4.6.2}Hokuyo URG-04LX Laser Rangefinder}{13}{subsubsection.4.6.2}%
 \contentsline {section}{\numberline {5}Future Applications}{14}{section.5}%
 \contentsline {section}{\numberline {6}Reflection}{15}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Project Management and Planning}{15}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Project Goals}{15}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.1}Project Evolution}{15}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}AGILE}{15}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Final Thoughts}{15}{subsection.6.3}%
 \contentsline {section}{\numberline {A}User Manual for the KUKA YouBot}{17}{appendix.A}%
 \contentsline {subsection}{\numberline {A.1} How to turn on the YouBot }{17}{subsection.A.1}%
 \contentsline {subsection}{\numberline {A.2}.bashrc recap}{17}{subsection.A.2}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.17)  11 MAY 2025 14:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.17)  11 MAY 2025 17:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1094,7 +1094,7 @@ Overfull \hbox (0.74953pt too wide) in paragraph at lines 330--333
 [14]
 
 [15]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 362.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 366.
  (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1105,7 +1105,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 Package biblatex Warning: No driver for 'bachelorsthesis'.
-(biblatex)                Using fallback driver on input line 362.
+(biblatex)                Using fallback driver on input line 366.
 
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
@@ -1127,14 +1127,14 @@ Here is how much of TeX's memory you used:
  32003 strings out of 473536
  608811 string characters out of 5714956
  1451140 words of memory out of 5000000
- 54643 multiletter control sequences out of 15000+600000
- 615761 words of font info for 143 fonts, out of 8000000 for 9000
+ 54644 multiletter control sequences out of 15000+600000
+ 615670 words of font info for 142 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,11n,131p,1045b,1982s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (19 pages, 205624 bytes).
+Output written on main.pdf (19 pages, 206480 bytes).
 PDF statistics:
- 333 PDF objects out of 1000 (max. 8388607)
- 63 named destinations out of 1000 (max. 500000)
- 31537 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 338 PDF objects out of 1000 (max. 8388607)
+ 64 named destinations out of 1000 (max. 500000)
+ 31545 words of extra memory for PDF output out of 35830 (max. 10000000)
 
