@@ -26,7 +26,6 @@
 \newcommand{\adi}[1]{\ifshowadi\textcolor{red}{#1}\fi}
 
 
-
 %%%%%%%%%%%%
 % Document %
 %%%%%%%%%%%%
@@ -164,7 +163,7 @@
 
     However, the SLA batteries that were initially included with the YouBot were completely unusable. The lab engineer (Vesa Korhonen) had also put together a makeshift SLA battery in 2019, which had also degraded severely. 
 
-    As such, either the original batteries had to be replaced, or the robot had to be continuously used with a wired connection to the wall. This would have been a significant limitation to the project had we not been able to create a makeshift replacement battery which will be discussed in section 4.3.
+    As such, either the original batteries had to be replaced, or the robot had to be continuously used with a wired connection to the wall. This would have been a significant limitation to the project had we not been able to create a makeshift replacement battery which will be discussed in section 4.4.
     
 
     \subsection{Sensors}
@@ -210,37 +209,87 @@
 
     \adi{furthermore describe issues with software that needed to be fixed, such as the bashrc file, the networking, etc.}
 
-        \pagebreak
+    After completing an initial physical inspection of the robot, I was able to power it on using the 24V power supply. The screen flashed on and I could see options to turn the PC and motors on/off seperately. However, I was unable to connect to the onboard computer at that time due to a lack of a monitor with a VGA port, and the required peripherals.
+
+    The advisor gave me an old monitor with a VGA port, which I was able to connect to the robot. Alongside some peripherals I was able to borrow, this was sufficient to boot up the onboard computer and utilise it as any other computer. 
+
+    There was also a wireless adapter connected to the onboard computer, which I was able to use for wireless connectivity. This means I can theoretically SSH into the computer from my personal laptop, but I was unable to do so at that time due to a lack of a static IP address. 
+    
+    I was able to see the following software installed on the onboard computer: insert ROS version here and discuss the github repos that were already installed here. 
+
+    There’s a lot of files from at least 6 years ago on this, and I believe a significant portion are from like 2013 or 14. Two folders that look especially important are ros\_stacks and youbot\_driver. One file of high importance is in the desktop: the Kuka YouBot User Manual. I took a copy of that to my personal computer using a thumbdrive.  
+    
+    \adi{discuss powering up, initial software inspection, static IP issue}
+    
+    
+    \pagebreak
 
 
     \subsection{Running ROS interface}
 
     \adi{describe the process of inspecting the installed software, the drivers and wrappers, and running the original demos.}
-        \pagebreak
 
 
-    \subsection{Battery Replacement}
-
-    \adi{vesa sent me a message about this entire part. use that.}
-    The lead-acid batteries, as previously mentioned, were completely unusable. I contacted our lab engineer (Vesa Korhonen) and he was more than willing to assist me with replacing this battery, as well as testing the abilities of the others. 
-    replaced batteries, obtained laptop and peripherals
-
-    Some description of how lead batteries work maybe? 
-
-    The old lead-acid batteries had become completely unusable for the purposes of this project. Lead-acid batteries need to be used regularly (i.e. once every 6 months) to be kept in a usable state, and even then these batteries only last for a handful of years. The batteries otherwise suffer from sulphation, which is a process where lead sulphate crystals form on the plates of the battery. This process is irreversible and leads to a significant decrease in the capacity of the battery. 
-
-    There were three original batteries in the box meant for the YouBot that were more than a decade old and a makeshift one made by the lab engineer in 2019. While we were able to receive a voltage on the makeshift battery, it was far too less and the voltage quickly dropped to 0 on attempting to charge overnight. As a result, me and Vesa decided to make a quick replacement battery.
-
-    This involved combining two lead-acid batteries that we bought from Vantaa using sticky tape and then attaching them to our XLR 4-pin connector. While the battery was quite quick and dirty, it works well for our purposes. We didn't bother to even hermetically seal it since I'm probably the only use going to be using the thing anyway. 
     \pagebreak
 
-
-    \subsection{Inspecting ROS1 Navigation Stack}
+     \subsection{Inspecting ROS1 Navigation Stack}
 
     \adi{rqt, rviz, writing own packages, catkin, the various topics and nodes, etc. }
     Finding the packages
     running these packages
     \pagebreak
+
+
+    \subsection{Battery Replacement}
+
+    \adi{
+how the new batteries were obtained, tested and recharged,
+}
+
+    As previously mentioned, the YouBot came with three 24V SLA batteries. Two of these were the original batteries included with the YouBot, and one was a makeshift battery put together by Vesa in 2019. All three batteries were unusable. This section thus documents the technology behind the SLA batteries, the testing of the original batteries, replacing and testing a new battery, and future battery options. 
+
+    \subsubsection{SLA Battery Overview}
+
+    Sealed lead-acid (SLA) batteries operate based on a reversible chemical reaction between lead plates, lead dioxide and sulfuric acid electrolyte. When the battery discharges, the substances react to form lead sulfate and water, releasing electrical energy. During charging, this reaction is reversed.
+
+    These batteries are quite simple, robust, inexpensive and safe to use, indicating the reason for use in this scenario. However, they require some maintainence, and should undergo full discharge and charge cycles regularly to keep them in a good state. If they are not used regularly, they can suffer from sulphation, where lead sulfate crystals gradually form on the plates of the battery. This process is irreversible and permanently impairs the battery's capabilities. Cheaper SLA batteries are more prone to this issue due to lower quality materials, and one may only expect a maximum lifespan of 3-5 years from them. 
+
+    SLA batteries are furthermore sealed and contain one-way valves to prevent internal pressure buildup due to production of hydrogen and oxygen gas. Normally these gases recombine back into water, but overcharging can force gas release, leading in gradual water loss. 
+
+    The recommended voltage for charging SLA batteries is 2.3 volts per cell (2V), or 13.8V for a 6-cell (12V) battery, or 27.6V for a 12-cell (24V) battery. Charging at a lower voltage (i.e. 2V per cell) will not fill up the battery completely, and increase the risk of sulphation, since the lead sulfate crystals will not be fully converted back into active materials. 
+
+    \subsubsection{Testing original batteries}
+
+    To confirm the degradation of the original batteries, we decided to test them using a multimeter. The two original batteries were completely dead, and did not show any voltage when connected to the multimeter. The makeshift battery showed some voltage, but it was far too low to be usable out the gate. This battery was put together using two 12V SLA batteries, where each battery was individually connected to the 4-pin XLR connector. The YouBot internally connects them in series to create a 24V battery.   
+    
+    Vesa attempted to revive this battery through desulphation, where a higher-than-recommended voltage (in this case, ) is applied to the battery to force current through the hardened sulphate layers and dissolve them. 
+
+    This seemed initially promising: the battery was accepting a charge and its voltage was increasing. However, this was only temporary, as the battery quickly lost voltage again after charging, suggesting that the sulphation was very severe. While some surface conductivity was perhaps restored, the effective area of the electrode plates was still very small, resulting in a very low capacity. As such, the battery was not usable for our purposes.  
+
+    \subsubsection{Replacing batteries}
+
+    
+
+    This involved combining two lead-acid batteries that we bought from Vantaa using sticky tape and then attaching them to our XLR 4-pin connector. While the battery was quite quick and dirty, it works well for our purposes. We didn't bother to even hermetically seal it since I'm probably the only use going to be using the thing anyway. 
+ 
+
+    \subsubsection{Future Battery Options}
+
+    While we have replaced the SLA batteries with a makeshift one at a rather inexpensive cost, these batteries will not last long and will be prone to the same issues as the original batteries. 
+
+    An ideal candidate for a replacement battery techonology would be lithium-ion-phosphate (LiFePO4) batteries. These batteries are more expensive, but have multiple advantages over SLA batteries. They have longer lifespans, higher energy density, lighter weight, and are less prone to degradation. However, they would also need an integrated battery management system (BMS) to ensure safe operation, and potentially some custom hardware to fit the dimensions of the YouBot's battery compartment. 
+    
+       \pagebreak
+
+    \subsubsection{balls}
+
+    Here are some good web pages about the Slealed Lead Acid (SLA) batteries:
+https://batterymasters.co.uk/blog/post/How%20Do%20Sealed%20Lead%20Acid%20Batteries%20Work
+and
+https://www.power-sonic.com/blog/how-to-charge-a-lead-acid-battery/
+and
+https://www.powerstream.com/SLA.htm
+   
 
     \subsection{ROS1-ROS2 Bridge}
 
