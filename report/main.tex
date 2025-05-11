@@ -98,11 +98,11 @@
 
     \subsection{About the Hardware}
 
-    The YouBot is a mobile robotic platform developed by German automation company KUKA. First introduced in the early 2010s \adi{[cite]}, it was primarily designed for research and educational purposes in the field of robotics. To further this purpose, a significant portion of software used on the YouBot is open-source and available on GitHub \adi{[cite]}. 
+    The YouBot is a mobile robotic platform developed by German automation company KUKA. First introduced in the early 2010s \notes{[cite]}, it was primarily designed for research and educational purposes in the field of robotics. To further this purpose, a significant portion of software used on the YouBot is open-source and available on GitHub \notes{[cite]}. 
 
-    The YouBot typically consists of two main parts: a mobile base and a robotic arm. The mobile base is equipped with four omnidirectional mecanum wheels and motors for movement, alongside an onboard computer for processing and control. This onboard computer uses Ubuntu and ROS1 with conveninently provided drivers and wrappers, allowing for smooth software integration as well. The robotic arm has 5 degrees of freedom (DOF) and a two-finger gripper \adi{[cite]}, allowing it to potentially perform a variety of tasks through the onboard computer. Since our project involves only the mobile base, we will not be discussing the arm in detail.
+    The YouBot typically consists of two main parts: a mobile base and a robotic arm. The mobile base is equipped with four omnidirectional mecanum wheels and motors for movement, alongside an onboard computer for processing and control. This onboard computer uses Ubuntu and ROS1 with conveninently provided drivers and wrappers, allowing for smooth software integration as well. The robotic arm has 5 degrees of freedom (DOF) and a two-finger gripper \notes{[cite]}, allowing it to potentially perform a variety of tasks through the onboard computer. Since our project involves only the mobile base, we will not be discussing the arm in detail.
 
-    The YouBot was also equipped with a variety of sensors when I received it, including a Kinect v1 camera \adi{[cite]} and a functioning Hokuyo URG-04LX laser rangefinder \adi{[cite]}. The Kinect camera module contains a infrared depth camera and RGB camera. This combined with its high availability and low cost made it a popular choice for navigation and perception tasks in robotics. The Hokuyo URG-04LX is a 2D laser rangefinder that was commonly used in robotics research as well, due to its compact design and high-resolution distance measurements. 
+    The YouBot was also equipped with a variety of sensors when I received it, including a Kinect v1 camera \notes{[cite]} and a functioning Hokuyo URG-04LX laser rangefinder \notes{[cite]}. The Kinect camera module contains a infrared depth camera and RGB camera. This combined with its high availability and low cost made it a popular choice for navigation and perception tasks in robotics. The Hokuyo URG-04LX is a 2D laser rangefinder that was commonly used in robotics research as well, due to its compact design and high-resolution distance measurements. 
 
     This robot and the attached sensor modules are thus particularly well-suited for research within mobile robotics, particularly those pertaining to navigation and perception, as well as human-robot interaction. 
 
@@ -110,9 +110,9 @@
 
     The initial prospect for this robot was to enable it to autonomously navigate using the above-mentioned sensors. Teach \& Repeat (T\&R) was considered to be an ideal candidate to allow for the same.
 
-    Teach \& Repeat (T\&R) \adi{[cite]} is a two-phase robotic navigation method where a robot is first "taught" a path via human guidance or pre-recoded data. The sensor data captured during this phase can then be used to allow the robot to autonomously "repeat" the path later on, even in different environments.
+    Teach \& Repeat (T\&R) \notes{[cite]} is a two-phase robotic navigation method where a robot is first "taught" a path via human guidance or pre-recoded data. The sensor data captured during this phase can then be used to allow the robot to autonomously "repeat" the path later on, even in different environments.
 
-    T\&R only requires a single camera for a basic implementation. It is a relatively simple method to implement through the use of open-source software and libraries, such as OpenCV and ROS. Furthermore, it is robust to changes in the environment and can dynamically correct errors through the use of visual odometry. As such, it has been a very popular research topic within the field of robotics, particularly in the context of mobile robots \adi{[cite]}. Much of the work done on extending T\&R aims to improve this robustness and scalability for a variety of sensors and use-cases. 
+    T\&R only requires a single camera for a basic implementation. It is a relatively simple method to implement through the use of open-source software and libraries, such as OpenCV and ROS. Furthermore, it is robust to changes in the environment and can dynamically correct errors through the use of visual odometry. As such, it has been a very popular research topic within the field of robotics, particularly in the context of mobile robots \notes{[cite]}. Much of the work done on extending T\&R aims to improve this robustness and scalability for a variety of sensors and use-cases. 
         
     Thus, it seemed ideal for our project considering the age of the YouBot, the sensors available, and my lack of experience within the field of robotics. 
     
@@ -120,7 +120,7 @@
 
     The motivation for this project is to document the current state of the YouBot, repair and revive it to a usable state, and explore its current capabilities and limitations, as well as the potential for future applications. 
 
-    Alongside completing this project, I personally wished to gain a deeper appreciation for the worlds of navigation and perception within to robotics, as well as understand the interfaces used to operate and customize this robot. This includes understanding the ROS ecosystem, open-source software like libfreenect \adi{[cite]}, the various drivers and wrappers used to interface with the robot through Ubuntu, the bash scripting language, the networking protocols used to communicate between the onboard computer, the sensors as well as external computers, and the hardware components of the robot itself. 
+    Alongside completing this project, I personally wished to gain a deeper appreciation for the worlds of navigation and perception within to robotics, as well as understand the interfaces used to operate and customize this robot. This includes understanding the ROS ecosystem, open-source software like libfreenect \notes{[cite]}, the various drivers and wrappers used to interface with the robot through Ubuntu, the bash scripting language, the networking protocols used to communicate between the onboard computer, the sensors as well as external computers, and the hardware components of the robot itself. 
 
     There were significant learnings made in terms of project management and planning as well, as this project was a significant departure from any other course I have taken in the past. The open-ended nature of the project and the lack of clear goals made it difficult to stay motivated at times, but it also allowed for a more free-form exploration of the robot's capabilities and limitations.
         
@@ -135,7 +135,7 @@
 
     \subsection{Robot Base Overview}
 
-    \adi{initial inspection\\}
+    \notes{initial inspection\\}
 
 
     The robot base features a 24V power input via a 3-pin XLR connector, accessed through the top of the robot. In addition to this, there are two 24V 3-pin XLR output ports, indeded to power external sensors or other components such as robotic arms. On this top panel, one can also find two EtherCAT ports for consistent real-time communication with motion-oriented robotics (i.e. the robotic arm), as well as a standard Ethernet port for wired interfacing with an external computer or network. 
@@ -151,12 +151,12 @@
     \subsection{Additional Hardware Components}
 
     
-    \adi{DESCRIBE THE INITIAL INSPECTION IN FULL HERE! TALK ABOUT THE PILLAR STUFF AND NUTS AND WHATNOT AS WELL!!!!}
+    \notes{DESCRIBE THE INITIAL INSPECTION IN FULL HERE! TALK ABOUT THE PILLAR STUFF AND NUTS AND WHATNOT AS WELL!!!!}
 
     \subsection{Onboard Computer Overview}
     The computer runs [this software] and ROS version []. I wasn't able to immediately boot up any tests to ensure if the robot itself was working at any stage in time. 
 
-    \adi{what ports are there? what software is on there? ubuntu? initial setup? ROS version? software?}
+    \notes{what ports are there? what software is on there? ubuntu? initial setup? ROS version? software?}
     The onboard computer is an [] with an []. 
 
     It was running Ubuntu 12.04 LTS with ROS Hydro, which is a decade-old version of the operating system and the robot operating system. This version of Ubuntu is no longer supported, and the software is outdated and not compatible with most modern software and libraries. This will be detailed in a future section.
@@ -166,7 +166,7 @@
 
     \subsection{Battery}
     
-    The mobile robot base allows for a 24V power supply through a 4-pin XLR connector. It could also be operated without using a wired cable to the wall, by using a lead-acid battery originally which had a capacity of 5Ah and gave the YouBot an approximate runtime of 90 minutes. This lead-acid battery is \adi{[dimensions here]}. This battery is also connected through a 4-pin XLR connector. While not a standard connector for power supply (4-pin XLR connectors are typically used for audio equipment), it is very robust and secure for the purposes of a mobile robot. 
+    The mobile robot base allows for a 24V power supply through a 4-pin XLR connector. It could also be operated without using a wired cable to the wall, by using a lead-acid battery originally which had a capacity of 5Ah and gave the YouBot an approximate runtime of 90 minutes. This lead-acid battery is \notes{[dimensions here]}. This battery is also connected through a 4-pin XLR connector. While not a standard connector for power supply (4-pin XLR connectors are typically used for audio equipment), it is very robust and secure for the purposes of a mobile robot. 
 
     However, the SLA batteries that were initially included with the YouBot were completely unusable. The lab engineer (Vesa Korhonen) had also put together a makeshift SLA battery in 2019, which had also degraded severely. 
 
@@ -181,7 +181,7 @@
 
     The Kinect v1 camera is a depth and RGB camera that was originally designed and sold in tandem with the XBOX 360 to enable motion tracking and gaming. Due to its low cost, high availability and ease of use, it had indirectly become a popular choice for robotics research as well.
 
-    This Kinect camera module can be used through the use of open-source software such as libfreenect \adi{[cite]} to access the data from the various sensors on the module. Furthermore, this information could be processed using the OpenCV library and then used to enable the autonomous navigation as previously described. 
+    This Kinect camera module can be used through the use of open-source software such as libfreenect \notes{[cite]} to access the data from the various sensors on the module. Furthermore, this information could be processed using the OpenCV library and then used to enable the autonomous navigation as previously described. 
 
     \subsubsection{Hokuyo URG-04LX Laser Rangefinder}
 
@@ -215,9 +215,9 @@
     \section{System Development}
     \subsection{Booting up the YouBot}
 
-    \adi{describe the booting up process here, what ports to use, how to connect to the onboard computer, etc.}
+    \notes{describe the booting up process here, what ports to use, how to connect to the onboard computer, etc.}
 
-    \adi{furthermore describe issues with software that needed to be fixed, such as the bashrc file, the networking, etc.}
+    \notes{furthermore describe issues with software that needed to be fixed, such as the bashrc file, the networking, etc.}
 
     After completing an initial physical inspection of the robot, I was able to power it on using the 24V power supply. The screen flashed on and I could see options to turn the PC and motors on/off seperately. However, I was unable to connect to the onboard computer at that time due to a lack of a monitor with a VGA port, and the required peripherals.
 
@@ -229,7 +229,7 @@
 
     There’s a lot of files from at least 6 years ago on this, and I believe a significant portion are from like 2013 or 14. Two folders that look especially important are ros\_stacks and youbot\_driver. One file of high importance is in the desktop: the Kuka YouBot User Manual. I took a copy of that to my personal computer using a thumbdrive.  
     
-    \adi{discuss powering up, initial software inspection, static IP issue}
+    \notes{discuss powering up, initial software inspection, static IP issue}
     
     
     \pagebreak
@@ -237,14 +237,14 @@
 
     \subsection{Running ROS interface}
 
-    \adi{describe the process of inspecting the installed software, the drivers and wrappers, and running the original demos.}
+    \notes{describe the process of inspecting the installed software, the drivers and wrappers, and running the original demos.}
 
 
     \pagebreak
 
      \subsection{Inspecting ROS1 Navigation Stack}
 
-    \adi{rqt, rviz, writing own packages, catkin, the various topics and nodes, etc. }
+    \notes{rqt, rviz, writing own packages, catkin, the various topics and nodes, etc. }
     Finding the packages
     running these packages
     \pagebreak
@@ -284,17 +284,22 @@ https://www.powerstream.com/SLA.htm}
 
     \subsubsection{Replacing batteries}
 
-    \adi{maybe here we can link to the specific batteries used? the dimensions would be neat as well...}
+    \notes{maybe here we can link to the specific batteries used? the dimensions would be neat as well...}
 
     We decided to remake the makeshift battery using two new 12V SLA batteries of the same dimensions. While the previous batteries were Bitelma batteries, we bought some from Leader this time. These batteries were 12V 5.4Ah batteries. We tested them using a multimeter and used a car charger to charge them overnight. 
     
-    The old batteries were removed from their casing and all relevant connections and pieces to structure the battery were removed. The new batteries were then appropriately connected to the 4-pin XLR connector \adi{maybe mention the pinout here?}, and the structural pieces were reattached with tape. After putting the casing back on, we were able to connect the new battery to the YouBot and power it on. The YouBot detects the two batteries and shows their individual voltages, confirming that the battery works. While it's not hermetically sealed, it works well for the purposes of this project. 
+    The old batteries were removed from their casing and all relevant connections and pieces to structure the battery were removed. The new batteries were then appropriately connected to the 4-pin XLR connector \notes{maybe mention the pinout here?}, and the structural pieces were reattached with tape. After putting the casing back on, we were able to connect the new battery to the YouBot and power it on. The YouBot detects the two batteries and shows their individual voltages, confirming that the battery works. While it's not hermetically sealed, it works well for the purposes of this project. 
 
     \subsubsection{Future Battery Options}
 
     While we have replaced the SLA batteries with a makeshift one at a rather inexpensive cost, these batteries will not last long and will be prone to the same issues as the original batteries. 
 
     An ideal candidate for a replacement battery techonology would be lithium-ion-phosphate (LiFePO4) batteries. These batteries are more expensive, but have multiple advantages over SLA batteries. They have longer lifespans, higher energy density, lighter weight, and are less prone to degradation. However, they would also need an integrated battery management system (BMS) to ensure safe operation, and potentially some custom hardware to fit the dimensions of the YouBot's battery compartment. 
+
+
+    \subsection{Experimental Setup for Movement and Odometry}
+
+    \notes{here, ill discuss the experimental setup for testing movement and odometry.  this should include the two experiments of moving linearly and rotating, and discuss how error is calculated. probably discuss negative feedback and PID control as well, random, percentage, consistent error, etc.}
     
     \pagebreak
     \subsection{ROS1-ROS2 Bridge}
@@ -312,14 +317,14 @@ https://www.powerstream.com/SLA.htm}
     We can use open-source software such as libfreenect to access the data from the various sensors on the module.
 
 
-    \adi{discuss the libfreenect library, how to install it, and how it could be used within ROS.}
+    \notes{discuss the libfreenect library, how to install it, and how it could be used within ROS.}
 
 
     \subsubsection{Hokuyo URG-04LX Laser Rangefinder}
 
     The Hokuyo URG-04LX is a 2D laser rangefinder that is commonly used in robotics research. It is a compact and lightweight sensor that provides high-resolution distance measurements in a 240-degree field of view. The URG-04LX is capable of measuring distances up to 4 meters with an accuracy of +/- 10 mm. It communicates with the onboard computer using a serial interface, making it easy to integrate into existing systems.
 
-    \adi{discuss installing the drivers and whatnot, and how to use it within ROS and rqt.}
+    \notes{discuss installing the drivers and whatnot, and how to use it within ROS and rqt.}
 
     \pagebreak
 
@@ -357,7 +362,7 @@ https://www.powerstream.com/SLA.htm}
 
     As disccused previously, the initial goal of this project was much more concrete and ambitious, with an ultimate aim of enabling Teach and Repeat on a decade-old robot whilst using something like ROS2 Jazzy. This was simply not feasible with the outdated software and hardware, lack of documentation, my own lack of experience, and the overall time and resource constraints for completing this project. Furthermore, this project was a significant different experience from any other course I have taken in the past.
     
-    My initial approach to project management was very linear and straighforward, with the understanding that there would be no hiccups or issues along the way. I had the following time-table in mind: \adi{maybe insert a table showcasing the plan here?} While this was initially rewarding as I made progress in individual tasks (i.e. Kinect camera, booting up computer, static IP, etc.), momentum was quickly lost when it came to integrating these tasks into a cohesive system, through the use of the ROS1-ROS2 bridge. 
+    My initial approach to project management was very linear and straighforward, with the understanding that there would be no hiccups or issues along the way. I had the following time-table in mind: \notes{maybe insert a table showcasing the plan here?} While this was initially rewarding as I made progress in individual tasks (i.e. Kinect camera, booting up computer, static IP, etc.), momentum was quickly lost when it came to integrating these tasks into a cohesive system, through the use of the ROS1-ROS2 bridge. 
 
     \subsection{AGILE}
 

@@ -25,10 +25,11 @@
 \contentsline {subsubsection}{\numberline {4.4.2}Testing original batteries}{10}{subsubsection.4.4.2}%
 \contentsline {subsubsection}{\numberline {4.4.3}Replacing batteries}{11}{subsubsection.4.4.3}%
 \contentsline {subsubsection}{\numberline {4.4.4}Future Battery Options}{11}{subsubsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.5}ROS1-ROS2 Bridge}{12}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Sensors}{13}{subsection.4.6}%
-\contentsline {subsubsection}{\numberline {4.6.1}Kinect Camera and libfreenect}{13}{subsubsection.4.6.1}%
-\contentsline {subsubsection}{\numberline {4.6.2}Hokuyo URG-04LX Laser Rangefinder}{13}{subsubsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.5}Experimental Setup for Movement and Odometry}{11}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}ROS1-ROS2 Bridge}{12}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Sensors}{13}{subsection.4.7}%
+\contentsline {subsubsection}{\numberline {4.7.1}Kinect Camera and libfreenect}{13}{subsubsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.7.2}Hokuyo URG-04LX Laser Rangefinder}{13}{subsubsection.4.7.2}%
 \contentsline {section}{\numberline {5}Future Applications}{14}{section.5}%
 \contentsline {section}{\numberline {6}Reflection}{15}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Project Evolution}{15}{subsection.6.1}%
