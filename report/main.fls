@@ -1,6 +1,6 @@
-PWD d:\OneDrive\_work\_DSD_FP\final-proj-report
+PWD d:\OneDrive\_work\_DSD_FP\final-proj-report\report
 INPUT C:\Users\Adity\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT d:\OneDrive\_work\_DSD_FP\final-proj-report\main.tex
+INPUT d:\OneDrive\_work\_DSD_FP\final-proj-report\report\main.tex
 OUTPUT main.log
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
