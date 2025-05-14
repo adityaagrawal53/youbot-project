@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.17)  14 MAY 2025 14:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.17)  14 MAY 2025 19:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -990,60 +990,62 @@ Package biblatex Info: Reference segment=0 on input line 40.
 [1
 
 {C:/Users/Adity/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}] (main.toc
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3.
  (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3.
  (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 4.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 3.
  (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 4.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 3.
  (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 4.
+(Font)              <12> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 4.
+(Font)              <8> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 4.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+(Font)              <6> on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
  (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+esint on input line 4.
+LaTeX Font Info:    Trying to load font information for U+esint on input line 3.
  (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/esint\uesint.fd
 File: uesint.fd 
-))
+)
+
+[1])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
 
 
-[1]
+[2]
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.108 
+l.118 
        [1]
 
 [2]
-Overfull \hbox (134.96434pt too wide) in paragraph at lines 136--137
+Overfull \hbox (134.96434pt too wide) in paragraph at lines 146--147
 \T1/lmr/m/n/12 (-20) at-tach-ment of var-i-ous sen-sors and ac-ces-sories. [cite https://web.archive.org/web/20160613151621/http://www.youbot-
  []
 
@@ -1058,6 +1060,15 @@ Overfull \hbox (134.96434pt too wide) in paragraph at lines 136--137
 [6]
 
 [7]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 272.
+ (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
 
 [8]
 
@@ -1068,59 +1079,48 @@ Overfull \hbox (134.96434pt too wide) in paragraph at lines 136--137
 [11]
 
 [12]
-
-[13]
-Overfull \hbox (167.70079pt too wide) in paragraph at lines 309--310
+Overfull \hbox (167.70079pt too wide) in paragraph at lines 361--362
 \T1/lmr/m/n/12 (-20) Here are some good web pages about the Slealed Lead Acid (SLA) bat-ter-ies: https://batterymasters.co.uk/blog/post/Howand
  []
 
 
-Overfull \hbox (164.72807pt too wide) in paragraph at lines 309--310
+Overfull \hbox (164.72807pt too wide) in paragraph at lines 361--362
 \T1/lmr/m/n/12 (-20) https://www.power-sonic.com/blog/how-to-charge-a-lead-acid-battery/ and https://www.powerstream.com/SLA.htm[] 
  []
 
 
-Overfull \hbox (14.18257pt too wide) in paragraph at lines 327--328
+Overfull \hbox (14.18257pt too wide) in paragraph at lines 379--380
 []\T1/lmr/m/n/12 (-20) Vesa at-tempted to re-vive this bat-tery through desul-pha-tion, where a higher-than-recommended
  []
 
 
 
+[13]
+
 [14]
 
 [15]
-
-[16]
-Overfull \hbox (0.74953pt too wide) in paragraph at lines 380--383
+Overfull \hbox (0.74953pt too wide) in paragraph at lines 432--435
 []\T1/lmr/m/n/12 (-20) flexible intra-logistics hu-man aware-ness and flex-i-bil-ity seam-less human-robot ex-is-tence 
  []
 
 
 
+[16]
+
 [17]
 
-[18]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 418.
- (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-
 Package biblatex Warning: No driver for 'bachelorsthesis'.
-(biblatex)                Using fallback driver on input line 418.
+(biblatex)                Using fallback driver on input line 470.
 
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
 
 
-[19]
+[18]
 
-[20] (main.aux)
+[19] (main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
@@ -1130,17 +1130,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32012 strings out of 473536
- 608969 string characters out of 5714956
+ 32019 strings out of 473536
+ 609072 string characters out of 5714956
  1452140 words of memory out of 5000000
- 54646 multiletter control sequences out of 15000+600000
- 615761 words of font info for 143 fonts, out of 8000000 for 9000
+ 54652 multiletter control sequences out of 15000+600000
+ 615670 words of font info for 142 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,131p,1052b,1984s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,131p,1052b,2893s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (22 pages, 212763 bytes).
+Output written on main.pdf (22 pages, 217534 bytes).
 PDF statistics:
- 361 PDF objects out of 1000 (max. 8388607)
- 69 named destinations out of 1000 (max. 500000)
- 31561 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 376 PDF objects out of 1000 (max. 8388607)
+ 72 named destinations out of 1000 (max. 500000)
+ 31585 words of extra memory for PDF output out of 35830 (max. 10000000)
 

@@ -102,6 +102,16 @@
     
     As such, the initial goal was to conduct a comprehensive revival of the robot and enable it to autonomously navigate a static environment using a low-cost camera. However, the goals shifted towards enabling the deployment of the robot, and documenting the quality of its various components. This document aims to provide a comprehensive overview of the project, including the initial state of the YouBot, the software and hardware components, the challenges faced during the revival process, and the potential future applications of the robot.
 
+    \subsection{Motivation}
+
+    The motivation for this project stems from the need to explore the potential of repurposing legacy robotic hardware yadda yadda yadda
+
+    \subsection{Context}
+
+    The current robotics landscape is dominated by high-end platforms that offer advanced capabilities and performance. However, these platforms are often expensive and not accessible to researchers and students. The KUKA YouBot, on the other hand, is a low-cost platform that offers a wide range of capabilities and can be easily modified and upgraded. This makes it an ideal candidate for research and education in the field of robotics. yadda yadda yadda
+
+    \subsection{Project Objectives and Scope}
+
         
 
     \pagebreak
@@ -206,27 +216,20 @@
     
     \section{Project Overview}
 
-    The learning goals for this project involve gaining a deeper understanind of ROS1 and ROS2, the various drivers and wrappers used to interface with the robot, Linux, Bash scripting, the networking protocols used to communicate between the onboard computer and other components, and the hardware components of the robot itself. 
+    
+
+    \subsection{Technical Goals}
 
     The technical goals for this project involve the deployment and quantification of the robot's capabilities, particularly in terms of navigation and odometry. This would involve enabling the robot to move on command using custom programs, and measuring the quality of movement and odometry by measuring their error. 
 
+    
     The set of goals that have been formulated have deviated from the original goals, which were formulated based on experimenting and identifying the limitations of the robot. 
 
+    \subsection{Learning Objectives}
+    The learning goals for this project involve gaining a deeper understanind of ROS1 and ROS2, the various drivers and wrappers used to interface with the robot, Linux, Bash scripting, the networking protocols used to communicate between the onboard computer and other components, and the hardware components of the robot itself. 
 
-    \subsection{Navigation}
-    What is VT\&R?
-    \subsection{Required Hardware}
-    So for this we were expecting the robot base to work, the battery to work, and the kinect camera to work. And also I used another ubuntu machine to ensure the computing wasnt handled on the ancient piece of hardware. 
-    \subsection{Intended Setup}
+    \subsection{System Architecture}
     Our intended setup was to use the YouBot as a mobile base with the Kinect camera mounted on top of it. The onboard computer of the YouBot would only be used to control the motors and communicate with the sensors. The actual bulk of the processing would be done on a seperate computer that runs ROS2 and enables the necessary navigation and perception stacks.  
-
-    \subsection{Motivation}
-
-    The motivation for this project is to document the current state of the YouBot, repair and revive it to a usable state, and explore its current capabilities and limitations, as well as the potential for future applications. 
-
-    Alongside completing this project, I personally wished to gain a deeper appreciation for the worlds of navigation and perception within to robotics, as well as understand the interfaces used to operate and customize this robot. This includes understanding the ROS ecosystem, open-source software like libfreenect \notes{[cite]}, the various drivers and wrappers used to interface with the robot through Ubuntu, the bash scripting language, the networking protocols used to communicate between the onboard computer, the sensors as well as external computers, and the hardware components of the robot itself. 
-
-    There were significant learnings made in terms of project management and planning as well, as this project was a significant departure from any other course I have taken in the past. The open-ended nature of the project and the lack of clear goals made it difficult to stay motivated at times, but it also allowed for a more free-form exploration of the robot's capabilities and limitations.
 
     \pagebreak
 
@@ -255,10 +258,40 @@
     \subsection{Running original demos}
     \notes{describe fixing network issue, and hten running the original demos.}
 
+    An attempt was made to run the original demos upon turning on the computer. These original demos were stored here: [insert path here].
+    However, the program was unable to run due to not detecting any devices on the eth1 port. This was assumedly due to the motor drivers not being initialised, or the wrong port being used. The user manual states eth0, but the onboard computer was using eth1. This was thus a simple fix of changing the port in the config file for the youbot\_driver. 
+
+    
+    After this issue was 
+
+
+    \subsection{Enabling wireless connections}
+
+    The wireless issues was caused by a combination of no IPv4 address assigned to the onboard computer, and the onboard computer not being able to connect to the internet. This was fixed by changing the network settings in the Network Manager, and setting a static IP address for the onboard computer. This was done by editing the /etc/network/interfaces file and adding the following lines:
+
+    \begin{verbatim}
+    auto eth1
+    iface eth1 inet static
+        address
+        netmask
+        gateway
+    \end{verbatim}
+
+    Initially, the following commands were used to set the static IP address: 
+    \begin{verbatim}
+    sudo ifconfig eth1
+    \end{verbatim}
+    however, this would automatically delete itself inconsistently due to the Network Manager. This was thus changed to the above method, which would set the static IP address permanently. This is much more convenient long term. 
+
+
     \pagebreak
 
 
     \subsection{Running ROS interface}
+
+    \notes{
+        so what packages were there?
+    }
 
     \notes{describe the process of inspecting the installed software, the drivers and wrappers, and running the original demos.}
      \notes{rqt, rviz, writing own packages, catkin, the various topics and nodes, etc. }
@@ -278,6 +311,23 @@
 
     \subsection{Writing Custom Programs}
 
+    Using the ROS demo packages as a reference, I was able to write my own custom programs to control the YouBot. This involved using the ROS packages and drivers on the onboard computer to send commands to the motors through the \/cmd\_vel topic. While primitive, this allows for a simmple and intuitive way to control the robot's movement. This could be further extended to include more complex movement through python scripts and other ROS nodes and packages.
+
+    To do this, first create a new package using the catkin command. This will create a new folder in the src directory of your catkin workspace. You can then create a new python script within this folder and use the ROS packages and drivers to send commands to the motors.
+
+    remember to either source the catkin workspace everytime in a new terminal, or add the source command to your .bashrc file.
+
+    After doing this, you can create a new python script within this folder and use the ROS packages and drivers to send commands to the motors. 
+
+    
+
+    \begin{verbatim}
+    Text enclosed inside \texttt{verbatim} environment 
+    is printed directly 
+    and all \LaTeX{} commands are ignored.
+    \end{verbatim}
+
+
    
     \pagebreak
 
@@ -285,7 +335,9 @@
 
     \notes{here, ill discuss the experimental setup for testing movement and odometry.  this should include the two experiments of moving linearly and rotating, and discuss how error is calculated. probably discuss negative feedback and PID control as well, random, percentage, consistent error, etc.}
 
-    Considering the drift and error noticed whilst running my own programs, an experiment was set up for testing the movement and odometry of the YouBot. The error seems to be a combination of the robot's own motor control, as well as the odometry. It would be interesting to see if this error is systematic, random, and how it may be corrected in both cases. 
+    Taking into account the various inconsistencies noticed whilst running custom programs, some experiments were set up to test the movement and odometry of the YouBot. Since this error seems to be a combination of the robot's own motor control as well as the odometry falling out of calibration, it is important to quantify this error and understand how it may be corrected. 
+
+
 
     \notes{different speeds? proportional or fixed error? does the odometry also drift?}
 
