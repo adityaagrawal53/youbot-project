@@ -94,7 +94,25 @@
     
     \section{Introduction}
 
-    \adi{i dont really know how to extend this actually}
+     \subsection{Motivation}
+    \adi{Motivation: Why is this project worthwhile? What did I stand to gain from this? This part is forward-looking and conceptual; it establishes the intent and value proposition for the project.}
+    \notes{1.1 Motivation Why this project? Explore the potential of repurposing legacy robotic platforms like the KUKA YouBot. Address the need for longer lifespans in academic robotics hardware. Personal/academic gain: Engage with low-level robotics systems. Learn system integration, perception, and hardware/software interfacing.}
+
+    In the rapidly evolving field of robotics, expensive hardware platform often become obsolete quickly. This is not because of physical wear and tear or a lack of functionality, but rather due to rapid advancements in software and infrastructure. This is particularly true for the KUKA YouBot, which remains a robust and versatile mobile robotics platform despite being no longer supported by the manufacturer. 
+
+    This project aims to explore the potential of deploying and repuposing legacy robotic hardware, specifically the KUKA YouBot, with modern software. This would demonstrate the potential of extracting long-term value from older platforms, particularly in the context of research and education.
+
+    \adi{Potential: Highlights unique physical and design attributes of the robot that make it worth saving. Why is it distinct? Robot's inherent capabilities and versatility. Mini technical pitch.}
+    \notes{1.3 Use Case Potential: Unique attributes of the YouBot: Compact, low-profile, omnidirectional drive. Reliable base hardware and extensibility. Application areas: Autonomous indoor navigation. HRI (Human-Robot Interaction) research. Visual/LIDAR-based perception projects. Education and prototyping platforms.}
+
+    The KUKA YouBot stands out among legacy robotic platforms due to its unique combination of features and design choices. Its compact, low-profile chassis and omnidirectional mecanum wheels enable agile movement in constrained indoor environments, making it ideal for research labs and educational settings where space is limited. The robust construction and modular sensor mounting plate allow for easy integration of a variety of sensors, such as depth cameras and laser rangefinders, supporting a wide range of perception and navigation experiments.
+
+    Unlike many discontinued platforms, the YouBot's open-source software stack and ROS compatibility provide a flexible foundation for both low-level hardware interfacing and high-level algorithm development. This extensibility means the platform can be adapted for tasks ranging from autonomous navigation and mapping to human-robot interaction studies. Its reliability and versatility make it a valuable asset for prototyping, teaching, and research, even as newer platforms emerge. By reviving and updating the YouBot, this project demonstrates how legacy hardware can continue to serve as a practical and cost-effective tool for advancing robotics education and experimentation.
+
+
+    \subsection{Project Objectives and Scope}
+    \adi{Project objectives: What are the goals of the project? What do I want to achieve? This is a high-level overview of the project and its roadmap.}
+    \notes{1.4 Project Objectives and Scope: Initial objective: Full robot revival with autonomous navigation using a Kinect sensor. Revised direction: Due to constraints, focused on: Re-enabling hardware operation. Evaluating performance. Documenting the restoration process. What this document provides: Overview of the project flow. Assessment of hardware/software components. Challenges faced and how they were handled. Ideas for future directions.}
 
     This project was undertaken to explore the potential of repurposing legacy robotic hardware, specifically the KUKA YouBot, for modern use cases. Despite the age of the YouBot, it is a capable and versatile platform that can be extensively used within research and academia in domains such as navigation, perception, and human-robot interaction amongst others. Furthermore, it could be furthermore upgraded with modern sensors and software to enable integration with cutting-edge technologies. With rapid advancements in the fields of robotics and artificial intelligence becoming commonplace, it is important to explore the potential of enabling longer lifespans for legacy hardware.
 
@@ -102,21 +120,18 @@
     
     As such, the initial goal was to conduct a comprehensive revival of the robot and enable it to autonomously navigate a static environment using a low-cost camera. However, the goals shifted towards enabling the deployment of the robot, and documenting the quality of its various components. This document aims to provide a comprehensive overview of the project, including the initial state of the YouBot, the software and hardware components, the challenges faced during the revival process, and the potential future applications of the robot.
 
-    \subsection{Motivation}
-
     The motivation for this project stems from the need to explore the potential of repurposing legacy robotic hardware yadda yadda yadda
-
-    \subsection{Context}
 
     The current robotics landscape is dominated by high-end platforms that offer advanced capabilities and performance. However, these platforms are often expensive and not accessible to researchers and students. The KUKA YouBot, on the other hand, is a low-cost platform that offers a wide range of capabilities and can be easily modified and upgraded. This makes it an ideal candidate for research and education in the field of robotics. yadda yadda yadda
 
-    \subsection{Project Objectives and Scope}
 
         
 
     \pagebreak
 
     \section{Initial state of YouBot}
+
+    \adi{reality check}
 
     This section aims to document the KUKA YouBot's state as initially received. This includes the actual robot base itself, the miscellaneous peripherals and accessories that were included, the onboard computer and its software, etc., as well as the documentation currently available for the YouBot, online and otherwise. 
 
