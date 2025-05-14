@@ -94,27 +94,7 @@
     
     \section{Project Overview}
 
-    The following document aims to document the progress of my work on the KUKA YouBot over the course of the past three months within the Robots Lab under Professor Tomasz Kucner. The initial goal was to conduct a comprehensive revival of the robot and enable it to autonomously navigate a static environment using a low-cost camera. However, the goals shifted towards a more free-form exploration of the robot's capabilities and limitations. This document aims to document my progress and learnings, the challenges faced, and the conclusions drawn upon completion.
-
-    \subsection{About the Hardware}
-
-    The YouBot is a mobile robotic platform developed by German automation company KUKA. First introduced in the early 2010s \notes{[cite]}, it was primarily designed for research and educational purposes in the field of robotics. To further this purpose, a significant portion of software used on the YouBot is open-source and available on GitHub \notes{[cite]}. 
-
-    The YouBot typically consists of two main parts: a mobile base and a robotic arm. The mobile base is equipped with four omnidirectional mecanum wheels and motors for movement, alongside an onboard computer for processing and control. This onboard computer uses Ubuntu and ROS1 with conveninently provided drivers and wrappers, allowing for smooth software integration as well. The robotic arm has 5 degrees of freedom (DOF) and a two-finger gripper \notes{[cite]}, allowing it to potentially perform a variety of tasks through the onboard computer. Since our project involves only the mobile base, we will not be discussing the arm in detail.
-
-    The YouBot was also equipped with a variety of sensors when I received it, including a Kinect v1 camera \notes{[cite]} and a functioning Hokuyo URG-04LX laser rangefinder \notes{[cite]}. The Kinect camera module contains a infrared depth camera and RGB camera. This combined with its high availability and low cost made it a popular choice for navigation and perception tasks in robotics. The Hokuyo URG-04LX is a 2D laser rangefinder that was commonly used in robotics research as well, due to its compact design and high-resolution distance measurements. 
-
-    This robot and the attached sensor modules are thus particularly well-suited for research within mobile robotics, particularly those pertaining to navigation and perception, as well as human-robot interaction. 
-
-    \subsection{Teach \& Repeat}
-
-    The initial prospect for this robot was to enable it to autonomously navigate using the above-mentioned sensors. Teach \& Repeat (T\&R) was considered to be an ideal candidate to allow for the same.
-
-    Teach \& Repeat (T\&R) \notes{[cite]} is a two-phase robotic navigation method where a robot is first "taught" a path via human guidance or pre-recoded data. The sensor data captured during this phase can then be used to allow the robot to autonomously "repeat" the path later on, even in different environments.
-
-    T\&R only requires a single camera for a basic implementation. It is a relatively simple method to implement through the use of open-source software and libraries, such as OpenCV and ROS. Furthermore, it is robust to changes in the environment and can dynamically correct errors through the use of visual odometry. As such, it has been a very popular research topic within the field of robotics, particularly in the context of mobile robots \notes{[cite]}. Much of the work done on extending T\&R aims to improve this robustness and scalability for a variety of sensors and use-cases. 
-        
-    Thus, it seemed ideal for our project considering the age of the YouBot, the sensors available, and my lack of experience within the field of robotics. 
+    The initial goal was to conduct a comprehensive revival of the robot and enable it to autonomously navigate a static environment using a low-cost camera. However, the goals shifted towards a more free-form exploration of the robot's capabilities and limitations. This document aims to document my progress and learnings, the challenges faced, and the conclusions drawn upon completion.
     
     \subsection{Motivation}
 
@@ -132,6 +112,16 @@
     This section aims to document the KUKA YouBot's state as initially received. This includes the actual robot base itself, the miscellaneous peripherals and accessories that were included, the onboard computer and its software, etc., as well as the documentation currently available for the YouBot, online and otherwise. 
 
     The KUKA YouBot was procured by the university in 2014, and has not been in use since 2019. At that time, the robot was considered to be quite antiquated, and the software and hardware were already outdated. Furthermore, the relevant websites hosting documentation and information are no longer available. This situation has only worsened over the years, and the starting point for this project documentation-wise was an user manual uploaded on a third-party website marked as a draft version from 2013.
+
+    \subsection{About the Hardware}
+
+    The YouBot is a mobile robotic platform developed by German automation company KUKA. First introduced in the early 2010s \notes{[cite]}, it was primarily designed for research and educational purposes in the field of robotics. To further this purpose, a significant portion of software used on the YouBot is open-source and available on GitHub \notes{[cite]}. 
+
+    The YouBot typically consists of two main parts: a mobile base and a robotic arm. The mobile base is equipped with four omnidirectional mecanum wheels and motors for movement, alongside an onboard computer for processing and control. This onboard computer uses Ubuntu and ROS1 with conveninently provided drivers and wrappers, allowing for smooth software integration as well. The robotic arm has 5 degrees of freedom (DOF) and a two-finger gripper \notes{[cite]}, allowing it to potentially perform a variety of tasks through the onboard computer. Since our project involves only the mobile base, we will not be discussing the arm in detail.
+
+    The YouBot was also equipped with a variety of sensors when I received it, including a Kinect v1 camera \notes{[cite]} and a functioning Hokuyo URG-04LX laser rangefinder \notes{[cite]}. The Kinect camera module contains a infrared depth camera and RGB camera. This combined with its high availability and low cost made it a popular choice for navigation and perception tasks in robotics. The Hokuyo URG-04LX is a 2D laser rangefinder that was commonly used in robotics research as well, due to its compact design and high-resolution distance measurements. 
+
+    This robot and the attached sensor modules are thus particularly well-suited for research within mobile robotics, particularly those pertaining to navigation and perception, as well as human-robot interaction. 
 
     \subsection{Robot Base Overview}
 
@@ -195,6 +185,8 @@
 
     We've also taken the liberty of citing some YouBot related projects here.
 
+    flow chart? how is the software and the hardware interacting with each other? pictures, diagrams, etc. 
+
     \pagebreak
     
     \section{Project Goals}
@@ -203,12 +195,37 @@
     \adi{this section im not sure if it needs to be here anymore. discuss with advisor.}
     The initial goal was to "revive the robot to a usable state and enable it to autonomously navigate a static environment using Visual Teach \& Repeat [VT\&R]. Add in more details from the initial project plan here. 
 
+
+    learning goals
+    technical goals: deployment, measurement of the quality of the odometry 
+
+    problem of the phrasing 
+    
+    the set of goals have been formulated deviation from goals, which has been formulated from experimenting and identifying the limitations of the robot. 
+
+
+    expansion of the goals
+    setup of system
+
+    software, metholodogies
+
+
     \subsection{Navigation}
     What is VT\&R?
     \subsection{Required Hardware}
     So for this we were expecting the robot base to work, the battery to work, and the kinect camera to work. And also I used another ubuntu machine to ensure the computing wasnt handled on the ancient piece of hardware. 
     \subsection{Intended Setup}
     Our intended setup was to use the YouBot as a mobile base with the Kinect camera mounted on top of it. The onboard computer of the YouBot would only be used to control the motors and communicate with the sensors. The actual bulk of the processing would be done on a seperate computer that runs ROS2 and enables the necessary navigation and perception stacks.  
+
+    \subsection{Teach \& Repeat}
+
+    The initial prospect for this robot was to enable it to autonomously navigate using the above-mentioned sensors. Teach \& Repeat (T\&R) was considered to be an ideal candidate to allow for the same.
+
+    Teach \& Repeat (T\&R) \notes{[cite]} is a two-phase robotic navigation method where a robot is first "taught" a path via human guidance or pre-recoded data. The sensor data captured during this phase can then be used to allow the robot to autonomously "repeat" the path later on, even in different environments.
+
+    T\&R only requires a single camera for a basic implementation. It is a relatively simple method to implement through the use of open-source software and libraries, such as OpenCV and ROS. Furthermore, it is robust to changes in the environment and can dynamically correct errors through the use of visual odometry. As such, it has been a very popular research topic within the field of robotics, particularly in the context of mobile robots \notes{[cite]}. Much of the work done on extending T\&R aims to improve this robustness and scalability for a variety of sensors and use-cases. 
+        
+    Thus, it seemed ideal for our project considering the age of the YouBot, the sensors available, and my lack of experience within the field of robotics. 
 
     \pagebreak
 
@@ -219,11 +236,11 @@
 
     \notes{furthermore describe issues with software that needed to be fixed, such as the bashrc file, the networking, etc.}
 
-    After completing an initial physical inspection of the robot, I was able to power it on using the 24V power supply. The screen flashed on and I could see options to turn the PC and motors on/off seperately. However, I was unable to connect to the onboard computer at that time due to a lack of a monitor with a VGA port, and the required peripherals.
+    The initial inspection was carried out as described in section 2. Since the onboard battery was completely dead, I connected the YouBot to a 24V power supply and booted it up. On long pressing the power button, the screen flashed on and I could see the voltage input for the robot, alongside options to turn the PC and motors on/off seperately. 
 
-    The advisor gave me an old monitor with a VGA port, which I was able to connect to the robot. Alongside some peripherals I was able to borrow, this was sufficient to boot up the onboard computer and utilise it as any other computer. 
+    After connecting a VGA monitor and keyboard and mouse, I was able to boot up the onboard PC and use it as any other computer. The wireless adapter connected to this onboard computer was also functional, and I was able to connect to the internet. This meant I could theoretically SSH into the computer from my personal laptop, but I was unable to do so at that time due to a lack of a static IP address.
 
-    There was also a wireless adapter connected to the onboard computer, which I was able to use for wireless connectivity. This means I can theoretically SSH into the computer from my personal laptop, but I was unable to do so at that time due to a lack of a static IP address. 
+
     
     I was able to see the following software installed on the onboard computer: insert ROS version here and discuss the github repos that were already installed here. 
 
@@ -234,20 +251,48 @@
     
     \pagebreak
 
+    \subsection{Running original demos}
+    \notes{describe fixing network issue, and hten running the original demos.}
+
+    \pagebreak
+
 
     \subsection{Running ROS interface}
 
     \notes{describe the process of inspecting the installed software, the drivers and wrappers, and running the original demos.}
-
-
-    \pagebreak
-
-     \subsection{Inspecting ROS1 Navigation Stack}
-
-    \notes{rqt, rviz, writing own packages, catkin, the various topics and nodes, etc. }
+     \notes{rqt, rviz, writing own packages, catkin, the various topics and nodes, etc. }
     Finding the packages
     running these packages
+
     \pagebreak
+
+    \pagebreak
+    \subsection{ROS1-ROS2 Bridge}
+
+    One of the first tasks I decided to embark on after getting the robot up and running was to set up the ROS1-ROS2 bridge. This was the most important link within the system, as it would allow the robot to seamless access the ROS2 navigation stack and enable it to access the computational resources of a more recent computer. However, the version of ROS1 on the robot is Hydro, which is more than a decade old and predates ROS2 development, i.e. it is not compatible with a ROS1-ROS2 bridge. 
+
+    There are thus a handful of options to consider: One would be to upgrade the ROS1 version of the robot to a version that supports the bridge, such as Melodic or Noetic. However, this would require a significant amount of work and may cause compatibility issues with the outdated software on the robot. Another option would be to use a different computer with a more recent version of ROS1 and use it as a middleware between the robot and the ROS2 navigation stack. This would allow for a more seamless integration of the two systems, but would require additional hardware and software setup and create an unneccesarily complex system. 
+
+    \pagebreak
+
+    \subsection{Writing Custom Programs}
+
+   
+    \pagebreak
+
+    \subsection{Experimental Setup for Movement and Odometry}
+
+    \notes{here, ill discuss the experimental setup for testing movement and odometry.  this should include the two experiments of moving linearly and rotating, and discuss how error is calculated. probably discuss negative feedback and PID control as well, random, percentage, consistent error, etc.}
+
+    Considering the drift and error noticed whilst running my own programs, an experiment was set up for testing the movement and odometry of the YouBot. The error seems to be a combination of the robot's own motor control, as well as the odometry. It would be interesting to see if this error is systematic, random, and how it may be corrected in both cases. 
+
+    \notes{different speeds? proportional or fixed error? does the odometry also drift?}
+
+    20 times per experiment
+    
+    
+    \pagebreak
+
 
 
     \subsection{Battery Replacement}
@@ -266,7 +311,7 @@ https://www.powerstream.com/SLA.htm}
 
     \subsubsection{SLA Battery Overview}
 
-    Sealed lead-acid (SLA) batteries operate based on a reversible chemical reaction between lead plates, lead dioxide and sulfuric acid electrolyte. When the battery discharges, the substances react to form lead sulfate and water, releasing electrical energy. During charging, this reaction is reversed.
+    Sealed lead-acid (SLA) batteries operate based on a reversible chemical reaction between lead plates, lead dioxide and sulfuric acid electrolyte. When the battery discharges, the substances react to form lead sultfate and water, releasing electrical energy. During charging, this reaction is reversed.
 
     These batteries are quite simple, robust, inexpensive and safe to use, indicating the reason for use in this scenario. However, they require some maintainence, and should undergo full discharge and charge cycles regularly to keep them in a good state. If they are not used regularly, they can suffer from sulphation, where lead sulfate crystals gradually form on the plates of the battery. This process is irreversible and permanently impairs the battery's capabilities. Cheaper SLA batteries are more prone to this issue due to lower quality materials, and one may only expect a maximum lifespan of 3-5 years from them. 
 
@@ -297,18 +342,7 @@ https://www.powerstream.com/SLA.htm}
     An ideal candidate for a replacement battery techonology would be lithium-ion-phosphate (LiFePO4) batteries. These batteries are more expensive, but have multiple advantages over SLA batteries. They have longer lifespans, higher energy density, lighter weight, and are less prone to degradation. However, they would also need an integrated battery management system (BMS) to ensure safe operation, and potentially some custom hardware to fit the dimensions of the YouBot's battery compartment. 
 
 
-    \subsection{Experimental Setup for Movement and Odometry}
-
-    \notes{here, ill discuss the experimental setup for testing movement and odometry.  this should include the two experiments of moving linearly and rotating, and discuss how error is calculated. probably discuss negative feedback and PID control as well, random, percentage, consistent error, etc.}
     
-    \pagebreak
-    \subsection{ROS1-ROS2 Bridge}
-
-    One of the first tasks I decided to embark on after getting the robot up and running was to set up the ROS1-ROS2 bridge. This was the most important link within the system, as it would allow the robot to seamless access the ROS2 navigation stack and enable it to access the computational resources of a more recent computer. However, the version of ROS1 on the robot is Hydro, which is more than a decade old and predates ROS2 development, i.e. it is not compatible with a ROS1-ROS2 bridge. 
-
-    There are thus a handful of options to consider: One would be to upgrade the ROS1 version of the robot to a version that supports the bridge, such as Melodic or Noetic. However, this would require a significant amount of work and may cause compatibility issues with the outdated software on the robot. Another option would be to use a different computer with a more recent version of ROS1 and use it as a middleware between the robot and the ROS2 navigation stack. This would allow for a more seamless integration of the two systems, but would require additional hardware and software setup and create an unneccesarily complex system. 
-    \pagebreak
-
     \subsection{Sensors}
     \subsubsection{Kinect Camera and libfreenect}
 
