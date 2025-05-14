@@ -1,21 +1,21 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Motivation}{1}{subsection.1.1}%
 \contentsline {section}{\numberline {2}Initial state of YouBot}{2}{section.2}%
 \contentsline {subsection}{\numberline {2.1}About the Hardware}{2}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Robot Base Overview}{2}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Additional Hardware Components}{3}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Onboard Computer Overview}{3}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Battery}{3}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.5}Battery}{4}{subsection.2.5}%
 \contentsline {subsection}{\numberline {2.6}Sensors}{4}{subsection.2.6}%
 \contentsline {subsubsection}{\numberline {2.6.1}Kinect}{4}{subsubsection.2.6.1}%
 \contentsline {subsubsection}{\numberline {2.6.2}Hokuyo URG-04LX Laser Rangefinder}{4}{subsubsection.2.6.2}%
 \contentsline {subsection}{\numberline {2.7}Documentation}{4}{subsection.2.7}%
-\contentsline {section}{\numberline {3}Project Motivation}{6}{section.3}%
+\contentsline {subsection}{\numberline {2.8}Initial Project Goals}{5}{subsection.2.8}%
+\contentsline {section}{\numberline {3}Project Overview}{6}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Navigation}{6}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Required Hardware}{6}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Intended Setup}{6}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Teach \& Repeat}{6}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.4}Motivation}{6}{subsection.3.4}%
 \contentsline {section}{\numberline {4}System Development}{8}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Booting up the YouBot}{8}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Running original demos}{9}{subsection.4.2}%
