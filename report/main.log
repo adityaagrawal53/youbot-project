@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.17)  14 MAY 2025 12:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.17)  14 MAY 2025 13:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1039,11 +1039,11 @@ File: uesint.fd
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.109 
+l.113 
        [1]
 
 [2]
-Overfull \hbox (134.96434pt too wide) in paragraph at lines 137--138
+Overfull \hbox (134.96434pt too wide) in paragraph at lines 141--142
 \T1/lmr/m/n/12 (-20) at-tach-ment of var-i-ous sen-sors and ac-ces-sories. [cite https://web.archive.org/web/20160613151621/http://www.youbot-
  []
 
@@ -1070,17 +1070,17 @@ Overfull \hbox (134.96434pt too wide) in paragraph at lines 137--138
 [12]
 
 [13]
-Overfull \hbox (167.70079pt too wide) in paragraph at lines 308--309
+Overfull \hbox (167.70079pt too wide) in paragraph at lines 312--313
 \T1/lmr/m/n/12 (-20) Here are some good web pages about the Slealed Lead Acid (SLA) bat-ter-ies: https://batterymasters.co.uk/blog/post/Howand
  []
 
 
-Overfull \hbox (164.72807pt too wide) in paragraph at lines 308--309
+Overfull \hbox (164.72807pt too wide) in paragraph at lines 312--313
 \T1/lmr/m/n/12 (-20) https://www.power-sonic.com/blog/how-to-charge-a-lead-acid-battery/ and https://www.powerstream.com/SLA.htm[] 
  []
 
 
-Overfull \hbox (14.18257pt too wide) in paragraph at lines 326--327
+Overfull \hbox (14.18257pt too wide) in paragraph at lines 330--331
 []\T1/lmr/m/n/12 (-20) Vesa at-tempted to re-vive this bat-tery through desul-pha-tion, where a higher-than-recommended
  []
 
@@ -1091,7 +1091,7 @@ Overfull \hbox (14.18257pt too wide) in paragraph at lines 326--327
 [15]
 
 [16]
-Overfull \hbox (0.74953pt too wide) in paragraph at lines 379--382
+Overfull \hbox (0.74953pt too wide) in paragraph at lines 383--386
 []\T1/lmr/m/n/12 (-20) flexible intra-logistics hu-man aware-ness and flex-i-bil-ity seam-less human-robot ex-is-tence 
  []
 
@@ -1100,7 +1100,7 @@ Overfull \hbox (0.74953pt too wide) in paragraph at lines 379--382
 [17]
 
 [18]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 417.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 421.
  (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1111,7 +1111,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 Package biblatex Warning: No driver for 'bachelorsthesis'.
-(biblatex)                Using fallback driver on input line 417.
+(biblatex)                Using fallback driver on input line 421.
 
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
@@ -1138,7 +1138,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  84i,11n,131p,1052b,1982s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (22 pages, 211478 bytes).
+Output written on main.pdf (22 pages, 212091 bytes).
 PDF statistics:
  361 PDF objects out of 1000 (max. 8388607)
  69 named destinations out of 1000 (max. 500000)
