@@ -215,13 +215,14 @@
 
     Considering the hardware and software components of the YouBot, the initial goals of this project involves a comprehensive revival of the robot and the enabling of autonomous navigation using the Kinect camera. This would involve the following steps:
 
-    Teach \& Repeat (T\&R) was considered to be an ideal candidate to allow for the same.
-
-    Teach \& Repeat (T\&R) \notes{[cite]} is a two-phase robotic navigation method where a robot is first "taught" a path via human guidance or pre-recoded data. The sensor data captured during this phase can then be used to allow the robot to autonomously "repeat" the path later on, even in different environments.
+    Teach \& Repeat (T\&R) was considered to be an ideal candidate to allow for the same. This\notes{[cite]} is a two-phase robotic navigation method where a robot is first "taught" a path via human guidance or pre-recoded data. The sensor data captured during this phase can then be used to allow the robot to autonomously "repeat" the path later on, even in different environments.
 
     T\&R only requires a single camera for a basic implementation. It is a relatively simple method to implement through the use of open-source software and libraries, such as OpenCV and ROS. Furthermore, it is robust to changes in the environment and can dynamically correct errors through the use of visual odometry. As such, it has been a very popular research topic within the field of robotics, particularly in the context of mobile robots \notes{[cite]}. Much of the work done on extending T\&R aims to improve this robustness and scalability for a variety of sensors and use-cases. 
 
     some sort of flow diagram showing how everything would be connected, the ros stack would look like.
+
+
+    However, considering the age of the YouBot and the software, it was realised that this was not feasible. We will be discussing our new goals in the next section. 
 
 
 
@@ -277,7 +278,7 @@
     However, the program was unable to run due to not detecting any devices on the eth1 port. This was assumedly due to the motor drivers not being initialised, or the wrong port being used. The user manual states eth0, but the onboard computer was using eth1. This was thus a simple fix of changing the port in the config file for the youbot\_driver. 
 
     
-    After this issue was 
+    After this issue was fixed, you can turn the motors on using that button on the screen. running the demo using the following command then allows you to access this thing through the terminal. it works to do shit.
 
 
     \subsection{Enabling wireless connections}
@@ -309,9 +310,21 @@
     }
 
     \notes{describe the process of inspecting the installed software, the drivers and wrappers, and running the original demos.}
-     \notes{rqt, rviz, writing own packages, catkin, the various topics and nodes, etc. }
+     \notes{rqt, rviz, the various topics and nodes, etc. }
     Finding the packages
     running these packages
+
+    I had to find these packages by running history and then going through the bash history. I was able to find some relevant packages and then use them to run my shit. I also found some youbot\_driver to do this but i found it more convenient to do sudo bash this another youbot\_Driver because it was visible much more easily on the home system. 
+
+    The demos through ROS allowed me to inspect many things within ROS as well, like the nodes,
+
+    list nodes here and their purposes.
+
+    the topics,
+
+    list that here,
+
+    discuss rqt and rviz here
 
     \pagebreak
 
