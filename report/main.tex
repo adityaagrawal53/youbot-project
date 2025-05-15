@@ -104,6 +104,10 @@
     
     Thus, this project aims to explore the potential of deploying and repurposting legacy robotic hardware like the KUKA YouBot within the current landscape of robotics. By doing so, we can demonstrate the potential of long-term viability of older platforms whilst allowing for smooth integration with other systems. 
 
+    \subsection{Project Overview}
+
+    This project aims to document the reployment and quantitative measurement of the KUKA YouBot's capabilities, particularly in terms of navigation and odometry. 
+
 
 
     %\adi{Potential: Highlights unique physical and design attributes of the robot that make it worth saving. Why is it distinct? Robot's inherent capabilities and versatility. Mini technical pitch.}
@@ -128,23 +132,17 @@
 
     \section{Initial state of YouBot}
 
-    \adi{reality check}
+    \adi{Needed: pictures of everything, flow chart diagram of the system, etc.}
 
-    This section aims to document the KUKA YouBot's state as initially received. This includes the actual robot base itself, the miscellaneous peripherals and accessories that were included, the onboard computer and its software, etc., as well as the documentation currently available for the YouBot, online and otherwise. 
-
-    The KUKA YouBot was procured by the university in 2014, and has not been in use since 2019. At that time, the robot was considered to be quite antiquated, and the software and hardware were already outdated. Furthermore, the relevant websites hosting documentation and information are no longer available. This situation has only worsened over the years, and the starting point for this project documentation-wise was an user manual uploaded on a third-party website marked as a draft version from 2013.
+    The KUKA YouBot was procured by the university in 2014, and has not been in use since 2019. At that time, the robot was considered to be quite antiquated, and the software and hardware were already outdated. Furthermore, the relevant websites hosting documentation and information are no longer available. This situation has only worsened over the years, and the starting point for this project through was an user manual uploaded on a third-party website marked as a draft version from 2013. 
 
     \subsection{About the Hardware}
 
     The YouBot is a mobile robotic platform developed by German automation company KUKA. First introduced in the early 2010s \notes{[cite]}, it was primarily designed for research and educational purposes in the field of robotics. To further this purpose, a significant portion of software used on the YouBot is open-source and available on GitHub \notes{[cite]}. 
 
-    The YouBot typically consists of two main parts: a mobile base and a robotic arm. The mobile base is equipped with four omnidirectional mecanum wheels and motors for movement, alongside an onboard computer for processing and control. This onboard computer uses Ubuntu and ROS1 with conveninently provided drivers and wrappers, allowing for smooth software integration as well. The robotic arm has 5 degrees of freedom (DOF) and a two-finger gripper \notes{[cite]}, allowing it to potentially perform a variety of tasks through the onboard computer. Since this  project involves only the mobile base, we will not be discussing the arm in detail.
+    The YouBot typically consists of two main parts: a mobile base and a robotic arm. The mobile base is equipped with four omnidirectional mecanum wheels and motors for movement, alongside an onboard computer for processing and control. This onboard computer runs Ubuntu and ROS1, with conveniently provided drivers and wrappers, allowing for smooth software integration. The robotic arm has 5 degrees of freedom (DOF) and a two-finger gripper \notes{[cite]}, enabling it to perform a variety of tasks through the onboard computer. Since this project involves only the mobile base, we will not be discussing the arm in detail.
 
-    Unlike many discontinued platforms, the YouBot's open-source software stack and ROS compatibility provide a flexible foundation for both low-level hardware interfacing and high-level algorithm development. This extensibility means the platform can be adapted for tasks ranging from autonomous navigation and mapping to human-robot interaction studies. Its reliability and versatility make it a valuable asset for prototyping, teaching, and research, even as newer platforms emerge. By reviving and updating the YouBot, this project demonstrates how legacy hardware can continue to serve as a practical and cost-effective tool for advancing robotics education and experimentation.
-
-    The YouBot was also equipped with a variety of sensors when I received it, including a Kinect v1 camera \notes{[cite]} and a functioning Hokuyo URG-04LX laser rangefinder \notes{[cite]}. The Kinect camera module contains a infrared depth camera and RGB camera. This combined with its high availability and low cost made it a popular choice for navigation and perception tasks in robotics. The Hokuyo URG-04LX is a 2D laser rangefinder that was commonly used in robotics research as well, due to its compact design and high-resolution distance measurements. 
-
-    This robot and the attached sensor modules are thus particularly well-suited for research within mobile robotics, particularly those pertaining to navigation and perception, as well as human-robot interaction. 
+    The YouBot's open-source software stack and ROS compatibility provide a flexible foundation for both low-level hardware interfacing and high-level algorithm development. This robot and the attached sensor modules are thus particularly well-suited for research within mobile robotics, particularly those pertaining to navigation and perception, as well as human-robot interaction. 
 
     \subsection{Robot Base Overview}
 
@@ -159,7 +157,7 @@
 
     The attached top panel is a sensor and mounting plate, designed to allow for the convenient attachment of various sensors and accessories. [cite https://web.archive.org/web/20160613151621/http://www.youbot-store.com/accessories/mounting-and-sensor-plate]
 
-    The robot base is also equipped with a slot for a sealed lead-acid battery (SLA), which can be used to power the robot when not connected to a wall outlet. The battery can connect to the robot via a 4-pin XLR connector.  
+    The robot base is also equipped with a slot for a sealed lead-acid battery (SLA), which can be used to power the robot when not connected to a wall outlet. The battery can connect to the robot via a 4-pin XLR connector. 
 
     \subsection{Additional Hardware Components}
 
@@ -212,36 +210,60 @@
 
     \subsection{Initial Project Goals}
 
-    Considering the hardware and software components of the YouBot, the initial goals of this project involves a comprehensive revival of the robot and the enabling of autonomous navigation using the Kinect camera. This would involve the following steps:
+    Considering the hardware and software components of the YouBot, the initial goals of this project involves a comprehensive revival of the robot and the enabling of autonomous navigation using the Kinect camera. 
 
-    Teach \& Repeat (T\&R) was considered to be an ideal candidate to allow for the same. This\notes{[cite]} is a two-phase robotic navigation method where a robot is first "taught" a path via human guidance or pre-recoded data. The sensor data captured during this phase can then be used to allow the robot to autonomously "repeat" the path later on, even in different environments.
+    Teach \& Repeat (T\&R) was considered to be an ideal candidate to allow for the autonomous navigation. This\notes{[cite]} is a two-phase robotic navigation method where a robot is first "taught" a path via human guidance or pre-recoded data. The sensor data captured during this phase can then be used to allow the robot to autonomously "repeat" the path later on, even in different environments.
 
     T\&R only requires a single camera for a basic implementation. It is a relatively simple method to implement through the use of open-source software and libraries, such as OpenCV and ROS. Furthermore, it is robust to changes in the environment and can dynamically correct errors through the use of visual odometry. As such, it has been a very popular research topic within the field of robotics, particularly in the context of mobile robots \notes{[cite]}. Much of the work done on extending T\&R aims to improve this robustness and scalability for a variety of sensors and use-cases. 
 
-    some sort of flow diagram showing how everything would be connected, the ros stack would look like.
+    \notes{some sort of flow diagram showing how everything would be connected, the ros stack would look like.}
 
+    Here, figure [] shows an example of how the architecture for this system would have been implemented. This would have involved a wired connection to an external computer running ROS2 Jazzy and directly connected to the Kinect camera mounted on top of the YouBot. The onboard computer would have been used to control the motors and communicate with the sensors, while the external computer would have handled the processing and navigation tasks. The onboard computer and external computer would commuicate through a ROS1-ROS2 bridge, allowing for seamless integration of the two systems. 
 
-    However, considering the age of the YouBot and the software, it was realised that this was not feasible. We will be discussing our new goals in the next section. 
-
-
-
-    flow chart? how is the software and the hardware interacting with each other? pictures, diagrams, etc. 
+    However, considering the age of the YouBot, lack of personal knowledge regarding robotics, as well as incompatible software, it was realised that this was not feasible. We will be discussing our new goals in the next section. 
 
     \pagebreak
     
     \section{Project Overview}
 
-    
-
     \subsection{Technical Goals}
 
-    The technical goals for this project involve the deployment and quantification of the robot's capabilities, particularly in terms of navigation and odometry. This would involve enabling the robot to move on command using custom programs, and measuring the quality of movement and odometry by measuring their error. 
-
+    The technical goals for this project involve the deployment and quantification of the robot's capabilities, particularly in terms of navigation and odometry. This would involve the following goals: 
+    \begin{itemize}
+        \item Inspecting the initial physical state of the YouBot
+        \item Enabling the robot start up
+        \item Enabling the running of the original demos
+        \item Enabling the running of the ROS interface
+        \item Enabling the ROS1-ROS2 bridge
+        \item Enabling wireless connections to external computers using SSH and Ethernet
+        \item Writing custom programs to control the YouBot
+        \item Testing the movement and odometry of the YouBot
+        \item Measuring the quality of movement and odometry by measuring their error
+        \item Replacing the current deprecated batteries with a usable battery
+        \item Documenting the revival process and potential future applications of the YouBot
+    \end{itemize}
     
     The set of goals that have been formulated have deviated from the original goals, which were formulated based on experimenting and identifying the limitations of the robot. 
 
     \subsection{Learning Objectives}
-    The learning goals for this project involve gaining a deeper understanind of ROS1 and ROS2, the various drivers and wrappers used to interface with the robot, Linux, Bash scripting, the networking protocols used to communicate between the onboard computer and other components, and the hardware components of the robot itself. 
+
+    The learning objectives for this project involve the following:
+    \begin{itemize}
+        \item Develop hands-on experience in restoring and operating a legacy robot platform (KUKA YouBot)
+        \item Gain proficiency in Linux systems and environment setup for robotics development
+        \item Learn to write and use Bash scripts to automate setup, build, and deployment workflows
+        \item Understand the architecture of the Robot Operating System (ROS1 \& ROS2), and learn to configure and launch ROS-based systems
+        \item Learn to establish and manage secure communication with robotic systems using SSH and Ethernet
+        \item Write and deploy custom ROS nodes for basic motion control of the YouBot platform
+        \item Understand the principles of robot navigation and odometry, including error measurement and correction techniques
+        \item Learn methods for documenting system restoration, experimental results, and identifying directions for future development
+    \end{itemize}
+
+    
+
+    
+
+    
 
     \subsection{System Architecture}
     Our intended setup was to use the YouBot as a mobile base with the Kinect camera mounted on top of it. The onboard computer of the YouBot would only be used to control the motors and communicate with the sensors. The actual bulk of the processing would be done on a seperate computer that runs ROS2 and enables the necessary navigation and perception stacks.  
