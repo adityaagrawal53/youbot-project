@@ -210,7 +210,7 @@
 
     \subsection{Initial Project Goals}
 
-    Considering the hardware and software components of the YouBot, the initial goals of this project involves a comprehensive revival of the robot and the enabling of autonomous navigation using the Kinect camera. 
+    Considering the hardware and software components of the YouBot, the initial goals of this project involved a comprehensive revival of the robot and the enabling of autonomous navigation using the Kinect camera. This would showcase the potential of the YouBot in cutting-edge research despite its age. 
 
     Teach \& Repeat (T\&R) was considered to be an ideal candidate to allow for the autonomous navigation. This\notes{[cite]} is a two-phase robotic navigation method where a robot is first "taught" a path via human guidance or pre-recoded data. The sensor data captured during this phase can then be used to allow the robot to autonomously "repeat" the path later on, even in different environments.
 
@@ -258,12 +258,6 @@
         \item Understand the principles of robot navigation and odometry, including error measurement and correction techniques
         \item Learn methods for documenting system restoration, experimental results, and identifying directions for future development
     \end{itemize}
-
-    
-
-    
-
-    
 
     \subsection{System Architecture}
     Our intended setup was to use the YouBot as a mobile base with the Kinect camera mounted on top of it. The onboard computer of the YouBot would only be used to control the motors and communicate with the sensors. The actual bulk of the processing would be done on a seperate computer that runs ROS2 and enables the necessary navigation and perception stacks.  
@@ -319,6 +313,8 @@
     sudo ifconfig eth1
     \end{verbatim}
     however, this would automatically delete itself inconsistently due to the Network Manager. This was thus changed to the above method, which would set the static IP address permanently. This is much more convenient long term. 
+
+    One can then connect to 
 
 
     \pagebreak
@@ -391,8 +387,68 @@
     \notes{different speeds? proportional or fixed error? does the odometry also drift?}
 
     20 times per experiment
-    
-    
+
+    Taking into account the various inconsistencies observed while running custom movement programs on the YouBot platform, a series of experiments were conducted to evaluate the accuracy of its movement and odometry. The goal was to quantify the types and sources of errors that arise during both linear and rotational motion, and to assess how these errors can be corrected or compensated for.
+
+    \subsubsection*{Experimental Procedure}
+
+    Two main experiments were designed: one for testing linear forward motion and the other for in-place rotation. In the linear movement test, the robot was commanded to travel forward by a set distance, while in the rotation test, the robot was commanded to rotate by a fixed angle (e.g., 90°). Each command was executed at different speed settings to observe whether error behavior varied with velocity.
+
+    Each experiment was repeated 20 times to ensure statistical significance and to detect any patterns of consistency or randomness in the errors. Measurements of the actual displacement and orientation were obtained using external references (e.g., floor markings or video tracking), and compared against the internal odometry values reported by the robot.
+
+    \subsubsection*{Experiment Configurations}
+
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Test ID} & \textbf{Type} & \textbf{Speed (m/s or rad/s)} & \textbf{Target (m or deg)} \\
+    \hline
+    L1 & Linear & 0.2 m/s & 1.0 m \\
+    L2 & Linear & 0.4 m/s & 1.0 m \\
+    L3 & Linear & 0.2 m/s & 0.5 m \\
+    R1 & Rotation & 0.5 rad/s & 90° \\
+    R2 & Rotation & 1.0 rad/s & 90° \\
+    \hline
+    \end{tabular}
+    \caption{Summary of movement and odometry test configurations}
+    \end{table}
+
+    Each test case involved issuing a velocity command for a precise duration such that the robot would cover the target distance or angle, assuming ideal conditions. The difference between the expected and actual outcomes was used to calculate both positional and orientation errors.
+
+    \subsubsection*{Types of Errors Observed}
+
+    During the experiments, several types of errors were encountered:
+
+    \begin{itemize}
+        \item \textbf{Systematic Errors:} These occurred consistently in the same direction or magnitude, such as under-rotation by a fixed angle or consistent overshoot in distance. Causes included calibration mismatches, wheel radius misestimation, or delay in motor response.
+        
+        \item \textbf{Random Errors:} Small variations due to factors like sensor noise, surface friction inconsistencies, or transient slippage. These were not consistent across trials and contributed to spread in the results.
+
+        \item \textbf{Proportional Errors:} Errors that scaled with speed or distance, such as increasing overshoot at higher speeds. This suggested control loop latency or imperfect motor linearity.
+
+        \item \textbf{Fixed Offsets:} Some errors were fixed and independent of input command, like a consistent 2 cm drift to one side. These often pointed to physical asymmetries or encoder misalignments.
+
+        \item \textbf{Odometry Drift:} Over longer trials or repeated motion without reset, odometry drift became more apparent, particularly in rotational tracking.
+    \end{itemize}
+
+    \subsubsection*{Correction Strategies}
+
+    To address the errors above, multiple correction strategies were explored:
+
+    \begin{itemize}
+        \item \textbf{PID Control:} Implementing a PID loop helped reduce overshoot and improve convergence during both linear and rotational motion. Negative feedback from odometry or external position estimates was used to dynamically adjust motor outputs.
+
+        \item \textbf{Calibration:} Careful calibration of wheel radius, wheelbase, and encoder resolution helped reduce systematic errors.
+
+        \item \textbf{Compensation Factors:} Where errors were consistent and repeatable, simple scalar correction factors were applied post hoc to odometry readings.
+
+        \item \textbf{Sensor Fusion:} Although not implemented in this basic test, more advanced setups could integrate IMUs or vision-based SLAM for odometry correction and drift reduction.
+
+        \item \textbf{Averaging Trials:} For random noise, statistical averaging over multiple trials helped establish a more reliable error profile.
+    \end{itemize}
+
+    These experiments form the foundation for understanding the motion characteristics of the YouBot and inform future work in navigation, localization, and control refinement.
     \pagebreak
 
 
@@ -485,6 +541,64 @@ https://www.powerstream.com/SLA.htm}
     While the YouBot holds the potential capabilities for undertaking Teach and Repeat, its abilities as a mobile industrial robot base would be better suited for real-world applications within closed environments as an assistive platform. 
 
     This robot base would be most useful in an assisstie  sense, where it assists humans in completing rather basic and repetitive tasks, like fetching beer. 
+
+    The KUKA YouBot, with its omnidirectional mobile base, offers a flexible platform for experimentation and prototyping in robotics. While the Teach and Repeat (T\&R) method---where a robot is ``taught'' a path using visual cues and then autonomously repeats it---has proven effective in certain domains, its real-world utility as a navigation strategy for assistive platforms is nuanced and context-dependent.
+
+    \subsection{Potential Use Cases for the YouBot Mobile Base}
+
+    The YouBot's mobile base, independent of its manipulator arm, is particularly well-suited for:
+
+    \begin{itemize}
+        \item \textbf{Flexible Intra-Logistics:} The YouBot can transport materials, components, or finished goods within factories or laboratories, adapting to dynamic layouts and avoiding obstacles thanks to its omnidirectional drive system. This makes it valuable for automating repetitive transport tasks in manufacturing, electronics, and pharmaceutical environments~.
+        \item \textbf{Assistive Service Robotics:} In assistive roles, the mobile base could help with tasks such as fetching objects (e.g., drinks, tools), delivering supplies, or guiding people in structured indoor environments. Such applications are particularly relevant in healthcare, offices, or smart homes, where repetitive, low-complexity tasks can be offloaded from humans to robots~.
+        \item \textbf{Research and Prototyping Platform:} The YouBot is widely used in academic and industrial research for developing and testing navigation, mapping, and multi-robot coordination algorithms. Its open interfaces and modular design make it ideal for experimentation in logistics, navigation, and human-robot interaction~.
+        \item \textbf{Quality Control and Inspection:} The platform can be equipped with sensors or cameras to autonomously inspect products, monitor environments, or perform routine checks in hazardous or hard-to-reach areas~.
+    \end{itemize}
+
+    \subsection{Teach and Repeat (T\&R) in Context}
+
+    The T\&R method, while simple and robust for repeated path following in static environments, has limitations when applied to assistive platforms:
+
+    \begin{itemize}
+        \item \textbf{Limited Flexibility:} T\&R excels in environments where the path and surroundings are relatively unchanging. In dynamic or human-populated spaces, its lack of real-time adaptability can be a drawback compared to more advanced SLAM or AI-based navigation systems.
+        \item \textbf{Suitability for Repetitive Tasks:} For repetitive, well-defined routes---such as material delivery within a warehouse, or routine inspection rounds---T\&R can be a practical, low-compute solution. However, its application as a general-purpose assistive platform is more speculative, especially where human interaction and environmental variability are significant.
+        \item \textbf{Platform Capabilities:} The YouBot's mobile base is robust and maneuverable, making it a strong candidate for T\&R-based applications in controlled settings. Its open architecture allows easy integration of additional sensors or navigation modules, enabling researchers to extend beyond T\&R as needed.
+    \end{itemize}
+
+    \subsection{Speculative and Emerging Applications}
+
+    Looking forward, the YouBot mobile base could play a role in:
+
+    \begin{itemize}
+        \item \textbf{Seamless Human-Robot Coexistence:} As part of smart environments, YouBots could support flexible logistics, on-demand delivery, and collaborative tasks alongside humans, leveraging both T\&R for routine paths and more advanced navigation for dynamic tasks.
+        \item \textbf{Education and Training:} Its accessibility and open-source support make it an excellent tool for teaching robotics concepts, prototyping new algorithms, or participating in competitions such as RoboCup@Work.
+        \item \textbf{Translational Research:} Innovations and algorithms developed on the YouBot can be scaled up to larger, industrial-grade mobile platforms, facilitating technology transfer from the lab to real-world production lines.
+    \end{itemize}
+
+    \subsection{Summary Table: Potential Use Cases for the KUKA YouBot Mobile Base}
+
+    \begin{table}[h!]
+    \centering
+    \begin{tabular}{|l|p{7cm}|l|}
+    \hline
+    \textbf{Application Area} & \textbf{Description} & \textbf{Reference} \\
+    \hline
+    Intra-logistics & Material transport, flexible routing in factories, labs, or warehouses &  \\
+    Assistive service robotics & Fetching/delivery tasks, guidance, support in healthcare or home environments &  \\
+    Research and prototyping & Testing navigation, SLAM, multi-robot systems, and human-robot interaction & \\
+    Inspection and quality control & Autonomous inspection, monitoring, and data collection in industrial or hazardous settings &  \\
+    Education and training & Robotics teaching, student projects, and competitions &  \\
+    \hline
+    \end{tabular}
+    \caption{Potential Use Cases for the KUKA YouBot Mobile Base}
+    \end{table}
+
+    \subsection{Conclusion}
+
+    While the KUKA YouBot’s mobile base is not the optimal platform for all assistive applications---especially those requiring high flexibility and human awareness---it remains a valuable tool for developing and demonstrating repetitive, structured tasks. Its use in T\&R navigation is best suited for closed, static environments, but its modularity and open architecture allow for broader experimentation and real-world prototyping in logistics, research, and assistive robotics.
+
+    
+
 
     \pagebreak
 

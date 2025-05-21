@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.17)  15 MAY 2025 18:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.17)  21 MAY 2025 20:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1066,7 +1066,7 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 [7]
 
 [8]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 309.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 303.
  (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1085,48 +1085,62 @@ Package microtype Info: Loading generic protrusion settings for font family
 [12]
 
 [13]
-Overfull \hbox (167.70079pt too wide) in paragraph at lines 410--411
+
+[14]
+Overfull \hbox (167.70079pt too wide) in paragraph at lines 466--467
 \T1/lmr/m/n/12 (-20) Here are some good web pages about the Slealed Lead Acid (SLA) bat-ter-ies: https://batterymasters.co.uk/blog/post/Howand
  []
 
 
-Overfull \hbox (164.72807pt too wide) in paragraph at lines 410--411
+Overfull \hbox (164.72807pt too wide) in paragraph at lines 466--467
 \T1/lmr/m/n/12 (-20) https://www.power-sonic.com/blog/how-to-charge-a-lead-acid-battery/ and https://www.powerstream.com/SLA.htm[] 
  []
 
 
-Overfull \hbox (14.18257pt too wide) in paragraph at lines 428--429
+Overfull \hbox (14.18257pt too wide) in paragraph at lines 484--485
 []\T1/lmr/m/n/12 (-20) Vesa at-tempted to re-vive this bat-tery through desul-pha-tion, where a higher-than-recommended
  []
 
 
 
-[14]
-
 [15]
 
 [16]
-Overfull \hbox (0.74953pt too wide) in paragraph at lines 481--484
+
+[17]
+Overfull \hbox (0.74953pt too wide) in paragraph at lines 537--540
 []\T1/lmr/m/n/12 (-20) flexible intra-logistics hu-man aware-ness and flex-i-bil-ity seam-less human-robot ex-is-tence 
  []
 
 
 
-[17]
-
 [18]
+Underfull \hbox (badness 1189) in paragraph at lines 589--589
+[]|\T1/lmr/m/n/12 (+20) Autonomous in-spec-tion, mon-i-tor-ing,
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[19]
+
+[20]
+
+[21]
 
 Package biblatex Warning: No driver for 'bachelorsthesis'.
-(biblatex)                Using fallback driver on input line 519.
+(biblatex)                Using fallback driver on input line 633.
 
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
 
 
-[19]
+[22]
 
-[20] (main.aux)
+[23] (main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
@@ -1136,17 +1150,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32062 strings out of 473536
- 610150 string characters out of 5714956
- 1452140 words of memory out of 5000000
- 54686 multiletter control sequences out of 15000+600000
- 616193 words of font info for 145 fonts, out of 8000000 for 9000
+ 32107 strings out of 473536
+ 610743 string characters out of 5714956
+ 1453140 words of memory out of 5000000
+ 54707 multiletter control sequences out of 15000+600000
+ 616678 words of font info for 150 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,131p,1052b,2893s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (23 pages, 219898 bytes).
+Output written on main.pdf (26 pages, 238332 bytes).
 PDF statistics:
- 379 PDF objects out of 1000 (max. 8388607)
- 72 named destinations out of 1000 (max. 500000)
- 33625 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 427 PDF objects out of 1000 (max. 8388607)
+ 86 named destinations out of 1000 (max. 500000)
+ 33665 words of extra memory for PDF output out of 35830 (max. 10000000)
 
