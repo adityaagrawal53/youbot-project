@@ -5,7 +5,7 @@ import pandas as pd
 import os
 print(os.getcwd())
 
-df = pd.read_csv('code/linear_06_2.csv')
+df = pd.read_csv('code/linear_04_2.csv')
 data = list(df.itertuples(index=False, name=None))
 
 # Now `data` is a list of tuples, same format as before
