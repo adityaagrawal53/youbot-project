@@ -1,4 +1,4 @@
-dx2_measured, dy2_measured, dx1_measured, dx2_measured, dx_odom,dy_odom,dz_odom,dyaw_odom
+dx2_measured,dy2_measured,dx1_measured,dy1_measured,dx_odom,dy_odom,dz_odom,dyaw_odom
 -3,3,3,-5,0,0,0,0.630
 -6,10,6,-10,0,0,0,0.370
 -4,5,4,-6,0,0,0,0.551
@@ -18,4 +18,4 @@ dx2_measured, dy2_measured, dx1_measured, dx2_measured, dx_odom,dy_odom,dz_odom,
 -4,3,3,-6,-1,0,0,0.585
 -2,3,2,-3,0,0,0,0.650
 -2,3,2,-3,-1,0,0,0.623
--2,3,2,-3-1,0,0,0.658
+-2,3,2,-3,-1,0,0,0.658

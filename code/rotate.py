@@ -1,71 +1,45 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 
-# Load CSV
-df = pd.read_csv("code/rotate_45_360.csv")
+def compute_robot_pose_with_errors(df, rotation_deg):
+    theta = np.radians(rotation_deg)
 
-print(df.columns.tolist())
+    # Expected positions of the two ends after rotation
+    # Left end corresponds to +30 on x-axis before rotation
+    expected_left = np.array([30 * np.cos(theta), 30 * np.sin(theta)])   
+    # Right end corresponds to -30 on x-axis before rotation
+    expected_right = np.array([-30 * np.cos(theta), -30 * np.sin(theta)]) 
 
-# Constants
-L = 60.0  # cm distance between two points (rear and front)
-r = L / 2  # Radius of rotation (centered between the two points)
+    # Print header for output columns
+    print(f"{'Row':<5} {'Center_X':>10} {'Center_Y':>10} {'Yaw_rad':>10} {'Yaw_deg':>10} "
+          f"{'Left_X':>10} {'Left_Y':>10} {'Right_X':>10} {'Right_Y':>10}")
 
-# Estimate actual yaw from front and rear displacement
-def estimate_yaw(row):
-    # Compute displacement vector from rear and front point
-    rear = np.array([row['dx1_measured'], row['dy1_measured']])
-    front = np.array([row['dx2_measured'], row['dy2_measured']])
-    
-    # Vector difference (from rear to front)
-    measured_vec = front - rear
+    for idx, row in df.iterrows():
+        # Extract measured deviations/errors from expected points
+        error_left_x, error_left_y = row['dx1_measured'], row['dy1_measured']
+        error_right_x, error_right_y = row['dx2_measured'], row['dy2_measured']
 
-    # Original vector is [0, 60]
-    original_vec = np.array([0, 60])
-    
-    # Compute angle between the two vectors
-    dot = np.dot(original_vec, measured_vec)
-    cross = np.cross(original_vec, measured_vec)
-    
-    angle_rad = np.arctan2(cross, dot)  # Signed angle
-    return angle_rad  # radians
+        # Calculate actual measured positions by adding errors to expected positions
+        actual_left = expected_left + np.array([error_left_x, error_left_y])
+        actual_right = expected_right + np.array([error_right_x, error_right_y])
 
-# Compute expected yaw
-df['dyaw_expected'] = df.apply(estimate_yaw, axis=1)
+        # Compute robot center as midpoint between left and right ends
+        center = (actual_left + actual_right) / 2
 
-# Estimate center displacement as average of front/rear
-df['dx_expected'] = (df['dx1_measured'] + df['dx2_measured']) / 2
-df['dy_expected'] = (df['dy1_measured'] + df['dy2_measured']) / 2
+        # Calculate vector from right end to left end
+        vector_left_to_right = actual_left - actual_right
 
-# ---- PLOTS ----
+        # Compute robot yaw angle (orientation) from this vector
+        yaw_rad = np.arctan2(vector_left_to_right[1], vector_left_to_right[0])
+        if yaw_rad < 1:
+            yaw_rad += 2 * np.pi
+        yaw_deg = np.degrees(yaw_rad)
 
-# 1. dx
-plt.figure(figsize=(10, 3))
-plt.subplot(1, 3, 1)
-plt.plot(df['dx_expected'], label='Expected')
-plt.plot(df['dx_odom'], label='Odometry')
-plt.title('dx comparison')
-plt.xlabel('Trial')
-plt.ylabel('dx (cm)')
-plt.legend()
+        # Print results formatted nicely
+        print(f"{idx:<5} {center[0]:10.3f} {center[1]:10.3f} {yaw_rad:10.3f} {yaw_deg:10.2f} "
+              f"{actual_left[0]:10.3f} {actual_left[1]:10.3f} {actual_right[0]:10.3f} {actual_right[1]:10.3f}")
 
-# 2. dy
-plt.subplot(1, 3, 2)
-plt.plot(df['dy_expected'], label='Expected')
-plt.plot(df['dy_odom'], label='Odometry')
-plt.title('dy comparison')
-plt.xlabel('Trial')
-plt.ylabel('dy (cm)')
-plt.legend()
-
-# 3. dyaw
-plt.subplot(1, 3, 3)
-plt.plot(np.degrees(df['dyaw_expected']), label='Expected')
-plt.plot(np.degrees(df['dyaw_odom']), label='Odometry')
-plt.title('dyaw comparison')
-plt.xlabel('Trial')
-plt.ylabel('Yaw (°)')
-plt.legend()
-
-plt.tight_layout()
-plt.show()
+# Usage example
+df = pd.read_csv('code/rotate_75_360.csv')
+rotation_angle = 360
+compute_robot_pose_with_errors(df, rotation_angle)
