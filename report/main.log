@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.17)  28 MAY 2025 20:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.17)  28 MAY 2025 20:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1219,23 +1219,25 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 [27]
 
-[28] (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+[28]
+
+[29] (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1069.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1071.
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.95pt on input line 1069.
+(Font)              scaled to size 10.95pt on input line 1071.
  (../code/rotate_graph.py
 
-[29]
+[30]
 
-[30])
+[31])
 
-[31] (../code/linear_graph.py
+[32] (../code/linear_graph.py
 
-[32])
+[33])
 
-[33] (main.aux)
+[34] (main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
@@ -1249,17 +1251,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35737 strings out of 473536
- 676808 string characters out of 5714956
- 1757484 words of memory out of 5000000
- 57973 multiletter control sequences out of 15000+600000
+ 35742 strings out of 473536
+ 676865 string characters out of 5714956
+ 1847510 words of memory out of 5000000
+ 57975 multiletter control sequences out of 15000+600000
  634409 words of font info for 173 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,131p,1052b,2947s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,131p,1052b,2961s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb>
-Output written on main.pdf (36 pages, 342102 bytes).
+Output written on main.pdf (37 pages, 348118 bytes).
 PDF statistics:
- 845 PDF objects out of 1000 (max. 8388607)
- 346 named destinations out of 1000 (max. 500000)
- 44545 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 863 PDF objects out of 1000 (max. 8388607)
+ 349 named destinations out of 1000 (max. 500000)
+ 44561 words of extra memory for PDF output out of 51595 (max. 10000000)
 
