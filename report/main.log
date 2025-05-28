@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.17)  21 MAY 2025 20:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.17)  28 MAY 2025 19:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -856,46 +856,106 @@ Package: xparse 2024-08-16 L3 Experimental document command parser
 Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
 )) (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/comment\comment.sty
 \CommentStream=\write4
- Excluding comment 'comment'))
+ Excluding comment 'comment')) (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/csvsimple\csvsimple.sty
+Package: csvsimple 2024/09/27 v2.7.0 LaTeX CSV file processing
+) (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/csvsimple\csvsimple-legacy.sty
+Package: csvsimple-legacy 2024/09/27 version 2.7.0 LaTeX2e CSV file processing
+ (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
+\pgfutil@everybye=\toks38
+\pgfutil@tempdima=\dimen263
+\pgfutil@tempdimb=\dimen264
+) (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
+\pgfutil@abb=\box71
+) (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+)) (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks39
+\pgfkeys@temptoks=\toks40
+ (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks41
+))) (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
+Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+)
+\csv@file=\read4
+\c@csvinputline=\count496
+\c@csvrow=\count497
+\c@csvcol=\count498
+\csv@out=\write5
+) (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count499
+\lst@gtempboxa=\box72
+\lst@token=\toks42
+\lst@length=\count500
+\lst@currlwidth=\dimen265
+\lst@column=\count501
+\lst@pos=\count502
+\lst@lostspace=\dimen266
+\lst@width=\dimen267
+\lst@newlines=\count503
+\lst@lineno=\count504
+\lst@maxwidth=\dimen268
+ (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
+File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
+) (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
+\c@lstnumber=\count505
+\lst@skipnumbers=\count506
+\lst@framebox=\box73
+) (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2024/09/23 1.10c listings configuration
+))
+Package: listings 2024/09/23 1.10c (Carsten Heinz)
+ (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\inconsolata.sty
+Package: inconsolata 2019/05/17 v1.12
+ `inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe) (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+)
+\zifour@ocount=\count507
+)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
- (main.aux)
+ (main.aux
+
+LaTeX Warning: Label `lst:fullscript' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Info: Redefining \microtypecontext on input line 40.
-Package microtype Info: Applying patch `item' on input line 40.
-Package microtype Info: Applying patch `toc' on input line 40.
-Package microtype Info: Applying patch `eqnum' on input line 40.
-Package microtype Info: Applying patch `footnote' on input line 40.
-Package microtype Info: Applying patch `verbatim' on input line 40.
-LaTeX Info: Redefining \microtypesetup on input line 40.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Info: Redefining \microtypecontext on input line 64.
+Package microtype Info: Applying patch `item' on input line 64.
+Package microtype Info: Applying patch `toc' on input line 64.
+Package microtype Info: Applying patch `eqnum' on input line 64.
+Package microtype Info: Applying patch `footnote' on input line 64.
+Package microtype Info: Applying patch `verbatim' on input line 64.
+LaTeX Info: Redefining \microtypesetup on input line 64.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 40.
+LaTeX Info: Redefining \showhyphens on input line 64.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -938,19 +998,19 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (
 
 (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count496
-\scratchdimen=\dimen263
-\scratchbox=\box71
-\nofMPsegments=\count497
-\nofMParguments=\count498
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count499
-\MPscratchDim=\dimen264
-\MPnumerator=\count500
-\makeMPintoPDFobject=\count501
-\everyMPtoPDFconversion=\toks39
+\scratchcounter=\count508
+\scratchdimen=\dimen269
+\scratchbox=\box74
+\nofMPsegments=\count509
+\nofMParguments=\count510
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count511
+\MPscratchDim=\dimen270
+\MPnumerator=\count512
+\makeMPintoPDFobject=\count513
+\everyMPtoPDFconversion=\toks44
 )
-Package hyperref Info: Link coloring ON on input line 40.
+Package hyperref Info: Link coloring ON on input line 64.
  (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
  (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
@@ -962,13 +1022,14 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
 )
-\Gin@req@height=\dimen265
-\Gin@req@width=\dimen266
+\Gin@req@height=\dimen271
+\Gin@req@width=\dimen272
 ) (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 40.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 64.
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -983,9 +1044,12 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
-Package biblatex Info: Reference section=0 on input line 40.
-Package biblatex Info: Reference segment=0 on input line 40.
-
+Package biblatex Info: Reference section=0 on input line 64.
+Package biblatex Info: Reference segment=0 on input line 64.
+\c@lstlisting=\count514
+ (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+)
 
 [1
 
@@ -1030,8 +1094,8 @@ File: uesint.fd
 )
 
 [1])
-\tf@toc=\write5
-\openout5 = `main.toc'.
+\tf@toc=\write6
+\openout6 = `main.toc'.
 
 
 
@@ -1041,11 +1105,11 @@ File: uesint.fd
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.132 
+l.156 
        [1]
 
 [2]
-Overfull \hbox (134.96434pt too wide) in paragraph at lines 158--159
+Overfull \hbox (134.96434pt too wide) in paragraph at lines 182--183
 \T1/lmr/m/n/12 (-20) at-tach-ment of var-i-ous sen-sors and ac-ces-sories. [cite https://web.archive.org/web/20160613151621/http://www.youbot-
  []
 
@@ -1056,7 +1120,7 @@ Overfull \hbox (134.96434pt too wide) in paragraph at lines 158--159
 [4]
 
 [5]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 233.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 257.
  (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1066,17 +1130,19 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 [7]
 
 [8]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 303.
- (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 327.
+ (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\t1zi4.fd
+File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 12.0pt on input line 327.
 Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: T1).
+(microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
 
-[9]
+[9{C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4-t1-0.enc}]
 
 [10]
 
@@ -1087,17 +1153,17 @@ Package microtype Info: Loading generic protrusion settings for font family
 [13]
 
 [14]
-Overfull \hbox (167.70079pt too wide) in paragraph at lines 466--467
+Overfull \hbox (167.70079pt too wide) in paragraph at lines 490--491
 \T1/lmr/m/n/12 (-20) Here are some good web pages about the Slealed Lead Acid (SLA) bat-ter-ies: https://batterymasters.co.uk/blog/post/Howand
  []
 
 
-Overfull \hbox (164.72807pt too wide) in paragraph at lines 466--467
+Overfull \hbox (164.72807pt too wide) in paragraph at lines 490--491
 \T1/lmr/m/n/12 (-20) https://www.power-sonic.com/blog/how-to-charge-a-lead-acid-battery/ and https://www.powerstream.com/SLA.htm[] 
  []
 
 
-Overfull \hbox (14.18257pt too wide) in paragraph at lines 484--485
+Overfull \hbox (14.18257pt too wide) in paragraph at lines 508--509
 []\T1/lmr/m/n/12 (-20) Vesa at-tempted to re-vive this bat-tery through desul-pha-tion, where a higher-than-recommended
  []
 
@@ -1108,14 +1174,14 @@ Overfull \hbox (14.18257pt too wide) in paragraph at lines 484--485
 [16]
 
 [17]
-Overfull \hbox (0.74953pt too wide) in paragraph at lines 537--540
+Overfull \hbox (0.74953pt too wide) in paragraph at lines 561--564
 []\T1/lmr/m/n/12 (-20) flexible intra-logistics hu-man aware-ness and flex-i-bil-ity seam-less human-robot ex-is-tence 
  []
 
 
 
 [18]
-Underfull \hbox (badness 1189) in paragraph at lines 589--589
+Underfull \hbox (badness 1189) in paragraph at lines 613--613
 []|\T1/lmr/m/n/12 (+20) Autonomous in-spec-tion, mon-i-tor-ing,
  []
 
@@ -1131,7 +1197,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [21]
 
 Package biblatex Warning: No driver for 'bachelorsthesis'.
-(biblatex)                Using fallback driver on input line 633.
+(biblatex)                Using fallback driver on input line 657.
 
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
@@ -1139,28 +1205,61 @@ Package microtype Info: Character `029' is missing
 
 
 [22]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 680.
 
-[23] (main.aux)
+
+[23]
+
+[24]
+
+[25]
+
+[26]
+
+[27]
+
+[28] (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1068.
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 10.95pt on input line 1068.
+ (../code/rotate_graph.py
+
+[29]
+
+[30])
+
+[31] (../code/linear_graph.py
+
+[32])
+
+[33] (main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32107 strings out of 473536
- 610743 string characters out of 5714956
- 1453140 words of memory out of 5000000
- 54707 multiletter control sequences out of 15000+600000
- 616678 words of font info for 150 fonts, out of 8000000 for 9000
+ 35737 strings out of 473536
+ 676808 string characters out of 5714956
+ 1757484 words of memory out of 5000000
+ 57973 multiletter control sequences out of 15000+600000
+ 634409 words of font info for 173 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,131p,1052b,2893s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (26 pages, 238332 bytes).
+ 84i,12n,131p,1052b,2947s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb>
+Output written on main.pdf (36 pages, 342125 bytes).
 PDF statistics:
- 427 PDF objects out of 1000 (max. 8388607)
- 86 named destinations out of 1000 (max. 500000)
- 33665 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 845 PDF objects out of 1000 (max. 8388607)
+ 346 named destinations out of 1000 (max. 500000)
+ 44545 words of extra memory for PDF output out of 51595 (max. 10000000)
 

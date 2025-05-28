@@ -14,6 +14,7 @@ CSV_DIR = 'code/csv/'  # Adjust as needed
 DATA_DIR = 'code/images/'
 
 plt.style.use('fivethirtyeight')
+#plt.rcParams["font.family"] = "Times New Roman"
 
 def compute_pose_errors_and_print(df, rotation_deg, speed):
     theta = np.radians(rotation_deg)
@@ -55,7 +56,7 @@ def compute_pose_errors_and_print(df, rotation_deg, speed):
         print(f"\nStatistics for {speed} deg/s, {rotation_deg} deg:")
         print(f"  Mean X Error: {np.mean(x_errors):.4f}, Variance: {np.var(x_errors):.4f}")
         print(f"  Mean Y Error: {np.mean(y_errors):.4f}, Variance: {np.var(y_errors):.4f}")
-        print(f"  Mean Yaw Error (deg): {mean_yaw_deg:.4f}, Variance (deg²): {var_yaw_deg:.4f}")
+        print(f"  Mean Yaw Error (deg): {mean_yaw_deg:.4f}, Variance (deg sq): {var_yaw_deg:.4f}")
 
     return np.array(x_errors), np.array(y_errors), np.array(yaw_errors)
 
@@ -85,7 +86,7 @@ def plot_rotational_errors_by_speed():
         x_err_all = [item[1] for item in group]
         y_err_all = [item[2] for item in group]
         yaw_err_all = [item[3] for item in group]
-        labels = [f"{item[0]}°" for item in group]
+        labels = [f"{item[0]}deg" for item in group]
 
         fig, axes = plt.subplots(1, 3, figsize=(18, 6))
 

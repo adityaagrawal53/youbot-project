@@ -14,6 +14,7 @@ CSV_DIR = 'code/csv/'  # Adjust as needed
 DATA_DIR = 'code/images/'
 
 plt.style.use('fivethirtyeight')
+#plt.rcParams["font.family"] = "Times New Roman"
 
 def print_column_data(label, dx_meas, dy_meas, dx_odom, dy_odom):
     print(f"\nResults for {label}:")
@@ -82,6 +83,7 @@ def plot_linear_errors():
     axes[1].grid(True)
     axes[1].tick_params(axis='x', rotation=45, labelsize=9)
 
+    
     plt.tight_layout()
 
     if SAVE_FIG:
