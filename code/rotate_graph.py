@@ -111,7 +111,7 @@ def plot_rotational_errors_by_speed():
             if not os.path.exists(DATA_DIR):
                 os.makedirs(DATA_DIR)
             filename = f'rotational_errors_speed_{int(speed):02d}.png'
-            plt.savefig(os.path.join(DATA_DIR, filename), dpi=300)
+            plt.savefig(os.path.join(DATA_DIR, filename), dpi=600)
 
         if SHOW_FIG:
             plt.show()

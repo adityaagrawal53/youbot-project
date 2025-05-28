@@ -71,14 +71,14 @@ def plot_linear_errors():
     axes[0].boxplot(dx_errors_by_exp, labels=labels)
     axes[0].set_title('dx Error by Experiment')
     axes[0].set_xlabel('Experiment')
-    axes[0].set_ylabel('dx Error')
+    axes[0].set_ylabel('dx Error (cm)')
     axes[0].grid(True)
     axes[0].tick_params(axis='x', rotation=45, labelsize=9)
 
     axes[1].boxplot(dy_errors_by_exp, labels=labels)
     axes[1].set_title('dy Error by Experiment')
     axes[1].set_xlabel('Experiment')
-    axes[1].set_ylabel('dy Error')
+    axes[1].set_ylabel('dy Error (cm)')
     axes[1].grid(True)
     axes[1].tick_params(axis='x', rotation=45, labelsize=9)
 
@@ -86,7 +86,7 @@ def plot_linear_errors():
 
     if SAVE_FIG:
         save_path = os.path.join(DATA_DIR, 'linear_error_boxplots.png')
-        plt.savefig(save_path, dpi=300)
+        plt.savefig(save_path, dpi=600)
     if SHOW_FIG:
         plt.show()
 
