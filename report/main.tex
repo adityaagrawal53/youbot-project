@@ -14,6 +14,7 @@
 \usepackage{inconsolata}  % Nicer monospace font
 \usepackage{graphicx} % For including images
 \usepackage{subcaption}  % in preamble
+\usepackage{enumitem}
 
 \lstset{
   basicstyle=\ttfamily\small,        % Smaller monospaced font
@@ -243,21 +244,30 @@
 
     \begin{figure}[ht]
         \centering
-        %/flushleft
-        %/flushright
-        \includegraphics[width=0.5\linewidth]{images/sec2/box2.jpg}
-        \caption{Centered image}
+        \begin{subfigure}[t]{0.49\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{images/sec2/box2.jpg}
+            \caption{Various pillars, nuts and bolts amongst other components.}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[t]{0.49\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{images/sec2/box1.jpg}
+            \caption{The box containing previously used batteries and miscellaneous components.}
+        \end{subfigure}
+        \caption{Additional hardware components supplemented with the YouBot.}
     \end{figure}
 
 
     \subsection{Onboard Computer Overview}
-    The computer runs [this software] and ROS version []. I wasn't able to immediately boot up any tests to ensure if the robot itself was working at any stage in time. 
 
-    The onboard computer is an [] with an []. 
+    The onboard computer uses a Intel Atom CPU D510 @ 1.66GHz processor with a 2GB DDR2 RAM and 32GB SSD hard drive. 
 
-    It was running Ubuntu 12.04 LTS with ROS Hydro, which is a decade-old version of the operating system and the robot operating system. This version of Ubuntu is no longer supported, and the software is outdated and not compatible with most modern software and libraries. This will be detailed in a future section.
+    It was running Ubuntu 12.04.5 LTS with ROS Hydro, which is a decade-old version of the operating system and the robot operating system. This version of Ubuntu is no longer supported, and the software is outdated and not compatible with most modern software and libraries. This will be detailed in a future section.
 
     Alongside the OS and ROS, the computer also had various drivers and wrappers installed to enable communication with the robot's motors and sensors. This could be done directly through C++ programs, or through the use of pre-made ROS packages. We have elected to use the latter for the purposes of developing a system on the YouBot, to allow for a seamless integration with the ROS ecosystem in the future, alongside a level of standardization and ease of use. 
+
+    The installed software includes youbot\_driver, which provides the necessary drivers to communicate with the robot's motors and sensors. Additionally, a complete ROS stacks were installed (youbot-ros-pkg) to provide ROS support for the YouBot. Alternatively, interfacing can be done with the simpler youbot\_driver\_ros\_interface package, which provides a minimal set of ROS nodes to control the YouBot. The latter has been used for the purposes of this project to simplify the interaction with the robot. Additionally, youbot\_description provides the necessary URDF files to describe the robot's kinematics and dynamics, allowing for simulation and visualization in RViz and Gazebo. Finally, youbot\_applications provides a set of example applications and demos to get started with the YouBot. There are additional open-source from the official youbot GitHub account that can be seen from here. 
 
 
 
@@ -353,7 +363,7 @@
     \subsection{Technical Goals}
 
     The technical goals for this project involve the deployment and quantification of the robot's capabilities, particularly in terms of navigation and odometry. This would involve the following goals: 
-    \begin{itemize}
+    \begin{itemize}[noitemsep, topsep=0pt]
         \item Inspecting the initial physical state of the YouBot
         \item Enabling the robot start up
         \item Enabling the running of the original demos
@@ -372,7 +382,7 @@
     \subsection{Learning Objectives}
 
     The learning objectives for this project involve the following:
-    \begin{itemize}
+    \begin{itemize}[noitemsep, topsep=0pt]
         \item Develop hands-on experience in restoring and operating a legacy robot platform (KUKA YouBot)
         \item Gain proficiency in Linux systems and environment setup for robotics development
         \item Learn to write and use Bash scripts to automate setup, build, and deployment workflows
@@ -402,9 +412,9 @@
 
     \notes{furthermore describe issues with software that needed to be fixed, such as the bashrc file, the networking, etc.}
 
-    The initial inspection was carried out as described in section 2. Since the onboard battery was completely dead, I connected the YouBot to a 24V power supply and booted it up. On long pressing the power button, the screen flashed on and I could see the voltage input for the robot, alongside options to turn the PC and motors on/off seperately. 
+    The initial inspection was carried out as described in section 2. Since the onboard battery was completely dead, I connected the YouBot to the 24V power supply and booted it up. On long pressing the power button, the screen flashed on and I could see the voltage input for the robot, alongside options to turn the PC and motors on/off seperately. 
 
-    After connecting a VGA monitor and keyboard and mouse, I was able to boot up the onboard PC and use it as any other computer. The wireless adapter connected to this onboard computer was also functional, and I was able to connect to the internet. This meant I could theoretically SSH into the computer from my personal laptop, but I was unable to do so at that time due to a lack of a static IP address.
+    After connecting a monitor using VGA and keyboard and mouse using USB, I was able to boot up the onboard PC and use it as any other computer. The wireless adapter connected to this onboard computer was also functional, and was able to connect to the internet. This meant one could theoretically SSH into the onboard computer from a personal laptop, but I was unable to do so at that time due to a lack of a static IP address.
 
 
     
