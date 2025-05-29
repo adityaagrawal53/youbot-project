@@ -12,6 +12,8 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{inconsolata}  % Nicer monospace font
+\usepackage{graphicx} % For including images
+\usepackage{subcaption}  % in preamble
 
 \lstset{
   basicstyle=\ttfamily\small,        % Smaller monospaced font
@@ -131,6 +133,8 @@
     \subsection{Project Overview}
 
     This project aims to document the reployment and quantitative measurement of the KUKA YouBot's capabilities, particularly in terms of navigation and odometry. 
+    
+    Section 2 provides an overview of the initial state of the YouBot, including its hardware and software components, as well as a brief description of the initial goals of the project. Section 3 outlines the technical and learning objectives of the project. Section 4 describes the system development process, including the booting up of the YouBot, running the original C++ demos and the ROS interface demos. This follows into custom program development and a experimental setup for testing movement and odometry. Section 5 discusses future potential for the YouBot, and section 6 concludes the report with a personal reflection on the project and its outcomes. The appendix includes a user manual for the YouBot, as well as relevant code files and experiment results. 
 
 
 
@@ -164,9 +168,25 @@
 
     The YouBot is a mobile robotic platform developed by German automation company KUKA. First introduced in the early 2010s \notes{[cite]}, it was primarily designed for research and educational purposes in the field of robotics. To further this purpose, a significant portion of software used on the YouBot is open-source and available on GitHub \notes{[cite]}. 
 
-    The YouBot typically consists of two main parts: a mobile base and a robotic arm. The mobile base is equipped with four omnidirectional mecanum wheels and motors for movement, alongside an onboard computer for processing and control. This onboard computer runs Ubuntu and ROS1, with conveniently provided drivers and wrappers, allowing for smooth software integration. The robotic arm has 5 degrees of freedom (DOF) and a two-finger gripper \notes{[cite]}, enabling it to perform a variety of tasks through the onboard computer. Since this project involves only the mobile base, we will not be discussing the arm in detail.
+    The YouBot typically consists of two main parts: a mobile base and a robotic arm. The mobile base is equipp ed with four omnidirectional mecanum wheels and motors for movement, alongside an onboard computer for processing and control. This onboard computer runs Ubuntu and ROS1, with conveniently provided drivers and wrappers, allowing for smooth software integration. The robotic arm has 5 degrees of freedom (DOF) and a two-finger gripper \notes{[cite]}, enabling it to perform a variety of tasks through the onboard computer. Since this project involves only the mobile base, we will not be discussing the arm in detail.
 
     The YouBot's open-source software stack and ROS compatibility provide a flexible foundation for both low-level hardware interfacing and high-level algorithm development. This robot and the attached sensor modules are thus particularly well-suited for research within mobile robotics, particularly those pertaining to navigation and perception, as well as human-robot interaction. 
+
+    \begin{figure}[ht]
+        \centering
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{images/sec2/youbot_with_arm.png}
+            \caption{Image 1}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{images/sec2/youbot_irl.jpg}
+            \caption{Image 2}
+        \end{subfigure}
+        \caption{Two images tiled side-by-side}
+    \end{figure}
 
     \subsection{Robot Base Overview}
 
@@ -183,12 +203,57 @@
 
     The robot base is also equipped with a slot for a sealed lead-acid battery (SLA), which can be used to power the robot when not connected to a wall outlet. The battery can connect to the robot via a 4-pin XLR connector. 
 
+    \begin{figure}[ht]
+        \centering
+
+        % Row 1
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{images/sec2/youbot_power.jpg}
+            \caption{Image 1}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{images/sec2/youbot_screen.jpg}
+            \caption{Image 2}
+        \end{subfigure}
+
+        \vspace{0.5em}  % Space between rows
+
+        % Row 2
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{images/sec2/youbot_usb_ports.jpg}
+            \caption{Image 3}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{images/sec2/youbot_battery_holder.jpg}
+            \caption{Image 4}
+        \end{subfigure}
+
+        \caption{Four images tiled in a 2×2 layout}
+        \label{fig:youbot-quad}
+    \end{figure}
+
+
     \subsection{Additional Hardware Components}
 
     
     \notes{DESCRIBE THE INITIAL INSPECTION IN FULL HERE! TALK ABOUT THE PILLAR STUFF AND NUTS AND WHATNOT AS WELL!!!!}
 
     The YouBot also came with a variety of additional components and accessories to assist with sensor mounting and operation. These included a variety of nuts, bolts, and screws, as well as a hex key and several horizonal and vertical pillars. These pillars can be combined in a variety of ways to create a stable and secure mounting platform for the sensors. 
+
+    \begin{figure}[ht]
+        \centering
+        %/flushleft
+        %/flushright
+        \includegraphics[width=0.5\linewidth]{images/sec2/box2.jpg}
+        \caption{Centered image}
+    \end{figure}
+
 
     \subsection{Onboard Computer Overview}
     The computer runs [this software] and ROS version []. I wasn't able to immediately boot up any tests to ensure if the robot itself was working at any stage in time. 
@@ -203,11 +268,13 @@
 
     \subsection{Battery}
     
-    The mobile robot base allows for a 24V power supply through a 4-pin XLR connector. It could also be operated without using a wired cable to the wall, by using a lead-acid battery originally which had a capacity of 5Ah and gave the YouBot an approximate runtime of 90 minutes. This lead-acid battery is \notes{[dimensions here]}. This battery is also connected through a 4-pin XLR connector. While not a standard connector for power supply (4-pin XLR connectors are typically used for audio equipment), it is very robust and secure for the purposes of a mobile robot. 
+    The mobile robot base allows for a 24V power supply through a 4-pin XLR connector. It could also be operated without using a wired cable to the wall, by using a lead-acid battery originally which had a capacity of 5Ah and gave the YouBot an approximate runtime of 90 minutes. This lead-acid battery is of dimensions 23cmx9.4cmx7.3cm. This battery is also connected through a 4-pin XLR connector. While not a standard connector for power supply (4-pin XLR connectors are typically used for audio equipment), it is very robust and secure for the purposes of a mobile robot. 
 
     However, the SLA batteries that were initially included with the YouBot were completely unusable. The lab engineer (Vesa Korhonen) had also put together a makeshift SLA battery in 2019, which had also degraded severely. 
 
     As such, either the original batteries had to be replaced, or the robot had to be continuously used with a wired connection to the wall. This would have been a significant limitation to the project had we not been able to create a makeshift replacement battery which will be discussed in section 4.4.
+
+    \notes{add image of the battery here.}
     
 
     \subsection{Sensors}
@@ -220,9 +287,27 @@
 
     This Kinect camera module can be used through the use of open-source software such as libfreenect \notes{[cite]} to access the data from the various sensors on the module. Furthermore, this information could be processed using the OpenCV library and then used to enable the autonomous navigation as previously described. 
 
+    \notes{add image of Kinect here.}
+    \begin{figure}[ht]
+        \centering
+        %/flushleft
+        %/flushright
+        \includegraphics[width=0.5\linewidth]{images/sec2/kinectv1.png}
+        \caption{Centered image}
+    \end{figure}
+
+
     \subsubsection{Hokuyo URG-04LX Laser Rangefinder}
 
     The Hokuyo URG-04LX is a 2D laser rangefinder that is commonly used in robotics research. It is a compact and lightweight sensor that provides high-resolution distance measurements in a 240-degree field of view. The URG-04LX is capable of measuring distances up to 4 meters with an accuracy of +/- 10 mm. It communicates with the onboard computer using a serial interface, making it easy to integrate into existing systems. 
+
+    \begin{figure}[ht]
+        \centering
+        %/flushleft
+        %/flushright
+        \includegraphics[width=0.5\linewidth]{images/sec2/hokuyo.png}
+        \caption{Centered image}
+    \end{figure}
 
     \subsection{Documentation}
 
@@ -240,7 +325,14 @@
 
     T\&R only requires a single camera for a basic implementation. It is a relatively simple method to implement through the use of open-source software and libraries, such as OpenCV and ROS. Furthermore, it is robust to changes in the environment and can dynamically correct errors through the use of visual odometry. As such, it has been a very popular research topic within the field of robotics, particularly in the context of mobile robots \notes{[cite]}. Much of the work done on extending T\&R aims to improve this robustness and scalability for a variety of sensors and use-cases. 
 
-    \notes{some sort of flow diagram showing how everything would be connected, the ros stack would look like.}
+    \adi{I'm not sure how the ROS stack would look like, or if its necessary to explain. Discuss with advisor}
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=\linewidth]{diagrams/sample.pdf}
+        \caption{System Diagram}
+        \label{fig:system-diagram}
+    \end{figure}
+
 
     Here, figure [] shows an example of how the architecture for this system would have been implemented. This would have involved a wired connection to an external computer running ROS2 Jazzy and directly connected to the Kinect camera mounted on top of the YouBot. The onboard computer would have been used to control the motors and communicate with the sensors, while the external computer would have handled the processing and navigation tasks. The onboard computer and external computer would commuicate through a ROS1-ROS2 bridge, allowing for seamless integration of the two systems. 
 
@@ -284,7 +376,14 @@
     \end{itemize}
 
     \subsection{System Architecture}
-    Our intended setup was to use the YouBot as a mobile base with the Kinect camera mounted on top of it. The onboard computer of the YouBot would only be used to control the motors and communicate with the sensors. The actual bulk of the processing would be done on a seperate computer that runs ROS2 and enables the necessary navigation and perception stacks.  
+    Our intended setup was to use the YouBot as a mobile base with the Kinect camera mounted on top of it. The onboard computer of the YouBot would only be used to control the motors and communicate with the sensors. The actual bulk of the processing would be done on a seperate computer that runs ROS2 and enables the necessary navigation and perception stacks.
+    
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=\linewidth]{diagrams/new_arch.drawio.pdf}
+        \caption{New System Diagram}
+        \label{fig:new-system-diagram}
+    \end{figure}
 
     \pagebreak
 

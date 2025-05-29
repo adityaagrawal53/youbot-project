@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1748448608.79521 "main.bcf" "main.bbl" "main" 1748453907.77251 0
+["biber main"] 1748448608.79521 "main.bcf" "main.bbl" "main" 1748521641.60988 0
   "./resources/bib/references.bib" 1746878577 948 1710f5213d882918bf61332ebc329d3d ""
-  "main.bcf" 1748453907 107899 8ece0180573269af6cdd670719e7ac66 "pdflatex"
+  "main.bcf" 1748521641 107899 8ece0180573269af6cdd670719e7ac66 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1748453901.68679 "d:/OneDrive/_work/_DSD_FP/final-proj-report/report/main.tex" "main.pdf" "main" 1748453907.77499 0
+["pdflatex"] 1748521634.85655 "d:/OneDrive/_work/_DSD_FP/final-proj-report/report/main.tex" "main.pdf" "main" 1748521641.61077 0
   "../code/linear_graph.py" 1748447539 3023 a77b6a81b37681c6956e521af99b3217 ""
   "../code/rotate_graph.py" 1748450944 4776 9610333ec9c009ea470fdc96f507fd3b ""
   "C:/Users/Adity/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1748451124 129835 c7e2353dd20653f88c1c4fcf30275c91 ""
@@ -58,6 +58,7 @@
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb" 1256929440 116908 9a7a12d1e4df280ea0ab4aad83cdef88 ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb" 1256929440 125241 791aeb35ceacc2764a175b32709cc6a9 ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb" 1256929440 116427 4909e80035dae5d5a4ec2b5ddd9649dd ""
+  "C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb" 1256929440 119235 05e5c8d6d60439433e50047898c2c0e0 ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb" 1256929440 113634 9384aebdf26f9881e046a4b5574566db ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb" 1256929440 119752 1bd8d06e4079df624bf59ce3ad7c9aa6 ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb" 1256929440 122174 a2d5e73f396ddbeb3bdf5c79aea0993d ""
@@ -88,6 +89,7 @@
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/generic/uniquecounter/uniquecounter.sty" 1576434012 7008 f92eaa0a3872ed622bbf538217cd2ab7 ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/generic/xkeyval/xkeyval.tex" 1656236919 19231 27205ee17aaa2902aea3e0c07a3cfc65 ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/generic/xkeyval/xkvutils.tex" 1656236919 7677 9cb1a74d945bc9331f2181c0a59ff34a ""
+  "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/00miktex/epstopdf-sys.cfg" 1616067285 584 2a1075dd71571459f59146da9f7502ad ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/algorithmicx/algorithmicx.sty" 1114628400 26750 ce139c05a983e19ddca355b43e29c395 ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/algorithmicx/algpseudocode.sty" 1114628520 3457 d9077efe6b74c5a094199256af8d7d9a ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/algorithms/algorithm.sty" 1251549064 3349 15763257e50278eef5db1952ccde229c ""
@@ -139,6 +141,7 @@
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/csvsimple/csvsimple-legacy.sty" 1727438104 25524 36deec441333daa43c598a9da6dd0dbc ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/csvsimple/csvsimple.sty" 1727438104 1711 0327fb85bb075bcab4a8e3e064826462 ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/enumitem/enumitem.sty" 1561039820 51697 f8f08183cd2080d9d18a41432d651dfb ""
+  "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1623003186 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/esint/esint.sty" 1567181315 3004 afa98ed936439dae4d7a74e105144a0f ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/esint/uesint.fd" 1567181315 829 7639bdc0e31ae0fddb2806b1ed14c450 ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty" 1601897756 46845 3b58f70c6e861a13d927bff09d35ecbc ""
@@ -212,12 +215,23 @@
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "d:/OneDrive/_work/_DSD_FP/final-proj-report/report/main.tex" 1748453895 100392 393409c85b9ddc71de4376a497307058 ""
-  "main.aux" 1748453907 32447 4cbc90f0dfbb9395ccd427c7e26b87cb "pdflatex"
+  "d:/OneDrive/_work/_DSD_FP/final-proj-report/report/main.tex" 1748521630 104046 7eaf5ee54701efdc306f7590a559a091 ""
+  "diagrams/new_arch.drawio.pdf" 1748519746 38225 8247e4cc391f23ab680e506b09a05312 ""
+  "diagrams/sample.pdf" 1748461152 39951 53376abc59bd1bbe86848c864c031372 ""
+  "images/sec2/box2.jpg" 1748518653 2995087 beac223c22881fd2a5b213e9e52ccc55 ""
+  "images/sec2/hokuyo.png" 1748465766 66950 61c15fcad7d430b113900e3206dbccec ""
+  "images/sec2/kinectv1.png" 1748465847 3011419 d950ba681adbe4b728ac406312a6996a ""
+  "images/sec2/youbot_battery_holder.jpg" 1748521347 2816947 caf751c7b3a45106a5ca645aeb30672c ""
+  "images/sec2/youbot_irl.jpg" 1748518651 3209943 6ed5776c46f91507be92cb71ac728e34 ""
+  "images/sec2/youbot_power.jpg" 1748518878 2797761 39e580942a096cbb65154b5536c0fdd9 ""
+  "images/sec2/youbot_screen.jpg" 1748518886 2828989 851e2286f54639a1f7a8e0f840efb44a ""
+  "images/sec2/youbot_usb_ports.jpg" 1748518651 2761612 df63c59fdfd26455bd77fd055fb276d0 ""
+  "images/sec2/youbot_with_arm.png" 1748467872 1700942 58f03d1db01a2377f8e9b843dfe4cffe ""
+  "main.aux" 1748521641 33737 d03e47f677ac81beb3e53f46f59d31b2 "pdflatex"
   "main.bbl" 1748448612 3325 904d3ee3aa3c7afa502df314f8a77cd0 "biber main"
-  "main.run.xml" 1748453907 2418 7c2806152324ae357b5c2693ccbac713 "pdflatex"
-  "main.tex" 1748453895 100392 393409c85b9ddc71de4376a497307058 ""
-  "main.toc" 1748453907 6107 38cd80dd0922f5e5667b3407023c4176 "pdflatex"
+  "main.run.xml" 1748521641 2418 7c2806152324ae357b5c2693ccbac713 "pdflatex"
+  "main.tex" 1748521630 104046 7eaf5ee54701efdc306f7590a559a091 ""
+  "main.toc" 1748521641 6111 6ab7e795efecd87c87c591b99e31aebd "pdflatex"
   "packages/sleek.sty" 1745878155 4351 813c79aebe6f1eb5e5b160093c517cae ""
   (generated)
   "main.aux"
