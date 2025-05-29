@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1748448608.79521 "main.bcf" "main.bbl" "main" 1748521641.60988 0
+["biber main"] 1748523963.30347 "main.bcf" "main.bbl" "main" 1748524829.47288 0
   "./resources/bib/references.bib" 1746878577 948 1710f5213d882918bf61332ebc329d3d ""
-  "main.bcf" 1748521641 107899 8ece0180573269af6cdd670719e7ac66 "pdflatex"
+  "main.bcf" 1748524828 107899 8ece0180573269af6cdd670719e7ac66 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1748521634.85655 "d:/OneDrive/_work/_DSD_FP/final-proj-report/report/main.tex" "main.pdf" "main" 1748521641.61077 0
+["pdflatex"] 1748524805.66046 "d:/OneDrive/_work/_DSD_FP/final-proj-report/report/main.tex" "main.pdf" "main" 1748524829.47465 0
   "../code/linear_graph.py" 1748447539 3023 a77b6a81b37681c6956e521af99b3217 ""
   "../code/rotate_graph.py" 1748450944 4776 9610333ec9c009ea470fdc96f507fd3b ""
   "C:/Users/Adity/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1748451124 129835 c7e2353dd20653f88c1c4fcf30275c91 ""
@@ -215,23 +215,28 @@
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "d:/OneDrive/_work/_DSD_FP/final-proj-report/report/main.tex" 1748521630 104046 7eaf5ee54701efdc306f7590a559a091 ""
+  "d:/OneDrive/_work/_DSD_FP/final-proj-report/report/main.tex" 1748524806 105607 1985451ff4cf51189973fadfadc277ce ""
   "diagrams/new_arch.drawio.pdf" 1748519746 38225 8247e4cc391f23ab680e506b09a05312 ""
   "diagrams/sample.pdf" 1748461152 39951 53376abc59bd1bbe86848c864c031372 ""
+  "images/experiment_results/linear_error_boxplots.png" 1748447543 331289 572b7ccae4c634a1649a3927d21a2409 ""
+  "images/experiment_results/rotational_errors_speed_45.png" 1748452761 504018 c2fd2c4dde65d086270d84f18f7f3fb3 ""
+  "images/experiment_results/rotational_errors_speed_75.png" 1748452762 504007 d3350e4225e8d9b7308c0520e4fd27bf ""
   "images/sec2/box2.jpg" 1748518653 2995087 beac223c22881fd2a5b213e9e52ccc55 ""
   "images/sec2/hokuyo.png" 1748465766 66950 61c15fcad7d430b113900e3206dbccec ""
   "images/sec2/kinectv1.png" 1748465847 3011419 d950ba681adbe4b728ac406312a6996a ""
+  "images/sec2/power_adapter.jpg" 1748518733 3148741 45ab307dab13e8f897b0a4828b16b3f4 ""
+  "images/sec2/youbot_battery.jpg" 1748524599 2979066 dd9cac4251054fd26a74c4e4c66c844d ""
   "images/sec2/youbot_battery_holder.jpg" 1748521347 2816947 caf751c7b3a45106a5ca645aeb30672c ""
   "images/sec2/youbot_irl.jpg" 1748518651 3209943 6ed5776c46f91507be92cb71ac728e34 ""
   "images/sec2/youbot_power.jpg" 1748518878 2797761 39e580942a096cbb65154b5536c0fdd9 ""
   "images/sec2/youbot_screen.jpg" 1748518886 2828989 851e2286f54639a1f7a8e0f840efb44a ""
   "images/sec2/youbot_usb_ports.jpg" 1748518651 2761612 df63c59fdfd26455bd77fd055fb276d0 ""
   "images/sec2/youbot_with_arm.png" 1748467872 1700942 58f03d1db01a2377f8e9b843dfe4cffe ""
-  "main.aux" 1748521641 33737 d03e47f677ac81beb3e53f46f59d31b2 "pdflatex"
-  "main.bbl" 1748448612 3325 904d3ee3aa3c7afa502df314f8a77cd0 "biber main"
-  "main.run.xml" 1748521641 2418 7c2806152324ae357b5c2693ccbac713 "pdflatex"
-  "main.tex" 1748521630 104046 7eaf5ee54701efdc306f7590a559a091 ""
-  "main.toc" 1748521641 6111 6ab7e795efecd87c87c591b99e31aebd "pdflatex"
+  "main.aux" 1748524828 34283 23fd7ed808f135fe0687651dcb203128 "pdflatex"
+  "main.bbl" 1748523968 3325 904d3ee3aa3c7afa502df314f8a77cd0 "biber main"
+  "main.run.xml" 1748524828 2418 7c2806152324ae357b5c2693ccbac713 "pdflatex"
+  "main.tex" 1748524806 105607 1985451ff4cf51189973fadfadc277ce ""
+  "main.toc" 1748524828 6112 4848e397078d274e254a7fcccfc2795c "pdflatex"
   "packages/sleek.sty" 1745878155 4351 813c79aebe6f1eb5e5b160093c517cae ""
   (generated)
   "main.aux"
