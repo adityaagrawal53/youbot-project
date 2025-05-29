@@ -32,6 +32,17 @@
   numbers=none, % No line numbers
 }
 
+% Custom style for code listings
+\lstdefinestyle{plain}{
+    basicstyle=\ttfamily\small,
+    frame=none,
+    breaklines=true,
+    columns=fullflexible,
+    showstringspaces=false,
+    tabsize=2,
+    numbers=none,
+}
+\lstset{style=plain}
 
 
 \addbibresource{./resources/bib/references.bib}
@@ -56,6 +67,8 @@
 \shownotestrue% Set to \shownotestrue to display notes
 
 \newcommand{\notes}[1]{\ifshownotes\textcolor{blue}{#1}\fi}
+
+\newcommand{\code}[1]{\texttt{\detokenize{#1}}}
 
 
 
@@ -265,10 +278,7 @@
 
     It was running Ubuntu 12.04.5 LTS with ROS Hydro, which is a decade-old version of the operating system and the robot operating system. This version of Ubuntu is no longer supported, and the software is outdated and not compatible with most modern software and libraries. This will be detailed in a future section.
 
-    Alongside the OS and ROS, the computer also had various drivers and wrappers installed to enable communication with the robot's motors and sensors. This could be done directly through C++ programs, or through the use of pre-made ROS packages. We have elected to use the latter for the purposes of developing a system on the YouBot, to allow for a seamless integration with the ROS ecosystem in the future, alongside a level of standardization and ease of use. 
-
-    The installed software includes youbot\_driver, which provides the necessary drivers to communicate with the robot's motors and sensors. Additionally, a complete ROS stacks were installed (youbot-ros-pkg) to provide ROS support for the YouBot. Alternatively, interfacing can be done with the simpler youbot\_driver\_ros\_interface package, which provides a minimal set of ROS nodes to control the YouBot. The latter has been used for the purposes of this project to simplify the interaction with the robot. Additionally, youbot\_description provides the necessary URDF files to describe the robot's kinematics and dynamics, allowing for simulation and visualization in RViz and Gazebo. Finally, youbot\_applications provides a set of example applications and demos to get started with the YouBot. There are additional open-source from the official youbot GitHub account that can be seen from here. 
-
+    Alongside the OS and ROS, the computer also had various drivers and wrappers installed to enable communication with the robot's motors and sensors. This could be done directly through C++ programs, or through the use of pre-made ROS packages. We have elected to use the latter for the purposes of developing a system on the YouBot, to allow for a seamless integration with the ROS ecosystem in the future, alongside a level of standardization and ease of use.
 
 
     \subsection{Battery}
@@ -408,23 +418,93 @@
     \section{System Development}
     \subsection{Booting up the YouBot}
 
-    \notes{describe the booting up process here, what ports to use, how to connect to the onboard computer, etc.}
-
-    \notes{furthermore describe issues with software that needed to be fixed, such as the bashrc file, the networking, etc.}
-
     The initial inspection was carried out as described in section 2. Since the onboard battery was completely dead, I connected the YouBot to the 24V power supply and booted it up. On long pressing the power button, the screen flashed on and I could see the voltage input for the robot, alongside options to turn the PC and motors on/off seperately. 
 
     After connecting a monitor using VGA and keyboard and mouse using USB, I was able to boot up the onboard PC and use it as any other computer. The wireless adapter connected to this onboard computer was also functional, and was able to connect to the internet. This meant one could theoretically SSH into the onboard computer from a personal laptop, but I was unable to do so at that time due to a lack of a static IP address.
-
-
     
     I was able to see the following software installed on the onboard computer: insert ROS version here and discuss the github repos that were already installed here. 
 
-    There’s a lot of files from at least 6 years ago on this, and I believe a significant portion are from like 2013 or 14. Two folders that look especially important are ros\_stacks and youbot\_driver. One file of high importance is in the desktop: the Kuka YouBot User Manual. I took a copy of that to my personal computer using a thumbdrive.  
+    The installed software includes youbot\_driver, which provides the necessary drivers to communicate with the robot's motors and sensors. Additionally, a complete ROS stacks were installed (youbot-ros-pkg) to provide ROS support for the YouBot. Alternatively, interfacing can be done with the simpler youbot\_driver\_ros\_interface package, which provides a minimal set of ROS nodes to control the YouBot. The latter has been used for the purposes of this project to simplify the interaction with the robot. Additionally, youbot\_description provides the necessary URDF files to describe the robot's kinematics and dynamics, allowing for simulation and visualization in RViz and Gazebo. Finally, youbot\_applications provides a set of example applications and demos to get started with the YouBot. There are additional open-source from the official youbot GitHub account that can be seen from here.  
+
     
-    \notes{discuss powering up, initial software inspection, static IP issue}
+    \notes{insert pictures showing failed stuff}
+    \subsection{Initial Configuration}
+
+    The ROS interface as well as the relevant demo programs were attempted to be run. The C++ demo programs were unable to detect any devices on the eth0 port, which was not the port the motors were using. The ROS interface was also unable to ping itself and start \code{roscore}. This was due to the onboard computer not being bind to the correct static IP address, which is necessary for the ROS interface to function properly.
+
+    Furthermore, the onboard computer did not have a static IP address, which meant that it could not be accessed through Ethernet. These three issues were thus configured and fixed.
+
+    \subsubsection{ROS Networking Configuration (.bashrc)}
+    The ROS networking configuration was set up by editing the \code{.bashrc} file on the onboard computer. This file is used to configure the environment variables for the ROS interface, and is executed every time a new terminal is opened. The following lines were added to the \code{.bashrc} file:
+
+    \begin{lstlisting}[style=plain]
+    export DSD_IP=localhost
+
+    # April 2025 : DSD Final Project settings
+    export ROS_IPV6=off
+    export ROS_HOSTNAME=$DSD_IP
+    export ROS_MASTER_URI=http://$DSD_IP:11311
+    export ROS_IP=$DSD_IP
+
+    export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH://home/youbot/youbot_driver:/home/youbot/ros_stacks:/home/youbot/applications
+    export LIBGL_ALWAYS_SOFTWARE=1
+
+    source /opt/ros/hydro/setup.bash
+    source ~/DSD/devel/setup.bash #this will be covered later.
+    \end{lstlisting}
+
+    This will set the ROS networking configuration to use the local host as the IP address, and will ensure that the ROS interface can communicate with itself. The \code{ROS_PACKAGE_PATH} variable is also set to include the necessary directories for the YouBot drivers and applications. To test whether ROS is now able to communicate with itself, the following command was run:
+    \begin{lstlisting}[style=plain]
+$   roscore 
+    \end{lstlisting}
+    If the command runs successfully, it means that the ROS interface is now able to communicate with itself and is ready to be used. 
+
+    \subsubsection{Ethernet Configuration (/etc/network/interfaces)}    
     
+    To fix the ethernet issue, \code{ifconfig} was ran to check the current network interfaces and their IP addresses. The output showed that \code{eth0} was not configured with a static IP address, and was instead using DHCP.
+
+    This was rectified by adding a static IP address for \code{eth0} to the \code{/etc/network/interfaces} file. This file is used to configure the network interfaces on the onboard computer as needed. The file was opened and the following lines added:
+
     
+    \begin{lstlisting}[style=plain]
+    auto eth0
+    iface eth0 inet static
+        address 192.168.10.1 # The IP address used by the YouBot
+        netmask 255.255.255.0
+    \end{lstlisting}
+    
+    After saving the file, the network interface was restarted using the following command:
+
+    \begin{lstlisting}[style=plain]
+$   sudo /etc/init.d/networking restart
+    \end{lstlisting}
+
+    Initially, the following commands were used to set the static IP address: 
+    \begin{lstlisting}[style=plain]
+$   sudo ip addr add 192.168.1.200/24 dev eth0
+    \end{lstlisting}
+    however, this would automatically delete itself inconsistently due to the Network Manager. This was thus changed to the above method, which would set the static IP address permanently. This is much more convenient long term. 
+
+    One can then connect another computer to the YouBot using an Ethernet cable and set its static IP address to another address in the same subnet, such as \code{192.168.10.2}. Test the connection by pinging the YouBot's IP address from the other computer:
+    \begin{lstlisting}[style=plain]
+$   ping 192.168.10.1
+    \end{lstlisting}
+    If the ping is successful, the connection is established and the YouBot can be accessed through a wired connection. One can also use SSH to connect to the YouBot from another computer using the following command:
+    \begin{lstlisting}[style=plain]
+$   ssh youbot@192.168.10.1
+    \end{lstlisting}
+    where \code{youbot} is the default username of the onboard computer. The default password is \code{youbot}.
+
+    \subsubsection{Youbot Driver Configuration (~/youbot\_driver/config/youbot-ethercat.cfg)}
+
+    The YouBot driver configuration file was also edited to change the port from \code{eth0} to \code{eth1}. This was done by opening the file \code{~/youbot\_driver/config/youbot-ethercat.cfg} and changing the line:
+    \begin{lstlisting}[style=plain]
+    #EtherCAT port
+    [EtherCAT]
+    EthernetDevice = eth0
+    \end{lstlisting}
+
+    This will enable the YouBot driver to communicate with the motors and sensors through the correct port for the C++ demos. After saving the file, the YouBot driver can be started using the following command:
     \pagebreak
 
     \subsection{Running original demos}
@@ -436,30 +516,7 @@
     
     After this issue was fixed, you can turn the motors on using that button on the screen. running the demo using the following command then allows you to access this thing through the terminal. it works to do shit.
 
-
-    \subsection{Enabling wireless connections}
-
-    The wireless issues was caused by a combination of no IPv4 address assigned to the onboard computer, and the onboard computer not being able to connect to the internet. This was fixed by changing the network settings in the Network Manager, and setting a static IP address for the onboard computer. This was done by editing the /etc/network/interfaces file and adding the following lines:
-
-    \begin{verbatim}
-    auto eth1
-    iface eth1 inet static
-        address
-        netmask
-        gateway
-    \end{verbatim}
-
-    Initially, the following commands were used to set the static IP address: 
-    \begin{verbatim}
-    sudo ifconfig eth1
-    \end{verbatim}
-    however, this would automatically delete itself inconsistently due to the Network Manager. This was thus changed to the above method, which would set the static IP address permanently. This is much more convenient long term. 
-
-    One can then connect to 
-
-
     \pagebreak
-
 
     \subsection{Running ROS interface}
 
