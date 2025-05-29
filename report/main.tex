@@ -510,13 +510,27 @@ $   ssh youbot@192.168.10.1
     \subsection{Running original demos}
     \notes{describe fixing network issue, and hten running the original demos.}
 
-    An attempt was made to run the original demos upon turning on the computer. These original demos were stored here: [insert path here].
-    However, the program was unable to run due to not detecting any devices on the eth1 port. This was assumedly due to the motor drivers not being initialised, or the wrong port being used. The user manual states eth0, but the onboard computer was using eth1. This was thus a simple fix of changing the port in the config file for the youbot\_driver. 
+    An attempt was made to run the original demos upon turning on the computer. These original demos are stored at \code{~/applications} locally (available on the YouBot's GitHub repository as \code{youbot_applications}). The demos are written in C++ and provide a simple interface to control the YouBot's motors and sensors. This includes a Hello World application to test the communication with the motors, as well as a keyboard control demo to enable primitive keyboard control.
 
     
-    After this issue was fixed, you can turn the motors on using that button on the screen. running the demo using the following command then allows you to access this thing through the terminal. it works to do shit.
+    After the EtherCAT interfacing issue was fixed, one can run the original demos by going to the relevant directory and running the application. Remember to turn the motors on beforehand. 
+    \begin{lstlisting}[style=plain]
+$   cd ~/applications/hello_world_demo/bin
+$   sudo ./youBot_HelloWorldDemo
+    \end{lstlisting}
+    \notes{add the feedback from the demo here}
+    
+    The output should show that the YouBot is able to communicate with the motors and sensors, and that the Hello World application is running successfully, by moving in the four cardinal directions.
 
+    Additionally, the keyboard control demo can be run by going to the relevant directory and running the application. This will allow you to control the YouBot's movement using the keyboard. The following command can be used to run the keyboard control demo:
+    \begin{lstlisting}[style=plain]
+$   cd ~/applications/keyboard_control_demo/bin
+$   sudo ./youBot_KeyboardControlDemo
+    \end{lstlisting}
+    \notes{add the feedback from the demo here}
     \pagebreak
+
+    This shows that the YouBot is able to communicate with the motors and sensors as expected. However, running the original demos is very cumbersome and cannot be extended into a more complex system. As such, we will be using the ROS interface, as discussed in the next section. 
 
     \subsection{Running ROS interface}
 
