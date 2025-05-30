@@ -395,6 +395,11 @@ INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex\latex\esint\uesint.fd
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\tfm\public\esint\esint10.tfm
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\tfm\public\esint\esint10.tfm
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\tfm\public\esint\esint10.tfm
+INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex\latex\inconsolata\t1zi4.fd
+INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex\latex\inconsolata\t1zi4.fd
+INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex\latex\inconsolata\t1zi4.fd
+INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\tfm\public\inconsolata\t1-zi4r-0.tfm
+INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\inconsolata\i4-t1-0.enc
 OUTPUT main.toc
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr12.tfm
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
@@ -500,12 +505,8 @@ INPUT .\diagrams\new_arch.drawio.pdf
 INPUT .\diagrams\new_arch.drawio.pdf
 INPUT .\diagrams\new_arch.drawio.pdf
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ts1.enc
-INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex\latex\inconsolata\t1zi4.fd
-INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex\latex\inconsolata\t1zi4.fd
-INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex\latex\inconsolata\t1zi4.fd
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\tfm\public\inconsolata\t1-zi4r-0.tfm
-INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\tfm\public\inconsolata\t1-zi4r-0.tfm
-INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\inconsolata\i4-t1-0.enc
+INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\tfm\public\inconsolata\t1-zi4b-0.tfm
 INPUT .\images\experiment_results\linear_error_boxplots.png
 INPUT .\images\experiment_results\linear_error_boxplots.png
 INPUT .\images\experiment_results\linear_error_boxplots.png
@@ -551,6 +552,8 @@ INPUT ..\code\linear_graph.py
 INPUT main.aux
 INPUT main.run.xml
 OUTPUT main.run.xml
+INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\type1\public\inconsolata\Inconsolata-zi4b.pfb
+INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\type1\public\inconsolata\Inconsolata-zi4b.pfb
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\type1\public\inconsolata\Inconsolata-zi4r.pfb
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\type1\public\inconsolata\Inconsolata-zi4r.pfb
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
