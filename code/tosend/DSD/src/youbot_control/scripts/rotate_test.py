@@ -7,34 +7,8 @@ import sys
 
 import time, math, tf
 rospy.init_node('rotate_test', anonymous=True)
-def move_fwd(speed, distance): 
 
-	
-	#Publisher to /cmd_vel
-	pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
-	
-	#Create a Twist message for movement
-	move_cmd = Twist()
-	move_cmd.linear.x = float(speed) # m/s
-	
-	#Calculate time needed
-	move_time = float(distance) / float(speed) 
-	
-	#Set a rate to publish messages 
-
-	start_time = time.time()
-	
-	while time.time() - start_time < move_time and not rospy.is_shutdown():
-		pub.publish(move_cmd)
-
-
-	#After specified distance, stop robot 
-	move_cmd.linear.x = 0 
-	pub.publish(move_cmd)
-
-	rospy.loginfo("Moved forward " + str(int(100 * distance)) + " cm.")
-
-def turn_right(speed, distance): 
+def turn_left(speed, distance): 
 	# speed and distance are in degrees here.	
 	
 	#Publisher to /cmd_vel
@@ -102,7 +76,7 @@ if __name__ == '__main__':
 		start = odom_get()
 		if start is None:
 			rospy.loginfo("Failed to get initial position.")	
-		turn_right(float(sys.argv[1]), float(sys.argv[2]))
+		turn_left(float(sys.argv[1]), float(sys.argv[2]))
 		end = odom_get()
 		if end is None:
 			rospy.loginfo("Failed to get final position.")	

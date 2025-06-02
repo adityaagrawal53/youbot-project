@@ -34,33 +34,6 @@ def move_fwd(speed, distance):
 
 	rospy.loginfo("Moved forward " + str(int(100 * distance)) + " cm.")
 	rospy.loginfo("%.2f", move_time)
-	
-def turn_right(speed, distance): 
-	
-	
-	#Publisher to /cmd_vel
-	pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
-	
-	#Create a Twist message for movement
-	move_cmd = Twist()
-	move_cmd.angular.z = float(speed) # rad/s
-
-	#Set distance and calculate time needed
-	move_time = float(distance) / float(speed) 
-	
-	#Set a rate to publish messages 
-
-	start_time = time.time()
-	
-	while time.time() - start_time < move_time and not rospy.is_shutdown():
-		pub.publish(move_cmd)
-
-
-	#After specific distance, stop robot 
-	move_cmd.angular.z = 0 
-	pub.publish(move_cmd)
-
-	rospy.loginfo("Turned %.2f degrees.", distance * 180 / math.pi)
 
 def get_yaw_from_quaternion(ori_q): 
 	qu = (
