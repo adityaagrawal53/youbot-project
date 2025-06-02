@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "youbot_control")
+set(youbot_control_MAINTAINER "youbot <youbot@todo.todo>")
+set(youbot_control_DEPRECATED "")
+set(youbot_control_VERSION "0.0.0")
+set(youbot_control_BUILD_DEPENDS "geometry_msgs" "rospy")
+set(youbot_control_RUN_DEPENDS "geometry_msgs" "rospy")
+set(youbot_control_BUILDTOOL_DEPENDS "catkin")

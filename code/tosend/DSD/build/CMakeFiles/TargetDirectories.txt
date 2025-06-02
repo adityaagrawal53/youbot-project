@@ -1,0 +1,12 @@
+/home/youbot/DSD/build/CMakeFiles/clean_test_results.dir
+/home/youbot/DSD/build/CMakeFiles/doxygen.dir
+/home/youbot/DSD/build/youbot_control/CMakeFiles/geometry_msgs_generate_messages_cpp.dir
+/home/youbot/DSD/build/youbot_control/CMakeFiles/geometry_msgs_generate_messages_lisp.dir
+/home/youbot/DSD/build/youbot_control/CMakeFiles/geometry_msgs_generate_messages_py.dir
+/home/youbot/DSD/build/gtest/CMakeFiles/gtest.dir
+/home/youbot/DSD/build/gtest/CMakeFiles/gtest_main.dir
+/home/youbot/DSD/build/CMakeFiles/run_tests.dir
+/home/youbot/DSD/build/youbot_control/CMakeFiles/std_msgs_generate_messages_cpp.dir
+/home/youbot/DSD/build/youbot_control/CMakeFiles/std_msgs_generate_messages_lisp.dir
+/home/youbot/DSD/build/youbot_control/CMakeFiles/std_msgs_generate_messages_py.dir
+/home/youbot/DSD/build/CMakeFiles/tests.dir

@@ -16,6 +16,9 @@
 \usepackage{subcaption}  % in preamble
 \usepackage{enumitem}
 
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+
 \lstset{
   basicstyle=\ttfamily\small,        % Smaller monospaced font
   frame=single,                        % No box frame=none
@@ -818,6 +821,40 @@ https://www.powerstream.com/SLA.htm}
     20 times per experiment
 
     Taking into account the various inconsistencies observed while running custom movement programs on the YouBot platform, a series of experiments were conducted to evaluate the accuracy of its movement and odometry. The goal was to quantify the types and sources of errors that arise during both linear and rotational motion, and to assess how these errors can be corrected or compensated for.
+
+    \begin{tikzpicture}[scale=0.1]
+
+    % Axes
+    \draw[->, thick] (-60, 0) -- (60, 0) node[right] {$x$};
+    \draw[->, thick] (0, -40) -- (0, 40) node[above] {$y$};
+
+    % Original robot (centered at origin)
+    \draw[thick, rounded corners=5pt, fill=gray!20]
+        (-30, -15) rectangle (30, 15);
+    \node at (0, 0) {Initial};
+
+    % Origin marker
+    \filldraw[black] (0, 0) circle (0.8);
+
+    % Rotated + drifted robot
+    \begin{scope}[shift={(5,7)}, rotate=47] % 45 deg intended + 2 deg yaw drift
+        \draw[thick, rounded corners=5pt, fill=blue!15]
+        (-30, -15) rectangle (30, 15);
+        \node at (0, 0) {Drifted};
+    \end{scope}
+
+    % Show rotation arc
+    \draw[->, thick, red]
+        (20,0) arc[start angle=0, end angle=45, radius=20];
+    \node[red] at (25,12) {Intended Rotation};
+
+    % Show drift arrow
+    \draw[->, thick, blue, dashed]
+        (0,0) -- (5,7) node[midway, above left] {Drift};
+
+    \end{tikzpicture}
+
+
 
     \subsubsection*{Experimental Procedure}
 

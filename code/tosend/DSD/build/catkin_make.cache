@@ -1,0 +1,2 @@
+youbot_control
+-DCATKIN_DEVEL_PREFIX=/home/youbot/DSD/devel -DCMAKE_INSTALL_PREFIX=/home/youbot/DSD/install

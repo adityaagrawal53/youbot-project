@@ -1,0 +1,8 @@
+prefix=/home/youbot/DSD/install
+
+Name: youbot_control
+Description: Description of youbot_control
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/youbot/DSD/install/lib 
+Requires: 
