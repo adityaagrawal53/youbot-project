@@ -76,3 +76,7 @@
 \contentsline {subsection}{\numberline {B.2}Python Files}{37}{subsection.B.2}%
 \contentsline {subsubsection}{\numberline {B.2.1}rotate\_graph.py}{37}{subsubsection.B.2.1}%
 \contentsline {subsubsection}{\numberline {B.2.2}linear\_graph.py}{40}{subsubsection.B.2.2}%
+\contentsline {subsubsection}{\numberline {B.2.3}linear\_test.py}{42}{subsubsection.B.2.3}%
+\contentsline {subsubsection}{\numberline {B.2.4}rotate\_test.py}{44}{subsubsection.B.2.4}%
+\contentsline {subsubsection}{\numberline {B.2.5}simple\_square\_movement.py}{46}{subsubsection.B.2.5}%
+\contentsline {subsubsection}{\numberline {B.2.6}Tmux automation script}{48}{subsubsection.B.2.6}%
