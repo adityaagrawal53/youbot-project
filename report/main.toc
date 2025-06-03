@@ -3,24 +3,23 @@
 \contentsline {subsection}{\numberline {1.1}Motivation}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Project Overview}{1}{subsection.1.2}%
 \contentsline {section}{\numberline {2}Initial state of YouBot}{2}{section.2}%
-\contentsline {subsection}{\numberline {2.1}About the Hardware}{2}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Robot Base Overview}{2}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Additional Hardware Components}{4}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Onboard Computer Overview}{4}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Battery}{4}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Sensors}{5}{subsection.2.6}%
-\contentsline {subsubsection}{\numberline {2.6.1}Kinect}{5}{subsubsection.2.6.1}%
-\contentsline {subsubsection}{\numberline {2.6.2}Hokuyo URG-04LX Laser Rangefinder}{6}{subsubsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.7}Documentation}{6}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}Initial Project Goals}{6}{subsection.2.8}%
-\contentsline {section}{\numberline {3}Project Overview}{9}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Technical Goals}{9}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Learning Objectives}{9}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}System Architecture}{9}{subsection.3.3}%
+\contentsline {subsection}{\numberline {2.1}Onboard Computer}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Connection Interfaces}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Power}{3}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Sensors}{4}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Kinect}{4}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Hokuyo URG-04LX Laser Rangefinder}{5}{subsubsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.5}Additional Hardware Components}{5}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Documentation}{6}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Initial Project Goals}{6}{subsection.2.7}%
+\contentsline {section}{\numberline {3}Project Overview}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Technical Goals}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Learning Objectives}{8}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}System Architecture}{8}{subsection.3.3}%
 \contentsline {section}{\numberline {4}System Development}{10}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Booting up the YouBot}{10}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Initial Configuration}{11}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}ROS Networking Configuration (.bashrc)}{11}{subsubsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2}Initial Configuration}{10}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}ROS Networking Configuration (.bashrc)}{10}{subsubsection.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.2}Ethernet Configuration (/etc/network/interfaces)}{11}{subsubsection.4.2.2}%
 \contentsline {subsubsection}{\numberline {4.2.3}Youbot Driver Configuration (~/youbot\_driver/config/youbot-ethercat.cfg)}{12}{subsubsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.3}Running original demos}{13}{subsection.4.3}%
@@ -43,17 +42,17 @@
 \contentsline {subsubsection}{\numberline {4.8.2}Testing original batteries}{20}{subsubsection.4.8.2}%
 \contentsline {subsubsection}{\numberline {4.8.3}Replacing batteries}{21}{subsubsection.4.8.3}%
 \contentsline {subsubsection}{\numberline {4.8.4}Future Battery Options}{21}{subsubsection.4.8.4}%
-\contentsline {subsection}{\numberline {4.9}Experimental Setup for Movement and Odometry}{21}{subsection.4.9}%
-\contentsline {section}{\numberline {5}Future Applications}{25}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Potential Use Cases for the YouBot Mobile Base}{25}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Teach and Repeat (T\&R) in Context}{26}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Speculative and Emerging Applications}{26}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Summary Table: Potential Use Cases for the KUKA YouBot Mobile Base}{27}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Conclusion}{27}{subsection.5.5}%
-\contentsline {section}{\numberline {6}Reflection}{28}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Project Evolution}{28}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}AGILE}{28}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Final Thoughts}{28}{subsection.6.3}%
+\contentsline {section}{\numberline {5}Experimental Setup for Movement and Odometry}{21}{section.5}%
+\contentsline {section}{\numberline {6}Future Applications}{25}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Potential Use Cases for the YouBot Mobile Base}{25}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Teach and Repeat (T\&R) in Context}{26}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Speculative and Emerging Applications}{26}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Summary Table: Potential Use Cases for the KUKA YouBot Mobile Base}{26}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Conclusion}{26}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Reflection}{28}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Project Evolution}{28}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}AGILE}{28}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Final Thoughts}{28}{subsection.7.3}%
 \contentsline {section}{\numberline {A}User Manual for the KUKA YouBot}{30}{appendix.A}%
 \contentsline {subsection}{\numberline {A.1} How to turn on the YouBot }{30}{subsection.A.1}%
 \contentsline {subsection}{\numberline {A.2}.bashrc recap}{30}{subsection.A.2}%

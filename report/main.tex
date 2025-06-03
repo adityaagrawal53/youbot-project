@@ -51,8 +51,8 @@
 \addbibresource{./resources/bib/references.bib}
 
 
-\newcommand{\projectTitle}{KUKA YouBot Revival and System Development Project}
-\newcommand{\projectSubtitle}{Documentation of progress through project, in requirements of Final Project in DSD}
+\newcommand{\projectTitle}{YouBot Project}
+\newcommand{\projectSubtitle}{Inspection, Development and Deployment of the KUKA YouBot Mobile Base}
 \newcommand{\authorName}{Aditya Agrawal}
 \newcommand{\advisorName}{assistant professor Tomasz Kucner}
 \newcommand{\supervisorName}{senior university lecturer Salu Ylirisku}
@@ -105,6 +105,7 @@
 
         \vfill
     \end{titlepage}
+    \setcounter{tocdepth}{2} % Only show sections and subsections in TOC
     \romantableofcontents
 
     \commentout{\section{Ideas \& Drafts (NOT ON FINAL REPORT)}
@@ -138,8 +139,8 @@
     \section{Introduction}
 
     \subsection{Motivation}
-    %\adi{Motivation: Why is this project worthwhile? What did I stand to gain from this? This part is forward-looking and conceptual; it establishes the intent and value proposition for the project.}
-    %\notes{1.1 Motivation Why this project? Explore the potential of repurposing legacy robotic platforms like the KUKA YouBot. Address the need for longer lifespans in academic robotics hardware. Personal/academic gain: Engage with low-level robotics systems. Learn system integration, perception, and hardware/software interfacing.}
+
+    \notes{Section 1 done. draft \#1}
 
     In the rapidly evolving field of robotics, expensive hardware platforms often become obsolete quickly. This is not because of physical wear and tear or a lack of functionality, but rather due to quick advancements in software and infrastructure. For example, artificial intelligence and machine learning have made significant strides in recent years, leading to the development of humanoid robots with advanced capabilities. As a result, older platforms become less relevant and lack the necessary support for extending their potential lifespan, despite inherent capabilities. 
 
@@ -151,48 +152,27 @@
 
     This project aims to document the reployment and quantitative measurement of the KUKA YouBot's capabilities, particularly in terms of navigation and odometry. 
     
-    Section 2 provides an overview of the initial state of the YouBot, including its hardware and software components, as well as a brief description of the initial goals of the project. Section 3 outlines the technical and learning objectives of the project. Section 4 describes the system development process, including the booting up of the YouBot, running the original C++ demos and the ROS interface demos. This follows into custom program development and a experimental setup for testing movement and odometry. Additionally, there will be insights into battery replacement and sensor integration. Section 5 discusses future potential for the YouBot for long-term research and industrial use cases, and section 6 concludes the report with a personal reflection on the project and its outcomes. The appendix includes a user manual for the YouBot, as well as relevant code files and experiment results. 
-
-
-
-    %\adi{Potential: Highlights unique physical and design attributes of the robot that make it worth saving. Why is it distinct? Robot's inherent capabilities and versatility. Mini technical pitch.}
-    %\notes{1.3 Use Case Potential: Unique attributes of the YouBot: Compact, low-profile, omnidirectional drive. Reliable base hardware and extensibility. Application areas: Autonomous indoor navigation. HRI (Human-Robot Interaction) research. Visual/LIDAR-based perception projects. Education and prototyping platforms.}
-
-
-    %
-
-
-    %\subsection{Project Objectives and Scope}
-    %\adi{Project objectives: What are the goals of the project? What do I want to achieve? This is a high-level overview of the project and its roadmap.}
-    %\notes{1.4 Project Objectives and Scope: Initial objective: Full robot revival with autonomous navigation using a Kinect sensor. Revised direction: Due to constraints, focused on: Re-enabling hardware operation. Evaluating performance. Documenting the restoration process. What this document provides: Overview of the project flow. Assessment of hardware/software components. Challenges faced and how they were handled. Ideas for future directions.}
-    
-    %As such, the initial goal was to conduct a comprehensive revival of the robot and enable it to autonomously navigate a static environment using a low-cost camera. However, the goals shifted towards enabling the deployment of the robot, and documenting the quality of its various components. This document aims to provide a comprehensive overview of the project, including the initial state of the YouBot, the software and hardware components, the challenges faced during the revival process, and the potential future applications of the robot.
-
-    %The motivation for this project stems from the need to explore the potential of repurposing legacy robotic hardware yadda yadda yadda
-
-
-        
+    Section 2 provides an overview of the initial state of the YouBot, including its hardware and software components, as well as a brief description of the initial goals of the project. Section 3 outlines the technical and learning objectives of the project. Section 4 describes the system development process, including network configuration, battery and sensor deployment, and custom program development. This follows into section 5, which details an experimental setup for testing movement and odometry. Section 6 discusses future potential for the YouBot for long-term research and industrial use cases, and section 7 concludes the report with a personal reflection on the project and its outcomes. The appendix includes a user manual for the YouBot, as well as relevant code files and experiment data. 
+      
 
     \pagebreak
 
     \section{Initial state of YouBot}
 
-    The KUKA YouBot was procured by the university in 2014, and has not been in use since 2019. At that time, the robot was considered to be quite antiquated, and the software and hardware were already outdated. Furthermore, the relevant websites hosting documentation and information are no longer available. This situation has only worsened over the years, and the starting point for this project through was an user manual uploaded on a third-party website marked as a draft version from 2013. 
+    \notes{Section 2 done. draft \#1}
 
-    \subsection{About the Hardware}
-
-    The YouBot is a mobile robotic platform developed by German automation company KUKA. First introduced in the early 2010s \notes{[cite]}, it was primarily designed for research and educational purposes in the field of robotics. To further this purpose, a significant portion of software used on the YouBot is open-source and available on GitHub \notes{[cite]}.
+    The YouBot is a mobile robotic platform developed by German automation company KUKA. First introduced in the early 2010s \notes{[cite]}, it was primarily designed for research and educational purposes in the field of mobile robotics. To further this purpose, a significant portion of software used on the YouBot is open-source and available on GitHub \notes{[cite]}.
 
     The YouBot typically consists of two main parts: a mobile base and a robotic arm. The mobile base is equipped with four omnidirectional mecanum wheels and motors for movement, alongside an onboard computer for processing and control. This onboard computer runs Ubuntu and ROS1, with conveniently provided drivers and wrappers, allowing for smooth software integration. The robotic arm has 5 degrees of freedom (DOF) and a two-finger gripper \notes{[cite]}, enabling it to perform a variety of tasks through the onboard computer. Since this project involves only the mobile base, we will not be discussing the arm in detail.
 
-    The YouBot's open-source software stack and ROS compatibility provide a flexible foundation for both low-level hardware interfacing and high-level algorithm development. This robot and the attached sensor modules are thus particularly well-suited for research within mobile robotics, particularly those pertaining to navigation and perception, as well as human-robot interaction. 
+    The YouBot's open-source software stack and ROS compatibility provide a versatile foundation for both low-level hardware interfacing and high-level algorithm development. This robot and the attached sensor modules are thus particularly well-suited for research within mobile robotics, particularly those pertaining to navigation, perception and human-robot interaction. 
 
-    \begin{figure}[ht]
+    \begin{figure}[H]
         \centering
         \begin{subfigure}[t]{0.49\linewidth}
             \centering
             \includegraphics[width=\linewidth]{images/sec2/youbot_with_arm.png}
-            \caption{The robot with the robotic arm attached.}
+            \caption{The robot with the robotic arm attached. \notes{[cite]}}
         \end{subfigure}
         \hfill
         \begin{subfigure}[t]{0.49\linewidth}
@@ -203,101 +183,49 @@
         \caption{The YouBot.}
     \end{figure}
 
-    \subsection{Robot Base Overview}
+    \subsection{Onboard Computer}
 
-    The robot base features a 24V power input via a 3-pin XLR connector, accessed through the top of the robot. In addition to this, there are two 24V 3-pin XLR output ports, indeded to power external sensors or other components such as robotic arms. On this top panel, one can also find two EtherCAT ports for consistent real-time communication with motion-oriented robotics (i.e. the robotic arm), as well as a standard Ethernet port for wired interfacing with an external computer or network. 
+    The onboard computer features a Intel Atom D510 @ 1.66GHz processor, with a 2GB DDR2 RAM and 32GB SSD hard drive. 
 
-    Mobility is provided by four omnidirectional mecanum wheels and relevant motors. This allows for relatively smooth and precise movement through a combination of linear and rotational motion. The motors are controlled via the onboard computer, which can send and recieve data from the motors and provide relevant feedback.
+    The computer currently runs Ubuntu 12.04.5 LTS with ROS Hydro, which is a decade-old version of the operating system and the robot operating system. Given the age of the OS and ROS, compatibility with modern libraries and software is limited. Essential drivers and wrappers were also available to enable communication with the robot's motors and sensors. These could be accessed directly through C++ programs or through ROS packages. For the purposes of this project, we have elected to focus on the latter to allow for a seamless integration with the ROS ecosystem in the future, alongside a level of standardization and ease of use.
 
-    The onboard computer includes 6 USB2.0 ports, which can be used to connect various peripherals, such as a keyboard, mouse, USB, wireless adapter, etc. Additionally, there is a VGA port for connecting a monitor. \cite{githubYoubotOverview}  
+    \subsection{Connection Interfaces}
 
-    The attached top panel is a sensor and mounting plate, designed to allow for the convenient attachment of various sensors and accessories. [cite https://web.archive.org/web/20160613151621/http://www.youbot-store.com/accessories/mounting-and-sensor-plate]
+    To interface with the onboard PC, the YouBot features panels with several connection ports. The top panel of the robot contains two EtherCAT ports for consistent real-time communication with motion-oriented systems (i.e. robotic manipulators), and a standard Ethernet port for wired interfacing with an external computer or network. Adjacent to these communication ports are a power button and a small screen that displays input voltage and ON/OFF state of the onboard PC and motors (Figure~\ref{fig:youbot-screen}). Furthermore, the right side of the robot features a panel with a VGA port for video output, as well as six USB 2.0 ports for connecting peripherals such as a keyboard, mouse, or wireless adapter (Figure~\ref{fig:youbot-usb}). 
 
-    The robot base is also equipped with a slot for a sealed lead-acid battery (SLA), which can be used to power the robot when not connected to a wall outlet. The battery can connect to the robot via a 4-pin XLR connector. 
-
-    \begin{figure}[ht]
+    \begin{figure}[H]
         \centering
-
-        % Row 1
+        % Row 2
         \begin{subfigure}[t]{0.49\linewidth}
             \centering
-            \includegraphics[width=\linewidth]{images/sec2/youbot_power.jpg}
-            \caption{The power input and output ports.}
+            \includegraphics[width=\linewidth]{images/sec2/youbot_usb_ports.jpg}
+            \caption{The right side of the robot, showing the VGA and USB ports.}
+            \label{fig:youbot-usb}
         \end{subfigure}
         \hfill
         \begin{subfigure}[t]{0.49\linewidth}
             \centering
             \includegraphics[width=\linewidth]{images/sec2/youbot_screen.jpg}
             \caption{The onboard computer screen, alongside the power button and EtherCAT/Ethernet ports.}
-        \end{subfigure}
-
-        \vspace{0.5em}  % Space between rows
-
-        % Row 2
-        \begin{subfigure}[t]{0.49\linewidth}
-            \centering
-            \includegraphics[width=\linewidth]{images/sec2/youbot_usb_ports.jpg}
-            \caption{The right side of the robot, showing the VGA and USB ports.}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[t]{0.49\linewidth}
-            \centering
-            \includegraphics[width=\linewidth]{images/sec2/youbot_battery_holder.jpg}
-            \caption{The left side of the robot, showing the battery in its holder.}
+            \label{fig:youbot-screen}
         \end{subfigure}
 
         \caption{Connection points on the YouBot.}
-        \label{fig:youbot-quad}
+        \label{fig:youbot-connections}
     \end{figure}
 
 
-    \subsection{Additional Hardware Components}
+    \subsection{Power}
 
-    
-    \notes{DESCRIBE THE INITIAL INSPECTION IN FULL HERE! TALK ABOUT THE PILLAR STUFF AND NUTS AND WHATNOT AS WELL!!!!}
+    The YouBot is powered by a 24V power supply, which can be connected through a 3-pin XLR connector located on the top panel of the robot. Additionally, the base includes two 24V 3-pin XLR output ports, which are intended for powering external components such as robotic manipulators or sensors (Figure~\ref{fig:youbot-power}).
 
-    The YouBot also came with a variety of additional components and accessories to assist with sensor mounting and operation. These included a variety of nuts, bolts, and screws, as well as a hex key and several horizonal and vertical pillars. These pillars can be combined in a variety of ways to create a stable and secure mounting platform for the sensors. 
-
-    \begin{figure}[ht]
+    \begin{figure}[H]
         \centering
         \begin{subfigure}[t]{0.49\linewidth}
             \centering
-            \includegraphics[width=\linewidth]{images/sec2/box2.jpg}
-            \caption{Various pillars, nuts and bolts amongst other components.}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[t]{0.49\linewidth}
-            \centering
-            \includegraphics[width=\linewidth]{images/sec2/box1.jpg}
-            \caption{The box containing previously used batteries and miscellaneous components.}
-        \end{subfigure}
-        \caption{Additional hardware components supplemented with the YouBot.}
-    \end{figure}
-
-
-    \subsection{Onboard Computer Overview}
-
-    The onboard computer uses a Intel Atom CPU D510 @ 1.66GHz processor with a 2GB DDR2 RAM and 32GB SSD hard drive. 
-
-    It was running Ubuntu 12.04.5 LTS with ROS Hydro, which is a decade-old version of the operating system and the robot operating system. This version of Ubuntu is no longer supported, and the software is outdated and not compatible with most modern software and libraries. This will be detailed in a future section.
-
-    Alongside the OS and ROS, the computer also had various drivers and wrappers installed to enable communication with the robot's motors and sensors. This could be done directly through C++ programs, or through the use of pre-made ROS packages. We have elected to use the latter for the purposes of developing a system on the YouBot, to allow for a seamless integration with the ROS ecosystem in the future, alongside a level of standardization and ease of use.
-
-
-    \subsection{Battery}
-    
-    The mobile robot base allows for a 24V power supply through a 4-pin XLR connector. It could also be operated without using a wired cable to the wall, by using a lead-acid battery originally which had a capacity of 5Ah and gave the YouBot an approximate runtime of 90 minutes. This lead-acid battery is of dimensions 23cmx9.4cmx7.3cm. This battery is also connected through a 4-pin XLR connector. While not a standard connector for power supply (4-pin XLR connectors are typically used for audio equipment), it is very robust and secure for the purposes of a mobile robot. 
-
-    However, the SLA batteries that were initially included with the YouBot were completely unusable. The lab engineer (Vesa Korhonen) had also put together a makeshift SLA battery in 2019, which had also degraded severely. 
-
-    As such, either the original batteries had to be replaced, or the robot had to be continuously used with a wired connection to the wall. This would have been a significant limitation to the project had we not been able to create a makeshift replacement battery which will be discussed in section 4.4.
-    
-    \begin{figure}[ht]
-        \centering
-        \begin{subfigure}[t]{0.49\linewidth}
-            \centering
-            \includegraphics[width=\linewidth]{images/sec2/youbot_battery.jpg}
-            \caption{The original SLA battery.}
+            \includegraphics[width=\linewidth]{images/sec2/youbot_power.jpg}
+            \caption{The power input and output ports.}
+            \label{fig:youbot-power}
         \end{subfigure}
         \hfill
         \begin{subfigure}[t]{0.49\linewidth}
@@ -306,7 +234,35 @@
             \caption{The 24V power adapter used to power the YouBot.}
         \end{subfigure}
         \caption{Power supply components for the YouBot.}
-\end{figure}
+    \end{figure}
+
+    However, continuously powering the YouBot through a wall connection is not ideal for the goal of mobile robotics. Thus, the YouBot was also originally equipped with a sealed lead-acid (SLA) battery (Figure~\ref{fig:youbot-battery}) . This battery had a capacity of 5Ah and provided an approximate runtime of 90 minutes. This battery furthermore connects to the robot via a 4-pin XLR connector, and is located in a dedicated slot on the left side of the robot (Figure~\ref{fig:youbot-battery-holder}). %While the 4-pin XLR connector is not standard for power supply (it is typically used for audio equipment), it is very robust and secure for the purposes of a mobile robot. This lead-acid battery is of dimensions 23cmx9.4cmx7.3cm.
+
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[t]{0.49\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{images/sec2/youbot_battery.jpg}
+            \caption{The original SLA battery.}
+            \label{fig:youbot-battery}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[t]{0.49\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{images/sec2/youbot_battery_holder.jpg}
+            \caption{The left side of the robot, showing the battery in its holder.}
+            \label{fig:youbot-battery-holder}
+        \end{subfigure}
+        \caption{Power supply connection points of the YouBot.}
+    \end{figure}
+
+    Upon receiving the robot, four SLA batteries were available: three of them were the original units supplied with the YouBot, and the fourth was a makeshift replacement assembled by the lab engineer, Vesa Korhonen, in 2019. Unfortunately, none of these batteries were functional. The original units had degraded beyond usability, and the makeshift battery had similarly deteriorated over time.
+
+    As a result, the robot could not operate on battery power in its current state and required a constant wired connection to a wall outlet—an obvious limitation for a mobile robotics platform. A battery replacement would be ideal to restore the robot's potential mobility. 
+
+
+    
+    
 
     \subsection{Sensors}
     
@@ -323,7 +279,7 @@
         %/flushleft
         %/flushright
         \includegraphics[width=0.5\linewidth]{images/sec2/kinectv1.png}
-        \caption{Centered image}
+        \caption{The Kinect v1 camera module.}
     \end{figure}
 
 
@@ -335,8 +291,34 @@
         \centering
         %/flushleft
         %/flushright
-        \includegraphics[width=0.5\linewidth]{images/sec2/hokuyo.png}
-        \caption{Centered image}
+        \includegraphics[width=0.25\linewidth]{images/sec2/hokuyo.png}
+        \caption{The Hokuyo URG-04LX laser rangefinder.}
+    \end{figure}
+
+    \subsection{Additional Hardware Components}
+
+    
+    \notes{DESCRIBE THE INITIAL INSPECTION IN FULL HERE! TALK ABOUT THE PILLAR STUFF AND NUTS AND WHATNOT AS WELL!!!!}
+
+    The YouBot also came with a variety of additional components and accessories to assist with sensor mounting and operation. These included a variety of nuts, bolts, and screws, as well as a hex key and several horizonal and vertical pillars. These pillars can be combined in a variety of ways to create a stable and secure mounting platform for the sensors. 
+
+    The attached top panel is a sensor and mounting plate, designed to allow for the convenient attachment of various sensors and accessories. [cite https://web.archive.org/web/20160613151621/http://www.youbot-store.com/accessories/mounting-and-sensor-plate]
+
+    
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[t]{0.49\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{images/sec2/box2.jpg}
+            \caption{Various pillars, nuts and bolts amongst other components.}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[t]{0.49\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{images/sec2/box1.jpg}
+            \caption{The box containing previously used batteries and miscellaneous components.}
+        \end{subfigure}
+        \caption{Additional hardware components supplemented with the YouBot.}
     \end{figure}
 
     \subsection{Documentation}
@@ -409,7 +391,7 @@
     \subsection{System Architecture}
     Our intended setup was to use the YouBot as a mobile base with the Kinect camera mounted on top of it. The onboard computer of the YouBot would only be used to control the motors and communicate with the sensors. The actual bulk of the processing would be done on a seperate computer that runs ROS2 and enables the necessary navigation and perception stacks.
     
-    \begin{figure}[ht]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=\linewidth]{diagrams/new_arch.drawio.pdf}
         \caption{New System Diagram}
@@ -762,6 +744,7 @@ $   rostopic list
     \pagebreak
 
     \subsection{Battery Replacement}
+    \label{sec:battery-replacement}
 
 
 
@@ -808,7 +791,7 @@ https://www.powerstream.com/SLA.htm}
     An ideal candidate for a replacement battery techonology would be lithium-iron-phosphate (LiFePO4) batteries. These batteries are more expensive, but have multiple advantages over SLA batteries. They have longer lifespans, higher energy density, lighter weight, and are less prone to degradation. However, they would also need an integrated battery management system (BMS) to ensure safe operation, and potentially some custom hardware to fit the dimensions of the YouBot's battery compartment. 
 
     
-    \subsection{Experimental Setup for Movement and Odometry}
+    \section{Experimental Setup for Movement and Odometry}
 
     \notes{here, ill discuss the experimental setup for testing movement and odometry.  this should include the two experiments of moving linearly and rotating, and discuss how error is calculated. probably discuss negative feedback and PID control as well, random, percentage, consistent error, etc.}
 
@@ -917,21 +900,21 @@ https://www.powerstream.com/SLA.htm}
     These experiments form the foundation for understanding the motion characteristics of the YouBot and inform future work in navigation, localization, and control refinement.
     \pagebreak
 
-    \begin{figure}[ht]
+    \begin{figure}[H]
         \centering
         %/flushleft
         %/flushright
         \includegraphics[width=0.99\linewidth]{images/experiment_results/linear_error_boxplots.png}
         \caption{Centered image}
     \end{figure}
-    \begin{figure}[ht]
+    \begin{figure}[H]
         \centering
         %/flushleft
         %/flushright
         \includegraphics[width=0.99\linewidth]{images/experiment_results/rotational_errors_speed_45.png}
         \caption{Centered image}
     \end{figure}
-    \begin{figure}[ht]
+    \begin{figure}[H]
         \centering
         %/flushleft
         %/flushright
