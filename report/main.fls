@@ -572,6 +572,8 @@ INPUT .\images\sec2\box1.jpg
 INPUT .\images\sec2\box1.jpg
 INPUT .\images\sec2\box1.jpg
 INPUT .\images\sec2\box1.jpg
+INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
+INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
 INPUT .\diagrams\sample.pdf
 INPUT .\diagrams\sample.pdf
 INPUT .\diagrams\sample.pdf
@@ -680,3 +682,5 @@ INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr17.p
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr17.pfb
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr8.pfb
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr8.pfb
+INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
+INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
