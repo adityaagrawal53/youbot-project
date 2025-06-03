@@ -422,6 +422,9 @@
     Furthermore, the onboard computer did not have a static IP address, which meant that it could not be accessed through Ethernet. This would prevent Ethernet-based communication with the YouBot, which would be more reliable than wireless communication. 
 
     \pagebreak
+    \subsection{}
+
+
     \subsection{ROS1-ROS2 Bridge}
 
     One of the first tasks I decided to embark on after getting the robot up and running was to set up the ROS1-ROS2 bridge. This was the most important link within the system, as it would allow the robot to seamless access the ROS2 navigation stack and enable it to access the computational resources of a more recent computer. However, the version of ROS1 on the robot is Hydro, which is more than a decade old and predates ROS2 development, i.e. it is not compatible with a ROS1-ROS2 bridge. 
@@ -751,71 +754,107 @@ https://www.powerstream.com/SLA.htm}
 
     \section{User Manual for the KUKA YouBot}
 
-    
+    \subsection{Booting Up the YouBot}
+    To begin operating the YouBot, follow these steps to power up the system and access the onboard computer interface using a monitor and peripherals. 
+
+    \subsubsection{Powering On}
+    \begin{enumerate}[topsep=0pt, noitemsep]
+        \item Plug the YouBot into a power source using the provided power cable and adapter through the top panel. Ensure that the supply voltage is compatible (24V DC).
+        \item Press the main power button located on the top panel of the YouBot. This will power the system on. Note that the onboard computer and motors are not powered on by default. 
+        \item Connect a monitor using the provided VGA port. Note that this is required to be plugged in before powering on the YouBot, as the onboard computer will not boot up with a GUI otherwise. 
+        \item Turn the onboard computer and motors on. Long press the power button to cycle through options for powering the subsystems. Toggle by releasing the button when the desired option is highlighted. 
+        \item Wait for the onboard computer to boot up. This may take a few minutes. 
+        \item Plug in USB peripherals such as a keyboard and mouse to interact with the onboard computer.
+        \item Once the computer has booted, you should see a desktop environment similar to a standard Linux distribution. You can now interact with the onboard computer using the keyboard and mouse. Note that the default credentials are: 
+        \begin{itemize}[topsep=0pt, noitemsep]
+            \item Username: \code{youbot}
+            \item Password: \code{youbot}
+        \end{itemize}
+    \end{enumerate}
+
+    \notes{add image of the booting up process.}
+
     \subsection{Initial Configuration}
 
-     These three issues were thus configured and fixed.
+    After booting up the YouBot, some initial configuration is required to enable the ROS interface and the YouBot drivers. This includes setting up the ROS networking configuration, configuring the Ethernet interface, and editing the YouBot driver configuration file. 
 
-    \subsubsection{ROS Networking Configuration (.bashrc)}
-    The ROS networking configuration was set up by editing the \code{.bashrc} file on the onboard computer. This file is used to configure the environment variables for the ROS interface, and is executed every time a new terminal is opened. The following lines were added to the \code{.bashrc} file:
+    \subsubsection{ROS Networking Configuration (\code{.bashrc})}
+    Update the onboard computer's \code{.bashrc} file with the following: 
 
     \begin{lstlisting}[style=plain]
-    export DSD_IP=localhost
+    export MY_IP=localhost
 
-    # April 2025 : DSD Final Project settings
     export ROS_IPV6=off
-    export ROS_HOSTNAME=$DSD_IP
-    export ROS_MASTER_URI=http://$DSD_IP:11311
-    export ROS_IP=$DSD_IP
+    export ROS_HOSTNAME=$MY_IP
+    export ROS_MASTER_URI=http://$MY_IP:11311
+    export ROS_IP=$MY_IP
 
     export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH://home/youbot/youbot_driver:/home/youbot/ros_stacks:/home/youbot/applications
     export LIBGL_ALWAYS_SOFTWARE=1
 
     source /opt/ros/hydro/setup.bash
-    source ~/DSD/devel/setup.bash #this will be covered later.
     \end{lstlisting}
+%    source ~/DSD/devel/setup.bash #this will be covered later.
 
-    This will set the ROS networking configuration to use the local host as the IP address, and will ensure that the ROS interface can communicate with itself. The \code{ROS_PACKAGE_PATH} variable is also set to include the necessary directories for the YouBot drivers and applications. To test whether ROS is now able to communicate with itself, the following command was run:
+    To verify configuration:
     \begin{lstlisting}[style=plain]
 $   roscore 
     \end{lstlisting}
-    If the command runs successfully, it means that the ROS interface is now able to communicate with itself and is ready to be used. 
 
-    \subsubsection{Ethernet Configuration (/etc/network/interfaces)}    
+    %This will set the ROS networking configuration to use the local host as the IP address, and will ensure that the ROS interface can communicate with itself. The \code{ROS_PACKAGE_PATH} variable is also set to include the necessary directories for the YouBot drivers and applications. To test whether ROS is now able to communicate with itself, the following command was run:
+
+    %If the command runs successfully, it means that the ROS interface is now able to communicate with itself and is ready to be used. 
+
+    \subsubsection{Ethernet Configuration}
+
+    To enable stable communication between the YouBot and external systems, a static IP address is preferably assigned to the onboard Ethernet interface. This enables reliable wired access for remote control. 
+
+    \paragraph{Interface Naming Note:} Not all Linux distributions name Ethernet interfaces as \code{eth0}, and instead may use interfaces named \code{eth1}, \code{enp2s0}, etc. To identify the correct interface, use the following command:
+
+    \begin{lstlisting}[style=plain]
+$   ip link show
+    \end{lstlisting}
+
+    Look for an interface name associated with a physical Ethernet port. In the following instructions, replace \code{eth0} with the appropriate interface name.
     
-    To fix the ethernet issue, \code{ifconfig} was ran to check the current network interfaces and their IP addresses. The output showed that \code{eth0} was not configured with a static IP address, and was instead using DHCP.
+    Assign a permanent static ethernet IP by editing the file \code{/etc/network/interfaces} and adding:
 
-    This was rectified by adding a static IP address for \code{eth0} to the \code{/etc/network/interfaces} file. This file is used to configure the network interfaces on the onboard computer as needed. The file was opened and the following lines added:
-
-    
     \begin{lstlisting}[style=plain]
     auto eth0
-    iface eth0 inet static
-        address 192.168.10.1 # The IP address used by the YouBot
-        netmask 255.255.255.0
+    iface eth0 inet static 
+        address 192.168.10.1            ## The static IP address to be assigned
+        netmask 255.255.255.0           ## Standard subnet mask
     \end{lstlisting}
-    
-    After saving the file, the network interface was restarted using the following command:
+
+    Replace \code{eth0} with your actual interface name as determined above. Save the file and apply changes:
 
     \begin{lstlisting}[style=plain]
 $   sudo /etc/init.d/networking restart
     \end{lstlisting}
 
-    Initially, the following commands were used to set the static IP address: 
+    Confirm the static IP assignment by checking the interface configuration:
     \begin{lstlisting}[style=plain]
-$   sudo ip addr add 192.168.1.200/24 dev eth0
+$   ip addr show eth0
     \end{lstlisting}
-    however, this would automatically delete itself inconsistently due to the Network Manager. This was thus changed to the above method, which would set the static IP address permanently. This is much more convenient long term. 
 
-    One can then connect another computer to the YouBot using an Ethernet cable and set its static IP address to another address in the same subnet, such as \code{192.168.10.2}. Test the connection by pinging the YouBot's IP address from the other computer:
+
+   \textbf{Note:} An alternative to an Ethernet configuration is to assign a static IP via the network router on a wireless interface. This eliminates a wired connection dependency and allows the YouBot to obtain a static IP automatically when connected to the same network. Refer to your router's documentation for specific instructions on conducting DHCP reservations. 
+
+    \paragraph{Testing the Connection}
+    After configuration, connect another device (e.g., a laptop) to the YouBot via Ethernet. Assign the other device a static IP in the same subnet (e.g., \code{192.168.10.2}). Then test connectivity:
+
     \begin{lstlisting}[style=plain]
-$   ping 192.168.10.1
+    $ ping 192.168.10.1         ## From the laptop to the YouBot
     \end{lstlisting}
-    If the ping is successful, the connection is established and the YouBot can be accessed through a wired connection. One can also use SSH to connect to the YouBot from another computer using the following command:
+
+    For remote terminal access:
+
     \begin{lstlisting}[style=plain]
-$   ssh youbot@192.168.10.1
+    $ ssh youbot@192.168.10.1
     \end{lstlisting}
-    where \code{youbot} is the default username of the onboard computer. The default password is \code{youbot}.
+
+    Enter the password when prompted (default is \code{youbot}). If the connection is successful, the YouBot should be accessible through an external PC. 
+
 
     \subsubsection{Youbot Driver Configuration (~/youbot\_driver/config/youbot-ethercat.cfg)}
 
@@ -827,9 +866,10 @@ $   ssh youbot@192.168.10.1
     \end{lstlisting}
 
     This will enable the YouBot driver to communicate with the motors and sensors through the correct port for the C++ demos. After saving the file, the YouBot driver can be started using the following command:
-    \pagebreak
-
+    
     \subsection{Running original demos}
+
+    \textbf{Note:} Remember to turn the motors on before running the demos. This can be done by long-pressing the power button on the top panel of the YouBot and toggling the "Motors" option to ON.
 
     An attempt was made to run the original demos upon turning on the computer. These original demos are stored at \code{~/applications} locally (available on the YouBot's GitHub repository as \code{youbot_applications}). The demos are written in C++ and provide a simple interface to control the YouBot's motors and sensors. This includes a Hello World application to test the communication with the motors, as well as a keyboard control demo to enable primitive keyboard control.
 
