@@ -260,19 +260,15 @@
 
     As a result, the robot could not operate on battery power in its current state and required a constant wired connection to a wall outlet—an obvious limitation for a mobile robotics platform. A battery replacement would be ideal to restore the robot's potential mobility. 
 
-
-    
-    
-
     \subsection{Sensors}
     
-    Alongside the robot base and various hardware components, the YouBot was also equipped with a variety of sensors. These included a Kinect v1 camera and two Hokuyo URG-04LX laser rangefinders (, one of which had a broken mini-USB port, rendering it unusable). These sensors are commonly used in robotics research and are well-suited for navigation and perception tasks.
+    Alongside the robot base and various hardware components, the YouBot was also equipped with a variety of sensors to enhance perception and navigation. These included a Kinect v1 camera and two Hokuyo URG-04LX laser rangefinders. 
 
     \subsubsection{Kinect}  
 
-    The Kinect v1 camera is a depth and RGB camera that was originally designed and sold in tandem with the XBOX 360 to enable motion tracking and gaming. Due to its low cost, high availability and ease of use, it had indirectly become a popular choice for robotics research as well.
+    The Kinect v1 camera is a depth and RGB camera that was originally designed and sold in tandem with the XBOX 360 to support motion tracking and gaming. Due to its low cost, high availability and ease of use, it had indirectly become a popular choice in the robotics community for perception tasks. 
 
-    This Kinect camera module can be used through the use of open-source software such as libfreenect \notes{[cite]} to access the data from the various sensors on the module. Furthermore, this information could be processed using the OpenCV library and then used to enable the autonomous navigation as previously described. 
+    Access to the Kinect's sensor data can be achieved through the use of open-source software such as libfreenect \notes{[cite]}. The retrieved data can then be processed using computer vision libraries such as OpenCV to enable the autonomous navigation as previously described. 
 
     \begin{figure}[ht]
         \centering
@@ -285,7 +281,7 @@
 
     \subsubsection{Hokuyo URG-04LX Laser Rangefinder}
 
-    The Hokuyo URG-04LX is a 2D laser rangefinder that is commonly used in robotics research. It is a compact and lightweight sensor that provides high-resolution distance measurements in a 240-degree field of view. The URG-04LX is capable of measuring distances up to 4 meters with an accuracy of +/- 10 mm. It communicates with the onboard computer using a serial interface, making it easy to integrate into existing systems. 
+    The Hokuyo URG-04LX is a lightweight 2D laser rangefinder that is commonly used in robotics research. It provides high-resolution distance measurements in a 240-degree field of view and can detect objects upto 4 meters away with an accuracy of \(\pm10\) mm. It communicates with the onboard computer using a serial interface, enabling straightforward integration into existing systems for mapping, localization, and obstacle avoidance tasks. 
 
     \begin{figure}[ht]
         \centering
