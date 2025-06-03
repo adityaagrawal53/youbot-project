@@ -367,20 +367,20 @@
 
     \subsection{Learning Objectives}
 
-    The learning objectives for this project involve the following:
+    In parallel with technical outcomes, this project required gaining a range of practical and theoretical competencies in robotics. These learning objectives included:
     \begin{itemize}[noitemsep, topsep=0pt]
-        \item Develop hands-on experience in restoring and operating a legacy robot platform (KUKA YouBot)
-        \item Gain proficiency in Linux systems and environment setup for robotics development
-        \item Learn to write and use Bash scripts to automate setup, build, and deployment workflows
-        \item Understand the architecture of the Robot Operating System (ROS1 \& ROS2), and learn to configure and launch ROS-based systems
-        \item Learn to establish and manage secure communication with robotic systems using SSH and Ethernet
-        \item Write and deploy custom ROS nodes for basic motion control of the YouBot platform
-        \item Understand the principles of robot navigation and odometry, including error measurement and correction techniques
-        \item Learn methods for documenting system restoration, experimental results, and identifying directions for future development
+        \item Gaining hands-on experience restoring and operating a legacy robotic platform (KUKA YouBot)
+        \item Building proficiency in Linux environments relevant to robotics development
+        \item Writing Bash scripts to automate system setup, compilation, and deployment workflows
+        \item Understanding the architecture and functionality of both ROS1 and ROS2, including their integration
+        \item Establishing and managing secure connections between host and robot using SSH and Ethernet
+        \item Creating and deploying custom ROS nodes for low-level motion control
+        \item Studying robot navigation and odometry principles, including error sources and correction strategies
+        \item Developing skills for documenting restoration efforts and formulating directions for future work
     \end{itemize}
 
     \subsection{System Architecture}
-    Our intended setup was to use the YouBot as a mobile base with the Kinect camera mounted on top of it. The onboard computer of the YouBot would only be used to control the motors and communicate with the sensors. The actual bulk of the processing would be done on a seperate computer that runs ROS2 and enables the necessary navigation and perception stacks.
+    Our current system architecture is starkly different from the initial goal. While the YouBot itself remains unchanged, the external computer only serves the purpose of SSH access and remote control into the onboard computer. The onboard computer runs ROS1 Hydro and communicates with the wheel motors and encoders through EtherCAT. No external sensors will be used, highlighting our focus on enabling the YouBot's existing capabilities rather than extending them. 
     
     \begin{figure}[H]
         \centering
