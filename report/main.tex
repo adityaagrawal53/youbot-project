@@ -805,7 +805,7 @@ $   roscore
 
     %If the command runs successfully, it means that the ROS interface is now able to communicate with itself and is ready to be used. 
 
-    \subsubsection{Ethernet Configuration ()\code{/etc/network/interfaces})}
+    \subsubsection{Ethernet Configuration (\code{/etc/network/interfaces})}
 
     To enable stable communication between the YouBot and external systems, a static IP address is preferably assigned to the onboard Ethernet interface. This enables reliable wired access for remote control. 
 
@@ -879,92 +879,102 @@ $   ifconfig
 
     \textbf{Note:} Remember to turn the motors on before running the demos. This can be done by long-pressing the power button on the top panel of the YouBot and toggling the "Motors" option to ON.
 
-    An attempt was made to run the original demos upon turning on the computer. These original demos are stored at \code{~/applications} locally (available on the YouBot's GitHub repository as \code{youbot_applications}). The demos are written in C++ and provide a simple interface to control the YouBot's motors and sensors. This includes a Hello World application to test the communication with the motors, as well as a keyboard control demo to enable primitive keyboard control.
+    The YouBot provides precompiled C++ demo applications located in \code{~/applications}. These are also available from the official \code{youbot_applications} GitHub repository. The demos include basic tests for motor communication and manual control interfaces.
 
-    
-    After the EtherCAT interfacing issue was fixed, one can run the original demos by going to the relevant directory and running the application. Remember to turn the motors on beforehand. 
-    \begin{lstlisting}[style=plain]
-$   cd ~/applications/hello_world_demo/bin
-$   sudo ./youBot_HelloWorldDemo
-    \end{lstlisting}
-    \notes{add the feedback from the demo here}
-    
-    The output should show that the YouBot is able to communicate with the motors and sensors, and that the Hello World application is running successfully, by moving in the four cardinal directions.
+    \subsubsection{Hello World Demo}
 
-    Additionally, the keyboard control demo can be run by going to the relevant directory and running the application. This will allow you to control the YouBot's movement using the keyboard. The following command can be used to run the keyboard control demo:
-    \begin{lstlisting}[style=plain]
-$   cd ~/applications/keyboard_control_demo/bin
-$   sudo ./youBot_KeyboardControlDemo
-    \end{lstlisting}
-    \notes{add the feedback from the demo here}
+    This demo verifies that the EtherCAT communication is working correctly by issuing movement commands to the robot.
 
-    This shows that the YouBot is able to communicate with the motors and sensors as expected. However, running the original demos is very cumbersome and cannot be extended into a more complex system. As such, we will be using the ROS interface, as discussed in the next section. 
-
-    \pagebreak
-
-    \subsection{Running ROS Interface}
-
-    After verifying that the original C++ demos functioned correctly, the focus was shifted towards using the ROS interface, which provides a more scalable and modular framework for robotics development. The ROS interface allows for the integration of higher-level capabilities such as visualization, mapping, planning, and logging.
-
-    \subsubsection{Finding Installed Packages}
-    Additionally, the following command was used to list installed packages:
+    To run it:
 
     \begin{lstlisting}[style=plain]
-$   rospack list
+    $ cd ~/applications/hello_world_demo/bin
+    $ sudo ./youBot_HelloWorldDemo
     \end{lstlisting}
 
-    Among the key packages found were:
+    If successful, the output will indicate that the application is connected to the motors, and the robot should briefly move in the four cardinal directions (forward, backward, left, and right), confirming functional motor control.
 
-    \begin{itemize}
-        \item \code{youbot_driver_ros_interface} – The core package providing ROS interfaces to the hardware.
-        \item \code{youbot_teleop} – A keyboard teleoperation node.
-        \item \code{youbot_common} – Shared definitions and URDF files.
-        \item \code{youbot_description} – The robot model used for visualization and simulation.
+    \subsubsection{Keyboard Control Demo}
+
+    This demo enables basic manual control of the YouBot using the keyboard. It allows testing of real-time responsiveness and manual teleoperation.
+
+    Run it with:
+
+    \begin{lstlisting}[style=plain]
+    $ cd ~/applications/keyboard_control_demo/bin
+    $ sudo ./youBot_KeyboardControlDemo
+    \end{lstlisting}
+
+    Use the on-screen instructions to control the robot’s movement via the keyboard. 
+
+    One may run the other demos in a similar manner. Refer to the GitHub repository's README for more details. 
+
+    \subsection{Running the ROS Interface}
+
+    Once the C++ demos have been confirmed functional, the ROS (Robot Operating System) interface can be used to enable modular software integration for motion planning, visualization, diagnostics, and teleoperation.
+
+    \subsubsection{Verifying Installed ROS Packages}
+
+    To verify the required packages are installed on the YouBot, run:
+
+    \begin{lstlisting}[style=plain]
+    $ rospack list
+    \end{lstlisting}
+
+    Ensure the following packages are present:
+
+    \begin{itemize}[topsep=0pt, itemsep=0pt]
+    \item \code{youbot_driver_ros_interface} – Core ROS hardware interface for the YouBot.
+    \item \code{youbot_teleop} – ROS node for keyboard-based teleoperation.
+    \item \code{youbot_common} – Common message definitions and configuration files.
+    \item \code{youbot_description} – URDF robot model and related assets.
     \end{itemize}
 
-    \subsubsection{Launching the ROS Interface}
+    \subsubsection{Launching the ROS Driver}
 
-    The ROS environment was initialized as described earlier by sourcing the appropriate setup scripts in the \code{.bashrc} file. Once that was configured, the interface could be launched with:
-
-    \begin{lstlisting}[style=plain]
-$   roscore
-$   roslaunch youbot_driver_ros_interface youbot_driver.launch
-    \end{lstlisting}
-
-    The driver was successfully able to connect to the hardware via EtherCAT and expose the motors and sensors to ROS.
-
-    \subsubsection{Inspecting ROS Nodes and Topics}
-
-    With the ROS system running, the following commands were used to inspect the active components:
+    Before launching the ROS interface, ensure the correct environment variables are set (see section: \textit{ROS Networking Configuration}). Then launch the ROS master and the YouBot driver:
 
     \begin{lstlisting}[style=plain]
-$   rosnode list
-$   rostopic list
+    $ roscore
+    $ roslaunch youbot_driver_ros_interface youbot_driver.launch
     \end{lstlisting}
 
-    Sample output from \code{rosnode list} included:
+    The driver initializes the EtherCAT interface and exposes the robot's hardware components to the ROS environment.
 
-    \begin{itemize}
-        \item \code{/youbot_driver} – The main node managing low-level hardware.
-        \item \code{/rosout} – Standard logging node.
+    \subsubsection{Inspecting Nodes and Topics}
+
+    Use the following commands to inspect active ROS nodes and topics:
+
+    \begin{lstlisting}[style=plain]
+    $ rosnode list
+    $ rostopic list
+    \end{lstlisting}
+
+    Example nodes:
+
+    \begin{itemize}[topsep=0pt, itemsep=0pt]
+    \item \code{/youbot_driver} – Node that manages all hardware-level communication.
+    \item \code{/rosout} – Default ROS logging node.
     \end{itemize}
 
-    Sample topics included:
+    Example topics:
 
-    \begin{itemize}
-        \item \code{/joint_states} – Published joint positions and velocities.
-        \item \code{/tf} – Coordinate transforms used for kinematics and visualization.
-        \item \code{/cmd_vel} – Subscribed to for base velocity commands.
+    \begin{itemize}[topsep=0pt, itemsep=0pt]
+    \item \code{/joint_states} – Publishes joint positions and velocities.
+    \item \code{/cmd_vel} – Accepts velocity commands for the base.
+    \item \code{/tf} – Publishes coordinate frame transforms.
     \end{itemize}
 
-    \subsubsection{Visualization with \code{rqt} and \code{rviz}}
+    \subsubsection{Using Visualization Tools: \code{rqt} and \code{rviz}}
 
-    To visually inspect the robot’s state and perform debugging, both \code{rqt} and \code{rviz} were used.
+    ROS visualization tools are used to monitor system behavior and robot state:
 
-    \begin{itemize}
-        \item \code{rqt_graph} provided a real-time view of the node and topic communication.
-        \item \code{rviz} allowed visualization of the robot’s URDF model, TF tree, joint states, and more.
+    \begin{itemize}[topsep=0pt, itemsep=0pt]
+    \item \code{rqt_graph} – Displays real-time node and topic communication graph.
+    \item \code{rviz} – Visualizes robot model, coordinate frames, sensor data, and state feedback.
     \end{itemize}
+
+    Run the following commands in separate terminals:
 
     \begin{lstlisting}[style=plain]
     $ rosrun rqt_graph rqt_graph
@@ -974,27 +984,25 @@ $   rostopic list
     
     \subsection{Writing Custom Programs}
 
-    Using the ROS demo packages as a reference, I was able to write my own custom programs to control the YouBot. This involved using the ROS packages and drivers on the onboard computer to send velocity commands to the motors through the \code{/cmd_vel} topic. While primitive, this provides a simple and intuitive way to control the robot's movement using Python scripts. This can be further extended to support autonomous navigation, sensor feedback, or integration with external systems.
+    This section describes how to create and run custom ROS programs to control the YouBot using Python. The provided ROS demo packages serve as a reference.
 
     \subsubsection{Creating a Catkin Workspace}
 
-    Before writing custom ROS programs, a \code{catkin} workspace must be created. This workspace will contain all custom packages and nodes. The following commands create a basic workspace:
-
-    \notes{write code for creating a catkin workspace here.}
+    Before writing custom ROS programs, create a Catkin workspace to manage packages and dependencies. Note that we have named our folder \code{DSD} to reflect the course name. 
 
     \begin{lstlisting}[style=plain]
-    $ mkdir -p ~/DSD/catkin_ws/src
-    $ cd ~/DSD/catkin_ws/
-    $ catkin_make
+    $   mkdir -p ~/DSD/catkin_ws/src 
+    $   cd ~/DSD/catkin_ws/
+    $   catkin_make
     \end{lstlisting}
 
-    After building the workspace, it must be sourced to update the ROS environment:
+    Source the workspace to update your ROS environment:
 
     \begin{lstlisting}[style=plain]
     $ source devel/setup.bash
     \end{lstlisting}
 
-    It is recommended to add this line to the \code{.bashrc} file so that it is sourced automatically in every new terminal:
+    To source automatically in every new terminal, add this line to your \code{.bashrc}:
 
     \begin{lstlisting}[style=plain]
     echo "source ~/DSD/catkin_ws/devel/setup.bash" >> ~/.bashrc
@@ -1002,60 +1010,35 @@ $   rostopic list
 
     \subsubsection{Creating a Custom Package}
 
-    Once the workspace is initialized, a new package can be created within the \code{src} directory:
+    Create a new ROS package named \code{youbot_control} with dependencies:
 
     \begin{lstlisting}[style=plain]
     $ cd ~/DSD/catkin_ws/src
-    $ catkin_create_pkg youbot_control rospy std_msgs geometry_msgs
+    $ catkin_create_pkg youbot_control rospy std_msgs geometry_msgs # youbot_control is the package name, the following are dependencies
     $ cd ~/DSD/catkin_ws
     $ catkin_make
     \end{lstlisting}
 
-    This creates a new package named \code{youbot\_control} with dependencies on the necessary ROS message types.
-
     \subsubsection{Writing a Python Control Script}
 
-    Inside the package, a Python script can be written to publish velocity commands to the robot. For example:
+    Inside your package directory, create a \code{scripts} folder and a Python control script:
 
     \begin{lstlisting}[style=plain]
     $ cd ~/DSD/catkin_ws/src/youbot_control
     $ mkdir scripts
     $ touch scripts/simple_move.py
-    $ chmod +x scripts/simple_move.py
+    $ chmod +x scripts/simple_move.py # Make the script executable
     \end{lstlisting}
 
-    Sample content for \code{simple_move.py}:
+    Sample code files can be found in \notes{appendix for code}
 
-    \begin{lstlisting}[style=plain]
-    #!/usr/bin/env python
-
-    import rospy
-    from geometry_msgs.msg import Twist
-
-    rospy.init_node('simple_move')
-    pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
-
-    move_cmd = Twist()
-    move_cmd.linear.x = 0.1  # Move forward at 0.1 m/s
-    move_cmd.angular.z = 0.0
-
-    rate = rospy.Rate(10)  # 10 Hz
-    for _ in range(50):  # Publish for 5 seconds
-        pub.publish(move_cmd)
-        rate.sleep()
-
-    # Stop
-    move_cmd.linear.x = 0.0
-    pub.publish(move_cmd)
-    \end{lstlisting}
-
-    This script sends a simple forward command to the robot for 5 seconds and then stops.
-
-    To run the script:
+    To run a script:
 
     \begin{lstlisting}[style=plain]
     $ rosrun youbot_control simple_move.py
     \end{lstlisting}
+
+    \textbf{Note:} Note that certain scripts require additional arguments to be passed in. Refer to the comments for details. 
 
     \subsubsection{Automation with Bash Scripts and Tmux}
 
@@ -1074,30 +1057,22 @@ $   rostopic list
     $ chmod +x launch_youbot.sh
     \end{lstlisting}
 
-    Sample content for \code{launch_youbot.sh}:
+    Sample content for \code{launch_youbot.sh} can be found in \notes{appendix for code}. This script will create a new \code{tmux} session with three panes: one for \code{roscore}, one for the YouBot driver, and one for a custom movement script. Run the script by navigating to its directory and running the command:
 
     \begin{lstlisting}[style=plain]
-    #!/bin/bash
-
-    tmux new-session -d -s youbot
-    tmux send-keys "source ~/DSD/catkin_ws/devel/setup.bash" C-m
-    tmux send-keys "roscore" C-m
-
-    tmux split-window -h
-    tmux send-keys "source ~/DSD/catkin_ws/devel/setup.bash" C-m
-    tmux send-keys "roslaunch youbot_driver_ros_interface youbot_driver.launch" C-m
-
-    tmux split-window -v
-    tmux send-keys "source ~/DSD/catkin_ws/devel/setup.bash" C-m
-    tmux send-keys "rosrun youbot_control simple_move.py" C-m
-
-    tmux select-pane -t 0
-    tmux attach-session -t youbot
+    $ ./launch_youbot.sh 
     \end{lstlisting}
 
-    This script will open a new tmux session with three panes: one running \code{roscore}, one running the driver, and one running the custom movement script. This greatly speeds up the development workflow.
+    Note that a password will be required to initialize the YouBot-ROS interface. Navigate between panes using \code{Ctrl+b} followed by the arrow keys. Detach from the session with \code{Ctrl+b d} and reattach later with:
+    \begin{lstlisting}[style=plain]
+    $ tmux attach-session -t youbot
+    \end{lstlisting}
+    
+    Refer to the \code{tmux} documentation for more advanced usage and commands.
 
-    One may use tmule to simplify the scripting process further using toml files. The youbot did not allow for the installation of tmule due to no support for Python 2.7, so this was not used in this project. However, it is a useful tool to consider for future projects.
+    \subsubsection{Using TMuLE for Configuration Management}
+
+    One may use TMuLE to simplify the scripting process further using toml files. The youbot did not allow for the installation of TMuLE due to no support for Python 2.7, so this was not used in this project. However, it is a useful tool to consider for future projects. Refer to the documentation here. 
    
     \pagebreak
     \section{Code files}
