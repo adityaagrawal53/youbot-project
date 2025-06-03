@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.17)  3 JUN 2025 23:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.17)  4 JUN 2025 00:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1510,8 +1510,13 @@ LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 [24]
 
 [25]
-Overfull \hbox (49.48532pt too wide) in paragraph at lines 859--859
-[]\T1/lmr/bx/n/12 (-20) Youbot Driver Con-fig-u-ra-tion ( /youbot_driver/config/youbot-ethercat.cfg) 
+Overfull \hbox (48.19731pt too wide) in paragraph at lines 859--859
+[]\T1/lmr/bx/n/12 (-20) Youbot Driver Con-fig-u-ra-tion (\T1/zi4/b/n/12 ~/youbot_driver/config/youbot-ethercat.cfg\T1/lmr/bx/n/12 (-20) ) 
+ []
+
+
+Overfull \hbox (15.63797pt too wide) in paragraph at lines 866--867
+\T1/lmr/m/n/12 (-20) (\T1/zi4/m/n/12 ~/youbot_driver/config/youbot-ethercat.cfg\T1/lmr/m/n/12 (-20) ) to match your ac-tual in-ter-face name: 
  []
 
 
@@ -1529,7 +1534,7 @@ Overfull \hbox (49.48532pt too wide) in paragraph at lines 859--859
 [31] (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1098.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1107.
  (../code/rotate_graph.py
 
 [32]
@@ -1538,32 +1543,32 @@ Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on in
 
 [34] (../code/linear_graph.py
 
-[35])
+[35]
 
-[36] (../code/youbot-files/DSD/src/youbot_control/scripts/linear_test.py
+[36])
 
-[37])
+[37] (../code/youbot-files/DSD/src/youbot_control/scripts/linear_test.py
 
-[38] (../code/youbot-files/DSD/src/youbot_control/scripts/rotate_test.py
+[38])
 
-[39])
+[39] (../code/youbot-files/DSD/src/youbot_control/scripts/rotate_test.py
 
-[40] (../code/youbot-files/DSD/src/youbot_control/scripts/simple_square_movement.py
+[40])
 
-[41])
+[41] (../code/youbot-files/DSD/src/youbot_control/scripts/simple_square_movement.py
 
-[42] (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+[42])
+
+[43] (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 ) (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 ) (../code/youbot-files/DSD.sh)
 
-[43]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 1124.
-
-
 [44]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 1138.
+
 
 [45]
 
@@ -1575,7 +1580,9 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 [49]
 
-[50] (main.aux)
+[50]
+
+[51] (main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
@@ -1589,17 +1596,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46808 strings out of 473536
- 922707 string characters out of 5714956
- 1955061 words of memory out of 5000000
+ 46811 strings out of 473536
+ 922741 string characters out of 5714956
+ 1940059 words of memory out of 5000000
  68358 multiletter control sequences out of 15000+600000
  635068 words of font info for 178 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,131p,1156b,2948s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,131p,1156b,2946s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4b.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (53 pages, 39274606 bytes).
+Output written on main.pdf (54 pages, 39281707 bytes).
 PDF statistics:
- 1448 PDF objects out of 1728 (max. 8388607)
- 802 named destinations out of 1000 (max. 500000)
+ 1455 PDF objects out of 1728 (max. 8388607)
+ 805 named destinations out of 1000 (max. 500000)
  44988 words of extra memory for PDF output out of 51595 (max. 10000000)
 

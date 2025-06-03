@@ -805,7 +805,7 @@ $   roscore
 
     %If the command runs successfully, it means that the ROS interface is now able to communicate with itself and is ready to be used. 
 
-    \subsubsection{Ethernet Configuration}
+    \subsubsection{Ethernet Configuration ()\code{/etc/network/interfaces})}
 
     To enable stable communication between the YouBot and external systems, a static IP address is preferably assigned to the onboard Ethernet interface. This enables reliable wired access for remote control. 
 
@@ -856,18 +856,26 @@ $   ip addr show eth0
     Enter the password when prompted (default is \code{youbot}). If the connection is successful, the YouBot should be accessible through an external PC. 
 
 
-    \subsubsection{Youbot Driver Configuration (~/youbot\_driver/config/youbot-ethercat.cfg)}
+    \subsubsection{Youbot Driver Configuration (\code{~/youbot_driver/config/youbot-ethercat.cfg})}
 
-    The YouBot driver configuration file was also edited to change the port from \code{eth0} to \code{eth1}. This was done by opening the file \code{~/youbot\_driver/config/youbot-ethercat.cfg} and changing the line:
+    The YouBot driver requires the correct Ethernet interface to be specified for EtherCAT communication with the base and arm motors. This is configured in the file \code{~/youbot_driver/config/youbot-ethercat.cfg}. Note that the interface name used here may be different from the Ethernet interface name used in the previous step.  Type the following to see your Ethernet interfaces:
+    \begin{lstlisting}[style=plain]
+$   ifconfig
+    \end{lstlisting}
+
+    Change the Ethernet interface name in the youbot configuration file \\(\code{~/youbot_driver/config/youbot-ethercat.cfg}) to match your actual interface name:
+
     \begin{lstlisting}[style=plain]
     #EtherCAT port
     [EtherCAT]
-    EthernetDevice = eth0
+    EthernetDevice = eth1 # Change this to your actual EtherCAT interface name
     \end{lstlisting}
 
-    This will enable the YouBot driver to communicate with the motors and sensors through the correct port for the C++ demos. After saving the file, the YouBot driver can be started using the following command:
+    This will enable the YouBot driver to communicate with the motors and sensors through the correct port for the C++ demos. Run and test either the C++ demos or the ROS interface to verify that the configuration is correct. 
+
+
     
-    \subsection{Running original demos}
+    \subsection{Running C++ demos}
 
     \textbf{Note:} Remember to turn the motors on before running the demos. This can be done by long-pressing the power button on the top panel of the YouBot and toggling the "Motors" option to ON.
 
@@ -1092,24 +1100,30 @@ $   rostopic list
     One may use tmule to simplify the scripting process further using toml files. The youbot did not allow for the installation of tmule due to no support for Python 2.7, so this was not used in this project. However, it is a useful tool to consider for future projects.
    
     \pagebreak
-    \subsection{Python Files}
+    \section{Code files}
     %\lstinputlisting[language=Python, caption={Full Script}, label={lst:fullscript}]{../code/rotate_graph.py}
     \subsubsection{rotate\_graph.py}
+    This script read the data collected from the rotational movement experiments to parse the data and plot the drift of the centre of the robot in x and y axes as well as difference in yaw in a graph format. It also prints out the mean and standard deviation of the relevant errors. Refer to \notes{insert something here idr} for further details. 
     \lstinputlisting[language=Python, label={lst:fullscript}]{../code/rotate_graph.py}
     \pagebreak
     \subsubsection{linear\_graph.py}
+    This script read the data collected from the linear movement experiments to parse the data and plot the drift of the centre of the robot in x and y axes in a graph format. It also prints out the mean and standard deviation of the relevant errors. Refer to \notes{insert something here idr} for further details. 
     \lstinputlisting[language=Python, label={lst:fullscript}]{../code/linear_graph.py}
     \pagebreak
     \subsubsection{linear\_test.py}
+    This script is used to undertake the linear movement experiments. It uses the ROS interface to send velocity commands to the YouBot, and then calculates the delta in odometry from the robot. The script is designed to be run multiple times with different parameters through the terminal to collect data for analysis. Refer to \notes{insert something here idr} for further details.
     \lstinputlisting[language=Python, label={lst:fullscript}]{../code/youbot-files/DSD/src/youbot_control/scripts/linear_test.py}
     \pagebreak
     \subsubsection{rotate\_test.py}
+    This script is used to undertake the linear movement experiments. It uses the ROS interface to send velocity commands to the YouBot, and then calculates the delta in odometry from the robot. The script is designed to be run multiple times with different parameters through the terminal to collect data for analysis. Refer to \notes{insert something here idr} for further details.
     \lstinputlisting[language=Python, label={lst:fullscript}]{../code/youbot-files/DSD/src/youbot_control/scripts/rotate_test.py}
     \pagebreak
     \subsubsection{simple\_square\_movement.py}
+    This script was used to test the YouBot's ability to move in a square pattern. It uses the ROS interface to send velocity commands to the YouBot. 
     \lstinputlisting[language=Python, label={lst:fullscript}]{../code/youbot-files/DSD/src/youbot_control/scripts/simple_square_movement.py}
     \pagebreak
     \subsubsection{Tmux automation script} 
+    This script is used to automate the process of launching the ROS interface and the custom control scripts in a tmux session. It creates a new tmux session with four panes: one running \code{the YouBot-ROS interface}, one running the keyboard controller node, and two free panes for miscellaneous purposes.
     \lstinputlisting[language=Bash, label={lst:fullscript}]{../code/youbot-files/DSD.sh}
 
     \pagebreak
