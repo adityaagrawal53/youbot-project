@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.17)  3 JUN 2025 18:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.17)  3 JUN 2025 19:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1371,52 +1371,53 @@ Package pdftex.def Info: images/sec2/box1.jpg  used on input line 312.
 
 
 [5{C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc} <./images/sec2/kinectv1.png> <./images/sec2/hokuyo.png>]
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 320.
+ (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\t1zi4.fd
+File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 12.0pt on input line 320.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `zi4' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 
-[6 <./images/sec2/box2.jpg> <./images/sec2/box1.jpg>]
+
+[6{C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4-t1-0.enc} <./images/sec2/box2.jpg> <./images/sec2/box1.jpg>]
 
 pdfTeX warning: pdflatex (file ./diagrams/sample.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<diagrams/sample.pdf, id=165, 313.17pt x 181.6386pt>
+<diagrams/sample.pdf, id=166, 313.17pt x 181.6386pt>
 File: diagrams/sample.pdf Graphic file (type pdf)
 <use diagrams/sample.pdf>
-Package pdftex.def Info: diagrams/sample.pdf  used on input line 339.
-(pdftex.def)             Requested size: 455.24411pt x 264.05101pt.
+Package pdftex.def Info: diagrams/sample.pdf  used on input line 336.
+(pdftex.def)             Requested size: 364.19667pt x 211.24135pt.
 
 
 [7 <./diagrams/sample.pdf>]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 357.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 353.
  (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
 pdfTeX warning: pdflatex (file ./diagrams/new_arch.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<diagrams/new_arch.drawio.pdf, id=185, 313.17pt x 181.6386pt>
+<diagrams/new_arch.drawio.pdf, id=187, 313.17pt x 181.6386pt>
 File: diagrams/new_arch.drawio.pdf Graphic file (type pdf)
 <use diagrams/new_arch.drawio.pdf>
-Package pdftex.def Info: diagrams/new_arch.drawio.pdf  used on input line 391.
+Package pdftex.def Info: diagrams/new_arch.drawio.pdf  used on input line 387.
 (pdftex.def)             Requested size: 455.24411pt x 264.05101pt.
 
 
 [8{C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
 
 [9 <./diagrams/new_arch.drawio.pdf>]
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 413.
- (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\t1zi4.fd
-File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
-)
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 12.0pt on input line 413.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `zi4' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.95pt on input line 420.
+(Font)              scaled to size 10.95pt on input line 416.
 
 
-[10{C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4-t1-0.enc}]
+[10]
 
 [11]
-Overfull \hbox (46.04134pt too wide) in paragraph at lines 478--478
+Overfull \hbox (46.04134pt too wide) in paragraph at lines 474--474
 []\T1/lmr/bx/n/12 (-20) Youbot Driver Con-fig-u-ra-tion ( /youbot_driver/config/youbot-ethercat.cfg) 
  []
 
@@ -1426,7 +1427,7 @@ Overfull \hbox (46.04134pt too wide) in paragraph at lines 478--478
 
 [13]
 LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
-(Font)              scaled to size 12.0pt on input line 570.
+(Font)              scaled to size 12.0pt on input line 566.
 
 
 [14]
@@ -1440,17 +1441,17 @@ LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
 [18]
 
 [19]
-Overfull \hbox (167.70079pt too wide) in paragraph at lines 752--753
+Overfull \hbox (167.70079pt too wide) in paragraph at lines 748--749
 \T1/lmr/m/n/12 (-20) Here are some good web pages about the Slealed Lead Acid (SLA) bat-ter-ies: https://batterymasters.co.uk/blog/post/Howand
  []
 
 
-Overfull \hbox (164.72807pt too wide) in paragraph at lines 752--753
+Overfull \hbox (164.72807pt too wide) in paragraph at lines 748--749
 \T1/lmr/m/n/12 (-20) https://www.power-sonic.com/blog/how-to-charge-a-lead-acid-battery/ and https://www.powerstream.com/SLA.htm[] 
  []
 
 
-Overfull \hbox (14.18257pt too wide) in paragraph at lines 770--771
+Overfull \hbox (14.18257pt too wide) in paragraph at lines 766--767
 []\T1/lmr/m/n/12 (-20) Vesa at-tempted to re-vive this bat-tery through desul-pha-tion, where a higher-than-recommended
  []
 
@@ -1463,32 +1464,32 @@ Overfull \hbox (14.18257pt too wide) in paragraph at lines 770--771
 [22{C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
 
 [23]
-<images/experiment_results/linear_error_boxplots.png, id=407, 1011.78pt x 433.62pt>
+<images/experiment_results/linear_error_boxplots.png, id=408, 1011.78pt x 433.62pt>
 File: images/experiment_results/linear_error_boxplots.png Graphic file (type png)
 <use images/experiment_results/linear_error_boxplots.png>
-Package pdftex.def Info: images/experiment_results/linear_error_boxplots.png  used on input line 902.
+Package pdftex.def Info: images/experiment_results/linear_error_boxplots.png  used on input line 898.
 (pdftex.def)             Requested size: 450.69417pt x 193.15547pt.
-<images/experiment_results/rotational_errors_speed_45.png, id=408, 1300.86pt x 433.62pt>
+<images/experiment_results/rotational_errors_speed_45.png, id=409, 1300.86pt x 433.62pt>
 File: images/experiment_results/rotational_errors_speed_45.png Graphic file (type png)
 <use images/experiment_results/rotational_errors_speed_45.png>
-Package pdftex.def Info: images/experiment_results/rotational_errors_speed_45.png  used on input line 909.
+Package pdftex.def Info: images/experiment_results/rotational_errors_speed_45.png  used on input line 905.
 (pdftex.def)             Requested size: 450.69417pt x 150.22763pt.
-<images/experiment_results/rotational_errors_speed_75.png, id=409, 1300.86pt x 433.62pt>
+<images/experiment_results/rotational_errors_speed_75.png, id=410, 1300.86pt x 433.62pt>
 File: images/experiment_results/rotational_errors_speed_75.png Graphic file (type png)
 <use images/experiment_results/rotational_errors_speed_75.png>
-Package pdftex.def Info: images/experiment_results/rotational_errors_speed_75.png  used on input line 916.
+Package pdftex.def Info: images/experiment_results/rotational_errors_speed_75.png  used on input line 912.
 (pdftex.def)             Requested size: 450.69417pt x 150.22763pt.
 
 
 [24 <./images/experiment_results/linear_error_boxplots.png> <./images/experiment_results/rotational_errors_speed_45.png> <./images/experiment_results/rotational_errors_speed_75.png>]
-Overfull \hbox (0.74953pt too wide) in paragraph at lines 936--939
+Overfull \hbox (0.74953pt too wide) in paragraph at lines 932--935
 []\T1/lmr/m/n/12 (-20) flexible intra-logistics hu-man aware-ness and flex-i-bil-ity seam-less human-robot ex-is-tence 
  []
 
 
 
 [25]
-Underfull \hbox (badness 1189) in paragraph at lines 988--988
+Underfull \hbox (badness 1189) in paragraph at lines 984--984
 []|\T1/lmr/m/n/12 (+20) Autonomous in-spec-tion, mon-i-tor-ing,
  []
 
@@ -1504,7 +1505,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [28]
 
 Package biblatex Warning: No driver for 'bachelorsthesis'.
-(biblatex)                Using fallback driver on input line 1032.
+(biblatex)                Using fallback driver on input line 1028.
 
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
@@ -1513,7 +1514,7 @@ Package microtype Info: Character `029' is missing
 
 [29]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 1055.
+(Font)              <5> on input line 1051.
 
 
 [30]
@@ -1531,7 +1532,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [36] (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1446.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1442.
  (../code/rotate_graph.py
 
 [37]
@@ -1582,9 +1583,9 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  84i,12n,131p,1052b,2948s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4b.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (51 pages, 33164469 bytes).
+Output written on main.pdf (51 pages, 33164879 bytes).
 PDF statistics:
- 1423 PDF objects out of 1440 (max. 8388607)
+ 1424 PDF objects out of 1440 (max. 8388607)
  789 named destinations out of 1000 (max. 500000)
  44978 words of extra memory for PDF output out of 51595 (max. 10000000)
 

@@ -317,34 +317,30 @@
 
     \subsection{Documentation}
     
+    The documentation for the KUKA YouBot is sparse. Since the product's discontinuation in the mid-2010s, KUKA has removed most references to the product from their official website, and the official website for the YouBot (\texttt{youbot-store.com}) is no longer active. The only starting point for official documentation was through a user manual dated 2013 found on the onboard PC. 
 
-    The documentation for the KUKA YouBot is sparse and unavailable for the most part. KUKA has removed most references to the product from their website, and the original youbot-store.com website is no longer available. Furthermore, the only available user manual for the YouBot online is a decade-old PDF file that was uploaded by a third-party user, and is marked as a draft version from 2013. 
+    Fortunately, as the YouBot was marketed as an open-source platform, many of its drivers and software components remain available on the YouBot GitHub repositories \notes{[cite]}. Furthermore, we leveraged the Wayback Machine \notes{[cite]} to retrieve snapshots of the original website. While this archive is incomplete and tedious to comb through, they provide valuable insights into the hardware specifications, software stack, and applications of the YouBot during its active develpoment period. Some notable websites include janpaulus.github.io, which provides a comprehensive overview of the YouBot's hardware and software components, and the YouBot Wiki, which contains limited information on setting up the YouBot. 
 
-    Thankfully, the YouBot was marketed as an open-source platform, and the drivers as well as various parts of software are available on GitHub. Furthermore, we were able to find some more information about the YouBot through the Wayback Machine, which had archived parts of the original website. While this archive is not complete by any means and is very tedious to comb through, it provides us with a powerful tool to piece together data about the YouBot and its use cases during its hayday.
+    \notes{add images of some of the more interesting websites here, and some of the images regarding the youbot's specifications.}
 
-    We've also taken the liberty of citing some YouBot related projects here.
-
-    \notes{add images of some of the more interesting websites here, and some of the images regarding the youbot's statistics.}
     \subsection{Initial Project Goals}
 
     Considering the hardware and software components of the YouBot, the initial goals of this project involved a comprehensive revival of the robot and the enabling of autonomous navigation using the Kinect camera. This would showcase the potential of the YouBot in cutting-edge research despite its age. 
 
-    Teach \& Repeat (T\&R) was considered to be an ideal candidate to allow for the autonomous navigation. This\notes{[cite]} is a two-phase robotic navigation method where a robot is first "taught" a path via human guidance or pre-recoded data. The sensor data captured during this phase can then be used to allow the robot to autonomously "repeat" the path later on, even in different environments.
+    The Teach \& Repeat (T\&R) method was considered to be an ideal candidate to allow for autonomous navigation. This\notes{[cite]} is a two-phase robotic navigation method where a robot is first "taught" a path via human guidance or pre-recoded data. The sensor data captured during this phase can then be used to allow the robot to autonomously "repeat" the path later on, even in different environments.
 
     T\&R only requires a single camera for a basic implementation. It is a relatively simple method to implement through the use of open-source software and libraries, such as OpenCV and ROS. Furthermore, it is robust to changes in the environment and can dynamically correct errors through the use of visual odometry. As such, it has been a very popular research topic within the field of robotics, particularly in the context of mobile robots \notes{[cite]}. Much of the work done on extending T\&R aims to improve this robustness and scalability for a variety of sensors and use-cases. 
 
-    \adi{I'm not sure how the ROS stack would look like, or if its necessary to explain. Discuss with advisor}
     \begin{figure}[ht]
         \centering
-        \includegraphics[width=\linewidth]{diagrams/sample.pdf}
+        \includegraphics[width=0.8\linewidth]{diagrams/sample.pdf}
         \caption{System Diagram}
         \label{fig:system-diagram}
     \end{figure}
 
+    Figure~\ref{fig:system-diagram} shows the proposed system architecture for this implementation. This would involve the onboard PC running ROS 1 Hydro, which would handle the low-level control tasks regarding motor actuation. The navigation and perception tasks would be handled by a more capable external computer running ROS 2 Jazzy. The two systems would then communicate through a ROS1-ROS2 bridge,  enabling compatibility between legacy software on the YouBot and the more modern ROS2 stack. The Kinect camera would be then mounted on top of the YouBot, and would be connected to the external computer via USB. This setup allows for the YouBot to be used without much modification or strain to its legacy hardware, while still enabling the use of modern software and sensors.
 
-    Here, figure [] shows an example of how the architecture for this system would have been implemented. This would have involved a wired connection to an external computer running ROS2 Jazzy and directly connected to the Kinect camera mounted on top of the YouBot. The onboard computer would have been used to control the motors and communicate with the sensors, while the external computer would have handled the processing and navigation tasks. The onboard computer and external computer would commuicate through a ROS1-ROS2 bridge, allowing for seamless integration of the two systems. 
-
-    However, considering the age of the YouBot, lack of personal knowledge regarding robotics, as well as incompatible software, it was realised that this was not feasible. We will be discussing our new goals in the next section. 
+    However, due to several challenges—namely the age of the YouBot, limited prior experience with robotics, and software incompatibilities—this plan proved infeasible. A revised set of project goals was subsequently developed, as discussed in the following section.
 
     \pagebreak
     

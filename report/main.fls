@@ -574,6 +574,11 @@ INPUT .\images\sec2\box1.jpg
 INPUT .\images\sec2\box1.jpg
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
+INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex\latex\inconsolata\t1zi4.fd
+INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex\latex\inconsolata\t1zi4.fd
+INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex\latex\inconsolata\t1zi4.fd
+INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\tfm\public\inconsolata\t1-zi4r-0.tfm
+INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\inconsolata\i4-t1-0.enc
 INPUT .\diagrams\sample.pdf
 INPUT .\diagrams\sample.pdf
 INPUT .\diagrams\sample.pdf
@@ -591,12 +596,7 @@ INPUT .\diagrams\new_arch.drawio.pdf
 INPUT .\diagrams\new_arch.drawio.pdf
 INPUT .\diagrams\new_arch.drawio.pdf
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ts1.enc
-INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex\latex\inconsolata\t1zi4.fd
-INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex\latex\inconsolata\t1zi4.fd
-INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex\latex\inconsolata\t1zi4.fd
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\tfm\public\inconsolata\t1-zi4r-0.tfm
-INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\tfm\public\inconsolata\t1-zi4r-0.tfm
-INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\inconsolata\i4-t1-0.enc
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\tfm\public\inconsolata\t1-zi4b-0.tfm
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
 INPUT .\images\experiment_results\linear_error_boxplots.png
