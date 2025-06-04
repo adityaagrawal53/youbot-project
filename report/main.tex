@@ -626,6 +626,30 @@ https://www.powerstream.com/SLA.htm}
         \caption{Centered image}
     \end{figure}
 
+    \subsection{Results and Error Analysis}
+
+    \subsubsection{Linear Motion Error Characteristics}
+
+    The linear motion experiments revealed a consistent underestimation in forward movement (dx), with mean errors increasing approximately linearly with the commanded distance. For instance, at 0.2 m/s over 1 meter, the mean dx error was -4.55 cm, while at 2 meters it was -9.05 cm, indicating a scale-dependent and systematic error. This bias suggests a miscalibration in either velocity estimation or time-based control. In contrast, the lateral error (dy) showed less consistency, with relatively low variance at slow speeds and significantly increased spread at higher velocities (e.g., variance of 203.5 cm² at 0.6 m/s). This may indicate instability in lateral control, sensor drift, or non-ideal surface interactions.
+
+    \subsubsection{Rotational Motion Error Characteristics}
+
+    Rotational experiments exhibited both systematic and random error components. At lower target angles (45° and 90°), yaw error was consistently negative across both speed conditions, pointing to under-rotation. This under-rotation was more severe at higher rotational speeds, suggesting an underestimation of angular displacement due to timing, inertia, or feedback delays. Notably, however, for the 360° trials, the yaw error became positive—indicating over-rotation. This suggests that the error model is nonlinear and possibly affected by controller saturation or feedback lag accumulating over time.
+
+    In addition to yaw deviation, positional drift in x and y was observed during rotation, with the magnitude generally increasing with both angle and speed. For example, at 75°/s over a 360° turn, the mean x and y drift exceeded 1.4 m and 0.72 m respectively. Such drift likely results from an imperfect center of rotation, actuator asymmetry, or encoder discrepancies.
+
+    \subsubsection{Classification of Errors}
+
+    Based on the data, errors were classified as follows:
+    \begin{itemize}
+        \item \textbf{Systematic Errors:} Present in both dx and yaw measurements. These were repeatable and dependent on motion parameters, suggesting calibration issues or consistent model inaccuracies.
+        \item \textbf{Random Errors:} Particularly visible in dy and yaw variance, especially at higher speeds. These may arise from environmental factors, surface inconsistencies, or sensor noise.
+        \item \textbf{Scale-Dependent Errors:} Errors in dx and yaw tended to grow with increasing speed and commanded magnitude, indicating drift or temporal misalignment in control commands.
+        \item \textbf{Nonlinear and Saturation Effects:} Reversal of yaw error direction (under-rotation to over-rotation) at large angles and high speeds suggests complex behavior beyond linear drift, potentially due to limits in the control loop or cumulative errors in open-loop motion.
+    \end{itemize}
+
+    These results underscore the need for either closed-loop feedback or more accurate modeling of motion and sensor characteristics to reduce the observed deviation, especially for longer or faster movements. 
+
     \pagebreak
 
     \section{Future Applications}
