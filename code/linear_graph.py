@@ -5,7 +5,7 @@ import os
 from glob import glob
 
 # === Config toggles ===
-PRINT_COLUMN_DATA = True
+PRINT_COLUMN_DATA = False
 PRINT_STATS = True
 SAVE_FIG = True
 SHOW_FIG = False

@@ -610,7 +610,7 @@ INPUT .\images\sec4\initial_ros_bootup.jpg
 INPUT .\images\sec4\initial_ros_bootup.jpg
 INPUT .\images\sec4\initial_ros_bootup.jpg
 INPUT .\images\sec4\initial_ros_bootup.jpg
-INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
+INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ts1-lmbx12.tfm
 INPUT .\images\experiment_results\linear_error_boxplots.png
 INPUT .\images\experiment_results\linear_error_boxplots.png
 INPUT .\images\experiment_results\linear_error_boxplots.png
@@ -687,8 +687,6 @@ INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx8.p
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx8.pfb
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmcsc10.pfb
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmcsc10.pfb
-INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi12.pfb
-INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi12.pfb
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr10.pfb
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr10.pfb
 INPUT C:\Users\Adity\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr12.pfb
