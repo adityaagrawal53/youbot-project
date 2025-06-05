@@ -41,22 +41,22 @@
 \contentsline {subsubsection}{\numberline {5.3.2}Rotational Motion Error Characteristics}{17}{subsubsection.5.3.2}%
 \contentsline {subsection}{\numberline {5.4}Conclusion}{18}{subsection.5.4}%
 \contentsline {section}{\numberline {6}Future Applications}{20}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Platform Considerations}{20}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Practical Deployment Context}{20}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Potential Roles for the YouBot Base}{20}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}On the Use of Teach and Repeat}{20}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Summary Table}{21}{subsection.6.5}%
-\contentsline {section}{\numberline {7}Reflection}{22}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Project Evolution}{22}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}AGILE}{22}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Final Thoughts}{22}{subsection.7.3}%
+\contentsline {subsection}{\numberline {6.1}Human-Robot Interaction (HRI)}{20}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Autonomous Mobile Robots (AMRs)}{20}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Automated Guided Vehicles (AGVs)}{20}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Swarm Robotics}{20}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Robotics Prototyping}{20}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Reflection}{21}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Project Evolution}{21}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}AGILE}{21}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Conclusions}{21}{subsection.7.3}%
 \contentsline {section}{\numberline {A}User Manual for the KUKA YouBot}{24}{appendix.A}%
 \contentsline {subsection}{\numberline {A.1}Booting Up the YouBot}{24}{subsection.A.1}%
 \contentsline {subsubsection}{\numberline {A.1.1}Powering On}{24}{subsubsection.A.1.1}%
 \contentsline {subsection}{\numberline {A.2}Initial Configuration}{24}{subsection.A.2}%
 \contentsline {subsubsection}{\numberline {A.2.1}ROS Networking Configuration (\texttt {.bashrc})}{24}{subsubsection.A.2.1}%
 \contentsline {subsubsection}{\numberline {A.2.2}Ethernet Configuration (\texttt {/etc/network/interfaces})}{25}{subsubsection.A.2.2}%
-\contentsline {paragraph}{Testing the Connection}{25}{section*.22}%
+\contentsline {paragraph}{Testing the Connection}{25}{section*.21}%
 \contentsline {subsubsection}{\numberline {A.2.3}Youbot Driver Configuration (\texttt {~/youbot_driver/config/youbot-ethercat.cfg})}{26}{subsubsection.A.2.3}%
 \contentsline {subsection}{\numberline {A.3}Running C++ demos}{26}{subsection.A.3}%
 \contentsline {subsubsection}{\numberline {A.3.1}Hello World Demo}{26}{subsubsection.A.3.1}%

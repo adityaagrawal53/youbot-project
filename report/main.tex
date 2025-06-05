@@ -142,7 +142,7 @@
 
     \notes{draft \#2}
 
-    In the rapidly evolving field of robotics, expensive hardware platforms often become obsolete quickly. This is not purely because of physical wear and tear or a lack of functionality, but also due to quick advancements in hardware, software and infrastructure. For example, artificial intelligence (AI) and related fields like Machine Learning (ML) and Deep Learning (DL) has accelerated progress within robotics, driving demand for specialised, high-performance hardware and tightly integrated software ecosystems. Consequently,older robotic platforms, despite their inherent capabilities, become less relevant and lose extended support. This furthermore could lead to increased e-waste and reduced sustainability in the robotics industry \cite{KARASTOYANOV201844}. 
+    In the rapidly evolving field of robotics, expensive hardware platforms often become obsolete quickly. This is not purely because of physical wear and tear or a lack of functionality, but also due to quick advancements in hardware, software and infrastructure. For example, artificial intelligence (AI) and related fields like Machine Learning (ML) and Deep Learning (DL) has accelerated progress within robotics, driving demand for specialised, high-performance hardware and tightly integrated software ecosystems. Consequently,older robotic platforms, despite their inherent capabilities, become less relevant and lose extended support. This furthermore could lead to increased e-waste and reduced sustainability in the robotics industry \cite{mcgloin2023introducing}. 
 
     The KUKA YouBot is a prime example of this phenomenon. It was once a popular platform for research and education in robotics in the mid-2010s, but has been since discontinued and is no longer supported by the manufacturer. This mobile robot base is quite robust, compact and utilizes open-source drivers. While this platform has reduced performance and integration capabilities compared to its modern peers, it can still serve a variety of purposes for the purposes of industrial and academic research. This includes autonomous navigation, perception and human-robot interaction. Instead of discarding such platforms, we should explore avenues to extend their lifespan and utility. This would reduce e-waste and costs associated with acquiring new hardware, and thus lower the barrier to entry for research and development in robotics.
     
@@ -548,14 +548,13 @@ https://www.powerstream.com/SLA.htm}
     
     \section{Experimental Setup for Movement and Odometry}
 
-    There were various inconsistencies that occured during the running of custom programs. For example, the square movement program consistently overshot the expected position with a positive drift in x, y, and yaw. To formally quantify these irregularities, a controlled set of experiments was conducted to assess error rates between actual movement and odometry measurement.
-
+    There were various inconsistencies that occured during the running of custom programs. For example, the square movement program showed that the odometry data, measured data and expected data disagreed with each other. To formally quantify these irregularities, a controlled set of experiments was conducted to assess error rates between odometry measurement and actual movement.
 
     \subsection{Motivation and Approach}
 
     The experimental effort was designed to:
     \begin{itemize}[noitemsep]
-        \item Quantify the error between commanded and actual movement.
+        \item Quantify the error between odometry measurement and actual movement.
         \item Identify whether errors were consistent (systematic), random, and/or scale-dependent.
         \item Assess the reliability of onboard odometry over short and long trajectories.
         \item Test how speed and distance affected performance.
@@ -729,79 +728,37 @@ https://www.powerstream.com/SLA.htm}
 
     \section{Future Applications}
 
-    While the Teach and Repeat (T\&R) method---a form of visual SLAM where the robot is manually guided through a path and then repsereats it using stored visual keyframes---has been applied in robotics, its real-world utility on the KUKA YouBot is nuanced. The platform is best viewed not as an ideal assistive robot for dynamic human environments, but as a robust mobile base for prototyping, logistics, and structured automation tasks.
+    This project has demonstrated that legacy hardware such as the KUKA YouBot can still offer meaningful value when approached with purpose. While the KUKA YouBot is no longer a competitive platform for cutting-edge industrial and research applications, it can act as a platform for conducting research, education and prototyping in the field of mobile robotics. This would allow us to make full use of the YouBot's capabilities, while also extending its operational life and reducing e-waste.
 
-    \subsection{Platform Considerations}
+    \subsection{Human-Robot Interaction (HRI)}
 
-    The YouBot, with its omnidirectional drive and compact form, offers a flexible and extensible base. However, its limited onboard compute and sensing make it suboptimal for tasks requiring high adaptability or semantic awareness---both critical for assistive service robots in real homes or public environments. Nonetheless, its utility in controlled or semi-structured settings remains strong.
-
-    \subsection{Practical Deployment Context}
-
-    In the broader context of mobile robot deployment, there are three major paradigms:
-
-    \begin{itemize}[noitemsep]
-        \item \textbf{Infrastructure-Dependent AGVs:} Traditional automated guided vehicles rely on pre-installed infrastructure such as reflector stripes or magnetic paths. These are effective in fixed-route logistics (e.g., forklift automation in warehouses), but require significant setup and cannot adapt dynamically.
-        \item \textbf{Smart AMRs:} Autonomous mobile robots (like those used by Amazon) can replan paths in real-time using onboard sensors and cloud coordination. These systems excel in semi-structured logistics environments with moving agents and dynamic layouts.
-        \item \textbf{Grid-Based Swarm Platforms:} Some warehouse systems use fleets of robots operating on a grid, optimizing item retrieval and packing through centralized orchestration (e.g., AutoStore systems). These prioritize high efficiency in tightly structured environments.
-    \end{itemize}
-
-    \subsection{Potential Roles for the YouBot Base}
-
-    While not competitive with fully integrated AMRs or commercial AGVs, the YouBot base can serve as a:
-
-    \begin{itemize}[noitemsep]
-        \item \textbf{Flexible Intra-Logistics Tool:} Ideal for transporting light items within labs or workshops in predefined or moderately dynamic spaces.
-        \item \textbf{Assistive Demonstrator:} For fetching or guiding in controlled environments (e.g., academic demos, elderly care labs).
-        \item \textbf{Research Platform:} Excellent for testing navigation, mapping, and multi-agent systems thanks to its ROS compatibility and open interfaces.
-        \item \textbf{Educational Robot:} Its small footprint and programmability make it a staple in teaching and competitions.
-    \end{itemize}
-
-    \subsection{On the Use of Teach and Repeat}
-
-    T\&R may still be useful in scenarios where:
-
-    \begin{itemize}[noitemsep]
-        \item The environment is static and predictable.
-        \item The path is repetitive (e.g., lab-to-lab delivery).
-        \item The focus is on rapid prototyping of navigation methods with minimal setup.
-    \end{itemize}
-
-    However, for adaptive assistive platforms, T\&R lacks the semantic and reactive capabilities necessary to operate alongside humans in dynamic contexts.
-
-    \subsection{Summary Table}
-
-    \begin{table}[H]
-    \centering
-    \begin{tabular}{|l|p{7cm}|}
-    \hline
-    \textbf{Application Area} & \textbf{Role of YouBot} \\
-    \hline
-    Intra-logistics & Automating small transport tasks in labs/factories \\
-    Assistive robotics (demonstrator) & Simple delivery/fetching in structured indoor environments \\
-    Research and prototyping & Platform for SLAM, navigation, and HRI testing \\
-    Education and training & Robotics coursework, student projects, competitions \\
-    \hline
-    \end{tabular}
-    \caption{Summary of Practical Applications for the KUKA YouBot Base}
-    \end{table}
+    The YouBot's small size and mobility make it a suitable for operation in tandem with humans in controlled environments, such as labs or workshops. This would allow for the testing of HRI algorithms and assistive applications, with a focus on navigation and cognition. 
 
 
-    
+    \subsection{Autonomous Mobile Robots (AMRs)}
+    As urban and industrial environments become more complex, the need for autonomous mobile robots (AMRs) that can navigate and operate in these environments is increasing. The YouBot's ROS compatibility and open interfaces make it a suitable platform for testing and prototyping AMR algorithms, such as SLAM and real-time localization. Sensor fusion through provided sensors such as the Kinect camera and Hokuyo laser rangefinder, can be used to provide the necessary data for these algorithms.
 
+    \subsection{Automated Guided Vehicles (AGVs)}
+
+    In the context of warehouse logistics and factory automation, the YouBot could emulate AGV systems for transporting light items within controlled environments. While it lacks the robustness and adaptability of modern AGVs, its lightweight and compact design make it suitable as a prototyping and testing platform. 
+
+    \subsection{Swarm Robotics}
+
+    \subsection{Robotics Prototyping}
+
+    The YouBot provides a flexible environment for rapid prototyping of both hardware modules and control software. It supports plug-and-play integration of third-party sensors, ROS packages, and custom algorithms. 
 
     \pagebreak
 
     \section{Reflection}
 
-    \notes{draft 1, 11.05 6pm}
-
-    In this section, I will reflect on the outcomes of this project. This will include an overview of project management practices and planning, alongside my learnings and personal feelings about the project. 
+    This project was a novel and challenging experience for me, as it was my first time dabbling in the field of robotics. It served as my first exposure to ROS, Linux, and the various hardware components of a robot. It was furthermore a very open-ended and self-directed project, where I had to manage my own time and resources, and make decisions about the direction of the project.
 
     \subsection{Project Evolution}
 
-    As disccused previously, the initial goal of this project was much more concrete and ambitious, with an ultimate aim of enabling Teach and Repeat on a decade-old robot whilst using something like ROS2 Jazzy. This was simply not feasible with the outdated software and hardware, lack of documentation, my own lack of experience, and the overall time and resource constraints for completing this project. Furthermore, this project was a significant different experience from any other course I have taken in the past.
+    As disccused previously, the initial goal of this project was much more concrete and ambitious, with an ultimate aim of enabling Teach and Repeat on a decade-old robot whilst using something like ROS2 Jazzy. This was simply not feasible with the outdated software and hardware, lack of documentation, my own lack of experience, and the overall time and resource constraints for completing this project. 
     
-    My initial approach to project management was very linear and straighforward, with the understanding that there would be no hiccups or issues along the way. I had the following time-table in mind: \notes{maybe insert a table showcasing the plan here?} While this was initially rewarding as I made progress in individual tasks (i.e. Kinect camera, booting up computer, static IP, etc.), momentum was quickly lost when it came to integrating these tasks into a cohesive system, through the use of the ROS1-ROS2 bridge. 
+    My initial approach to project management was very linear and straightforward, with the understanding that there would be no hiccups or issues along the way. While this was initially rewarding as I made progress in individual tasks (i.e. Kinect camera, booting up computer, static IP, etc.), momentum was quickly lost when it came to integrating these tasks into a cohesive system, through the use of the ROS1-ROS2 bridge. This led me to feel overwhelmed and frustrated, as I was unable to make progress towards the initial goal. Thus, a pivot was necessary to reframe the project and its goals, and a change in perspective allowed me to make progress in a more manageable and healthy way.
 
     \subsection{AGILE}
 
@@ -811,9 +768,13 @@ https://www.powerstream.com/SLA.htm}
 
     Undertaking this mindset required time and patience, where I had to learn to accept that not everything would go according to plan. It furthermore required me to be more open to feedback, and actively focusing on short-term goals. 
 
-    \subsection{Final Thoughts}
+    \subsection{Conclusions}
 
-    Overall, despite the various challenges faced, I am very happy with my progress and learning outcomes regarding this project. I was able to successfully revive the KUKA YouBot to a usable state, gain a deeper understanding of the ROS ecosystem, Linux, bash scripting, alongside the various hardware components of the robot. More importantly, I learned to manage projects with the understanding of personal and technical constraints. I'd like to thank my advisor for his provision of a different perspective on the project, explanations of everything and constant patience.  
+    The revised technical goals and learning outcomes were mostly completed by the end of the project. I was able to successfully revive the KUKA YouBot to a usable state, gain a deeper understanding of the ROS ecosystem, Linux, bash scripting, and the various hardware components of the robot. I was also able to write custom programs to control the YouBot, and test its movement capabilities through controlled experiments. Soft skills such as project management, time management, and self-directed learning were also improved greatly. 
+    
+    There are several areas of the YouBot that could be further explored, such as an actual implementation for the ROS1-ROS2 bridge, further integration of sensors, and more advanced control algorithms. However, I am satisfied with the overall progress made despite my pitfalls. 
+
+    I'd like to thank my advisor for his provision of a different perspective on the project, explanations of everything and consistent patience. I also want to thank Vesa Korhonen for his help with replacing the YouBot battery and his insights into the YouBot's hardware and documentation.
 
 
     \newpage
