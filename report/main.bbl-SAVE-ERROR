@@ -19,14 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
-    \entry{githubYoubotOverview}{misc}{}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://github.com/youbot}}
-      \field{note}{[Accessed 23-04-2025]}
-      \field{title}{youbot - {O}verview --- github.com}
-    \endentry
     \entry{Tsogias2016}{bachelorsthesis}{}{}
       \name{author}{1}{}{%
         {{hash=848151fbf6191c8a8635a0950ce929e7}{%
@@ -46,8 +38,8 @@
       \strng{authornamehash}{848151fbf6191c8a8635a0950ce929e7}
       \strng{authorfullhash}{848151fbf6191c8a8635a0950ce929e7}
       \strng{authorfullhashraw}{848151fbf6191c8a8635a0950ce929e7}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{Kinematic Analysis of a KUKA YouBot}}
@@ -64,8 +56,8 @@
       \endverb
     \endentry
     \entry{archiveYouBotStore}{misc}{}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{note}{[Accessed 23-04-2025]}
       \field{title}{you{B}ot {S}tore --- web.archive.org}
@@ -78,12 +70,21 @@
       \endverb
     \endentry
     \entry{janpaulusYouBotDriver}{misc}{}{}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://janpaulus.github.io/}}
       \field{note}{[Accessed 23-04-2025]}
       \field{title}{you{B}ot {D}river --- janpaulus.github.io}
+      \true{nocite}
+    \endentry
+    \entry{githubYoubotOverview}{misc}{}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/youbot}}
+      \field{note}{[Accessed 23-04-2025]}
+      \field{title}{youbot - {O}verview --- github.com}
       \true{nocite}
     \endentry
   \enddatalist
