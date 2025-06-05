@@ -1,14 +1,14 @@
 # Fdb version 4
-["biber main"] 1749131610.61 "main.bcf" "main.bbl" "main" 1749131726.26922 0
+["biber main"] 1749133492.49422 "main.bcf" "main.bbl" "main" 1749136919.45609 0
   "./resources/bib/references.bib" 1749131552 10015 17bbfea3d344774d2963693d3d66778f ""
-  "main.bcf" 1749131725 109219 155d463562199e36fe575dc0f919df87 "pdflatex"
+  "main.bcf" 1749136918 109219 155d463562199e36fe575dc0f919df87 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1749131709.57733 "d:/OneDrive/_work/_DSD_FP/final-proj-report/report/main.tex" "main.pdf" "main" 1749131726.27055 0
+["pdflatex"] 1749136901.22628 "d:/OneDrive/_work/_DSD_FP/final-proj-report/report/main.tex" "main.pdf" "main" 1749136919.457 0
   "../code/linear_graph.py" 1749038769 3024 44c544ce0acd7253127243feb49e6388 ""
-  "../code/rotate_graph.py" 1749038773 4777 970c977402881a084b44598d748693ea ""
+  "../code/rotate_graph.py" 1749134606 4896 807c17662d9eb6f7816345300bfdb3d0 ""
   "../code/youbot-files/DSD.sh" 1748882619 1076 de9637882682ca9143f428a463ad83f7 ""
   "../code/youbot-files/DSD/src/youbot_control/scripts/linear_test.py" 1748882168 2115 360f02e3248b16ec3aeed874ab89c8d0 ""
   "../code/youbot-files/DSD/src/youbot_control/scripts/rotate_test.py" 1748882143 2142 6f4bd52a0a4a9c694bcb4dd8a156c046 ""
@@ -286,12 +286,12 @@
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "d:/OneDrive/_work/_DSD_FP/final-proj-report/report/main.tex" 1749131563 123278 d8dd670d8ebcf56de196b867ebe7ccd4 ""
+  "d:/OneDrive/_work/_DSD_FP/final-proj-report/report/main.tex" 1749136882 126513 d6101bd562bdfdc6d21b11d0ee76d093 ""
   "diagrams/new_arch.drawio.pdf" 1748519746 38225 8247e4cc391f23ab680e506b09a05312 ""
   "diagrams/sample.pdf" 1748461152 39951 53376abc59bd1bbe86848c864c031372 ""
-  "images/experiment_results/linear_error_boxplots.png" 1748447543 331289 572b7ccae4c634a1649a3927d21a2409 ""
-  "images/experiment_results/rotational_errors_speed_45.png" 1748452761 504018 c2fd2c4dde65d086270d84f18f7f3fb3 ""
-  "images/experiment_results/rotational_errors_speed_75.png" 1748452762 504007 d3350e4225e8d9b7308c0520e4fd27bf ""
+  "images/experiment_results/linear_error_boxplots.png" 1749038823 331289 572b7ccae4c634a1649a3927d21a2409 ""
+  "images/experiment_results/rotational_errors_speed_45.png" 1749134307 471150 d4b9e84991290e3cffd8c9bd24e9d031 ""
+  "images/experiment_results/rotational_errors_speed_75.png" 1749134308 511359 ad7538bdc689d44c278bceb076493ba5 ""
   "images/sec2/box1.jpg" 1748518652 3061725 8660f5b1ca7019b8baf5cffd43ec103f ""
   "images/sec2/box2.jpg" 1748518653 2995087 beac223c22881fd2a5b213e9e52ccc55 ""
   "images/sec2/hokuyo.png" 1748465766 66950 61c15fcad7d430b113900e3206dbccec ""
@@ -306,13 +306,15 @@
   "images/sec2/youbot_screen.jpg" 1748518886 2828989 851e2286f54639a1f7a8e0f840efb44a ""
   "images/sec2/youbot_usb_ports.jpg" 1748518651 2761612 df63c59fdfd26455bd77fd055fb276d0 ""
   "images/sec2/youbot_with_arm.png" 1748467872 1700942 58f03d1db01a2377f8e9b843dfe4cffe ""
+  "images/sec4/experiment_tape.jpg" 1748951487 3490746 fd48bc50e124583d16e6a76f840e7041 ""
   "images/sec4/initial_computer_bootup.jpg" 1748519102 2845638 97cee3b40ce8b96b4e14f9203ea96cf2 ""
   "images/sec4/initial_ros_bootup.jpg" 1748519097 3256894 4d7bb19b974a06ee2a4404080fd05ac6 ""
-  "main.aux" 1749131725 36108 769ac6e1d7ae4a74180e77a7560bf881 "pdflatex"
-  "main.bbl" 1749131615 18054 ab56656183379a91723e7c6cb03dfc66 "biber main"
-  "main.run.xml" 1749131725 2418 7c2806152324ae357b5c2693ccbac713 "pdflatex"
-  "main.tex" 1749131563 123278 d8dd670d8ebcf56de196b867ebe7ccd4 ""
-  "main.toc" 1749131725 9099 0aa706ef78b451c81bb92cf109bde595 "pdflatex"
+  "images/sec4/tmux-setup.jpg" 1748519074 2695319 747d568a560b918ca9e05609445dc96b ""
+  "main.aux" 1749136918 39344 195aa3bbfc56ea62f4aaa1669ba9e064 "pdflatex"
+  "main.bbl" 1749133497 18054 ab56656183379a91723e7c6cb03dfc66 "biber main"
+  "main.run.xml" 1749136918 2418 7c2806152324ae357b5c2693ccbac713 "pdflatex"
+  "main.tex" 1749136882 126513 d6101bd562bdfdc6d21b11d0ee76d093 ""
+  "main.toc" 1749136918 9411 86b7cebc9a68022c4a204ca820ccb1a8 "pdflatex"
   "packages/sleek.sty" 1749127728 4352 a9a168e220410f7bcba1242383b9cf60 ""
   (generated)
   "main.aux"

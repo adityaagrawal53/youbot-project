@@ -37,10 +37,12 @@ def compute_pose_errors_and_print(df, rotation_deg, speed):
 
         vector_left_to_right = actual_left - actual_right
         yaw_rad = np.arctan2(vector_left_to_right[1], vector_left_to_right[0])
-        yaw_diff = (yaw_rad - expected_yaw + np.pi) % (2 * np.pi) - np.pi
-
-        x_err = center[0] - expected_center[0]
-        y_err = center[1] - expected_center[1]
+        
+        # Compare odometry-based pose vs measured pose
+        x_err = row['dx_odom'] - center[0]  # Convert meters to cm
+        y_err = row['dy_odom'] * 100 - center[1]
+        odom_yaw = row['dyaw_odom']
+        yaw_diff = (odom_yaw - yaw_rad + np.pi) % (2 * np.pi) - np.pi
 
         x_errors.append(x_err)
         y_errors.append(y_err)

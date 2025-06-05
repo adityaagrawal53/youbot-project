@@ -397,7 +397,7 @@
     
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\linewidth]{diagrams/new_arch.drawio.pdf}
+        \includegraphics[width=0.8\linewidth]{diagrams/new_arch.drawio.pdf}
         \caption{New System Diagram}
         \label{fig:new-system-diagram}
     \end{figure}
@@ -409,7 +409,7 @@
 
     After conducting the initial inspection as described in section 2, the next step was to boot up the YouBot. Since the onboard battery was completely dead, the YouBot was connected to an external 24V supply. On long pressing the power button, the screen flashed on and I could see the voltage input for the robot, alongside options to turn the PC and motors on/off seperately.
     
-    Using a VGA monitor and USB peripherals, the onboard PC was accessed. It booted successfully and functioned like a standard Linux desktop. The wireless adapter was also operational and could connect to the internet. However, remote access via SSH was initially unavailable due to the absence of a static IP configuration.
+    Using a VGA monitor and USB peripherals, the onboard PC was accessed. It booted successfully and functioned like a standard Linux desktop. The wireless adapter was also operational and could connect to the internet. However, remote access via Ethernet was initially unavailable due to the absence of a static IP configuration.
 
     Upon further inspection, several YouBot-specific software packages were also found installed on the onboard computer. These packages include the \code{youbot_driver}, which provides the necessary drivers to communicate with the roboto's motors through EtherCAT, and the \code{youbot_ros_pkg}, which provides a complete ROS stack for the YouBot. These packages are essential for enabling the YouBot to communicate with ROS and to control its motors and sensors. Alternatively, a simpler ROS interface can be used through the \code{youbot_driver_ros_interface} package, which provides a minimal set of ROS nodes to control the YouBot. This package has been used for the purposes of this project to simplify the interaction with the robot. Additionally, the \code{youbot_description} package provides the necessary URDF files to describe the robot's kinematics and dynamics, allowing for simulation and visualization in RViz and Gazebo. Finally, the \code{youbot_applications} package provides a set of example applications and demos to get started with the YouBot.
 
@@ -556,7 +556,7 @@ https://www.powerstream.com/SLA.htm}
     The experimental effort was designed to:
     \begin{itemize}[noitemsep]
         \item Quantify the error between commanded and actual movement.
-        \item Identify whether errors were consistent (systematic), random, or scale-dependent.
+        \item Identify whether errors were consistent (systematic), random, and/or scale-dependent.
         \item Assess the reliability of onboard odometry over short and long trajectories.
         \item Test how speed and distance affected performance.
         \item Provide insights into feedback control and calibration strategies for error reduction.
@@ -569,81 +569,88 @@ https://www.powerstream.com/SLA.htm}
         \item 8 rotational movement tests at different speeds and angles.
     \end{itemize}
 
-    Each experiment was carried out 20 times to ensure statistical significance and to allow observation of both deterministic and stochastic error components.
-
-    \subsubsection*{Linear Motion Experiments}
+    Each experiment was carried out 20 times to ensure statistical significance and to allow observation of both deterministic and stochastic error components. The below tables summarize the configurations for linear and rotational motion tests, respectively.
 
     \begin{table}[H]
-    \centering
-    \scriptsize
-    \begin{tabular}{|c|c|c|}
-    \hline
-    \textbf{Test ID} & \textbf{Speed (m/s)} & \textbf{Distance (m)} \\
-    \hline
-    L1 & 0.2 & 1.0 \\
-    L2 & 0.4 & 1.0 \\
-    L3 & 0.2 & 2.0 \\
-    L4 & 0.4 & 2.0 \\
-    L5 & 0.6 & 2.0 \\
-    \hline
-    \end{tabular}
-    \caption{Linear motion test configurations}
-    \end{table}
-
-    \subsubsection*{Rotational Motion Experiments}
-
-    \begin{table}[H]
-    \centering
-    \scriptsize
-    \begin{tabular}{|c|c|c|}
-    \hline
-    \textbf{Test ID} & \textbf{Speed (deg/s)} & \textbf{Target Angle} \\
-    \hline
-    R1 & 45 & 45° \\
-    R2 & 75 & 45° \\
-    R3 & 45 & 90° \\
-    R4 & 75 & 90° \\
-    R5 & 45 & 180° \\
-    R6 & 75 & 180° \\
-    R7 & 45 & 360° \\
-    R8 & 75 & 360° \\
-    \hline
-    \end{tabular}
-    \caption{Rotational motion test configurations}
+        \centering
+        \begin{minipage}{0.48\linewidth}
+            \centering
+            \scriptsize
+            \begin{tabular}{|c|c|c|}
+            \hline
+            \textbf{Test ID} & \textbf{Speed (m/s)} & \textbf{Distance (m)} \\
+            \hline
+            L1 & 0.2 & 1.0 \\
+            L2 & 0.4 & 1.0 \\
+            L3 & 0.2 & 2.0 \\
+            L4 & 0.4 & 2.0 \\
+            L5 & 0.6 & 2.0 \\
+            \hline
+            \end{tabular}
+            \caption{Linear motion test configurations}
+        \end{minipage}\hfill
+        \begin{minipage}{0.48\linewidth}
+            \centering
+            \scriptsize
+            \begin{tabular}{|c|c|c|}
+            \hline
+            \textbf{Test ID} & \textbf{Speed (deg/s)} & \textbf{Target Angle} \\
+            \hline
+            R1 & 45 & 45° \\
+            R2 & 75 & 45° \\
+            R3 & 45 & 90° \\
+            R4 & 75 & 90° \\
+            R5 & 45 & 180° \\
+            R6 & 75 & 180° \\
+            R7 & 45 & 360° \\
+            R8 & 75 & 360° \\
+            \hline
+            \end{tabular}
+            \caption{Rotational motion test configurations}
+        \end{minipage}
     \end{table}
 
     \subsubsection{Experimental Procedure}
 
-    The experiments were conducted in a controlled environment on a flat surface. Masking tape was used to make the start and end points of each trajectory, ensuring consistent measurements. The robot then was commanded to move at a specified speed for a calculated duration of time to cover the target distance or angle. The deviation of the final position from the expected position was measured and recorded in a CSV file. Note that for the linear movement tests, the robot center's x and y drift were directly recorded without any additional recordings for the angle deviation, whereas for the rotational movement tests, the x and y drift of two points of the robot (specifically the edge of the middle of the front and back panels) were recorded, and using these data the center of the robot's deviation as well as angle deviation were calculated. 
+    The experiments were conducted in a controlled environment on a flat surface. Masking tape was used to make the start and end points of each trajectory, ensuring consistent measurements. The robot then was commanded to move at a specified speed for a calculated duration of time to cover the target distance or angle, using custom programs (see Appendix~\ref{appendix:experiment_scripts}). 
 
-    \notes{insert diagram here showing how that is done}
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[t]{0.49\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{images/sec4/experiment_tape.jpg}
+            \caption{The masking tape with marked start and end points.}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[t]{0.49\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{images/sec4/tmux-setup.jpg}
+            \caption{The tmux setup used. The two right panes were used to run the custom programs, while the left pane was used to run the ROS interface and keyboard program for ease of adjustment.}
+        \end{subfigure}
+        \caption{The experimental setup.}
+    \end{figure}
+    
+    The deviation of the final position from the expected position was measured using measuring tape to the nearest centimeter and recorded in a CSV file, alongside the odometry deltas the custom program outputted. Note that for the linear movement tests, the robot center's x and y drift were directly recorded without any additional recordings for the angle deviation. Whereas for the rotational movement tests, the x and y drift of two points of the robot (specifically the edge of the middle of the front and back panels) were recorded, and using this data the center of the robot's deviation as well as angle deviation were calculated (see Appendix~\ref{appendix:experimental_data} for more details). The measured data was then subtracted from the odometry data to calculate the error in movement. While the expected values play a role in undertaking the experiment itself, we did not use them in the error calculations. The goal was to measure the deviation of the robot's movement from its own odometry, rather than from a fixed reference point.
+    
+    The data was then processed and plotted using Matplotlib to visualize the errors and variances in the robot's movement (see Appendix~\ref{appendix:experiment_scripts}).
+
+    \subsection{Results and Error Analysis}
+
+    \subsubsection{Linear Motion Error Characteristics}
+
+    The linear motion experiments revealed a consistent underestimation in forward movement (dx), with mean errors increasing approximately linearly with the commanded distance. For instance, at 0.2 m/s over 1 meter, the mean dx error was -4.55 cm, while at 2 meters it was -9.05 cm, indicating a scale-dependent and systematic error. This bias suggests a miscalibration in either velocity estimation or time-based control. Similar proportional errors occur for 0.4 m/s. As speed increases, the robot tends to be more inconsistent with its goal and overshoots more on average, showing some speed-dependent behaviour as well. 
+    
+    By contrast, the y-axis errors were mostly small and random, with no clear systematic bias. An exception was at 0.6 m/s over 2 meters, where the mean dy error was -20.83 cm. The CSV files reveal that this was due to the robot odometry dy measurements increasing in value as experiments were carried out, while the measured distance remained relatively constant. This suggests that the robot's odometry is unable to accurately track its position at high speeds, potentially due to wheel slip or encoder inaccuracies.
 
     \begin{table}[H]
     \centering
     \scriptsize
-    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \begin{tabular}{|c|c|cc|cc|}
     \hline
-    \textbf{Speed (°/s)} & \textbf{Angle (°)} & \textbf{X Error (m)} & \textbf{Var} & \textbf{Y Error (m)} & \textbf{Var} & \textbf{Yaw Error (°)} & \textbf{Var} \\
-    \hline
-    45 & 45  & -0.3500 & 0.2525 & -0.6500 & 0.3525 & -7.1310 & 7.4743 \\
-    45 & 90  & -0.5750 & 0.5819 &  0.7750 & 0.3119 & -4.8049 & 7.2139 \\
-    45 & 180 &  0.5000 & 0.3000 &  0.3000 & 1.3600 & -1.6012 & 9.1212 \\
-    45 & 360 &  0.8500 & 0.1275 &  0.2000 & 0.1350 &  7.4315 & 12.4949 \\
-    75 & 45  &  0.1000 & 0.1650 & -0.6000 & 0.2900 & -13.3710 & 33.7566 \\
-    75 & 90  &  0.4750 & 0.7119 &  0.3500 & 0.4525 & -7.3666 & 34.6317 \\
-    75 & 180 &  1.2143 & 0.6565 &  0.7143 & 1.7755 & -5.3584 & 32.1340 \\
-    75 & 360 &  1.4500 & 0.3225 &  0.7250 & 1.2119 &  1.8853 & 34.6874 \\
-    \hline
-    \end{tabular}
-    \caption{Rotational motion statistics: Mean error and variance in position (m) and yaw (°)}
-    \end{table}
-
-    \begin{table}[H]
-    \centering
-    \scriptsize
-    \begin{tabular}{|c|c|c|c|c|c|}
-    \hline
-    \textbf{Speed (m/s)} & \textbf{Distance (m)} & \textbf{dx Mean (cm)} & \textbf{dx Var} & \textbf{dy Mean (cm)} & \textbf{dy Var} \\
+    \textbf{Speed (m/s)} & \textbf{Distance (m)} &
+    \multicolumn{2}{c|}{\textbf{dx (cm)}} & \multicolumn{2}{c|}{\textbf{dy (cm)}} \\
+    \cline{3-6}
+    & & \textbf{Error} & \textbf{Var} & \textbf{Error} & \textbf{Var} \\
     \hline
     0.2 & 1 & -4.5500 & 0.2475 &  0.5000 & 1.4500 \\
     0.2 & 2 & -9.0500 & 0.1475 & -0.4500 & 2.9475 \\
@@ -652,46 +659,65 @@ https://www.powerstream.com/SLA.htm}
     0.6 & 2 & -13.3043 & 3.0813 & -20.8261 & 203.5350 \\
     \hline
     \end{tabular}
-    \caption{Linear motion statistics: Mean and variance of dx/dy errors (cm)}
-    \end{table}
-
-
+    \caption{Linear motion statistics: Mean error and variance in dx/dy (cm)}
+    \end{table} 
 
     \begin{figure}[H]
         \centering
         %/flushleft
         %/flushright
         \includegraphics[width=0.99\linewidth]{images/experiment_results/linear_error_boxplots.png}
-        \caption{Centered image}
+        \caption{Box plot graph showing the errors in x and y for the linear motion tests. The boxplots show the distribution of errors for each speed and distance combination, with the mean error shown as an orange line.}
     \end{figure}
+
+    \subsubsection{Rotational Motion Error Characteristics}
+
+    Rotational experiments exhibited both systematic and random error components. Despite significantly different speeds (45°/s vs 75°/s), their results were similar, suggesting that the robot's control system is more consistent in angular motion than linear. Y drift was generally small and random, with no clear systematic bias. However, x drift was more pronounced, with errors generally becoming larger with an increase in angular distance. The variance for x and y drift are consistently high, showing a lack of capability for the YouBot to do pure rotational motion without some translational drift, most likely due to wheel slip. 
+
+    The yaw error (difference between odometry and actual rotation) was particularly interesting. At the lower target angle of 45°, the mean error was neglible. However, as the target angle increased, the yaw error became more negative, indicating over-rotation. This error is also roughly proportional to the commanded angle, suggesting a systematic bias in the robot's angular velocity estimation or control timing. 
+
+    \begin{table}[H]
+    \centering
+    \scriptsize
+    \begin{tabular}{|c|c|cc|cc|cc|}
+    \hline
+    \textbf{Speed (°/s)} & \textbf{Angle (°)} &
+    \multicolumn{2}{c|}{\textbf{X}} & \multicolumn{2}{c|}{\textbf{Y}} & \multicolumn{2}{c|}{\textbf{Yaw (°)}} \\
+    \cline{3-8}
+    & & \textbf{Error} & \textbf{Var} & \textbf{Error} & \textbf{Var} & \textbf{Error} & \textbf{Var} \\
+    \hline
+    45 & 45  &  0.3500 & 0.2525 &  0.6000 & 0.3150 & -0.6841 &  1.3144 \\
+    45 & 90  &  0.5750 & 0.7819 & -0.6750 & 0.4569 & -2.6462 &  1.5169 \\
+    45 & 180 & -0.5000 & 0.8000 &  0.0000 & 1.8000 & -5.6806 & 11.0494 \\
+    45 & 360 & -1.2500 & 0.5875 & -0.6000 & 0.3650 & -13.9718 & 3.1095 \\
+    75 & 45  & -0.2500 & 0.2125 &  0.6000 & 0.2900 & -0.3685 &  1.7324 \\
+    75 & 90  & -0.4250 & 0.9569 & -1.1000 & 0.4150 & -3.5968 &  8.4881 \\
+    75 & 180 & -1.3571 & 1.5748 & -0.5714 & 2.2449 & -6.9914 &  5.8088 \\
+    75 & 360 & -1.6000 & 1.6150 & -0.8250 & 2.1069 & -13.6940 & 11.8580 \\
+    \hline
+    \end{tabular}
+    \caption{Rotational motion statistics: Mean error and variance in position (m) and yaw (°)}
+    \end{table}
+
+
+    
     \begin{figure}[H]
         \centering
         %/flushleft
         %/flushright
         \includegraphics[width=0.99\linewidth]{images/experiment_results/rotational_errors_speed_45.png}
-        \caption{Centered image}
+        \caption{Box plot graph showing the errors in x, y, and yaw for the rotational motion tests at 45°/s.}
     \end{figure}
     \begin{figure}[H]
         \centering
         %/flushleft
         %/flushright
         \includegraphics[width=0.99\linewidth]{images/experiment_results/rotational_errors_speed_75.png}
-        \caption{Centered image}
+        \caption{Box plot graph showing the errors in x, y, and yaw for the rotational motion tests at 75°/s.}
     \end{figure}
 
-    \subsection{Results and Error Analysis}
-
-    \subsubsection{Linear Motion Error Characteristics}
-
-    The linear motion experiments revealed a consistent underestimation in forward movement (dx), with mean errors increasing approximately linearly with the commanded distance. For instance, at 0.2 m/s over 1 meter, the mean dx error was -4.55 cm, while at 2 meters it was -9.05 cm, indicating a scale-dependent and systematic error. This bias suggests a miscalibration in either velocity estimation or time-based control. In contrast, the lateral error (dy) showed less consistency, with relatively low variance at slow speeds and significantly increased spread at higher velocities (e.g., variance of 203.5 cm² at 0.6 m/s). This may indicate instability in lateral control, sensor drift, or non-ideal surface interactions.
-
-    \subsubsection{Rotational Motion Error Characteristics}
-
-    Rotational experiments exhibited both systematic and random error components. At lower target angles (45° and 90°), yaw error was consistently negative across both speed conditions, pointing to under-rotation. This under-rotation was more severe at higher rotational speeds, suggesting an underestimation of angular displacement due to timing, inertia, or feedback delays. Notably, however, for the 360° trials, the yaw error became positive—indicating over-rotation. This suggests that the error model is nonlinear and possibly affected by controller saturation or feedback lag accumulating over time.
-
-    In addition to yaw deviation, positional drift in x and y was observed during rotation, with the magnitude generally increasing with both angle and speed. For example, at 75°/s over a 360° turn, the mean x and y drift exceeded 1.4 m and 0.72 m respectively. Such drift likely results from an imperfect center of rotation, actuator asymmetry, or encoder discrepancies.
-
-    \subsubsection{Classification of Errors}
+    
+    \subsection{Conclusion}
 
     Based on the data, errors were classified as follows:
     \begin{itemize}
@@ -1127,23 +1153,8 @@ $   ifconfig
    
     \pagebreak
     \section{Code files}
-    %\lstinputlisting[language=Python, caption={Full Script}, label={lst:fullscript}]{../code/rotate_graph.py}
-    \subsubsection{rotate\_graph.py}
-    This script read the data collected from the rotational movement experiments to parse the data and plot the drift of the centre of the robot in x and y axes as well as difference in yaw in a graph format. It also prints out the mean and standard deviation of the relevant errors. Refer to \notes{insert something here idr} for further details. 
-    \lstinputlisting[language=Python, label={lst:fullscript}]{../code/rotate_graph.py}
-    \pagebreak
-    \subsubsection{linear\_graph.py}
-    This script read the data collected from the linear movement experiments to parse the data and plot the drift of the centre of the robot in x and y axes in a graph format. It also prints out the mean and standard deviation of the relevant errors. Refer to \notes{insert something here idr} for further details. 
-    \lstinputlisting[language=Python, label={lst:fullscript}]{../code/linear_graph.py}
-    \pagebreak
-    \subsubsection{linear\_test.py}
-    This script is used to undertake the linear movement experiments. It uses the ROS interface to send velocity commands to the YouBot, and then calculates the delta in odometry from the robot. The script is designed to be run multiple times with different parameters through the terminal to collect data for analysis. Refer to \notes{insert something here idr} for further details.
-    \lstinputlisting[language=Python, label={lst:fullscript}]{../code/youbot-files/DSD/src/youbot_control/scripts/linear_test.py}
-    \pagebreak
-    \subsubsection{rotate\_test.py}
-    This script is used to undertake the linear movement experiments. It uses the ROS interface to send velocity commands to the YouBot, and then calculates the delta in odometry from the robot. The script is designed to be run multiple times with different parameters through the terminal to collect data for analysis. Refer to \notes{insert something here idr} for further details.
-    \lstinputlisting[language=Python, label={lst:fullscript}]{../code/youbot-files/DSD/src/youbot_control/scripts/rotate_test.py}
-    \pagebreak
+    \subsection{Custom Scripts for YouBot ROS Interface testing and development}
+    \label{appendix:custom_scripts}
     \subsubsection{simple\_square\_movement.py}
     This script was used to test the YouBot's ability to move in a square pattern. It uses the ROS interface to send velocity commands to the YouBot. 
     \lstinputlisting[language=Python, label={lst:fullscript}]{../code/youbot-files/DSD/src/youbot_control/scripts/simple_square_movement.py}
@@ -1154,8 +1165,29 @@ $   ifconfig
 
     \pagebreak
 
-
+    %\lstinputlisting[language=Python, caption={Full Script}, label={lst:fullscript}]{../code/rotate_graph.py}
+    \subsection{Scripts for Experimental Setup and Data Collection}
+    \label{appendix:experiment_scripts}
+    \subsubsection{linear\_test.py}
+    This script is used to undertake the linear movement experiments. It uses the ROS interface to send velocity commands to the YouBot, and then calculates the delta in odometry from the robot. The script is designed to be run multiple times with different parameters through the terminal to collect data for analysis. Refer to \notes{insert something here idr} for further details.
+    \lstinputlisting[language=Python, label={lst:fullscript}]{../code/youbot-files/DSD/src/youbot_control/scripts/linear_test.py}
+    \pagebreak
+    \subsubsection{rotate\_test.py}
+    This script is used to undertake the linear movement experiments. It uses the ROS interface to send velocity commands to the YouBot, and then calculates the delta in odometry from the robot. The script is designed to be run multiple times with different parameters through the terminal to collect data for analysis. Refer to \notes{insert something here idr} for further details.
+    \lstinputlisting[language=Python, label={lst:fullscript}]{../code/youbot-files/DSD/src/youbot_control/scripts/rotate_test.py}
+    \pagebreak
+    \subsection{Graph Plotting Scripts}
+    \label{appendix:graph_scripts}
+    \subsubsection{rotate\_graph.py}
+    This script read the data collected from the rotational movement experiments to parse the data and plot the drift of the centre of the robot in x and y axes as well as difference in yaw in a graph format. It also prints out the mean and standard deviation of the relevant errors. Refer to \notes{insert something here idr} for further details. 
+    \lstinputlisting[language=Python, label={lst:fullscript}]{../code/rotate_graph.py}
+    \pagebreak
+    \subsubsection{linear\_graph.py}
+    This script read the data collected from the linear movement experiments to parse the data and plot the drift of the centre of the robot in x and y axes in a graph format. It also prints out the mean and standard deviation of the relevant errors. Refer to \notes{insert something here idr} for further details. 
+    \lstinputlisting[language=Python, label={lst:fullscript}]{../code/linear_graph.py}
+    \pagebreak
     \section{Experimental Data}
+    \label{appendix:experimental_data}
 
     \subsection{Linear movement experiment}
     \subsubsection{Linear movement, 0.2m/s, 1m}
