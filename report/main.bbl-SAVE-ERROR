@@ -19,73 +19,139 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
-    \entry{Tsogias2016}{bachelorsthesis}{}{}
+    \entry{KARASTOYANOV201844}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=60a1dd010080cfca34c8c25d5a1f4f55}{%
+           family={Karastoyanov},
+           familyi={K\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=36c2fef1c53210d833914f5f82763b05}{%
+           family={Karastanev},
+           familyi={K\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b5a0701b716bfc20853f2696049446d7}
+      \strng{fullhash}{6bfa0f2a6d180f932545f32f01ad6f71}
+      \strng{fullhashraw}{6bfa0f2a6d180f932545f32f01ad6f71}
+      \strng{bibnamehash}{6bfa0f2a6d180f932545f32f01ad6f71}
+      \strng{authorbibnamehash}{6bfa0f2a6d180f932545f32f01ad6f71}
+      \strng{authornamehash}{b5a0701b716bfc20853f2696049446d7}
+      \strng{authorfullhash}{6bfa0f2a6d180f932545f32f01ad6f71}
+      \strng{authorfullhashraw}{6bfa0f2a6d180f932545f32f01ad6f71}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{EoL of industrial robots is currently only a partially solved problem. Usually the average life time of an industrial robot in industry, depending from the working and maintaining conditions, is in average 6-7 years because of the advances in IT hard-and software. Especially with the new headlines Procedure 4.0, Cyberphysical Systems (CPS). Most of the older robot-controllers cannot be used for these methods of production automation. The average lifetime of the robot mechanics is, depending from the industrial use between 10 and 20 years. A special case are robots for educational and research purposes. They should be also replaced every 5 - 7 years. Until now there was only the possibility to disassemble and sell the mechanical parts as spare parts. Therefore in this paper a new approach for reuse will be presented. The main idea beyond consists in using the mechanics of selected "old" industrial robots and a completely reengineering of the controller hard and software according to the latest requests from manufacturing automation. The authors created this idea some years ago and have developed a procedure geared to the automation of auxiliary processes in the die-casting industry. This procedure was applied to two types of robots. They are now equipped with new controllers from a local company which allows to include these robots in "modern" manufacturing automation systems. The new software and interface are more user-friendly and easy to use by the users in this field of automation.}
+      \field{issn}{2405-8963}
+      \field{journaltitle}{IFAC-PapersOnLine}
+      \field{note}{18th IFAC Conference on Technology, Culture and International Stability TECIS 2018}
+      \field{number}{30}
+      \field{title}{Reuse of Industrial Robots}
+      \field{volume}{51}
+      \field{year}{2018}
+      \field{pages}{44\bibrangedash 47}
+      \range{pages}{4}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.ifacol.2018.11.243
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S240589631832915X
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S240589631832915X
+      \endverb
+      \keyw{Industrial robots,Reuse,EoL,Die-casting}
+    \endentry
+    \entry{KUKAYouBotFlyer}{misc}{}{}
       \name{author}{1}{}{%
-        {{hash=848151fbf6191c8a8635a0950ce929e7}{%
-           family={Tsogias},
-           familyi={T\bibinitperiod},
-           given={Ioannis},
-           giveni={I\bibinitperiod}}}%
+        {{hash=07150e2189504f5d9e22645f955cfdc4}{%
+           family={KUKA},
+           familyi={K\bibinitperiod}}}%
       }
-      \list{institution}{1}{%
-        {National Technical University of Athens}%
-      }
-      \strng{namehash}{848151fbf6191c8a8635a0950ce929e7}
-      \strng{fullhash}{848151fbf6191c8a8635a0950ce929e7}
-      \strng{fullhashraw}{848151fbf6191c8a8635a0950ce929e7}
-      \strng{bibnamehash}{848151fbf6191c8a8635a0950ce929e7}
-      \strng{authorbibnamehash}{848151fbf6191c8a8635a0950ce929e7}
-      \strng{authornamehash}{848151fbf6191c8a8635a0950ce929e7}
-      \strng{authorfullhash}{848151fbf6191c8a8635a0950ce929e7}
-      \strng{authorfullhashraw}{848151fbf6191c8a8635a0950ce929e7}
+      \strng{namehash}{07150e2189504f5d9e22645f955cfdc4}
+      \strng{fullhash}{07150e2189504f5d9e22645f955cfdc4}
+      \strng{fullhashraw}{07150e2189504f5d9e22645f955cfdc4}
+      \strng{bibnamehash}{07150e2189504f5d9e22645f955cfdc4}
+      \strng{authorbibnamehash}{07150e2189504f5d9e22645f955cfdc4}
+      \strng{authornamehash}{07150e2189504f5d9e22645f955cfdc4}
+      \strng{authorfullhash}{07150e2189504f5d9e22645f955cfdc4}
+      \strng{authorfullhashraw}{07150e2189504f5d9e22645f955cfdc4}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{{Kinematic Analysis of a KUKA YouBot}}
-      \field{year}{2016}
-      \true{nocite}
-      \verb{doi}
-      \verb 10.26240/heal.ntua.12581
-      \endverb
-      \verb{urlraw}
-      \verb https://dspace.lib.ntua.gr/xmlui/handle/123456789/43358
-      \endverb
-      \verb{url}
-      \verb https://dspace.lib.ntua.gr/xmlui/handle/123456789/43358
-      \endverb
+      \field{howpublished}{\url{https://web.archive.org/web/20170829075021/http://www.youbot-store.com/media/wysiwyg/pdf/youbot_product_flyer.pdf}}
+      \field{note}{Accessed: 2025-06-05}
+      \field{title}{YouBot Product Flyer}
+      \field{year}{2017}
     \endentry
-    \entry{archiveYouBotStore}{misc}{}{}
+    \entry{KUKAYouBotManual2013}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=ab762276e8c05e6e145b3997b370c353}{%
+           family={{Locomotec}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab762276e8c05e6e145b3997b370c353}
+      \strng{fullhash}{ab762276e8c05e6e145b3997b370c353}
+      \strng{fullhashraw}{ab762276e8c05e6e145b3997b370c353}
+      \strng{bibnamehash}{ab762276e8c05e6e145b3997b370c353}
+      \strng{authorbibnamehash}{ab762276e8c05e6e145b3997b370c353}
+      \strng{authornamehash}{ab762276e8c05e6e145b3997b370c353}
+      \strng{authorfullhash}{ab762276e8c05e6e145b3997b370c353}
+      \strng{authorfullhashraw}{ab762276e8c05e6e145b3997b370c353}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{[Accessed 23-04-2025]}
-      \field{title}{you{B}ot {S}tore --- web.archive.org}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://web.archive.org/web/20170318163736/http://www.youbot-store.com/developers/
-      \endverb
-      \verb{url}
-      \verb https://web.archive.org/web/20170318163736/http://www.youbot-store.com/developers/
-      \endverb
-    \endentry
-    \entry{janpaulusYouBotDriver}{misc}{}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://janpaulus.github.io/}}
-      \field{note}{[Accessed 23-04-2025]}
-      \field{title}{you{B}ot {D}river --- janpaulus.github.io}
-      \true{nocite}
+      \field{edition}{version 1.02}
+      \field{month}{2}
+      \field{note}{Unpublished manual, available as PDF.}
+      \field{title}{KUKA youBot User Manual}
+      \field{year}{2013}
     \endentry
     \entry{githubYoubotOverview}{misc}{}{}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://github.com/youbot}}
       \field{note}{[Accessed 23-04-2025]}
       \field{title}{youbot - {O}verview --- github.com}
-      \true{nocite}
+    \endentry
+    \entry{ubahnverleih2016}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=ebf39beb404e4b320184dadbc713d308}{%
+           family={ubahnverleih},
+           familyi={u\bibinitperiod}}}%
+      }
+      \strng{namehash}{ebf39beb404e4b320184dadbc713d308}
+      \strng{fullhash}{ebf39beb404e4b320184dadbc713d308}
+      \strng{fullhashraw}{ebf39beb404e4b320184dadbc713d308}
+      \strng{bibnamehash}{ebf39beb404e4b320184dadbc713d308}
+      \strng{authorbibnamehash}{ebf39beb404e4b320184dadbc713d308}
+      \strng{authornamehash}{ebf39beb404e4b320184dadbc713d308}
+      \strng{authorfullhash}{ebf39beb404e4b320184dadbc713d308}
+      \strng{authorfullhashraw}{ebf39beb404e4b320184dadbc713d308}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://commons.wikimedia.org/wiki/File:RoboCup_2016_Leipzig_-_KUKA_youBot_(2).jpg}}
+      \field{month}{7}
+      \field{note}{Own work. Image retrieved from Wikimedia Commons.}
+      \field{title}{RoboCup 2016 Leipzig - KUKA youBot}
+      \field{year}{2016}
+    \endentry
+    \entry{YouBotSpecs2016}{misc}{}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://web.archive.org/web/20160121124150/http://www.youbot-store.com/wiki/index.php/YouBot_Detailed_Specifications}}
+      \field{note}{Accessed: 2025-06-05}
+      \field{title}{YouBot Detailed Specifications}
+      \field{year}{2016}
     \endentry
   \enddatalist
 \endrefsection
