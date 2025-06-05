@@ -719,15 +719,11 @@ https://www.powerstream.com/SLA.htm}
     
     \subsection{Conclusion}
 
-    Based on the data, errors were classified as follows:
-    \begin{itemize}
-        \item \textbf{Systematic Errors:} Present in both dx and yaw measurements. These were repeatable and dependent on motion parameters, suggesting calibration issues or consistent model inaccuracies.
-        \item \textbf{Random Errors:} Particularly visible in dy and yaw variance, especially at higher speeds. These may arise from environmental factors, surface inconsistencies, or sensor noise.
-        \item \textbf{Scale-Dependent Errors:} Errors in dx and yaw tended to grow with increasing speed and commanded magnitude, indicating drift or temporal misalignment in control commands.
-        \item \textbf{Nonlinear and Saturation Effects:} Reversal of yaw error direction (under-rotation to over-rotation) at large angles and high speeds suggests complex behavior beyond linear drift, potentially due to limits in the control loop or cumulative errors in open-loop motion.
-    \end{itemize}
+    Based on the experimental results, we can draw several conclusions about the YouBot's movement and odometry capabilities. Firstly, the YouBot exhibits systematic errors in both linear and rotational motion, with a tendency to underestimate distances and angles. The robot's odometry is more reliable for short distances and angles, but becomes less accurate as the commanded distance or angle increases. This error is roughly proportional to the commanded distance or angle, indicating a scale-dependent error. This error is also proportional to the speed of the robot, with higher speeds leading to larger errors and more variability in the results.
+    
+    This suggests several potential issues. First, the YouBot's motors may be performing with reduced efficiency, leading to a loss of power delivered to the wheels. This furthermore results in a lower speed than expected, which in turn leads to a lower distance travelled than commanded. Second, the YouBot suffers from wheel slip, which is particularly pronounced at higher speeds. This theory would also explain the large error bars seen for in-place rotational movement in the x and y directions, as the robot is unable to maintain a consistent position while rotating.
 
-    These results underscore the need for either closed-loop feedback or more accurate modeling of motion and sensor characteristics to reduce the observed deviation, especially for longer or faster movements. 
+    These issues can be addressed through several strategies. For example, the YouBot's motors and motor encoders could be re-calibrated, taking into account the current state of the motors and their efficiency. This would allow the measured distance to more closely resemble the commanded distance. A closed feedback loop using PID could also be implemented to adjust the speed of the motors based on the measured distance travelled, allowing for more accurate movement. To address wheel slip, the YouBot's wheels could be completely cleaned or replaced with ones that have better traction to better resist slipping in real-world conditions. 
 
     \pagebreak
 
