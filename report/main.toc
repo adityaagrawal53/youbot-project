@@ -56,7 +56,7 @@
 \contentsline {subsection}{\numberline {A.2}Initial Configuration}{23}{subsection.A.2}%
 \contentsline {subsubsection}{\numberline {A.2.1}ROS Networking Configuration (\texttt {.bashrc})}{23}{subsubsection.A.2.1}%
 \contentsline {subsubsection}{\numberline {A.2.2}Ethernet Configuration (\texttt {/etc/network/interfaces})}{24}{subsubsection.A.2.2}%
-\contentsline {paragraph}{Testing the Connection}{24}{section*.23}%
+\contentsline {paragraph}{Testing the Connection}{24}{section*.24}%
 \contentsline {subsubsection}{\numberline {A.2.3}Youbot Driver Configuration (\texttt {~/youbot_driver/config/youbot-ethercat.cfg})}{25}{subsubsection.A.2.3}%
 \contentsline {subsection}{\numberline {A.3}Running C++ demos}{25}{subsection.A.3}%
 \contentsline {subsubsection}{\numberline {A.3.1}Hello World Demo}{25}{subsubsection.A.3.1}%

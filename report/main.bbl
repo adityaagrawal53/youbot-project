@@ -210,6 +210,142 @@
       \field{title}{Mounting and Sensor Plate, KUKA youBot Store}
       \field{year}{2016}
     \endentry
+    \entry{WaybackMachine}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://web.archive.org/}}
+      \field{note}{Accessed: 2025-06-05}
+      \field{title}{Wayback Machine}
+    \endentry
+    \entry{janpaulusYouBotDriver}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://janpaulus.github.io/}}
+      \field{note}{[Accessed 23-04-2025]}
+      \field{title}{you{B}ot {D}river --- janpaulus.github.io}
+    \endentry
+    \entry{Shahrivar2018}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=29013d65576b307a72f7503094401fe2}{%
+           family={Shahrivar},
+           familyi={S\bibinitperiod},
+           given={Ebrahim},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{29013d65576b307a72f7503094401fe2}
+      \strng{fullhash}{29013d65576b307a72f7503094401fe2}
+      \strng{fullhashraw}{29013d65576b307a72f7503094401fe2}
+      \strng{bibnamehash}{29013d65576b307a72f7503094401fe2}
+      \strng{authorbibnamehash}{29013d65576b307a72f7503094401fe2}
+      \strng{authornamehash}{29013d65576b307a72f7503094401fe2}
+      \strng{authorfullhash}{29013d65576b307a72f7503094401fe2}
+      \strng{authorfullhashraw}{29013d65576b307a72f7503094401fe2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{note}{Accessed: 2025-06-05}
+      \field{title}{Visual Teach and Repeat: A Closer Look (PART 1)}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://clearpathrobotics.com/blog/2018/07/visual-teach-and-repeat-closer-look-part-1/
+      \endverb
+      \verb{url}
+      \verb https://clearpathrobotics.com/blog/2018/07/visual-teach-and-repeat-closer-look-part-1/
+      \endverb
+    \endentry
+    \entry{10611662}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=f8cf5d6dcb01ac9a1d361760b32f05ac}{%
+           family={Nourizadeh},
+           familyi={N\bibinitperiod},
+           given={Payam},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e5b56f2b9117e2bff1a05dc43d280583}{%
+           family={Milford},
+           familyi={M\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f78022e2bfa45cef5967c827e7ce71df}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{d15feb5dfc276419ed49b64c86923767}
+      \strng{fullhash}{7e5502f39af9ede0ce1e98285d74bf2d}
+      \strng{fullhashraw}{7e5502f39af9ede0ce1e98285d74bf2d}
+      \strng{bibnamehash}{7e5502f39af9ede0ce1e98285d74bf2d}
+      \strng{authorbibnamehash}{7e5502f39af9ede0ce1e98285d74bf2d}
+      \strng{authornamehash}{d15feb5dfc276419ed49b64c86923767}
+      \strng{authorfullhash}{7e5502f39af9ede0ce1e98285d74bf2d}
+      \strng{authorfullhashraw}{7e5502f39af9ede0ce1e98285d74bf2d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2024 IEEE International Conference on Robotics and Automation (ICRA)}
+      \field{title}{Teach and Repeat Navigation: A Robust Control Approach}
+      \field{year}{2024}
+      \field{pages}{2909\bibrangedash 2916}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/ICRA57147.2024.10611662
+      \endverb
+      \keyw{Uncertainty;Navigation;Wheels;Robot sensing systems;Robustness;Odometry;Mobile robots}
+    \endentry
+    \entry{NITSCHE2020103577}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=234e67803afaf7df1704213e2411ba46}{%
+           family={Nitsche},
+           familyi={N\bibinitperiod},
+           given={Matías},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4382db451b02ace6cfabda171d88df6c}{%
+           family={Pessacg},
+           familyi={P\bibinitperiod},
+           given={Facundo},
+           giveni={F\bibinitperiod}}}%
+        {{hash=255a79b6250247eb19d8ebb2e15815ef}{%
+           family={Civera},
+           familyi={C\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{5f10824d3f886266e890163000b56430}
+      \strng{fullhash}{96e4b426547e39efff1c76630c787f5a}
+      \strng{fullhashraw}{96e4b426547e39efff1c76630c787f5a}
+      \strng{bibnamehash}{96e4b426547e39efff1c76630c787f5a}
+      \strng{authorbibnamehash}{96e4b426547e39efff1c76630c787f5a}
+      \strng{authornamehash}{5f10824d3f886266e890163000b56430}
+      \strng{authorfullhash}{96e4b426547e39efff1c76630c787f5a}
+      \strng{authorfullhashraw}{96e4b426547e39efff1c76630c787f5a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Teach and Repeat (T&R) refers to the technology that allows a robot to autonomously follow a previously traversed route, in a natural scene and using only its onboard sensors. In this paper we present a Visual-Inertial Teach and Repeat (VI-T&R) algorithm that uses stereo and inertial data and targets Unmanned Aerial Vehicles with limited on-board computational resources. We propose a tightly-coupled relative formulation of the visual-inertial constraints that is tailored to the T&R application. In order to achieve real-time operation on limited hardware, we reduce the problem to motion-only visual-inertial Bundle Adjustment. In the repeat stage, we detail how to generate a trajectory and smoothly follow it with a constantly changing relative frame. The proposed method is validated in simulated environments, using real sensor data from the public EuRoC dataset, and using our own robotic setup and closed-loop control. Our experimental results demonstrate high accuracy and real-time performance both on a standard desktop system and on a low-cost Odroid X-U4 embedded computer.}
+      \field{issn}{0921-8890}
+      \field{journaltitle}{Robotics and Autonomous Systems}
+      \field{title}{Visual-inertial teach and repeat}
+      \field{volume}{131}
+      \field{year}{2020}
+      \field{pages}{103577}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.robot.2020.103577
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0921889020304176
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0921889020304176
+      \endverb
+      \keyw{UAV,Embedded,Navigation,Visual-inertial,Stereo,Teach-and-replay,Relative}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

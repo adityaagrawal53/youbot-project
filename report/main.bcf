@@ -2385,6 +2385,14 @@
     <bcf:citekey order="9" intorder="1">OpenKinectLibfreenect</bcf:citekey>
     <bcf:citekey order="10" intorder="1">HokuyoURG04LXUG01</bcf:citekey>
     <bcf:citekey order="11" intorder="1">YouBotSensorPlate2016</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">KUKAYouBotManual2013</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">githubYoubotOverview</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">WaybackMachine</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">githubYoubotOverview</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">janpaulusYouBotDriver</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">Shahrivar2018</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">10611662</bcf:citekey>
+    <bcf:citekey order="18" intorder="2">NITSCHE2020103577</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
