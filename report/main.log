@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.17)  6 JUN 2025 06:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.17)  16 JUN 2025 09:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1447,19 +1447,9 @@ LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 
 
 [11]
-Overfull \hbox (167.70079pt too wide) in paragraph at lines 511--512
-\T1/lmr/m/n/12 (-20) Here are some good web pages about the Slealed Lead Acid (SLA) bat-ter-ies: https://batterymasters.co.uk/blog/post/Howand
- []
-
-
-Overfull \hbox (164.72807pt too wide) in paragraph at lines 511--512
-\T1/lmr/m/n/12 (-20) https://www.power-sonic.com/blog/how-to-charge-a-lead-acid-battery/ and https://www.powerstream.com/SLA.htm[] 
- []
-
-
 
 [12]
-Overfull \hbox (14.18257pt too wide) in paragraph at lines 529--530
+Overfull \hbox (14.18257pt too wide) in paragraph at lines 520--521
 []\T1/lmr/m/n/12 (-20) Vesa at-tempted to re-vive this bat-tery through desul-pha-tion, where a higher-than-recommended
  []
 
@@ -1469,39 +1459,39 @@ Overfull \hbox (14.18257pt too wide) in paragraph at lines 529--530
 
 [14]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 578.
-<images/sec4/experiment_tape.jpg, id=306, 1926.19624pt x 1084.05pt>
+(Font)              <5> on input line 567.
+<images/sec4/experiment_tape.jpg, id=314, 1926.19624pt x 1084.05pt>
 File: images/sec4/experiment_tape.jpg Graphic file (type jpg)
 <use images/sec4/experiment_tape.jpg>
-Package pdftex.def Info: images/sec4/experiment_tape.jpg  used on input line 620.
+Package pdftex.def Info: images/sec4/experiment_tape.jpg  used on input line 609.
 (pdftex.def)             Requested size: 223.07211pt x 125.53154pt.
-<images/sec4/tmux-setup.jpg, id=307, 1926.19624pt x 1084.05pt>
+<images/sec4/tmux-setup.jpg, id=315, 1926.19624pt x 1084.05pt>
 File: images/sec4/tmux-setup.jpg Graphic file (type jpg)
 <use images/sec4/tmux-setup.jpg>
-Package pdftex.def Info: images/sec4/tmux-setup.jpg  used on input line 626.
+Package pdftex.def Info: images/sec4/tmux-setup.jpg  used on input line 615.
 (pdftex.def)             Requested size: 223.07211pt x 125.53154pt.
 
 
 [15]
 
 [16 <./images/sec4/experiment_tape.jpg> <./images/sec4/tmux-setup.jpg>]
-<images/experiment_results/linear_error_boxplots.png, id=326, 231.264pt x 99.13036pt>
+<images/experiment_results/linear_error_boxplots.png, id=334, 231.264pt x 99.13036pt>
 File: images/experiment_results/linear_error_boxplots.png Graphic file (type png)
 <use images/experiment_results/linear_error_boxplots.png>
-Package pdftex.def Info: images/experiment_results/linear_error_boxplots.png  used on input line 668.
+Package pdftex.def Info: images/experiment_results/linear_error_boxplots.png  used on input line 657.
 (pdftex.def)             Requested size: 450.69417pt x 193.19904pt.
 
 
 [17 <./images/experiment_results/linear_error_boxplots.png>]
-<images/experiment_results/rotational_errors_speed_45.png, id=335, 231.264pt x 77.088pt>
+<images/experiment_results/rotational_errors_speed_45.png, id=343, 231.264pt x 77.088pt>
 File: images/experiment_results/rotational_errors_speed_45.png Graphic file (type png)
 <use images/experiment_results/rotational_errors_speed_45.png>
-Package pdftex.def Info: images/experiment_results/rotational_errors_speed_45.png  used on input line 707.
+Package pdftex.def Info: images/experiment_results/rotational_errors_speed_45.png  used on input line 696.
 (pdftex.def)             Requested size: 450.69417pt x 150.2398pt.
-<images/experiment_results/rotational_errors_speed_75.png, id=336, 231.264pt x 77.088pt>
+<images/experiment_results/rotational_errors_speed_75.png, id=344, 231.264pt x 77.088pt>
 File: images/experiment_results/rotational_errors_speed_75.png Graphic file (type png)
 <use images/experiment_results/rotational_errors_speed_75.png>
-Package pdftex.def Info: images/experiment_results/rotational_errors_speed_75.png  used on input line 714.
+Package pdftex.def Info: images/experiment_results/rotational_errors_speed_75.png  used on input line 703.
 (pdftex.def)             Requested size: 450.69417pt x 150.2398pt.
 
 
@@ -1514,7 +1504,7 @@ Package pdftex.def Info: images/experiment_results/rotational_errors_speed_75.pn
 [21]
 
 [22]
-Overfull \hbox (14.84921pt too wide) in paragraph at lines 783--783
+Overfull \hbox (14.84921pt too wide) in paragraph at lines 772--772
 \T1/zi4/m/n/12 http : / / www . youbot -[] store . com / wiki / index . php / YouBot _ Detailed _ Specifications$[][]\T1/lmr/m/n/12 (-20) ,
  []
 
@@ -1524,61 +1514,61 @@ Package microtype Info: Character `029' is missing
 
 
 [23]
-LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
-(Font)              scaled to size 12.0pt on input line 815.
-
 
 [24]
+LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
+(Font)              scaled to size 12.0pt on input line 804.
+
 
 [25]
-Overfull \hbox (48.19731pt too wide) in paragraph at lines 893--893
+
+[26]
+Overfull \hbox (48.19731pt too wide) in paragraph at lines 882--882
 []\T1/lmr/bx/n/12 (-20) Youbot Driver Con-fig-u-ra-tion (\T1/zi4/b/n/12 ~/youbot_driver/config/youbot-ethercat.cfg\T1/lmr/bx/n/12 (-20) ) 
  []
 
 
-Overfull \hbox (15.63797pt too wide) in paragraph at lines 900--901
+Overfull \hbox (15.63797pt too wide) in paragraph at lines 889--890
 \T1/lmr/m/n/12 (-20) (\T1/zi4/m/n/12 ~/youbot_driver/config/youbot-ethercat.cfg\T1/lmr/m/n/12 (-20) ) to match your ac-tual in-ter-face name: 
  []
 
 
 
-[26]
-
 [27]
 
 [28]
 
-[29] (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+[29]
+
+[30] (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1117.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1106.
  (../code/youbot-files/DSD/src/youbot_control/scripts/simple_square_movement.py
 
-[30])
+[31])
 
-[31] (../code/youbot-files/DSD.sh)
+[32] (../code/youbot-files/DSD.sh)
 
-[32] (../code/youbot-files/DSD/src/youbot_control/scripts/linear_test.py
+[33] (../code/youbot-files/DSD/src/youbot_control/scripts/linear_test.py
 
-[33])
+[34])
 
-[34] (../code/youbot-files/DSD/src/youbot_control/scripts/rotate_test.py
+[35] (../code/youbot-files/DSD/src/youbot_control/scripts/rotate_test.py
 
-[35])
+[36])
 
-[36] (../code/rotate_graph.py
+[37] (../code/rotate_graph.py
 
-[37]
+[38]
 
-[38])
+[39])
 
-[39] (../code/linear_graph.py
+[40] (../code/linear_graph.py
 
-[40]
+[41]
 
-[41])
-
-[42]
+[42])
 
 [43]
 
@@ -1592,7 +1582,9 @@ Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on in
 
 [48]
 
-[49] (main.aux)
+[49]
+
+[50] (main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
@@ -1606,17 +1598,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46914 strings out of 473536
- 924693 string characters out of 5714956
- 1954143 words of memory out of 5000000
- 68442 multiletter control sequences out of 15000+600000
+ 46931 strings out of 473536
+ 925460 string characters out of 5714956
+ 1955448 words of memory out of 5000000
+ 68454 multiletter control sequences out of 15000+600000
  641248 words of font info for 193 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,131p,1255b,2923s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4b.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (52 pages, 12212129 bytes).
+Output written on main.pdf (53 pages, 12216351 bytes).
 PDF statistics:
- 1531 PDF objects out of 1728 (max. 8388607)
- 798 named destinations out of 1000 (max. 500000)
+ 1551 PDF objects out of 1728 (max. 8388607)
+ 803 named destinations out of 1000 (max. 500000)
  51240 words of extra memory for PDF output out of 51595 (max. 10000000)
 

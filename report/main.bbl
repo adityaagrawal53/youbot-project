@@ -339,6 +339,123 @@
       \endverb
       \keyw{UAV,Embedded,Navigation,Visual-inertial,Stereo,Teach-and-replay,Relative}
     \endentry
+    \entry{batterymasters_sla}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=670fd397b099915b42d10f1c4be06bf5}{%
+           family={Masters},
+           familyi={M\bibinitperiod},
+           given={Battery},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{670fd397b099915b42d10f1c4be06bf5}
+      \strng{fullhash}{670fd397b099915b42d10f1c4be06bf5}
+      \strng{fullhashraw}{670fd397b099915b42d10f1c4be06bf5}
+      \strng{bibnamehash}{670fd397b099915b42d10f1c4be06bf5}
+      \strng{authorbibnamehash}{670fd397b099915b42d10f1c4be06bf5}
+      \strng{authornamehash}{670fd397b099915b42d10f1c4be06bf5}
+      \strng{authorfullhash}{670fd397b099915b42d10f1c4be06bf5}
+      \strng{authorfullhashraw}{670fd397b099915b42d10f1c4be06bf5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-06-16}
+      \field{title}{How Do Sealed Lead Acid Batteries Work?}
+      \verb{urlraw}
+      \verb https://batterymasters.co.uk/blog/post/How%20Do%20Sealed%20Lead%20Acid%20Batteries%20Work
+      \endverb
+      \verb{url}
+      \verb https://batterymasters.co.uk/blog/post/How%20Do%20Sealed%20Lead%20Acid%20Batteries%20Work
+      \endverb
+    \endentry
+    \entry{powerstream_sla}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=6580b6b07100171bd8ccac20334a24b6}{%
+           family={PowerStream},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{6580b6b07100171bd8ccac20334a24b6}
+      \strng{fullhash}{6580b6b07100171bd8ccac20334a24b6}
+      \strng{fullhashraw}{6580b6b07100171bd8ccac20334a24b6}
+      \strng{bibnamehash}{6580b6b07100171bd8ccac20334a24b6}
+      \strng{authorbibnamehash}{6580b6b07100171bd8ccac20334a24b6}
+      \strng{authornamehash}{6580b6b07100171bd8ccac20334a24b6}
+      \strng{authorfullhash}{6580b6b07100171bd8ccac20334a24b6}
+      \strng{authorfullhashraw}{6580b6b07100171bd8ccac20334a24b6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-06-16}
+      \field{title}{Lead Acid Battery Charging Basics and Chargers}
+      \verb{urlraw}
+      \verb https://www.powerstream.com/SLA.htm
+      \endverb
+      \verb{url}
+      \verb https://www.powerstream.com/SLA.htm
+      \endverb
+    \endentry
+    \entry{powersonic_charging}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=ca516e6f2892ec33c9a7157f1e61ddc5}{%
+           family={Sonic},
+           familyi={S\bibinitperiod},
+           given={Power},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{ca516e6f2892ec33c9a7157f1e61ddc5}
+      \strng{fullhash}{ca516e6f2892ec33c9a7157f1e61ddc5}
+      \strng{fullhashraw}{ca516e6f2892ec33c9a7157f1e61ddc5}
+      \strng{bibnamehash}{ca516e6f2892ec33c9a7157f1e61ddc5}
+      \strng{authorbibnamehash}{ca516e6f2892ec33c9a7157f1e61ddc5}
+      \strng{authornamehash}{ca516e6f2892ec33c9a7157f1e61ddc5}
+      \strng{authorfullhash}{ca516e6f2892ec33c9a7157f1e61ddc5}
+      \strng{authorfullhashraw}{ca516e6f2892ec33c9a7157f1e61ddc5}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-06-16}
+      \field{title}{How to Charge a Lead Acid Battery}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.power-sonic.com/blog/how-to-charge-a-lead-acid-battery/
+      \endverb
+      \verb{url}
+      \verb https://www.power-sonic.com/blog/how-to-charge-a-lead-acid-battery/
+      \endverb
+    \endentry
+    \entry{powersonic_lithium_vs_lead}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=ca516e6f2892ec33c9a7157f1e61ddc5}{%
+           family={Sonic},
+           familyi={S\bibinitperiod},
+           given={Power},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{ca516e6f2892ec33c9a7157f1e61ddc5}
+      \strng{fullhash}{ca516e6f2892ec33c9a7157f1e61ddc5}
+      \strng{fullhashraw}{ca516e6f2892ec33c9a7157f1e61ddc5}
+      \strng{bibnamehash}{ca516e6f2892ec33c9a7157f1e61ddc5}
+      \strng{authorbibnamehash}{ca516e6f2892ec33c9a7157f1e61ddc5}
+      \strng{authornamehash}{ca516e6f2892ec33c9a7157f1e61ddc5}
+      \strng{authorfullhash}{ca516e6f2892ec33c9a7157f1e61ddc5}
+      \strng{authorfullhashraw}{ca516e6f2892ec33c9a7157f1e61ddc5}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-06-16}
+      \field{title}{The Complete Guide to Lithium vs Lead Acid Batteries}
+      \verb{urlraw}
+      \verb https://www.power-sonic.com/blog/lithium-vs-lead-acid-batteries/
+      \endverb
+      \verb{url}
+      \verb https://www.power-sonic.com/blog/lithium-vs-lead-acid-batteries/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
