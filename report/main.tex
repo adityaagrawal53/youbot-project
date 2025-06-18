@@ -140,7 +140,6 @@
 
     \subsection{Motivation}
 
-    \notes{draft \#2}
 
     In the rapidly evolving field of robotics, expensive hardware platforms often become obsolete quickly. This is not purely because of physical wear and tear or a lack of functionality, but also due to quick advancements in hardware, software and infrastructure. For example, artificial intelligence (AI) and related fields like Machine Learning (ML) and Deep Learning (DL) has accelerated progress within robotics, driving demand for specialised, high-performance hardware and tightly integrated software ecosystems. Consequently,older robotic platforms, despite their inherent capabilities, become less relevant and lose extended support. This furthermore could lead to increased e-waste and reduced sustainability in the robotics industry \cite{mcgloin2023introducing}. 
 
@@ -433,38 +432,26 @@
 
     Furthermore, the onboard computer did not have a static IP address, which meant that it could not be accessed through Ethernet. This would prevent Ethernet-based communication with the YouBot, which would be more reliable than wireless communication. 
 
-    \subsection{Configuration}
+    \subsection{Configuration \& C++ demos}
 
-    To boot up the C++ programs, the onboard computer required some configuration to suit my current needs. The YouBot config files had to be changed to provide the correct interface (\code{eth1} instead of \code{eth0} for the motors). 
+    To boot up the C++ programs, the onboard computer required some configuration to suit my current needs. The YouBot config files had to be changed to provide the correct interface (\code{eth1} instead of \code{eth0} for the motors). Refer to \ref{appendix:initial_configuration} for relevant details. 
 
-    The Ethernet connection was also configured to use a static IP address, which would allow for reliable communication with the onboard computer. This was done by editing the \code{interfaces} file in the \code{/etc/network/} directory and adding a static IP address for the \code{eth0} interface. 
+    The Ethernet connection was also configured to use a static IP address, which would allow for reliable communication with the onboard computer. This was done by editing the \code{interfaces} file in the \code{/etc/network/} directory and adding a static IP address for the \code{eth0} interface. Refer to \ref{appendix:ethernet_configuration} for the relevant details.
 
-    After making
-
-    \subsection{C++ demos}
-
-    After configuring the YouBot, I was able to run the C++ demo programs. 
+    After making these changes, the onboard computer was able to communicate with my external computer through Ethernet. Furthermore, I was able to run the C++ demo programs. Refer to \ref{appendix:cpp_demos} for a guide on doing the same. Running the keyboard and hello world demos was particularly successful, and showcased the YouBot's robust movement capabilities despite half a decade of inactivity. While this movement has degraded over time, the YouBot was still able to move in all directions and turn in place. The YouBot was also able to detect the motors and encoders, and could report basic issues through the C++ error code. 
 
     \subsection{ROS Interface}
 
-    This included changing the \code{.bashrc} file to provide ROS with the correct environment variables, which would in turn allow it to communicate with itself. 
+    While the C++ demos worked quite nicely, they would be unsuitable for potential extension into actual use-cases in mobile robotics. There is no in-built system for networking across multiple machines, utilising multiple sensors, debugging, status echoing, etc. Thus, ROS was chosen to be the basis for my experimental setups. This included changing the \code{.bashrc} file to provide ROS with the correct environment variables, which would in turn allow it to communicate with itself. Refer to \ref{appendix:ros_configuration} for the relevant details.
 
-    I was able to start up \code{roscore} after making this change. However, I was not able to run the YouBot-ROS interface due to a lack of permissions to access the \code{eth1} interface. This was due to the fact that the YouBot-ROS interface requires root privileges to access the EtherCAT devices. To resolve this, I had to run the ROS interface with \code{sudo}, which allowed it to access the EtherCAT devices and communicate with the motors. 
+    I was able to start up \code{roscore} after making this change. However, I was not able to run the YouBot-ROS interface due to a lack of permissions to access the \code{eth1} interface. This was due to the fact that the YouBot-ROS interface requires root privileges to access the EtherCAT devices. To resolve this, I had to run the ROS interface in with \code{sudo bash -c}, which allowed it to access the EtherCAT devices and communicate with the motors. 
 
     After fixing this issue, I elected to try and run a keyboard teleoperation demo program to test the YouBot's movement capabilities through ROS. This file was stored locally at \code{~/ros_stacks/youbot-ros-pkg/youbot_drivers/youbot_oodl} and could be run by typing:
     \begin{lstlisting}[language=bash]
 $    rosrun youbot_oodl youbot_keyboard_teleop.py
     \end{lstlisting}
 
-    I was able to fulfill one of the key project goals, of enabling the YouBot to move through the ROS interface. While there were some issues regarding overcurrent that showed up on some wheels with high speeds, the YouBot was able to move in all directions and turn in place. 
-
-    \subsection{Diving into ROS}
-
-    After getting this to work, my goal now was to understand, at least on a surface level, some of the basic functionalities of ROS, and what nodes and topics the YouBot interface was publishing. Understanding these would enable me to write my own programs to control the YouBot, and to further extend its capabilities. 
-
-    
-
-    
+    I was able to fulfill one of the key project goals, of enabling the YouBot to move through the ROS interface. While there were some issues regarding overcurrent that showed up on some wheels with high speeds, the YouBot was able to move in all directions and turn in place.     
 
     \subsection{ROS1-ROS2 Bridge}
 
@@ -474,7 +461,9 @@ $    rosrun youbot_oodl youbot_keyboard_teleop.py
 
     \subsection{Custom Programs}
 
-    I elected to write my own custom programs to control the YouBot, as this would allow me to gain a better understanding of the ROS interface and how to interact with the robot. I started by writing a simple program that would move the YouBot in a square pattern, using the \code{geometry\_msgs/Twist} message type to control the robot's movement. This message type is used to specify the linear and angular velocities of the robot, which can be used to control its movement. 
+    I elected to write my own custom programs to control the YouBot, as this would allow me to gain a better understanding of the ROS interface and how to interact with the robot. I started by writing a simple program that would move the YouBot in a square pattern, using the \code{geometry_msgs/Twist} message type to control the robot's movement. This message type is used to specify the linear and angular velocities of the robot, which can be used to control its movement. This program is very basic in implementation since it calculates the time to move by dividing the speed by distance. However, this already showcased many interesting issues that occured with the YouBot. Firstly, some wheels would often show an overcurrent error when moving at high speeds, which indicates that the motors were drawing too much current and could potentially damage the motors or the robot's electronics. This was particularly noticeable when moving in a straight line at high speeds, where the robot would often drift slightly off course, potentially due to the motors not being perfectly calibrated with each other. 
+
+
     
 
     
@@ -501,7 +490,22 @@ $    rosrun youbot_oodl youbot_keyboard_teleop.py
     \label{sec:battery-replacement}
 
 
-    As previously mentioned, the YouBot came with three 24V SLA batteries. Two of these were the original batteries included with the YouBot, and one was a makeshift battery put together by Vesa in 2019. All three batteries were unusable. This section thus documents the technology behind the SLA batteries, the testing of the original batteries, replacing and testing a new battery, and future battery options. 
+    As previously mentioned, the YouBot came with three 24V SLA batteries. Two of these were the original batteries included with the YouBot, and one was a makeshift battery put together by Vesa in 2019. All three batteries were unusable. This section thus documents the technology behind the SLA batteries, the testing of the original batteries, replacing and testing a new battery, and future battery options.
+    
+    \begin{figure}[ht]
+        \centering
+        \begin{subfigure}[t]{0.49\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{images2/sec4/youbot-battery-og.jpg}
+            \caption{The original YouBot battery.}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[t]{0.49\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{images2/sec4/youbot-battery-unwrapped.jpg}
+            \caption{The handmade battery, case removed.}
+        \end{subfigure}
+\end{figure}
 
     \subsubsection{SLA Battery Overview}
 
@@ -519,6 +523,15 @@ $    rosrun youbot_oodl youbot_keyboard_teleop.py
     
     Vesa attempted to revive this battery through desulphation, where a higher-than-recommended voltage (in this case, 30V) is applied to the battery to force current through the hardened sulphate layers and dissolve them. 
 
+    \begin{figure}[H]
+    \centering
+    %/flushleft
+    %/flushright
+    \includegraphics[width=0.5\linewidth]{images2/sec4/testing-with-vesa.jpg}
+    \caption{Testing the old batteries with Vesa.}
+\end{figure}
+
+
     This seemed initially promising: the battery was accepting a charge and its voltage was increasing. However, this was only temporary, as the battery quickly lost voltage again after charging, suggesting that the sulphation was very severe. While some surface conductivity was perhaps restored, the effective area of the electrode plates was still very small, resulting in a very low capacity. As such, the battery was not usable for our purposes.  
 
     \subsubsection{Replacing batteries}
@@ -527,11 +540,22 @@ $    rosrun youbot_oodl youbot_keyboard_teleop.py
     
     The old batteries were removed from their casing and all relevant connections and pieces to structure the battery were removed. The new batteries were then appropriately connected to the 4-pin XLR connector, and the structural pieces were reattached with tape. After putting the casing back on, we were able to connect the new battery to the YouBot and power it on. The YouBot detects the two batteries and shows their individual voltages, confirming that the battery works. While it's not hermetically sealed, it works well for the purposes of this project. 
 
+    \begin{figure}[H]
+    \centering
+    %/flushleft
+    %/flushright
+    \includegraphics[width=0.5\linewidth]{images2/sec4/newly-arranged-battery.jpg}
+    \caption{The new batteries taped together in the needed form factor.}
+\end{figure}
+
+
     \subsubsection{Future Battery Options}
 
     While we have replaced the SLA batteries with a makeshift one at a rather inexpensive cost, these batteries will not last long and will be prone to the same issues as the original batteries. 
 
-    An ideal candidate for a replacement battery techonology would be lithium-iron-phosphate (LiFePO4) batteries. These batteries are more expensive, but have multiple advantages over SLA batteries \cite{powersonic_lithium_vs_lead}. They have longer lifespans, higher energy density, lighter weight, and are less prone to degradation. However, they would also need an integrated battery management system (BMS) to ensure safe operation, and potentially some custom hardware to fit the dimensions of the YouBot's battery compartment. 
+    An ideal candidate for a replacement battery techonology would be lithium-iron-phosphate (LiFePO4) batteries. These batteries are more expensive, but have multiple advantages over SLA batteries \cite{powersonic_lithium_vs_lead}. They have longer lifespans, higher energy density, lighter weight, and are less prone to degradation. However, they would also need an integrated battery management system (BMS) to ensure safe operation, and potentially some custom hardware to fit the dimensions of the YouBot's battery compartment.
+    
+    
 
     \pagebreak
     
@@ -717,28 +741,64 @@ $    rosrun youbot_oodl youbot_keyboard_teleop.py
 
     \section{Future Applications}
 
-    This project has demonstrated that legacy hardware such as the KUKA YouBot can still offer meaningful value when approached with purpose. While the KUKA YouBot is no longer a competitive platform for cutting-edge industrial and research applications, it can act as a platform for conducting research, education and prototyping in the field of mobile robotics. This would allow us to make full use of the YouBot's capabilities, while also extending its operational life and reducing e-waste.
-
-    \subsection{Human-Robot Interaction (HRI)}
-
-    The YouBot's small size and mobility make it a suitable for operation in tandem with humans in controlled environments, such as labs or workshops. This would allow for the testing of HRI algorithms and assistive applications, with a focus on navigation and cognition. 
-
-
-    \subsection{Autonomous Mobile Robots (AMRs)}
-    As urban and industrial environments become more complex, the need for autonomous mobile robots (AMRs) that can navigate and operate in these environments is increasing. The YouBot's ROS compatibility and open interfaces make it a suitable platform for testing and prototyping AMR algorithms, such as SLAM and real-time localization. Sensor fusion through provided sensors such as the Kinect camera and Hokuyo laser rangefinder, can be used to provide the necessary data for these algorithms.
+    This project has demonstrated that legacy hardware such as the KUKA YouBot can still offer meaningful value when approached with purpose. While the mobile base is no longer a competitive platform for cutting-edge industrial and research applications, it can act as a platform for conducting research, education and prototyping in the field of mobile robotics. This would allow us to make full use of the YouBot's capabilities, while also extending its operational life and reducing e-waste.
 
     \subsection{Automated Guided Vehicles (AGVs)}
 
-    In the context of warehouse logistics and factory automation, the YouBot could emulate AGV systems for transporting light items within controlled environments. While it lacks the robustness and adaptability of modern AGVs, its lightweight and compact design make it suitable as a prototyping and testing platform. 
+    In the context of warehouse logistics and factory automation, the YouBot could emulate AGV systems for transporting light items within controlled environments. Traditional AGV systems, like those developed by Kollmorgen, utilize infrastructure-dependent navigation methods such as reflector stripes and laser-based positioning systems to follow predefined paths \cite{kollmorgen_agv}\cite{kollmorgen_agv_video}. These systems require significant setup with deployment engineers configuring the infrastructure and programming routes \cite{kollmorgen_agv_video}.
+
+    The YouBot's omnidirectional drive system, with its four Mecanum wheels allowing movement in any direction, provides an excellent platform for prototyping and testing AGV applications \cite{maxon_youbot}. This mobility system enables the YouBot to navigate tight spaces with precision, making it ideal for simulating warehouse logistics operations in controlled environments. While it lacks the industrial robustness of commercial AGVs, its compact size and reasonable payload capacity (20kg) make it suitable for educational demonstrations and small-scale prototyping of material handling solutions.
+
+    Companies like Kollmorgen are advancing AGV technologies with smart algorithms that optimize routing and facilitate flexible material handling, significantly reducing installation and commissioning time \cite{kollmorgen_agv_video}. The YouBot can serve as an affordable platform to test similar algorithms before implementing them on more expensive industrial systems \cite{maxon_youbot}.
+
+    \begin{figure}[H]
+    \centering
+    %/flushleft
+    %/flushright
+    \includegraphics[width=0.5\linewidth]{images2/sec6/kollmorgen-agv.png}
+    \caption{Kollmorgen NDC8 Hardware.}
+\end{figure}
+
+
+    \subsection{Human-Robot Interaction (HRI)}
+
+    The YouBot's small size and mobility make it suitable for operation in tandem with humans in controlled environments, such as labs or workshops. This would allow for the testing of HRI algorithms and assistive applications, with a focus on navigation and cognition \cite{Gross2023}.
+
+    Modern HRI research focuses on developing robots that can interact naturally with humans, understand social cues, and operate safely in shared spaces. The YouBot provides an accessible platform for implementing and testing these interactions due to its non-threatening size and open software architecture. Researchers can develop applications that explore how robots and humans can collaborate effectively, testing various interaction paradigms before implementing them on more specialized platforms.
+
+    Recent advancements in HRI include frameworks like RISE (Robotics Integration and Scenario-Management Extensible-Architecture), which supports interdisciplinary research and reproducible human-robot dialog studies \cite{Gross2023}.
+    \subsection{Autonomous Mobile Robots (AMRs)}
+
+    As urban and industrial environments become more complex, the need for autonomous mobile robots (AMRs) that can navigate and operate in these environments is increasing \cite{interlake_slam}. Unlike traditional AGVs that follow fixed paths, AMRs are smart machines capable of replanning routes according to the current state of their environment \cite{mathworks_slam}.
+
+    The YouBot's ROS compatibility and open interfaces make it a suitable platform for testing and prototyping AMR algorithms, such as SLAM (Simultaneous Localization and Mapping) and real-time localization. SLAM algorithms enable robots to build maps of unknown environments while simultaneously tracking their position within those maps. This capability is fundamental for AMRs that need to navigate dynamically changing environments without predefined infrastructure.
+
+    \begin{figure}[H]
+    \centering
+    %/flushleft
+    %/flushright
+    \includegraphics[width=0.5\linewidth]{images2/sec6/amazonrobotics.jpg}
+    \caption{Amazon Robotics in action at a warehouse.}
+    \end{figure}
+
+    Companies like Amazon have revolutionized warehouse operations with their Kiva robots (now Amazon Robotics), which autonomously transport shelving units to human operators \cite{amazon_10years}. While these systems operate at industrial scale, the fundamental navigation and coordination principles can be studied and prototyped using platforms like the YouBot \cite{exotec_amazon}.
+
+   
 
     \subsection{Swarm Robotics}
 
-    \subsection{Robotics Prototyping}
+    Swarm robotics represents an emerging field where multiple simple robots collaborate to accomplish tasks that would be difficult or impossible for individual robots \cite{swarmbot_hardware} \cite{upm_swarm}. This approach draws inspiration from natural swarm behaviors observed in social organisms like ants and bees, where collective intelligence emerges from simple individual behaviors and local interactions \cite{swarmbot_hardware} \cite{azorobotics_swarm}.
 
-    The YouBot provides a flexible environment for rapid prototyping of both hardware modules and control software. It supports plug-and-play integration of third-party sensors, ROS packages, and custom algorithms. 
+    The YouBot's compact size, omnidirectional mobility, and open software architecture make it suitable for small-scale swarm robotics experiments \cite{swarmbot_hardware}. Multiple YouBots can be programmed to coordinate their movements and actions, demonstrating principles of distributed control and collective decision-making \cite{swarmbot_hardware}\cite{azorobotics_swarm}. While industrial-scale swarm applications might require dozens or hundreds of robots, fundamental research can be conducted with smaller numbers of units. 
+
+    \subsection{Robotics Education and Prototyping}
+
+    Modern robotics education emphasizes hands-on learning approaches that enhance problem-solving skills and boost creativity through practical application. The YouBot facilitates this approach by providing a complete system that integrates mechanical design, electronics, and software programming. Students learn to work with real-world challenges such as sensor noise, mechanical tolerances, and system integration issues that cannot be fully replicated in simulation environments. Furthermore, the age of the YouBot provides an interesting opportunity for users to create creative solutions to integrate the mobile base into modern toolsets. Students can use the platform to prepare for events like RoboCup, where KUKA has historically provided support and sponsorship.
+
 
     \pagebreak
 
+    
     \section{Reflection}
 
     This project was a novel and challenging experience for me, as it was my first time dabbling in the field of robotics. It served as my first exposure to ROS, Linux, and the various hardware components of a robot. It was furthermore a very open-ended and self-directed project, where I had to manage my own time and resources, and make decisions about the direction of the project.
@@ -764,6 +824,7 @@ $    rosrun youbot_oodl youbot_keyboard_teleop.py
     There are several areas of the YouBot that could be further explored, such as an actual implementation for the ROS1-ROS2 bridge, further integration of sensors, and more advanced control algorithms. However, I am satisfied with the overall progress made despite my pitfalls. 
 
     I'd like to thank my advisor for his provision of a different perspective on the project, explanations of everything and consistent patience. I also want to thank Vesa Korhonen for his help with replacing the YouBot battery and his insights into the YouBot's hardware and documentation.
+
 
 
     \newpage
@@ -798,10 +859,12 @@ $    rosrun youbot_oodl youbot_keyboard_teleop.py
     \notes{add image of the booting up process.}
 
     \subsection{Initial Configuration}
+    \label{appendix:initial_configuration}
 
     After booting up the YouBot, some initial configuration is required to enable the ROS interface and the YouBot drivers. This includes setting up the ROS networking configuration, configuring the Ethernet interface, and editing the YouBot driver configuration file. 
 
     \subsubsection{ROS Networking Configuration (\code{.bashrc})}
+    \label{appendix:ros_networking_configuration}
     Update the onboard computer's \code{.bashrc} file with the following: 
 
     \begin{lstlisting}[style=plain]
@@ -829,6 +892,7 @@ $   roscore
     %If the command runs successfully, it means that the ROS interface is now able to communicate with itself and is ready to be used. 
 
     \subsubsection{Ethernet Configuration (\code{/etc/network/interfaces})}
+    \label{appendix:ethernet_configuration}
 
     To enable stable communication between the YouBot and external systems, a static IP address is preferably assigned to the onboard Ethernet interface. This enables reliable wired access for remote control. 
 
@@ -881,6 +945,8 @@ $   ip addr show eth0
 
     \subsubsection{Youbot Driver Configuration (\code{~/youbot_driver/config/youbot-ethercat.cfg})}
 
+    \label{sec:youbot_driver_config}
+
     The YouBot driver requires the correct Ethernet interface to be specified for EtherCAT communication with the base and arm motors. This is configured in the file \code{~/youbot_driver/config/youbot-ethercat.cfg}. Note that the interface name used here may be different from the Ethernet interface name used in the previous step.  Type the following to see your Ethernet interfaces:
     \begin{lstlisting}[style=plain]
 $   ifconfig
@@ -899,6 +965,7 @@ $   ifconfig
 
     
     \subsection{Running C++ demos}
+    \label{appendix:cpp_demos}
 
     \textbf{Note:} Remember to turn the motors on before running the demos. This can be done by long-pressing the power button on the top panel of the YouBot and toggling the "Motors" option to ON.
 
@@ -933,6 +1000,7 @@ $   ifconfig
     One may run the other demos in a similar manner. Refer to the GitHub repository's README for more details. 
 
     \subsection{Running the ROS Interface}
+    \label{appendix:ros_interface}
 
     Once the C++ demos have been confirmed functional, the ROS (Robot Operating System) interface can be used to enable modular software integration for motion planning, visualization, diagnostics, and teleoperation.
 
@@ -1006,6 +1074,7 @@ $   ifconfig
 
     
     \subsection{Writing Custom Programs}
+    \label{appendix:custom_ros_programs}
 
     This section describes how to create and run custom ROS programs to control the YouBot using Python. The provided ROS demo packages serve as a reference.
 

@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1750053888.4123 "main.bcf" "main.bbl" "main" 1750053921.75972 0
-  "./resources/bib/references.bib" 1750053864 9295 aaad1ac60fba7eaa71bdeed9eec8a940 ""
-  "main.bcf" 1750053921 109525 f470ed4e63a2af9ea423310ab90c0710 "pdflatex"
+["biber main"] 1750239005.53385 "main.bcf" "main.bbl" "main" 1750249026.59878 0
+  "./resources/bib/references.bib" 1750238918 12264 8afdbaf9f1dd9cdb4a3ed3b40d1d8539 ""
+  "main.bcf" 1750249025 110871 ad9c1b37806b8456b249c0a21479c0a2 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1750053911.01818 "d:/OneDrive/_work/_DSD_FP/final-proj-report/report/main.tex" "main.pdf" "main" 1750053921.76073 0
+["pdflatex"] 1750249014.78014 "d:/OneDrive/_work/_DSD_FP/final-proj-report/report/main.tex" "main.pdf" "main" 1750249026.60121 0
   "../code/linear_graph.py" 1749038769 3024 44c544ce0acd7253127243feb49e6388 ""
   "../code/rotate_graph.py" 1749153185 4867 690c75dd62ced1ec40bd8cece8c68b85 ""
   "../code/youbot-files/DSD.sh" 1748882619 1076 de9637882682ca9143f428a463ad83f7 ""
@@ -286,7 +286,7 @@
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/Adity/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "d:/OneDrive/_work/_DSD_FP/final-proj-report/report/main.tex" 1750053874 125672 8c33bf1d692881e8c36048d374b461ec ""
+  "d:/OneDrive/_work/_DSD_FP/final-proj-report/report/main.tex" 1750249000 133096 8beabcd11fa46f88186a6ca63eeb7065 ""
   "diagrams/new_arch.drawio.pdf" 1748519746 38225 8247e4cc391f23ab680e506b09a05312 ""
   "diagrams/sample.pdf" 1748461152 39951 53376abc59bd1bbe86848c864c031372 ""
   "images/experiment_results/linear_error_boxplots.png" 1749179322 107936 817d49cfa63a19f99eae9685cf0c611c ""
@@ -310,11 +310,17 @@
   "images/sec4/initial_computer_bootup.jpg" 1749179432 290258 30f506b68364f295324d992d2afcbcef ""
   "images/sec4/initial_ros_bootup.jpg" 1749179433 454725 2db6a5c588d64941df34c78e5357f25a ""
   "images/sec4/tmux-setup.jpg" 1749179434 370194 c6d9b4766dca7fe657e82976e6a087d4 ""
-  "main.aux" 1750053921 39779 95dc7e535d345e701e554bae1c5dbea7 "pdflatex"
-  "main.bbl" 1750053893 21581 b5edf42ee2f969710527dfee8584a032 "biber main"
-  "main.run.xml" 1750053921 2418 7c2806152324ae357b5c2693ccbac713 "pdflatex"
-  "main.tex" 1750053874 125672 8c33bf1d692881e8c36048d374b461ec ""
-  "main.toc" 1750053921 9405 bb5c494cab8dafe35c6eccc8ab2c05d7 "pdflatex"
+  "images2/sec4/newly-arranged-battery.jpg" 1748519076 2519540 e2fd0e604a5259d3e924a7f7c43a65bd ""
+  "images2/sec4/testing-with-vesa.jpg" 1748519086 2883534 6a4f5da8da0892b632caba9dbc6cf1c3 ""
+  "images2/sec4/youbot-battery-og.jpg" 1748519089 2706074 ab3559ba72b50aae642987612d962274 ""
+  "images2/sec4/youbot-battery-unwrapped.jpg" 1748519088 2909504 14816025bbbdcb618345ea89373fe244 ""
+  "images2/sec6/amazonrobotics.jpg" 1750243846 131480 7f3def9176a48c8aef01a60b4c70e558 ""
+  "images2/sec6/kollmorgen-agv.png" 1750243540 276904 7b425386bb117d2840f1de9547a22412 ""
+  "main.aux" 1750249025 43095 1fd0d1891f24e11a04b3b5333e8a6bad "pdflatex"
+  "main.bbl" 1750239012 38135 87e3c8a055ac09b7e7e7a7a71660b5b9 "biber main"
+  "main.run.xml" 1750249025 2418 7c2806152324ae357b5c2693ccbac713 "pdflatex"
+  "main.tex" 1750249000 133096 8beabcd11fa46f88186a6ca63eeb7065 ""
+  "main.toc" 1750249025 9274 e7172ecd4efb2c4873e01f25e4aef5c3 "pdflatex"
   "packages/sleek.sty" 1749127728 4352 a9a168e220410f7bcba1242383b9cf60 ""
   (generated)
   "main.aux"

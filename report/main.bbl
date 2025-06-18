@@ -456,6 +456,394 @@
       \verb https://www.power-sonic.com/blog/lithium-vs-lead-acid-batteries/
       \endverb
     \endentry
+    \entry{kollmorgen_agv}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=2d87207bfa8d90e6bf57bcb9a43040a0}{%
+           family={Kollmorgen},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{2d87207bfa8d90e6bf57bcb9a43040a0}
+      \strng{fullhash}{2d87207bfa8d90e6bf57bcb9a43040a0}
+      \strng{fullhashraw}{2d87207bfa8d90e6bf57bcb9a43040a0}
+      \strng{bibnamehash}{2d87207bfa8d90e6bf57bcb9a43040a0}
+      \strng{authorbibnamehash}{2d87207bfa8d90e6bf57bcb9a43040a0}
+      \strng{authornamehash}{2d87207bfa8d90e6bf57bcb9a43040a0}
+      \strng{authorfullhash}{2d87207bfa8d90e6bf57bcb9a43040a0}
+      \strng{authorfullhashraw}{2d87207bfa8d90e6bf57bcb9a43040a0}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-06-18}
+      \field{title}{Kollmorgen}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://automaticguidedvehicles.com/kollmorgen/
+      \endverb
+      \verb{url}
+      \verb https://automaticguidedvehicles.com/kollmorgen/
+      \endverb
+    \endentry
+    \entry{kollmorgen_agv_video}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=2d87207bfa8d90e6bf57bcb9a43040a0}{%
+           family={Kollmorgen},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{2d87207bfa8d90e6bf57bcb9a43040a0}
+      \strng{fullhash}{2d87207bfa8d90e6bf57bcb9a43040a0}
+      \strng{fullhashraw}{2d87207bfa8d90e6bf57bcb9a43040a0}
+      \strng{bibnamehash}{2d87207bfa8d90e6bf57bcb9a43040a0}
+      \strng{authorbibnamehash}{2d87207bfa8d90e6bf57bcb9a43040a0}
+      \strng{authornamehash}{2d87207bfa8d90e6bf57bcb9a43040a0}
+      \strng{authorfullhash}{2d87207bfa8d90e6bf57bcb9a43040a0}
+      \strng{authorfullhashraw}{2d87207bfa8d90e6bf57bcb9a43040a0}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-06-18}
+      \field{title}{AGVs using Smart Algorithms for Smart Factories}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://www.youtube.com/watch?v=T3Z2CKDhJEo
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=T3Z2CKDhJEo
+      \endverb
+    \endentry
+    \entry{maxon_youbot}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=dba9eea9ff0a81d5d4de479dc301c25f}{%
+           family={Group},
+           familyi={G\bibinitperiod},
+           given={Maxon},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{dba9eea9ff0a81d5d4de479dc301c25f}
+      \strng{fullhash}{dba9eea9ff0a81d5d4de479dc301c25f}
+      \strng{fullhashraw}{dba9eea9ff0a81d5d4de479dc301c25f}
+      \strng{bibnamehash}{dba9eea9ff0a81d5d4de479dc301c25f}
+      \strng{authorbibnamehash}{dba9eea9ff0a81d5d4de479dc301c25f}
+      \strng{authornamehash}{dba9eea9ff0a81d5d4de479dc301c25f}
+      \strng{authorfullhash}{dba9eea9ff0a81d5d4de479dc301c25f}
+      \strng{authorfullhashraw}{dba9eea9ff0a81d5d4de479dc301c25f}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-06-18}
+      \field{title}{Application story Robotics: KUKA youBot}
+      \field{type}{techreport}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://www.maxongroup.in/medias/sys_master/8815857795102.pdf?attachment=true
+      \endverb
+      \verb{url}
+      \verb https://www.maxongroup.in/medias/sys_master/8815857795102.pdf?attachment=true
+      \endverb
+    \endentry
+    \entry{Gross2023}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=af5a2437a10c654c5bc759c213a7188e}{%
+           family={Groß},
+           familyi={G\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fa16c03973d66f601e2384472feddfcb}{%
+           family={Schütze},
+           familyi={S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=4109e43361c3826b36e0cc70551aaa31}{%
+           family={Brandt},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a6a058758c5818184a11ec2b5b380392}{%
+           family={Wrede},
+           familyi={W\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=a580975a70ea8fca120dfb6927f8539b}{%
+           family={Richter},
+           familyi={R\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{025bb88315691915469e9c0627a81433}
+      \strng{fullhash}{18958a9d55c41636722bb97b2fc068e0}
+      \strng{fullhashraw}{18958a9d55c41636722bb97b2fc068e0}
+      \strng{bibnamehash}{025bb88315691915469e9c0627a81433}
+      \strng{authorbibnamehash}{025bb88315691915469e9c0627a81433}
+      \strng{authornamehash}{025bb88315691915469e9c0627a81433}
+      \strng{authorfullhash}{18958a9d55c41636722bb97b2fc068e0}
+      \strng{authorfullhashraw}{18958a9d55c41636722bb97b2fc068e0}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Robotics and AI}
+      \field{note}{Published: 2023-12-06}
+      \field{title}{RISE: an open-source architecture for interdisciplinary and reproducible human-robot interaction research}
+      \field{volume}{10}
+      \field{year}{2023}
+      \field{pages}{1245501}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3389/frobt.2023.1245501
+      \endverb
+    \endentry
+    \entry{interlake_slam}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=d5509e440d5c5be354b4ee2949e6f29e}{%
+           family={Mecalux},
+           familyi={M\bibinitperiod},
+           given={Interlake},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{d5509e440d5c5be354b4ee2949e6f29e}
+      \strng{fullhash}{d5509e440d5c5be354b4ee2949e6f29e}
+      \strng{fullhashraw}{d5509e440d5c5be354b4ee2949e6f29e}
+      \strng{bibnamehash}{d5509e440d5c5be354b4ee2949e6f29e}
+      \strng{authorbibnamehash}{d5509e440d5c5be354b4ee2949e6f29e}
+      \strng{authornamehash}{d5509e440d5c5be354b4ee2949e6f29e}
+      \strng{authorfullhash}{d5509e440d5c5be354b4ee2949e6f29e}
+      \strng{authorfullhashraw}{d5509e440d5c5be354b4ee2949e6f29e}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-06-18}
+      \field{title}{SLAM Navigation in Robotics}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.interlakemecalux.com/blog/slam-navigation-robotics
+      \endverb
+      \verb{url}
+      \verb https://www.interlakemecalux.com/blog/slam-navigation-robotics
+      \endverb
+    \endentry
+    \entry{mathworks_slam}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=2d2b0d998977e6379aad61f1b56ac3c1}{%
+           family={MathWorks},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{fullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{fullhashraw}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{bibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorbibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authornamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorfullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorfullhashraw}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-06-18}
+      \field{title}{What Is SLAM?}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.mathworks.com/discovery/slam.html
+      \endverb
+      \verb{url}
+      \verb https://www.mathworks.com/discovery/slam.html
+      \endverb
+    \endentry
+    \entry{amazon_10years}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=b3b3a6ac74ecbd56bcdbefa4799fb9df}{%
+           family={Amazon},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{fullhash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{fullhashraw}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{bibnamehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{authorbibnamehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{authornamehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{authorfullhash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{authorfullhashraw}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-06-18}
+      \field{title}{10 years of Amazon Robotics: How robots help sort packages, move product, and improve safety}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.aboutamazon.com/news/operations/10-years-of-amazon-robotics-how-robots-help-sort-packages-move-product-and-improve-safety
+      \endverb
+      \verb{url}
+      \verb https://www.aboutamazon.com/news/operations/10-years-of-amazon-robotics-how-robots-help-sort-packages-move-product-and-improve-safety
+      \endverb
+    \endentry
+    \entry{exotec_amazon}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=7b54e78b61a539cc28599f0ea211db55}{%
+           family={Exotec},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b54e78b61a539cc28599f0ea211db55}
+      \strng{fullhash}{7b54e78b61a539cc28599f0ea211db55}
+      \strng{fullhashraw}{7b54e78b61a539cc28599f0ea211db55}
+      \strng{bibnamehash}{7b54e78b61a539cc28599f0ea211db55}
+      \strng{authorbibnamehash}{7b54e78b61a539cc28599f0ea211db55}
+      \strng{authornamehash}{7b54e78b61a539cc28599f0ea211db55}
+      \strng{authorfullhash}{7b54e78b61a539cc28599f0ea211db55}
+      \strng{authorfullhashraw}{7b54e78b61a539cc28599f0ea211db55}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-06-18}
+      \field{title}{How Amazon Robotics Has Changed the Landscape of Fulfillment}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.exotec.com/insights/how-amazon-robotics-has-changed-the-landscape-of-fulfillment/
+      \endverb
+      \verb{url}
+      \verb https://www.exotec.com/insights/how-amazon-robotics-has-changed-the-landscape-of-fulfillment/
+      \endverb
+    \endentry
+    \entry{swarmbot_hardware}{report}{}{}
+      \name{author}{9}{}{%
+        {{hash=9f69b22106c8cf3eed0b4d99f00244e0}{%
+           family={Mondada},
+           familyi={M\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=c2c9c5a0cb492ccc322352d47449f7da}{%
+           family={Pettinaro},
+           familyi={P\bibinitperiod},
+           given={G.C.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=d702447858769ff61c7efd7154890a5e}{%
+           family={Guignard},
+           familyi={G\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f3e07a5d4e9f3722a3080a9008c242fa}{%
+           family={Kwee},
+           familyi={K\bibinitperiod},
+           given={I.W.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=7e5ed62bb118f9ebdc2a131b5e7eb661}{%
+           family={Floreano},
+           familyi={F\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=417da8a3ac97e9e06e3d1d8057a897a3}{%
+           family={Deneubourg},
+           familyi={D\bibinitperiod},
+           given={J.-L.},
+           giveni={J\bibinithyphendelim L\bibinitperiod}}}%
+        {{hash=1f18914601e33123091e2b0dafb3e3ff}{%
+           family={Nolfi},
+           familyi={N\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=fdc59763ebfde507299954f894bd75e3}{%
+           family={Gambardella},
+           familyi={G\bibinitperiod},
+           given={L.M.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=d1ad206d110b9398571ff21dbdf38e32}{%
+           family={Dorigo},
+           familyi={D\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {IDSIA}%
+      }
+      \strng{namehash}{8bab4d17fd37be430c55545d60d53f31}
+      \strng{fullhash}{c0f627701a8d95d865f4701af8b3295c}
+      \strng{fullhashraw}{c0f627701a8d95d865f4701af8b3295c}
+      \strng{bibnamehash}{8bab4d17fd37be430c55545d60d53f31}
+      \strng{authorbibnamehash}{8bab4d17fd37be430c55545d60d53f31}
+      \strng{authornamehash}{8bab4d17fd37be430c55545d60d53f31}
+      \strng{authorfullhash}{c0f627701a8d95d865f4701af8b3295c}
+      \strng{authorfullhashraw}{c0f627701a8d95d865f4701af8b3295c}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-06-18}
+      \field{title}{Swarm-bot: a New Distributed Robotic Concept}
+      \field{type}{techreport}
+      \field{year}{2004}
+      \verb{urlraw}
+      \verb https://people.idsia.ch/~luca/swarmbot-hardware.pdf
+      \endverb
+      \verb{url}
+      \verb https://people.idsia.ch/~luca/swarmbot-hardware.pdf
+      \endverb
+    \endentry
+    \entry{upm_swarm}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=46eab7bda93b7be5f790c65000d2a2dd}{%
+           family={Madrid},
+           familyi={M\bibinitperiod},
+           given={Universidad\bibnamedelima Politécnica},
+           giveni={U\bibinitperiod\bibinitdelim P\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{46eab7bda93b7be5f790c65000d2a2dd}
+      \strng{fullhash}{46eab7bda93b7be5f790c65000d2a2dd}
+      \strng{fullhashraw}{46eab7bda93b7be5f790c65000d2a2dd}
+      \strng{bibnamehash}{46eab7bda93b7be5f790c65000d2a2dd}
+      \strng{authorbibnamehash}{46eab7bda93b7be5f790c65000d2a2dd}
+      \strng{authornamehash}{46eab7bda93b7be5f790c65000d2a2dd}
+      \strng{authorfullhash}{46eab7bda93b7be5f790c65000d2a2dd}
+      \strng{authorfullhashraw}{46eab7bda93b7be5f790c65000d2a2dd}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-06-18}
+      \field{title}{Swarm Robotics Research}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://oa.upm.es/id/eprint/1947/contents
+      \endverb
+      \verb{url}
+      \verb https://oa.upm.es/id/eprint/1947/contents
+      \endverb
+    \endentry
+    \entry{azorobotics_swarm}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=bd9a02a7c7131bc0a1275b5561a8587b}{%
+           family={AZoRobotics},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{bd9a02a7c7131bc0a1275b5561a8587b}
+      \strng{fullhash}{bd9a02a7c7131bc0a1275b5561a8587b}
+      \strng{fullhashraw}{bd9a02a7c7131bc0a1275b5561a8587b}
+      \strng{bibnamehash}{bd9a02a7c7131bc0a1275b5561a8587b}
+      \strng{authorbibnamehash}{bd9a02a7c7131bc0a1275b5561a8587b}
+      \strng{authornamehash}{bd9a02a7c7131bc0a1275b5561a8587b}
+      \strng{authorfullhash}{bd9a02a7c7131bc0a1275b5561a8587b}
+      \strng{authorfullhashraw}{bd9a02a7c7131bc0a1275b5561a8587b}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-06-18}
+      \field{title}{Swarm Robotics Applications}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.azorobotics.com/Article.aspx?ArticleID=657
+      \endverb
+      \verb{url}
+      \verb https://www.azorobotics.com/Article.aspx?ArticleID=657
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

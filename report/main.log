@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.17)  16 JUN 2025 09:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.17)  18 JUN 2025 15:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1297,102 +1297,102 @@ File: uesint.fd
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.158 
+l.157 
        [1]
-<images/sec2/youbot_with_arm.png, id=139, 1220.30907pt x 813.0375pt>
+<images/sec2/youbot_with_arm.png, id=135, 1220.30907pt x 813.0375pt>
 File: images/sec2/youbot_with_arm.png Graphic file (type png)
 <use images/sec2/youbot_with_arm.png>
-Package pdftex.def Info: images/sec2/youbot_with_arm.png  used on input line 171.
+Package pdftex.def Info: images/sec2/youbot_with_arm.png  used on input line 170.
 (pdftex.def)             Requested size: 223.07211pt x 148.62312pt.
-<images/sec2/youbot_irl.jpg, id=143, 1926.19624pt x 1084.05pt>
+<images/sec2/youbot_irl.jpg, id=139, 1926.19624pt x 1084.05pt>
 File: images/sec2/youbot_irl.jpg Graphic file (type jpg)
 <use images/sec2/youbot_irl.jpg>
-Package pdftex.def Info: images/sec2/youbot_irl.jpg  used on input line 177.
+Package pdftex.def Info: images/sec2/youbot_irl.jpg  used on input line 176.
 (pdftex.def)             Requested size: 223.07211pt x 125.53154pt.
 
 
 [2 <./images/sec2/youbot_with_arm.png> <./images/sec2/youbot_irl.jpg>]
-<images/sec2/youbot_usb_ports.jpg, id=157, 1926.19624pt x 1084.05pt>
+<images/sec2/youbot_usb_ports.jpg, id=153, 1926.19624pt x 1084.05pt>
 File: images/sec2/youbot_usb_ports.jpg Graphic file (type jpg)
 <use images/sec2/youbot_usb_ports.jpg>
-Package pdftex.def Info: images/sec2/youbot_usb_ports.jpg  used on input line 199.
+Package pdftex.def Info: images/sec2/youbot_usb_ports.jpg  used on input line 198.
 (pdftex.def)             Requested size: 223.07211pt x 125.53154pt.
-<images/sec2/youbot_screen.jpg, id=158, 1926.19624pt x 1084.05pt>
+<images/sec2/youbot_screen.jpg, id=154, 1926.19624pt x 1084.05pt>
 File: images/sec2/youbot_screen.jpg Graphic file (type jpg)
 <use images/sec2/youbot_screen.jpg>
-Package pdftex.def Info: images/sec2/youbot_screen.jpg  used on input line 206.
+Package pdftex.def Info: images/sec2/youbot_screen.jpg  used on input line 205.
 (pdftex.def)             Requested size: 223.07211pt x 125.53154pt.
-<images/sec2/youbot_power.jpg, id=160, 1926.19624pt x 1084.05pt>
+<images/sec2/youbot_power.jpg, id=156, 1926.19624pt x 1084.05pt>
 File: images/sec2/youbot_power.jpg Graphic file (type jpg)
 <use images/sec2/youbot_power.jpg>
-Package pdftex.def Info: images/sec2/youbot_power.jpg  used on input line 224.
+Package pdftex.def Info: images/sec2/youbot_power.jpg  used on input line 223.
 (pdftex.def)             Requested size: 223.07211pt x 125.53154pt.
-<images/sec2/power_adapter.jpg, id=161, 1926.19624pt x 1084.05pt>
+<images/sec2/power_adapter.jpg, id=157, 1926.19624pt x 1084.05pt>
 File: images/sec2/power_adapter.jpg Graphic file (type jpg)
 <use images/sec2/power_adapter.jpg>
-Package pdftex.def Info: images/sec2/power_adapter.jpg  used on input line 231.
+Package pdftex.def Info: images/sec2/power_adapter.jpg  used on input line 230.
 (pdftex.def)             Requested size: 223.07211pt x 125.53154pt.
 
 
 [3 <./images/sec2/youbot_usb_ports.jpg> <./images/sec2/youbot_screen.jpg> <./images/sec2/youbot_power.jpg> <./images/sec2/power_adapter.jpg>]
-<images/sec2/youbot_battery.jpg, id=171, 1926.19624pt x 1084.05pt>
+<images/sec2/youbot_battery.jpg, id=167, 1926.19624pt x 1084.05pt>
 File: images/sec2/youbot_battery.jpg Graphic file (type jpg)
 <use images/sec2/youbot_battery.jpg>
-Package pdftex.def Info: images/sec2/youbot_battery.jpg  used on input line 243.
+Package pdftex.def Info: images/sec2/youbot_battery.jpg  used on input line 242.
 (pdftex.def)             Requested size: 223.07211pt x 125.53154pt.
-<images/sec2/youbot_battery_holder.jpg, id=172, 1926.19624pt x 1084.05pt>
+<images/sec2/youbot_battery_holder.jpg, id=168, 1926.19624pt x 1084.05pt>
 File: images/sec2/youbot_battery_holder.jpg Graphic file (type jpg)
 <use images/sec2/youbot_battery_holder.jpg>
-Package pdftex.def Info: images/sec2/youbot_battery_holder.jpg  used on input line 250.
+Package pdftex.def Info: images/sec2/youbot_battery_holder.jpg  used on input line 249.
 (pdftex.def)             Requested size: 223.07211pt x 125.53154pt.
-<images/sec2/kinectv1.png, id=174, 1445.4pt x 499.11469pt>
+<images/sec2/kinectv1.png, id=170, 1445.4pt x 499.11469pt>
 File: images/sec2/kinectv1.png Graphic file (type png)
 <use images/sec2/kinectv1.png>
-Package pdftex.def Info: images/sec2/kinectv1.png  used on input line 275.
+Package pdftex.def Info: images/sec2/kinectv1.png  used on input line 274.
 (pdftex.def)             Requested size: 227.62206pt x 78.59573pt.
 
 
 [4 <./images/sec2/youbot_battery.jpg> <./images/sec2/youbot_battery_holder.jpg>]
-<images/sec2/hokuyo.png, id=185, 813.0375pt x 813.0375pt>
+<images/sec2/hokuyo.png, id=181, 813.0375pt x 813.0375pt>
 File: images/sec2/hokuyo.png Graphic file (type png)
 <use images/sec2/hokuyo.png>
-Package pdftex.def Info: images/sec2/hokuyo.png  used on input line 288.
+Package pdftex.def Info: images/sec2/hokuyo.png  used on input line 287.
 (pdftex.def)             Requested size: 113.81102pt x 113.79965pt.
-<images/sec2/box2.jpg, id=188, 1926.19624pt x 1084.05pt>
+<images/sec2/box2.jpg, id=184, 1926.19624pt x 1084.05pt>
 File: images/sec2/box2.jpg Graphic file (type jpg)
 <use images/sec2/box2.jpg>
-Package pdftex.def Info: images/sec2/box2.jpg  used on input line 303.
+Package pdftex.def Info: images/sec2/box2.jpg  used on input line 302.
 (pdftex.def)             Requested size: 223.07211pt x 125.53154pt.
-<images/sec2/box1.jpg, id=189, 1926.19624pt x 1084.05pt>
+<images/sec2/box1.jpg, id=185, 1926.19624pt x 1084.05pt>
 File: images/sec2/box1.jpg Graphic file (type jpg)
 <use images/sec2/box1.jpg>
-Package pdftex.def Info: images/sec2/box1.jpg  used on input line 309.
+Package pdftex.def Info: images/sec2/box1.jpg  used on input line 308.
 (pdftex.def)             Requested size: 223.07211pt x 125.53154pt.
 
 
 [5{C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc} <./images/sec2/kinectv1.png> <./images/sec2/hokuyo.png>]
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 318.
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 317.
  (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 12.0pt on input line 318.
+(Font)              scaled to size 12.0pt on input line 317.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<images/sec2/youbot-store-page.png, id=208, 963.6pt x 416.55624pt>
+<images/sec2/youbot-store-page.png, id=204, 963.6pt x 416.55624pt>
 File: images/sec2/youbot-store-page.png Graphic file (type png)
 <use images/sec2/youbot-store-page.png>
-Package pdftex.def Info: images/sec2/youbot-store-page.png  used on input line 326.
+Package pdftex.def Info: images/sec2/youbot-store-page.png  used on input line 325.
 (pdftex.def)             Requested size: 223.07211pt x 96.42882pt.
-<images/sec2/janpalaus.png, id=209, 963.6pt x 415.05063pt>
+<images/sec2/janpalaus.png, id=205, 963.6pt x 415.05063pt>
 File: images/sec2/janpalaus.png Graphic file (type png)
 <use images/sec2/janpalaus.png>
-Package pdftex.def Info: images/sec2/janpalaus.png  used on input line 332.
+Package pdftex.def Info: images/sec2/janpalaus.png  used on input line 331.
 (pdftex.def)             Requested size: 223.07211pt x 96.08028pt.
 
-Underfull \hbox (badness 1377) in paragraph at lines 333--333
+Underfull \hbox (badness 1377) in paragraph at lines 332--332
 []\T1/lmr/m/n/10.95 (+20) (b) |The YouBot driver doc-u-men-ta-tion on
  []
 
@@ -1401,15 +1401,15 @@ Underfull \hbox (badness 1377) in paragraph at lines 333--333
 [6{C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4-t1-0.enc} <./images/sec2/box2.jpg> <./images/sec2/box1.jpg> <./images/sec2/youbot-store-page.png> <./images/sec2/janpalaus.png>]
 
 pdfTeX warning: pdflatex (file ./diagrams/sample.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<diagrams/sample.pdf, id=224, 313.17pt x 181.6386pt>
+<diagrams/sample.pdf, id=220, 313.17pt x 181.6386pt>
 File: diagrams/sample.pdf Graphic file (type pdf)
 <use diagrams/sample.pdf>
-Package pdftex.def Info: diagrams/sample.pdf  used on input line 349.
+Package pdftex.def Info: diagrams/sample.pdf  used on input line 348.
 (pdftex.def)             Requested size: 364.19667pt x 211.24135pt.
 
 
 [7 <./diagrams/sample.pdf>]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 366.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 365.
  (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1417,94 +1417,137 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 [8{C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
 
 pdfTeX warning: pdflatex (file ./diagrams/new_arch.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<diagrams/new_arch.drawio.pdf, id=253, 313.17pt x 181.6386pt>
+<diagrams/new_arch.drawio.pdf, id=249, 313.17pt x 181.6386pt>
 File: diagrams/new_arch.drawio.pdf Graphic file (type pdf)
 <use diagrams/new_arch.drawio.pdf>
-Package pdftex.def Info: diagrams/new_arch.drawio.pdf  used on input line 400.
+Package pdftex.def Info: diagrams/new_arch.drawio.pdf  used on input line 399.
 (pdftex.def)             Requested size: 364.19667pt x 211.24135pt.
 
 
 [9 <./diagrams/new_arch.drawio.pdf>]
-<images/sec4/initial_computer_bootup.jpg, id=273, 1926.19624pt x 1084.05pt>
+<images/sec4/initial_computer_bootup.jpg, id=269, 1926.19624pt x 1084.05pt>
 File: images/sec4/initial_computer_bootup.jpg Graphic file (type jpg)
 <use images/sec4/initial_computer_bootup.jpg>
-Package pdftex.def Info: images/sec4/initial_computer_bootup.jpg  used on input line 420.
+Package pdftex.def Info: images/sec4/initial_computer_bootup.jpg  used on input line 419.
 (pdftex.def)             Requested size: 223.07211pt x 125.53154pt.
-<images/sec4/initial_ros_bootup.jpg, id=274, 1926.19624pt x 1084.05pt>
+<images/sec4/initial_ros_bootup.jpg, id=270, 1926.19624pt x 1084.05pt>
 File: images/sec4/initial_ros_bootup.jpg Graphic file (type jpg)
 <use images/sec4/initial_ros_bootup.jpg>
-Package pdftex.def Info: images/sec4/initial_ros_bootup.jpg  used on input line 426.
+Package pdftex.def Info: images/sec4/initial_ros_bootup.jpg  used on input line 425.
 (pdftex.def)             Requested size: 223.07211pt x 125.53154pt.
 
 
-[10 <./images/sec4/initial_computer_bootup.jpg> <./images/sec4/initial_ros_bootup.jpg>] (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+[10 <./images/sec4/initial_computer_bootup.jpg> <./images/sec4/initial_ros_bootup.jpg>]
+
+LaTeX Warning: Reference `appendix:ros_configuration' on page 11 undefined on input line 445.
+
+(C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 ) (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.95pt on input line 455.
+(Font)              scaled to size 10.95pt on input line 450.
 
 
 [11]
 
 [12]
-Overfull \hbox (14.18257pt too wide) in paragraph at lines 520--521
+<images2/sec4/youbot-battery-og.jpg, id=292, 4095.3pt x 2304.61pt>
+File: images2/sec4/youbot-battery-og.jpg Graphic file (type jpg)
+<use images2/sec4/youbot-battery-og.jpg>
+Package pdftex.def Info: images2/sec4/youbot-battery-og.jpg  used on input line 499.
+(pdftex.def)             Requested size: 223.07211pt x 125.50557pt.
+<images2/sec4/youbot-battery-unwrapped.jpg, id=293, 4095.3pt x 2304.61pt>
+File: images2/sec4/youbot-battery-unwrapped.jpg Graphic file (type jpg)
+<use images2/sec4/youbot-battery-unwrapped.jpg>
+Package pdftex.def Info: images2/sec4/youbot-battery-unwrapped.jpg  used on input line 505.
+(pdftex.def)             Requested size: 223.07211pt x 125.50557pt.
+
+
+[13 <./images2/sec4/youbot-battery-og.jpg> <./images2/sec4/youbot-battery-unwrapped.jpg>]
+Overfull \hbox (14.18257pt too wide) in paragraph at lines 524--525
 []\T1/lmr/m/n/12 (-20) Vesa at-tempted to re-vive this bat-tery through desul-pha-tion, where a higher-than-recommended
  []
 
+<images2/sec4/testing-with-vesa.jpg, id=306, 4095.3pt x 2304.61pt>
+File: images2/sec4/testing-with-vesa.jpg Graphic file (type jpg)
+<use images2/sec4/testing-with-vesa.jpg>
+Package pdftex.def Info: images2/sec4/testing-with-vesa.jpg  used on input line 530.
+(pdftex.def)             Requested size: 227.62206pt x 128.07265pt.
+<images2/sec4/newly-arranged-battery.jpg, id=307, 4095.3pt x 2304.61pt>
+File: images2/sec4/newly-arranged-battery.jpg Graphic file (type jpg)
+<use images2/sec4/newly-arranged-battery.jpg>
+Package pdftex.def Info: images2/sec4/newly-arranged-battery.jpg  used on input line 547.
+(pdftex.def)             Requested size: 227.62206pt x 128.07265pt.
 
 
-[13]
+[14 <./images2/sec4/testing-with-vesa.jpg>]
 
-[14]
+[15 <./images2/sec4/newly-arranged-battery.jpg>]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 567.
-<images/sec4/experiment_tape.jpg, id=314, 1926.19624pt x 1084.05pt>
+(Font)              <5> on input line 591.
+<images/sec4/experiment_tape.jpg, id=325, 1926.19624pt x 1084.05pt>
 File: images/sec4/experiment_tape.jpg Graphic file (type jpg)
 <use images/sec4/experiment_tape.jpg>
-Package pdftex.def Info: images/sec4/experiment_tape.jpg  used on input line 609.
+Package pdftex.def Info: images/sec4/experiment_tape.jpg  used on input line 633.
 (pdftex.def)             Requested size: 223.07211pt x 125.53154pt.
-<images/sec4/tmux-setup.jpg, id=315, 1926.19624pt x 1084.05pt>
+<images/sec4/tmux-setup.jpg, id=326, 1926.19624pt x 1084.05pt>
 File: images/sec4/tmux-setup.jpg Graphic file (type jpg)
 <use images/sec4/tmux-setup.jpg>
-Package pdftex.def Info: images/sec4/tmux-setup.jpg  used on input line 615.
+Package pdftex.def Info: images/sec4/tmux-setup.jpg  used on input line 639.
 (pdftex.def)             Requested size: 223.07211pt x 125.53154pt.
 
 
-[15]
+[16]
 
-[16 <./images/sec4/experiment_tape.jpg> <./images/sec4/tmux-setup.jpg>]
-<images/experiment_results/linear_error_boxplots.png, id=334, 231.264pt x 99.13036pt>
+[17 <./images/sec4/experiment_tape.jpg> <./images/sec4/tmux-setup.jpg>]
+<images/experiment_results/linear_error_boxplots.png, id=345, 231.264pt x 99.13036pt>
 File: images/experiment_results/linear_error_boxplots.png Graphic file (type png)
 <use images/experiment_results/linear_error_boxplots.png>
-Package pdftex.def Info: images/experiment_results/linear_error_boxplots.png  used on input line 657.
+Package pdftex.def Info: images/experiment_results/linear_error_boxplots.png  used on input line 681.
 (pdftex.def)             Requested size: 450.69417pt x 193.19904pt.
 
 
-[17 <./images/experiment_results/linear_error_boxplots.png>]
-<images/experiment_results/rotational_errors_speed_45.png, id=343, 231.264pt x 77.088pt>
+[18 <./images/experiment_results/linear_error_boxplots.png>]
+<images/experiment_results/rotational_errors_speed_45.png, id=354, 231.264pt x 77.088pt>
 File: images/experiment_results/rotational_errors_speed_45.png Graphic file (type png)
 <use images/experiment_results/rotational_errors_speed_45.png>
-Package pdftex.def Info: images/experiment_results/rotational_errors_speed_45.png  used on input line 696.
+Package pdftex.def Info: images/experiment_results/rotational_errors_speed_45.png  used on input line 720.
 (pdftex.def)             Requested size: 450.69417pt x 150.2398pt.
-<images/experiment_results/rotational_errors_speed_75.png, id=344, 231.264pt x 77.088pt>
+<images/experiment_results/rotational_errors_speed_75.png, id=355, 231.264pt x 77.088pt>
 File: images/experiment_results/rotational_errors_speed_75.png Graphic file (type png)
 <use images/experiment_results/rotational_errors_speed_75.png>
-Package pdftex.def Info: images/experiment_results/rotational_errors_speed_75.png  used on input line 703.
+Package pdftex.def Info: images/experiment_results/rotational_errors_speed_75.png  used on input line 727.
 (pdftex.def)             Requested size: 450.69417pt x 150.2398pt.
 
 
-[18 <./images/experiment_results/rotational_errors_speed_45.png> <./images/experiment_results/rotational_errors_speed_75.png>]
-
-[19]
+[19 <./images/experiment_results/rotational_errors_speed_45.png> <./images/experiment_results/rotational_errors_speed_75.png>]
 
 [20]
+<images2/sec6/kollmorgen-agv.png, id=376, 379.91937pt x 361.35pt>
+File: images2/sec6/kollmorgen-agv.png Graphic file (type png)
+<use images2/sec6/kollmorgen-agv.png>
+Package pdftex.def Info: images2/sec6/kollmorgen-agv.png  used on input line 758.
+(pdftex.def)             Requested size: 227.62206pt x 216.5029pt.
 
-[21]
 
-[22]
-Overfull \hbox (14.84921pt too wide) in paragraph at lines 772--772
+[21 <./images2/sec6/kollmorgen-agv.png>]
+<images2/sec6/amazonrobotics.jpg, id=390, 903.375pt x 677.53125pt>
+File: images2/sec6/amazonrobotics.jpg Graphic file (type jpg)
+<use images2/sec6/amazonrobotics.jpg>
+Package pdftex.def Info: images2/sec6/amazonrobotics.jpg  used on input line 780.
+(pdftex.def)             Requested size: 227.62206pt x 170.71603pt.
+
+
+[22 <./images2/sec6/amazonrobotics.jpg>]
+
+[23]
+
+[24]
+
+[25]
+Overfull \hbox (14.84921pt too wide) in paragraph at lines 833--833
 \T1/zi4/m/n/12 http : / / www . youbot -[] store . com / wiki / index . php / YouBot _ Detailed _ Specifications$[][]\T1/lmr/m/n/12 (-20) ,
  []
 
@@ -1513,68 +1556,62 @@ Package microtype Info: Character `029' is missing
 (microtype)             Ignoring protrusion settings for this character.
 
 
-[23]
-
-[24]
-LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
-(Font)              scaled to size 12.0pt on input line 804.
-
-
-[25]
-
 [26]
-Overfull \hbox (48.19731pt too wide) in paragraph at lines 882--882
+
+[27]
+LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
+(Font)              scaled to size 12.0pt on input line 866.
+
+
+[28]
+
+[29]
+Overfull \hbox (48.19731pt too wide) in paragraph at lines 946--946
 []\T1/lmr/bx/n/12 (-20) Youbot Driver Con-fig-u-ra-tion (\T1/zi4/b/n/12 ~/youbot_driver/config/youbot-ethercat.cfg\T1/lmr/bx/n/12 (-20) ) 
  []
 
 
-Overfull \hbox (15.63797pt too wide) in paragraph at lines 889--890
+Overfull \hbox (15.63797pt too wide) in paragraph at lines 955--956
 \T1/lmr/m/n/12 (-20) (\T1/zi4/m/n/12 ~/youbot_driver/config/youbot-ethercat.cfg\T1/lmr/m/n/12 (-20) ) to match your ac-tual in-ter-face name: 
  []
 
 
 
-[27]
+[30]
 
-[28]
+[31]
 
-[29]
+[32]
 
-[30] (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+[33] (C:\Users\Adity\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1106.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1175.
  (../code/youbot-files/DSD/src/youbot_control/scripts/simple_square_movement.py
-
-[31])
-
-[32] (../code/youbot-files/DSD.sh)
-
-[33] (../code/youbot-files/DSD/src/youbot_control/scripts/linear_test.py
 
 [34])
 
-[35] (../code/youbot-files/DSD/src/youbot_control/scripts/rotate_test.py
+[35] (../code/youbot-files/DSD.sh)
 
-[36])
+[36] (../code/youbot-files/DSD/src/youbot_control/scripts/linear_test.py
 
-[37] (../code/rotate_graph.py
+[37])
 
-[38]
+[38] (../code/youbot-files/DSD/src/youbot_control/scripts/rotate_test.py
 
 [39])
 
-[40] (../code/linear_graph.py
+[40] (../code/rotate_graph.py
 
 [41]
 
 [42])
 
-[43]
+[43] (../code/linear_graph.py
 
 [44]
 
-[45]
+[45])
 
 [46]
 
@@ -1584,11 +1621,20 @@ Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on in
 
 [49]
 
-[50] (main.aux)
+[50]
+
+[51]
+
+[52]
+
+[53] (main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
  ***********
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1598,17 +1644,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46931 strings out of 473536
- 925460 string characters out of 5714956
- 1955448 words of memory out of 5000000
- 68454 multiletter control sequences out of 15000+600000
+ 47031 strings out of 473536
+ 929397 string characters out of 5714956
+ 1957652 words of memory out of 5000000
+ 68537 multiletter control sequences out of 15000+600000
  641248 words of font info for 193 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,131p,1255b,2923s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4b.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Adity/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (53 pages, 12216351 bytes).
+Output written on main.pdf (56 pages, 23664467 bytes).
 PDF statistics:
- 1551 PDF objects out of 1728 (max. 8388607)
- 803 named destinations out of 1000 (max. 500000)
- 51240 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 1620 PDF objects out of 1728 (max. 8388607)
+ 820 named destinations out of 1000 (max. 500000)
+ 51254 words of extra memory for PDF output out of 51595 (max. 10000000)
 
