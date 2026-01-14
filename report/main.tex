@@ -442,7 +442,7 @@
 
     \subsection{ROS Interface}
 
-    While the C++ demos worked quite nicely, they would be unsuitable for potential extension into actual use-cases in mobile robotics. There is no in-built system for networking across multiple machines, utilising multiple sensors, debugging, status echoing, etc. Thus, ROS was chosen to be the basis for my experimental setups. This included changing the \code{.bashrc} file to provide ROS with the correct environment variables, which would in turn allow it to communicate with itself. Refer to \ref{appendix:ros_configuration} for the relevant details.
+    While the C++ demos worked quite nicely, they would be unsuitable for potential extension into actual use-cases in mobile robotics. There is no in-built system for networking across multiple machines, utilising multiple sensors, debugging, status echoing, etc. Thus, ROS was chosen to be the basis for my experimental setups. This included changing the \code{.bashrc} file to provide ROS with the correct environment variables, which would in turn allow it to communicate with itself. Refer to \ref{appendix:ros_networking_configuration} for the relevant details.
 
     I was able to start up \code{roscore} after making this change. However, I was not able to run the YouBot-ROS interface due to a lack of permissions to access the \code{eth1} interface. This was due to the fact that the YouBot-ROS interface requires root privileges to access the EtherCAT devices. To resolve this, I had to run the ROS interface in with \code{sudo bash -c}, which allowed it to access the EtherCAT devices and communicate with the motors. 
 

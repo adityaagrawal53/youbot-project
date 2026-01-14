@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1768427975.57652 "main.bcf" "main.bbl" "main" 1768429888.51841 0
+["biber main"] 1768427975.57652 "main.bcf" "main.bbl" "main" 1768430925.41837 0
   "./resources/bib/references.bib" 1768427737.59458 12264 8afdbaf9f1dd9cdb4a3ed3b40d1d8539 ""
-  "main.bcf" 1768429888.38565 111069 ba0abe70b2230436862d38e5d5bfd2e4 "pdflatex"
+  "main.bcf" 1768430925.28554 111069 ba0abe70b2230436862d38e5d5bfd2e4 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1768429885.73983 "main.tex" "main.pdf" "main" 1768429888.51869 0
+["pdflatex"] 1768430922.61715 "main.tex" "main.pdf" "main" 1768430925.41865 0
   "../code/linear_graph.py" 1768427736.34288 2928 44c544ce0acd7253127243feb49e6388 ""
   "../code/rotate_graph.py" 1768427736.34288 4742 690c75dd62ced1ec40bd8cece8c68b85 ""
   "../code/youbot-files/DSD.sh" 1768427736.34288 1076 de9637882682ca9143f428a463ad83f7 ""
@@ -316,11 +316,11 @@
   "images2/sec4/youbot-battery-unwrapped.jpg" 1768427737.57688 2909504 e7410d5776334d6c258467fa08267d06 ""
   "images2/sec6/amazonrobotics.jpg" 1768427737.57772 131480 7f3def9176a48c8aef01a60b4c70e558 ""
   "images2/sec6/kollmorgen-agv.png" 1768427737.57788 276904 162123886391d6827b10e6e1b8353d26 ""
-  "main.aux" 1768429888.37665 43814 3e76389141a0ed8f6b601a4f0610c517 "pdflatex"
+  "main.aux" 1768430925.27554 43814 3e76389141a0ed8f6b601a4f0610c517 "pdflatex"
   "main.bbl" 1768427976.27831 37285 d7cabfc96e2def50990da76dcdb30608 "biber main"
-  "main.run.xml" 1768429888.38809 2418 e908cc7d78936813de6db70d83386960 "pdflatex"
-  "main.tex" 1768429885.69864 131325 7c29ffb444b64f1ba9c080c064ff1087 ""
-  "main.toc" 1768429888.38809 9274 e8144d2f711d2a80afae9f33d1d5209e "pdflatex"
+  "main.run.xml" 1768430925.28752 2418 e908cc7d78936813de6db70d83386960 "pdflatex"
+  "main.tex" 1768430912.59352 131336 590211d653e6c087188fa520de104ffb ""
+  "main.toc" 1768430925.28752 9274 e8144d2f711d2a80afae9f33d1d5209e "pdflatex"
   "packages/sleek.sty" 1768427972.4013 4332 24089e1db84bb06770d76bfa1230820b ""
   (generated)
   "main.aux"
