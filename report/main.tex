@@ -141,7 +141,7 @@
     \subsection{Motivation}
 
 
-    In the rapidly evolving field of robotics, expensive hardware platforms often become obsolete quickly. This is not purely because of physical wear and tear or a lack of functionality, but also due to quick advancements in hardware, software and infrastructure. For example, artificial intelligence (AI) and related fields like Machine Learning (ML) and Deep Learning (DL) has accelerated progress within robotics, driving demand for specialised, high-performance hardware and tightly integrated software ecosystems. Consequently,older robotic platforms, despite their inherent capabilities, become less relevant and lose extended support. This furthermore could lead to increased e-waste and reduced sustainability in the robotics industry \cite{mcgloin2023introducing}. 
+    In the rapidly evolving field of robotics, expensive hardware platforms often become obsolete quickly. This is not purely because of physical wear and tear or a lack of functionality, but also due to quick advancements in hardware, software and infrastructure. For example, artificial intelligence (AI) and related fields like Machine Learning (ML) and Deep Learning (DL) has accelerated progress within robotics, driving demand for specialised, high-performance hardware and tightly integrated software ecosystems. Consequently, older robotic platforms, despite their inherent capabilities, become less relevant and lose extended support. This furthermore could lead to increased e-waste and reduced sustainability in the robotics industry \cite{mcgloin2023introducing}. 
 
     The KUKA YouBot is a prime example of this phenomenon. It was once a popular platform for research and education in robotics in the mid-2010s, but has been since discontinued and is no longer supported by the manufacturer. This mobile robot base is quite robust, compact and utilizes open-source drivers. While this platform has reduced performance and integration capabilities compared to its modern peers, it can still serve a variety of purposes for the purposes of industrial and academic research. This includes autonomous navigation, perception and human-robot interaction. Instead of discarding such platforms, we should explore avenues to extend their lifespan and utility. This would reduce e-waste and costs associated with acquiring new hardware, and thus lower the barrier to entry for research and development in robotics.
     
@@ -472,18 +472,13 @@ $    rosrun youbot_oodl youbot_keyboard_teleop.py
 
     The Kinectv1 camera is a depth and RGB camera that was originall designed and sold in tandem with the XBOX 360 to enable motion tracking and gaming. Due to its low cost, high availability and ease of use, it has indirectly become a popular choice for robotics research as well. 
 
-    We can use open-source software such as libfreenect to access the data from the various sensors on the module.
-
-
-    \notes{discuss the libfreenect library, how to install it, and how it could be used within ROS.}
-
+    We can use open-source software such as libfreenect to access the data from the various sensors on the module. This can be furthermore utilised within ROS using community packages for the stack. However, documentation is outdated and sparse.
 
     \subsubsection{Hokuyo URG-04LX Laser Rangefinder}
 
     The Hokuyo URG-04LX is a 2D laser rangefinder that is commonly used in robotics research. It is a compact and lightweight sensor that provides high-resolution distance measurements in a 240-degree field of view. The URG-04LX is capable of measuring distances up to 4 meters with an accuracy of +/- 10 mm. It communicates with the onboard computer using a serial interface, making it easy to integrate into existing systems.
 
-    \notes{discuss installing the drivers and whatnot, and how to use it within ROS and rqt.}
-
+	Setting up the Hokuyo for use within the ROS ecosystem is well-documented and explained. Refer to \url{https://wiki.ros.org/hokuyo_node} for details and tutorials.
 
 
     \subsection{Battery Replacement}
@@ -856,7 +851,6 @@ $    rosrun youbot_oodl youbot_keyboard_teleop.py
         \end{itemize}
     \end{enumerate}
 
-    \notes{add image of the booting up process.}
 
     \subsection{Initial Configuration}
     \label{appendix:initial_configuration}
@@ -1122,7 +1116,7 @@ $   ifconfig
     $ chmod +x scripts/simple_move.py # Make the script executable
     \end{lstlisting}
 
-    Sample code files can be found in \notes{appendix for code}
+    Sample code files can be found in Appendix~\ref{appendix:custom_scripts}
 
     To run a script:
 
@@ -1149,7 +1143,7 @@ $   ifconfig
     $ chmod +x launch_youbot.sh
     \end{lstlisting}
 
-    Sample content for \code{launch_youbot.sh} can be found in \notes{appendix for code}. This script will create a new \code{tmux} session with three panes: one for \code{roscore}, one for the YouBot driver, and one for a custom movement script. Run the script by navigating to its directory and running the command:
+	Sample content for \code{launch_youbot.sh} can be found in Appendix~\ref{appendix:tmux}. This script will create a new \code{tmux} session with three panes: one for \code{roscore}, one for the YouBot driver, and one for a custom movement script. Run the script by navigating to its directory and running the command:
 
     \begin{lstlisting}[style=plain]
     $ ./launch_youbot.sh 
@@ -1174,6 +1168,7 @@ $   ifconfig
     This script was used to test the YouBot's ability to move in a square pattern. It uses the ROS interface to send velocity commands to the YouBot. 
     \lstinputlisting[language=Python, label={lst:fullscript}]{../code/youbot-files/DSD/src/youbot_control/scripts/simple_square_movement.py}
     \pagebreak
+    \label{appendix:tmux}
     \subsubsection{Tmux automation script} 
     This script is used to automate the process of launching the ROS interface and the custom control scripts in a tmux session. It creates a new tmux session with four panes: one running \code{the YouBot-ROS interface}, one running the keyboard controller node, and two free panes for miscellaneous purposes.
     \lstinputlisting[language=Bash, label={lst:fullscript}]{../code/youbot-files/DSD.sh}
@@ -1184,21 +1179,21 @@ $   ifconfig
     \subsection{Scripts for Experimental Setup and Data Collection}
     \label{appendix:experiment_scripts}
     \subsubsection{linear\_test.py}
-    This script is used to undertake the linear movement experiments. It uses the ROS interface to send velocity commands to the YouBot, and then calculates the delta in odometry from the robot. The script is designed to be run multiple times with different parameters through the terminal to collect data for analysis. Refer to \notes{insert something here idr} for further details.
+    This script is used to undertake the linear movement experiments. It uses the ROS interface to send velocity commands to the YouBot, and then calculates the delta in odometry from the robot. The script is designed to be run multiple times with different parameters through the terminal to collect data for analysis.
     \lstinputlisting[language=Python, label={lst:fullscript}]{../code/youbot-files/DSD/src/youbot_control/scripts/linear_test.py}
     \pagebreak
     \subsubsection{rotate\_test.py}
-    This script is used to undertake the linear movement experiments. It uses the ROS interface to send velocity commands to the YouBot, and then calculates the delta in odometry from the robot. The script is designed to be run multiple times with different parameters through the terminal to collect data for analysis. Refer to \notes{insert something here idr} for further details.
+    This script is used to undertake the linear movement experiments. It uses the ROS interface to send velocity commands to the YouBot, and then calculates the delta in odometry from the robot. The script is designed to be run multiple times with different parameters through the terminal to collect data for analysis.
     \lstinputlisting[language=Python, label={lst:fullscript}]{../code/youbot-files/DSD/src/youbot_control/scripts/rotate_test.py}
     \pagebreak
     \subsection{Graph Plotting Scripts}
     \label{appendix:graph_scripts}
     \subsubsection{rotate\_graph.py}
-    This script read the data collected from the rotational movement experiments to parse the data and plot the drift of the centre of the robot in x and y axes as well as difference in yaw in a graph format. It also prints out the mean and standard deviation of the relevant errors. Refer to \notes{insert something here idr} for further details. 
+    This script read the data collected from the rotational movement experiments to parse the data and plot the drift of the centre of the robot in x and y axes as well as difference in yaw in a graph format. It also prints out the mean and standard deviation of the relevant errors. 
     \lstinputlisting[language=Python, label={lst:fullscript}]{../code/rotate_graph.py}
     \pagebreak
     \subsubsection{linear\_graph.py}
-    This script read the data collected from the linear movement experiments to parse the data and plot the drift of the centre of the robot in x and y axes in a graph format. It also prints out the mean and standard deviation of the relevant errors. Refer to \notes{insert something here idr} for further details. 
+    This script read the data collected from the linear movement experiments to parse the data and plot the drift of the centre of the robot in x and y axes in a graph format. It also prints out the mean and standard deviation of the relevant errors. 
     \lstinputlisting[language=Python, label={lst:fullscript}]{../code/linear_graph.py}
     \pagebreak
     \section{Experimental Data}
